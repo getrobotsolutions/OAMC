@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="UTF-8">
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--<script language="JavaScript" type="text/javascript"
+	src="Scripts/FlashPlayer.js"></script>-->
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/LogConsole.js"></script>
+
+
+
+ <script src="jquery/jquery-3.2.1.min.js"></script>
+ <script language="JavaScript" type="text/javascript"
+  src="maincontents.js"></script>
+ <script src="boots/js/bootstrap.min.js"></script>
+
+
+ <script src="Scripts/speech.js"></script>
+
+
+  <script src="Scripts/lang.js"></script>
+  <link rel="stylesheet" href="boots/css/bootstrap.min.css">
+
+
+
+<script type="text/javascript">
+
+    // responsiveVoice.speak("شكرا", "Arabic Male");
+
+    // setTimeout( function(){
+    // responsiveVoice.speak("Hi. Welcome to our airport. To begin, please press one of the buttons below.", "UK English Male");
+
+  // }  , 3000 );
+
+
+
+
+</script>
+<link rel="stylesheet" href="css/style_riyadh.css">
+<link href="css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="css/Language.css" rel="stylesheet" type="text/css" />
+<link href="css/Main.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+<!-- <h1>नमस्ते</h1> -->
+  	<div class="jumbotron text-center">
+      <p id="currentDate"></p><br>
+      <span class="col-sm-6">
+         <img src="images/Logo.jpg" class="img-responsive" alt="Responsive image" style="height:auto;margin-top: -109px;
+    width: 441px;">
+       <!-- <p id="content_term"> محطة A</p> -->
+      </span>
+      <span class="col-sm-6 text-right">
+          <p  id="content_air"><!--مطار الملك خالد الدولي--></p>
+      </span>
+
+
+    </div>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar1">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+      <div id="google_translate_element"></div>
+      <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', multilanguagePage: true}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+      <div class="topnav">
+        <a href="#" class="langhead"> LANGUAGES </a>
+  <a class="active" href="#home">ENGLISH</a>
+  <a href="#news">غير اللغة</a>
+  <div class="dropdown">
+
+<button onclick="myFunction()" class="dropbtn">&nbsp; OTHER LANGUAGES &#8964; </button> 
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#home">Chinese</a>
+      <a href="#about">Hindi</a>
+
+    </div>
+
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', multilanguagePage: true}, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </div>
+
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
+  </li>
+
+</div>
+    </nav>
+  <div class="bmg">
+    <div class="icon1">
+      <div class="container">
+        <div class="row">
+          <div id="content_fly" class="alert alert-success" role="alert" style="background-color: rgb(0,0,102);font-size:57px;/*text-align: right*/">اضغط هنا للبدء</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+              <div class="parent">
+                <a onclick="FC_ContentsCall('eat')" href="#">
+                    <img class="child" src="images/png/eat.png" align="left">
+
+                </a>
+              </div>
+         <!--  <a onclick="FC_ContentsCall('eat')" href="#" class="btn btn-danger btn-lg">
+                <span  class="glyphicon glyphicon-cutlery"></span> <br>
+                <div id="content_eat" class="txt">المأكولات <br>والمشروبات</div>
+            </a> -->
+          </div>
+
+          <div class="col-sm-2">
+              <div class="parent">
+                <a onclick="FC_ContentsCall('shop')" href="#">
+                  <img class="child" src="images/png/shop.png" align="right">
+                </a>
+              </div>
+
+
+              <!-- <a onclick="FC_ContentsCall('shop')" href="#" class="btn btn-success btn-lg">
+                <span class="glyphicon glyphicon-shopping-cart"></span> <br>
+                <div id="content_shop" class="txt">التسوق</div>
+            </a> -->
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-sm-2">
+              <div class="parent">
+                  <a onclick="FC_ContentsCall('Flights','')" href="#">
+                    <img class="child" src="images/png/flight.png" align="left">
+
+                  </a>
+              </div>
+          </div>
+
+          <div class="col-sm-2">
+              <div class="parent">
+                  <a onclick="FC_ContentsCall('BoardingPass','')" href="#">
+                    <img class="child" src="images/png/boarding pass.png" align="right">
+
+                  </a>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-sm-2">
+
+                <div class="parent">
+                  <a onclick="FC_ContentsCall('TerminalMap','')" href="#">
+                    <img class="child" src="images/png/TERMINAL.png" align="left">
+
+                  </a>
+                </div>
+
+          </div>
+
+          <div class="col-sm-2">
+              <div class="parent">
+                <a onclick="FC_ContentsCall('info')" href="#">
+                  <img class="child" src="images/png/info.png" align="right">
+
+                </a>
+              </div>
+              <!-- <a onclick="FC_ContentsCall('info')" href="#" class="btn btn-warning1 btn-lg">
+                <span class="glyphicon glyphicon glyphicon-road"></span> <br>
+                <div id="content_info" class="txt">خدمات<br> التنقل</div>
+            </a> -->
+          </div>
+
+        <!--   <div class="col-sm-4">
+            <img id="HF" width="300" src="Image\Robot_Avatar.png"
+            onclick="FC_ContentsCall('RobotAvatar', '')">
+
+          </div> -->
+
+
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-sm-2">
+              <div class="parent">
+                <a onclick="FC_ContentsCall('PhotoPrinting','')" href="#">
+                  <img class="img-child" src="images/png/selfie.png" align="left">
+
+                </a>
+              </div>
+
+              <!-- <a onclick="FC_ContentsCall('PhotoPrinting','')" href="#" class="btn btn-primary btn-lg">
+                <span class="glyphicon glyphicon-camera"></span> <br>
+                <div id="content_selfie" class="txt">تصوير</div>
+            </a> -->
+          </div>
+
+          <div class="col-sm-2">
+              <div class="parent">
+                <a onclick="FC_ContentsCall('RobotAvatar', '')" href="#">
+                  <img class="img-child" src="images/png/avatar.png" align="right">
+
+                </a>
+              </div>
+          <!-- <a onclick="FC_ContentsCall('RobotAvatar', '')" href="#" class="btn btn-warning btn-lg">
+                <span class="glyphicon glyphicon-user"></span> <br>
+                <div id="content_dance" class="txt">صورتك في <br>الوجه الآلي</div>
+            </a> -->
+          </div>
+<!--           <div class="col-sm-4">
+              <img id="HF" width="300" src="Image\PhotoPrinting_En.png"
+              onclick="FC_ContentsCall('PhotoPrinting', '')">
+          </div>
+ -->
+
+
+
+<!--           <div class="col-sm-4">
+
+              <img id="HF" width="300" src="Image\Dance.png"
+            onclick="FC_ContentsCall('RobotDance', '')">
+
+          </div>
+ -->          <!--<div class="col-sm-4">
+
+                <div class="parent" style="background-color: #0696B9;">
+                  <a onclick="FC_ContentsCall('RobotDance','')" href="#">
+                    <img class="img-child" src="images/icon/D.png">
+                    <div id="content_dance" class="icon-title">صورتك في <br>الوجه الآلي</div>
+                  </a>
+              </div>
+
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div  id="content_explore" class="explore">استكشاف تنازلات لدينا</div> -->
+</body>
+</html>
