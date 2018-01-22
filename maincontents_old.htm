@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/jquery-3.2.1.min.js"></script>
+<!--<script language="JavaScript" type="text/javascript"
+	src="Scripts/FlashPlayer.js"></script>-->
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/LogConsole.js"></script>
+
+
+<script language="JavaScript" type="text/javascript"
+	src="maincontents.js"></script>
+
+
+
+
+<script type="text/javascript">
+				var text = ["Welcome to the airport!", "欢迎来到机场!", "हवाई अड्डे पर आपका स्वागत है!",
+				"Have your boarding pass and identification ready for our TSA document checker","为我们的TSA文件检查员准备好您的登机牌和身份证","हमारे बोर्डिंग पास और पहचान हमारे TSA दस्तावेज़ चेकर के लिए तैयार है",
+				"After the document checker, please put those items in your personal carryon","文件检查后，请将这些物品放在您的个人包中","दस्तावेज़ चेकर के बाद, कृपया उन चीज़ों को अपने निजी कैमरे में डालें",
+				"Please remove all hats and sunglasses","请删除所有帽子和太阳镜","कृपया सभी टोपी और धूप का चश्मा हटाएं",
+				"Remove lights jackets, sweaters and hoodies","去除灯罩，毛衣和连帽衫","रोशनी जैकेट, स्वेटर और हुडियों को निकालें",
+				"Remove bracelets and loose hanging necklaces","去除手镯和松散的项链","कंगन निकालें और ढीली फांसी के हार",
+				"Remove Fitbits and watches","删除Fitbits和手表","Fitbits और घड़ियों निकालें",
+				"Remove belts","取下皮带","बेल्ट निकालें",
+				"Empty your pockets of it’s contents: phone, wallet, passport, loose change","清空你的口袋里的内容：电话，钱包，护照，松散的变化","अपनी सामग्री की अपनी जेब खाली करें: फोन, बटुआ, पासपोर्ट, ढीली परिवर्तन",
+				"Watch for the proper stance in the AIT","注意AIT中的正确立场","एआईटी में उचित रुख के लिए देखें",
+				"Make sure your hands are empty","确保你的手是空的","सुनिश्चित करें कि आपके हाथ खाली हैं",
+				"Stand on yellow footprints","站在黄色的脚印上","पीले पैरों के निशान पर खड़े हो जाओ",
+				"Have your hands above your head","把你的手放在你的头上","अपने हाथों को अपने सिर से ऊपर रखें",
+				"And stand upright","站立直立","और सीधे खड़े हो जाओ",
+				"Let’s start from head to toe","我们从头到脚开始","चलो सिर से पैर की अंगुली तक चलें",
+				"Remove hats and sunglasses","去掉帽子和太阳眼镜","टोपी और धूप का चश्मा हटाएं",
+				"Remove scarves and loose jackets","取下围巾和松紧夹克","स्कार्फ और ढीली जैकेट निकालें",
+				"Remove bracelets including watches and Fitbits & remove belts","取下手表，包括手表和Fitbits和拆卸皮带","घड़ियों और फ़िटबिट्स सहित कंगन निकालें और बेल्ट को हटा दें",
+				"Empty your pockets of it’s contents: phone, wallet, passport, loose change","清空你的口袋里的内容：电话，钱包，护照，松散的变化","अपनी सामग्री की अपनी जेब खाली करें: फोन, बटुआ, पासपोर्ट, ढीली परिवर्तन",
+				"Have a nice day and safe travels!","有一个美好的一天，安全的旅行！","एक अच्छा दिन और सुरक्षित यात्रा है!"
+				];
+				var text2 = ["¡Bienvenido al aeropuerto!","공항에 오신 것을 환영합니다!","空港へようこそ！",
+				"Tenga su tarjeta de embarque y su identificación listos para nuestro verificador de documentos TSA","탑승권과 신분증을 TSA 서류 심사원에게 준비시켜주십시오","TSA書類チェッカーの搭乗券と身分証明書を用意してください",
+				"Después de que el inspector de documentos, por favor ponga esos artículos en su carryon personal","문서 검사기를 통해 개인 물품에 물건을 넣으십시오.","書類チェッカーの後、それらの物をあなたの個人用バッグに入れてください",
+				"Quite todos los sombreros y gafas de sol","모든 모자와 선글라스를 제거하십시오.","すべての帽子とサングラスを取り外してください",
+				"Quite las chaquetas de las luces, los suéteres y las sudaderas con capucha","조명 재킷, 스웨터 및 후드를 삭제합니다.","ライトのジャケット、セーター、パーカーを取り外す",
+				"Quite las pulseras y los collares colgantes flojos","팔찌와 느슨한 매달린 목걸이를 제거하십시오.","ブレスレットと吊り下げネックレスを取り外します",
+				"Quitar Fitbits y relojes","Fitbits 및 시계 제거","Fitbitsと時計を削除する",
+				"Quite las correas","取下皮带","ベルトを取り外す",
+				"Vacíe sus bolsillos de su contenido: teléfono, billetera, pasaporte, cambio suelto","내용물의 주머니를 비우십시오 : 전화, 지갑, 여권, 느슨한 변경","その内容のあなたのポケットを空にする：電話、財布、パスポート、緩い変更",
+				"Esté pendiente de la postura apropiada en el AIT","AIT에서 적절한 입장을 관찰하십시오.","AITで適切な立場を見守る",
+				"Asegúrese de que sus manos estén vacías","손이 비어 있는지 확인하십시오.","手が空であることを確認する",
+				"Párese en huellas amarillas","노란 발자취 위에 서십시오.","黄色の足跡に立つ",
+				"Tener las manos sobre la cabeza","머리 위로 손 올려.","あなたの頭の上に手をかける",
+				"Y ponerse de pie","그리고 똑바로 서서","立って立つ",
+				"Empecemos de la cabeza a los pies","머리부터 발끝까지 시작합시다.","頭からつま先まで",
+				"Quite sombreros y gafas de sol","모자 및 선글라스 제거","帽子とサングラスを取り外す",
+				"Quite las bufandas y las chaquetas sueltas","스카프 및 느슨한 재킷을 제거하십시오.","スカーフとルーズジャケットを取り外す",
+				"Quite las pulseras incluyendo los relojes y Fitbits y quitar correas","시계와 Fitbits를 포함하여 팔찌를 제거하고 벨트를 제거하십시오","時計やFitbitsなどのブレスレットを取り外し、ベルトを取り外します",
+				"Vacíe sus bolsillos de su contenido: teléfono, billetera, pasaporte, cambio suelto","내용물의 주머니를 비우십시오 : 전화, 지갑, 여권, 느슨한 변경","その内容のあなたのポケットを空にする：電話、財布、パスポート、緩い変更",
+				"¡Que tengas un buen día y viajes seguros!","좋은 하루 보내고 안전한 여행!","良い一日を過ごし、安全な旅行を！"
+				];
+				
+				
+				var count = 0;
+				function change(){
+					
+					var txt1 = $("#changeText1").text(text[count]);
+				    console.log(txt1);
+					$("#changeText2").text(text2[count]);
+					count<61?count++:count=0;
+					
+				}
+				setInterval(change,3000);
+</script>
+
+<link href="css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="css/Language.css" rel="stylesheet" type="text/css" />
+<link href="css/Main.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body oncontextmenu="return false" onselectstart="return false"
+	ondragstart="return false"
+	style="padding: 0; margin: 0; background-repeat: no-repeat;"
+	scroll=no onload="JSMain()" onbeforeunload="JSUnload()">
+
+	<div class="header" style="background-color: #ffff00;">
+		<div class="changeText" id="changeText1"> </div>
+	</div>
+	<div class="main">
+			<div class="video-size">
+				<video width="1067px" height="1050px" controls loop autoplay>
+				  <source src="vids/video.mp4" type="video/mp4">
+				  
+				  Your browser does not support the video tag.
+				</video>
+			</div>
+	</div>
+
+	<div class="footer" style="background-color: #ffff00;">
+		<div class="changeText2" id="changeText2"></div>
+	</div>
+			
+		
+
+</body>
+</html>
