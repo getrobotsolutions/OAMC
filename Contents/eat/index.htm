@@ -7,7 +7,6 @@
 
 <!--<script language="JavaScript" type="text/javascript"
   src="Scripts/FlashPlayer.js"></script>-->
-  
 <script language="JavaScript" type="text/javascript"
   src="../../Scripts/BaseCommand.js"></script>
 <script language="JavaScript" type="text/javascript"
@@ -19,24 +18,24 @@
  <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
  <!--<script language="JavaScript" type="text/javascript"
   src="../../maincontents.js"></script>-->
+
+ <script src="../../boots/js/bootstrap.min.js"></script>
+  <script src="../../Scripts/speech.js"></script>
+
+
+  <script src="js/lang_eat.js"></script>
+<script src="../../Scripts/lang.js"></script>
 <script type="text/javascript">
-  if(readCookie("lang")=="arabic"){
+if(readCookie("lang")=="english"){
     //alert("worked");
-    location.href='index.html';
-  }
-  function GoHome()
+    location.href='index-us.htm';
+}
+function GoHome()
 {
   //if(flagPictureAvatar == "true") DeleteRobotFace();  //사진 아바타 삭제
   location.href = "../../maincontents.htm";
 }
 </script>
-
- <script src="../../boots/js/bootstrap.min.js"></script>
-  <script src="../../Scripts/speech.js"></script>
-
-  <script src="js/lang_eat-us.js"></script>
-  <script src="../../Scripts/lang.js"></script>
-
   <!--<script src="sheetjs/dist/xlsx.full.min.js"></script> -->
 
   <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
@@ -44,7 +43,7 @@
   <link rel="stylesheet" href="../../css/style_riyadh.css">
 
 <style>
-   .bmg{
+    .bmg{
           background-image: none;
           height: 1195px;
     }
@@ -85,7 +84,7 @@
           border-top: 3px solid #87CEFA;
       }
     .wrap{
-        padding-top: 280px;
+        padding-top: 55px;
     }
     .part1{
           background-color: whitesmoke;
@@ -161,7 +160,7 @@
         height: 1px;
         width: 100%;
         margin: 0px;
-        background: grey;
+        background: none;
     }
     a,a:hover { text-decoration : none; color : #000; }
     #leftmenu h3 {
@@ -177,7 +176,7 @@
         color:#ffffff;
         text-align:left;
     }
-   
+    
     #leftmenu h5 {
         margin:0;
         font-family:OpenSans-Regular;
@@ -376,18 +375,22 @@ li.odd{background-color: #c0b5e9;}
 li.even{background-color: #f3ebf9;}
 .list2{display: none;}
 .list2 li{padding-left: 50px !important;}
+
 </style>
 
 
 <link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Language.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
-
-<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
-<script language="JavaScript" type="text/javascript" src="RobotDance.js"></script>
-  <script type="text/javascript">
-    PlaySpeech('Enjoy your time here at these restaurants.');
+    <script type="text/javascript">
+    responsiveVoice.speak("استمتع بوقتك في هذه المطاعم.", "Arabic Male");
+    responsiveVoice.cancel();
+    //PlaySpeech('Enjoy your time here at these restaurants.');
   </script>
+<!--<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="RobotDance.js"></script>-->
+
+
 </head>
 <body>
 
@@ -402,50 +405,7 @@ li.even{background-color: #f3ebf9;}
       </div>     
     </div>
 
-    <!--<nav class="navbar navbar-default">
-      <div class="container-fluid navbar1">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="vdivider">
-              <a onclick="FC_ContentsCall('sub_flights','')" href="#" >
-                  <span class="glyphicon glyphicon-plane" ></span>
-                  <div class="fly" id="glyph-text">رحلات طيران</div>
-                   <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="vdivider">
-            <a onclick="FC_ContentsCall('sub_boardingpass','')" href="#">
-              <span class="glyphicon glyphicon-qrcode" id="glyph-text"></span>
-              <div class="scan" id="glyph-text">مسح الصعود تمريرة الخاص بك</div>
-
-            </a>
-            </li>
-            
-            <li class="vdivider">
-              <a onclick="FC_ContentsCall('sub_terminalmap','')" href="#">
-                <span class="glyphicon glyphicon-picture" id="glyph-text"></span><div class="map" id="glyph-text">خريطة المحطة الطرفية</div>
-              </a>
-            </li>
-            <li class="dropdown vdivider">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="glyphicon glyphicon-pushpin" id="glyph-text"></span>              <div class="lang" id="glyph-text">Change Language<span class="caret"></span></div>
-
-               </a>
-              <ul class="dropdown-menu">
-                <li class = "active">
-                  <a id="change-ar" href = "#">
-                    <img class="flag" src="../../images/flags/arabia.png">
-                  </a>
-                </li>
-                <li><a id="change-us" value="de" href="#"><img class="flag" src="../../images/flags/us.png"></a></li>
-              </ul>
-            </li>
-            <li class="vdivider"></li>
-          </ul>
-        </div>
-      </div>
-    </nav>-->
-
+    
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #4A32A4;">
       <div class="col-sm-4" style=" border-top: 62px solid #4A32A4;border-right: 36px solid #ffffff00;">
@@ -471,24 +431,27 @@ li.even{background-color: #f3ebf9;}
                   <div class="part1" style="">
                     <div id="leftmenu" >
                       <h3 id="restau">مطاعم</h3>
+                        
                         <img class="eat-icon" src="photo/eat-icon.png">
                         <ul class="list1">
-                          <li class="odd"><a id="c3" href="#">ستاربكس 1</a></li>
-                          <li class="even"><a id="c4" href="#">المقاتل</a></li>
-                          <li class="odd"><a id="c5" href="#">ماما روتي كافيه</a></li>
-                          <li class="even">
-                            <a id="c6" href="#">كاريبو، بني اللون</a>
-                            <ul class="list2">
-                              <li class="odd"><a id="c61" href="#">Idli.com</a></li>
-                              <li class="even"><a id="c62" href="#">Curry Kitchen</a></li>
-                              <li class="odd"><a id="c63" href="#">Automatic</a></li>
-                            </ul>
-
-                          </li>
-                          <li class="odd"><a id="c7" href="#">قهوة واين</a></li>
-                          <li class="even"><a id="c8" href="#">دنكن "للكعك المقلي</a></li>
-                          <li class="odd"><a id="c9" href="#">قهوة جافا</a></li>
-                          <li class="even"><a id="c10" href="#">ستاربكس 2</a></li>
+                          <li class="odd"><a id="c3" href="#">KFC</a></li>
+                          <li class="even"><a id="c4" href="#">McDonalds</a></li>
+                          <li class="odd"><a id="c5" href="#">Spice Kitchen</a></li>
+                          <li class="even"><a id="c6" href="#">Plenty</a></li>
+                           
+                          <li class="odd"><a id="c61" href="#">Noor</a></li>
+                          <li class="even"><a id="c62" href="#">Tickerdaze</a></li>
+                          <li class="odd"><a id="c63" href="#">Luna</a></li>
+                          
+                          <li class="even"><a id="c7" href="#">Mazoon</a></li>
+                          <li class="odd"><a id="c8" href="#">Café Nero</a></li>
+                          <li class="even"><a id="c9" href="#">Caribou Coffee</a></li>
+                          <li class="odd"><a id="c10" href="#">Qahwaji Coffee</a></li>
+                          <li class="even"><a id="c11" href="#">Travelers Club</a></li>
+                          <li class="odd"><a id="c12" href="#">Cakes & Bakes</a></li>
+                          <li class="even"><a id="c13" href="#">Seaside Park</a></li>
+                          <li class="odd"><a id="c14" href="#">Prime Class Lounge</a></li>
+                          <li class="even"><a id="c15" href="#">Aerotel Muscat Hotel</a></li>
                         </ul>  
                     </div>
                   </div>
@@ -503,8 +466,8 @@ li.even{background-color: #f3ebf9;}
                         <div id="title"></div>
                         <!--<div id="location"> </div>-->
                         <div id="desc"></div>
-                        <button type="button" id="btn" class="btn btn-success" dir="">View Menu</button>
-                        <button type="button" id="mapBtn" class="btn btn-success" dir="">Map</button>
+                        <button type="button" id="btn" class="btn btn-success" dir="">القائمة</button>
+                        <button type="button" id="mapBtn" class="btn btn-success" dir="">الخريطة</button>
                       </div>
 
                   </div>
