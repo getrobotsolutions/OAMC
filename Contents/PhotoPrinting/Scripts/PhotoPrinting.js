@@ -14,8 +14,8 @@ function JSMain()
     // FaceTracking Off & 실시간 카메라 영상 디스플레이
 	if (isRobot) 
     {
-        window.external.StartFaceTracking(false);
-        window.external.InitPose();
+        //window.external.StartFaceTracking(false);
+        //window.external.InitPose();
         
         window.external.StartCamViewer();    
         refreshIntervalId = setInterval("UpdateCamImage()", 33);
