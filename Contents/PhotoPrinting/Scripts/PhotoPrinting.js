@@ -21,7 +21,11 @@ function JSMain()
         refreshIntervalId = setInterval("UpdateCamImage()", 33);
     }
 }
-
+function GoHome()
+{
+    //if(flagPictureAvatar == "true")   DeleteRobotFace();  //사진 아바타 삭제
+    location.href = "../../maincontents.htm";
+}
 function JSUnload() 
 {
 	if (isRobot)
