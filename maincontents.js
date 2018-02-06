@@ -65,7 +65,7 @@ function FC_ContentsCall(strContentsName, strLanguage)
 	//[포토 프린트 서비스]---
 	if(strContentsName == "PhotoPrinting")   
 	{
-		location.href = "Contents/PhotoPrinting/PhotoPrinting.htm";
+		location.href = "Contents/PhotoPrinting/index.html";
 	}
 	//[음성인식 서비스]---
 	if(strContentsName == "RobotDance")   
