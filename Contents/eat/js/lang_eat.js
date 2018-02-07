@@ -32,8 +32,8 @@ $(document).ready(function(){
     $('.bdy #title').text("قهوة كاريبو.");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("اشهى قطع الدجاج المقلية لمن لا يملك الوقت الكافي للحاق بالطائرة.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
+    //$("#btn").show();
+    //$("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
     $("#mapBtn").attr('dir','photo/maps/aribou-Coffee.jpg');
     $("#mapBtn").show();
   });
@@ -42,8 +42,8 @@ $(document).ready(function(){
                 $('.bdy #title').text("كوستا");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("لمحبي البرجر والماكولات السريعة، استمتع بمذاق ماكدونالدز الشهي مع حركة  الطائرات");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/costa-drinks.png');
+                //$("#btn").show();
+                //$("#btn").attr('dir','photo/costa-drinks.png');
                 $("#mapBtn").show();
                 
               });
@@ -52,8 +52,8 @@ $(document).ready(function(){
                 $('.bdy #title').text("دي كيو جريل اند تشيل");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("لمحبي الماكولات الهندية والحارة، ندعوكم للاستمتاع بالطعام في ردهة المطاعم.");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/dq-menu-prices.png');
+                //$("#btn").show();
+                //$("#btn").attr('dir','photo/dq-menu-prices.png');
                 $("#mapBtn").show();
               });
               $('#c6').click(function(){
@@ -86,8 +86,8 @@ $(document).ready(function(){
                 $('.bdy #title').text("البيت الإيرلندي/ ذا ايريش هاوس");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("قهوة عالمية وعالية الجودة لاجلك");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/irish-menu.png');
+                //$("#btn").show();
+                //$("#btn").attr('dir','photo/irish-menu.png');
                 $("#mapBtn").show();
                 
               });
@@ -102,8 +102,7 @@ $(document).ready(function(){
                 $('.bdy #title').text("صدف");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("محبي الكافيين؟ اشحن طاقتاتك بقهوة كاريبو");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/sadaf-menu.png');
+                
                 $("#mapBtn").show();
               });
               $('#c10').click(function(){
@@ -111,8 +110,7 @@ $(document).ready(function(){
                 $('.bdy #title').text("صبواي");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("كافيه عماني تقليدي مع القهوة العمانية المشهورة وفرصة لتذوق عمان قبل مغادرة مسقط");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/menu/subway-ar.png');
+                
               
               });
               $('#c11').click(function(){
@@ -120,8 +118,7 @@ $(document).ready(function(){
                 $('.bdy #title').text("صبواي");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("كافيه مع كراسي مريحة وفرصة للتمتع بالخفائف");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/menu/subway-ar.png');
+               
               
               });
               $('#c12').click(function(){
@@ -129,8 +126,7 @@ $(document).ready(function(){
                 $('.bdy #title').text("صبواي");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("كافيه وموقع لافضل المعجنات بمطار مسقط الدولي.");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/menu/subway-ar.png');
+                
               
               });
               $('#c13').click(function(){
@@ -138,8 +134,7 @@ $(document).ready(function(){
                 $('.bdy #title').text("صبواي");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("جنة الاطفال للترفيه عنهم ولتغذيهم بافضل الاطعمة الصحية لهم.");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/menu/subway-ar.png');
+                
               
               });
               $('#c14').click(function(){
@@ -147,18 +142,14 @@ $(document).ready(function(){
                 $('.bdy #title').text("صبواي");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("استرخي، تناول وغيره، استمتع بافضل صالة كبار الشخصيات وانت في مكان واحد.");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/menu/subway-ar.png');
+               
               
               });
               $('#c10').click(function(){
                 $('.part2 #icon').attr("src","photo/Subway.jpg");
                 $('.bdy #title').text("صبواي");
                 $('.bdy #location').text("Location:");
-                $('.bdy #desc').text("هل لديك وقت طويل حتى موعد رحلتلك القادمة وتريد النوم بدون اي ازعاج؟ ما عليك الا ان تقوم بزيارة فندق ايروتل مسقط للراحة او السباحة في حوض داخل الفندق.");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/menu/subway-ar.png');
-              
+                $('.bdy #desc').text("هل لديك وقت طويل حتى موعد رحلتلك القادمة وتريد النوم بدون اي ازعاج؟ ما عليك الا ان تقوم بزيارة فندق ايروتل مسقط للراحة او السباحة في حوض داخل الفندق.");              
               });
               
 

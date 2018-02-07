@@ -31,8 +31,7 @@ $(document).ready(function(){
     $('.bdy #title').text("KFC");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("well known fried chicken concept for the best taste and if you are in hurry.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
+    
     $("#mapBtn").attr('dir','photo/maps/aribou-Coffee.jpg');
     $("#mapBtn").show();
   });
@@ -41,8 +40,7 @@ $(document).ready(function(){
     $('.bdy #title').text("McDonalds");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("for burger and fast food lovers, enjou mcdonalds with movement of planes next to you.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/costa-drinks.png');
+   
     $("#mapBtn").show();
                 
   });
@@ -51,8 +49,7 @@ $(document).ready(function(){
     $('.bdy #title').text("Spice Kitchen");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Indian Cuisine in a fast food concept for spicy food lovers.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/dq-menu-prices.png');
+   
     $("#mapBtn").show();
   });
   $('#c6').click(function(){
@@ -85,8 +82,7 @@ $(document).ready(function(){
     $('.bdy #title').text("Mazoon");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Café with premium coffee just for you and your palates");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/irish-menu.png');
+   
     $("#mapBtn").show();             
   });
   $('#c8').click(function(){
@@ -100,8 +96,7 @@ $(document).ready(function(){
     $('.bdy #title').text("Caribou Coffee");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("ACaffeine Junkie? Boost your energy with Caribou Coffee");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/sadaf-menu.png');
+   
     $("#mapBtn").show();
   });
   $('#c10').click(function(){
@@ -109,48 +104,42 @@ $(document).ready(function(){
     $('.bdy #title').text("Qahwaji Coffee");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Traditional Omani Café with best Omani Coffee and a chance to taste Oman before leaving Muscat.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/menu/subway-en.png');
   });
+   
   $('#c11').click(function(){
     $('.part2 #icon').attr("src","photo/Subway.jpg");
     $('.bdy #title').text("Travelers Club");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Café with relaxing seating to sip your coffee and enjoy your snacks.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/menu/subway-en.png');
+   
   });
   $('#c12').click(function(){
     $('.part2 #icon').attr("src","photo/Subway.jpg");
     $('.bdy #title').text("Cakes & Bakes");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Bakery and café for pasty lovers");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/menu/subway-en.png');
+   
   });
   $('#c13').click(function(){
     $('.part2 #icon').attr("src","photo/Subway.jpg");
     $('.bdy #title').text("Seaside Park");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("kids heaven and amazing play ground and snacks.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/menu/subway-en.png');
+    
   });
   $('#c14').click(function(){
     $('.part2 #icon').attr("src","photo/Subway.jpg");
     $('.bdy #title').text("Prime Class Lounge");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("CIP Passenger? Relax, dine, nap, shower, play and more in our world class lounge.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/menu/subway-en.png');
+   
   });
   $('#c15').click(function(){
     $('.part2 #icon').attr("src","photo/Subway.jpg");
     $('.bdy #title').text("Aerotel Muscat Hotel");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("have long layover or want to sleep without any disturbance? Then visit Aerotel Muscat and you will enjoy the best rooms or swim in an In-Door swimming pool.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/menu/subway-en.png');
+   
   });
               
 
