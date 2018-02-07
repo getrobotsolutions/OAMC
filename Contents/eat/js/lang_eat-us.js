@@ -17,107 +17,148 @@ $(document).ready(function(){
 
   });
 
-  $('#c3').text("Caribou Coffee");
-  $('#c4').text("Costa Coffee");
-  $('#c5').text("DQ Grill & Chill");
-  $('#c6').text("Food Court");
+  /*$('#restau').text("Restaurants");
+  $('#c3').text("KFC");
+  $('#c4').text("McDonalds");
+  $('#c5').text("Spice Kitchen");
+  $('#c6').text("Plenty");
   $('#c7').text("The Irish House");
   $('#c8').text("Moka & More");
   $('#c9').text("Sadaf");
-  $('#c10').text("Subway");
+  $('#c10').text("Subway");*/
                 
   $('#c3').click(function(){
     $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
-    $('.bdy #title').text("Caribou Coffee");
+    $('.bdy #title').text("KFC");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Place for an amazing coffee and relaxing area before your flight. ");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
+    $('.bdy #desc').text("well known fried chicken concept for the best taste and if you are in hurry.");
+    
+
     $("#mapBtn").attr('dir','photo/maps/aribou-Coffee.jpg');
     $("#mapBtn").show();
   });
   $('#c4').click(function(){
     $('.part2 #icon').attr("src","photo/Costa Coffee.jpg");
-    $('.bdy #title').text("Costa Coffee");
+
+    $('.bdy #title').text("McDonalds");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Coffee lover? Don’t miss costa fresh coffee and lattes. Machiato and cortos for flavor lovers.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/costa-drinks.png');
+    $('.bdy #desc').text("for burger and fast food lovers, enjou mcdonalds with movement of planes next to you.");
+   
+
     $("#mapBtn").show();
                 
   });
   $('#c5').click(function(){
     $('.part2 #icon').attr("src","photo/DQ Grill & Chill.jpg");
-    $('.bdy #title').text("DQ Grill & Chill");
+
+    $('.bdy #title').text("Spice Kitchen");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Fast food treat with burgers and fries. Enjoy amazing ice-cream with a dare that you will come back for it.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/dq-menu-prices.png');
+    $('.bdy #desc').text("Indian Cuisine in a fast food concept for spicy food lovers.");
+   
+
     $("#mapBtn").show();
   });
   $('#c6').click(function(){
     $('.part2 #icon').attr("src","photo/Food Court.jpg");
-    $('.bdy #title').text("Idli.com");
+
+    $('.bdy #title').text("Plenty");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("South Indian food and for those who love pure vegetarian food");
-    $('.list2').toggle();
+    $('.bdy #desc').text("Healthy Concious? We have what you need. Just drop in and you calories will be maintained by us.");
+    //$('.list2').toggle();
   });
   $('#c61').click(function(){
     $('.part2 #icon').attr("src","photo/Food Court.jpg");
-    $('.bdy #title').text("Idli.com");
+    $('.bdy #title').text("Noor");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("South Indian food and for those who love pure vegetarian food");
+    $('.bdy #desc').text("Fine Arabic Cuisine, enjoy the breathtaking food and decoration where your eyes will love the food before your palates.");
   });
   $('#c62').click(function(){
     $('.part2 #icon').attr("src","photo/Food Court.jpg");
-    $('.bdy #title').text("Curry Kitchen");
+    $('.bdy #title').text("Tickerdaze");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Northern Indian cuisine for those who love spicy food.");
+    $('.bdy #desc').text("casual dinning with sports and bubbly beverages. Enjoy matches before boarding you fligth.");
   });
   $('#c63').click(function(){
     $('.part2 #icon').attr("src","photo/Food Court.jpg");
-    $('.bdy #title').text("Automatic");
+    $('.bdy #title').text("Luna");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Lebnanese restaurant serving you Arabic cuisine in the fast food way.");
+    $('.bdy #desc').text("ala cart Tapas Restaurant with Fine Beverages and quite zones with beautiful view of Muscat Beaches.");
   });
   $('#c7').click(function(){
     $('.part2 #icon').attr("src","photo/The Irish House.jpg");
-    $('.bdy #title').text("The Irish House");
+    $('.bdy #title').text("Mazoon");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Relax with fine dining and bubbly beverages. A treat for your stomach.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/irish-menu.png');
+    $('.bdy #desc').text("Café with premium coffee just for you and your palates");
+
     $("#mapBtn").show();             
   });
   $('#c8').click(function(){
     $('.part2 #icon').attr("src","photo/Moka & More.jpg");
-    $('.bdy #title').text("Moka & More");
+
+    $('.bdy #title').text("Café Nero");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Treat yourself with coffee and tasteful pastries with varieties of pastries.");
+    $('.bdy #desc').text("want to try the best coffee? Visit Café Nero and you will not regret it");
   });
   $('#c9').click(function(){
     $('.part2 #icon').attr("src","photo/Sadaf.jpg");
-    $('.bdy #title').text("Sadaf");
+    $('.bdy #title').text("Caribou Coffee");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Authentic Iranian buffet restaurant and sweets. ");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/sadaf-menu.png');
+    $('.bdy #desc').text("ACaffeine Junkie? Boost your energy with Caribou Coffee");
+   
+
     $("#mapBtn").show();
   });
   $('#c10').click(function(){
     $('.part2 #icon').attr("src","photo/Subway.jpg");
-    $('.bdy #title').text("Subway");
+
+    $('.bdy #title').text("Qahwaji Coffee");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Looking for a healthy option? Subway gives you the best sandwiches and fresh toppings of your choice. ");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/menu/subway-en.png');
+    $('.bdy #desc').text("Traditional Omani Café with best Omani Coffee and a chance to taste Oman before leaving Muscat.");
+  });
+   
+  $('#c11').click(function(){
+    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.bdy #title').text("Travelers Club");
+    $('.bdy #location').text("Location:");
+    $('.bdy #desc').text("Café with relaxing seating to sip your coffee and enjoy your snacks.");
+   
+  });
+  $('#c12').click(function(){
+    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.bdy #title').text("Cakes & Bakes");
+    $('.bdy #location').text("Location:");
+    $('.bdy #desc').text("Bakery and café for pasty lovers");
+   
+  });
+  $('#c13').click(function(){
+    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.bdy #title').text("Seaside Park");
+    $('.bdy #location').text("Location:");
+    $('.bdy #desc').text("kids heaven and amazing play ground and snacks.");
+    
+  });
+  $('#c14').click(function(){
+    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.bdy #title').text("Prime Class Lounge");
+    $('.bdy #location').text("Location:");
+    $('.bdy #desc').text("CIP Passenger? Relax, dine, nap, shower, play and more in our world class lounge.");
+   
+  });
+  $('#c15').click(function(){
+    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.bdy #title').text("Aerotel Muscat Hotel");
+    $('.bdy #location').text("Location:");
+    $('.bdy #desc').text("have long layover or want to sleep without any disturbance? Then visit Aerotel Muscat and you will enjoy the best rooms or swim in an In-Door swimming pool.");
+
   });
               
 
               //Change to English
               //$('#change-us').click(function(){
                
-                $('.titl1').text("Oman Airport Eat page");
+
+                /*$('.titl1').text("Oman Airport Eat page");
+
                 $('#txt1').text("Here you can discover all of our food and beverage options, where they are located, and what's on the menu.");
                 $('#txt2').text("Select a button on the down left to get started.");
 
@@ -148,7 +189,9 @@ $(document).ready(function(){
                 $('#10').text("Alfursan Lounges");
                 $('#11').text("Lounge 1");
                 $('#12').text("Lounge 2");
-                $('#btn').text("View Menu");
+
+                $('#btn').text("View Menu");*/
+
                 
             //});
 
@@ -161,20 +204,24 @@ $(document).ready(function(){
 
                     //$('#btn').hide();
                     //$('#leftmenu ul').hide();        
-                    $('#leftmenu h3,h5').click( 
-                        function() {
-                            var $this = $(this);
+
+                $('#leftmenu h3,h5').click( 
+                  function() {
+                    var $this = $(this);
+
                             /*$this.next('ul').siblings('ul').slideUp();
                             $this.next('ul').find('ul').slideUp();
                             $this.next().slideToggle(300); */
                     });
-                $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
-                $('.bdy #title').text("Caribou Coffee");
-                $('.bdy #location').text("Location:");
-                $('.bdy #desc').text("Place for an amazing coffee and relaxing area before your flight. ");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
-                $("#mapBtn").show();
+
+    $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
+    $('.bdy #title').text("KFC");
+    $('.bdy #location').text("Location:");
+    $('.bdy #desc').text("well known fried chicken concept for the best taste and if you are in hurry.");
+    $("#btn").show();
+    $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
+    $("#mapBtn").show();
+
 
          /* function display(data)
           { 

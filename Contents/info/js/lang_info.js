@@ -397,7 +397,9 @@ $(document).ready(function() {
             $.ajax({
               type: "GET",
 
-              url: "http://localhost/json/json.json",
+
+              url: "https://api.myjson.com/bins/yxdsx",
+
             
               dataType: "JSON",
               success: function(data) {

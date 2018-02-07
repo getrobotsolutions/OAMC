@@ -12,7 +12,9 @@
 
               $('#s1').click(function(){
                 $('.part2 #icon').attr("src","photo/Amouage.jpg");
-                $('.bdy #title').text("Amouage");
+
+                $('.bdy #title').text("Electronics");
+
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Shop now!! And enjoy the International, luxury, innovative fragrances that pay tribute to the art of fine perfume making.");
                 $("#mapBtn").show();
@@ -20,7 +22,9 @@
               });
               $('#s2').click(function(){
                 $('.part2 #icon').attr("src","photo/La Moda.jpg");
-                $('.bdy #title').text("La Moda");
+
+                $('.bdy #title').text("Muscat Duty Free");
+
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("La Moda Sunglasses is now one of the largest and the fastest growing sunglass. The La Moda brand promises to redefine the luxury eyewear shopping experience forever and to provide the best customer experience to all.");
                   $("#mapBtn").show();
@@ -28,7 +32,9 @@
               });
               $('#s3').click(function(){
                 $('.part2 #icon').attr("src","photo/Le Tabac.jpg");
-                $('.bdy #title').text("Le Tabac");
+
+                $('.bdy #title').text("Hugo Boss");
+
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Be the first to experience our fine tobacco blends, high-end and outstanding selection of cigars and cigarettes.");
               $("#mapBtn").show();
@@ -36,7 +42,9 @@
               });
               $('#s4').click(function(){
                 $('.part2 #icon').attr("src","photo/Lacoste.jpg");
-                $('.bdy #title').text("Lacoste");
+
+                $('.bdy #title').text("Michael Kors");
+
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Polo lover? Enjoy the elegant and sportswear shopping collection from clothing, shoes, watches and bags");
               });
