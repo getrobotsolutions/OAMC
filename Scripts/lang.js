@@ -44,8 +44,9 @@
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
+
                 $('#content_info').text("INFORMATION");
-                $('#content_map').html("TERMINAL MAP");
+
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
                 $('#content_avatar').text("CHANGE AVATAR");
@@ -74,8 +75,10 @@
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
+
                 $('#content_info').text("INFORMATION");
                 $('#content_map').html("TERMINAL MAP");
+
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
                 $('#content_avatar').text("CHANGE AVATAR");

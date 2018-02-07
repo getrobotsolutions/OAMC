@@ -16,6 +16,7 @@ $(document).ready(function(){
     //$("$list1").show();
 
   });
+
   /*$('#restau').text("Restaurants");
   $('#c3').text("KFC");
   $('#c4').text("McDonalds");
@@ -32,28 +33,34 @@ $(document).ready(function(){
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("well known fried chicken concept for the best taste and if you are in hurry.");
     
+
     $("#mapBtn").attr('dir','photo/maps/aribou-Coffee.jpg');
     $("#mapBtn").show();
   });
   $('#c4').click(function(){
     $('.part2 #icon').attr("src","photo/Costa Coffee.jpg");
+
     $('.bdy #title').text("McDonalds");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("for burger and fast food lovers, enjou mcdonalds with movement of planes next to you.");
    
+
     $("#mapBtn").show();
                 
   });
   $('#c5').click(function(){
     $('.part2 #icon').attr("src","photo/DQ Grill & Chill.jpg");
+
     $('.bdy #title').text("Spice Kitchen");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Indian Cuisine in a fast food concept for spicy food lovers.");
    
+
     $("#mapBtn").show();
   });
   $('#c6').click(function(){
     $('.part2 #icon').attr("src","photo/Food Court.jpg");
+
     $('.bdy #title').text("Plenty");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Healthy Concious? We have what you need. Just drop in and you calories will be maintained by us.");
@@ -82,11 +89,12 @@ $(document).ready(function(){
     $('.bdy #title').text("Mazoon");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Café with premium coffee just for you and your palates");
-   
+
     $("#mapBtn").show();             
   });
   $('#c8').click(function(){
     $('.part2 #icon').attr("src","photo/Moka & More.jpg");
+
     $('.bdy #title').text("Café Nero");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("want to try the best coffee? Visit Café Nero and you will not regret it");
@@ -97,10 +105,12 @@ $(document).ready(function(){
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("ACaffeine Junkie? Boost your energy with Caribou Coffee");
    
+
     $("#mapBtn").show();
   });
   $('#c10').click(function(){
     $('.part2 #icon').attr("src","photo/Subway.jpg");
+
     $('.bdy #title').text("Qahwaji Coffee");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Traditional Omani Café with best Omani Coffee and a chance to taste Oman before leaving Muscat.");
@@ -139,14 +149,16 @@ $(document).ready(function(){
     $('.bdy #title').text("Aerotel Muscat Hotel");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("have long layover or want to sleep without any disturbance? Then visit Aerotel Muscat and you will enjoy the best rooms or swim in an In-Door swimming pool.");
-   
+
   });
               
 
               //Change to English
               //$('#change-us').click(function(){
                
+
                 /*$('.titl1').text("Oman Airport Eat page");
+
                 $('#txt1').text("Here you can discover all of our food and beverage options, where they are located, and what's on the menu.");
                 $('#txt2').text("Select a button on the down left to get started.");
 
@@ -177,7 +189,9 @@ $(document).ready(function(){
                 $('#10').text("Alfursan Lounges");
                 $('#11').text("Lounge 1");
                 $('#12').text("Lounge 2");
+
                 $('#btn').text("View Menu");*/
+
                 
             //});
 
@@ -190,13 +204,16 @@ $(document).ready(function(){
 
                     //$('#btn').hide();
                     //$('#leftmenu ul').hide();        
+
                 $('#leftmenu h3,h5').click( 
                   function() {
                     var $this = $(this);
+
                             /*$this.next('ul').siblings('ul').slideUp();
                             $this.next('ul').find('ul').slideUp();
                             $this.next().slideToggle(300); */
                     });
+
     $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
     $('.bdy #title').text("KFC");
     $('.bdy #location').text("Location:");
@@ -204,6 +221,7 @@ $(document).ready(function(){
     $("#btn").show();
     $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
     $("#mapBtn").show();
+
 
          /* function display(data)
           { 
