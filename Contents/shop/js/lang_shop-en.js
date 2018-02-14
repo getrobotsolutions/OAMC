@@ -21,7 +21,7 @@
     $("#mapBtn").attr('dir','photo/maps/map.jpg');
   });
   $('#s2').click(function(){
-    $('.part2 #icon').attr("src","photo/La Moda.jpg");
+    $('.part2 #icon').attr("src","photo/LTC.png");
 
     $('.bdy #title').text("LTC (Liquor, Tobacco and Confectionary)");
 
@@ -39,7 +39,7 @@
     $("#mapBtn").attr('dir','photo/maps/map.jpg');
   });
   $('#s4').click(function(){
-    $('.part2 #icon').attr("src","photo/Lacoste.jpg");
+    $('.part2 #icon').attr("src","photo/p-and-c.png");
     $('.bdy #title').text("Perfume and Cosmetics ");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>This area is divided into two main kidney shaped footprints with defined passenger walkways and a circular central feature measuring 900sqm.</p><p>Four destination brands, Chanel, Estee Lauder, Lancôme and Christian Dior will be the iconic footprints at each of the entrances.</p><p>Within the perfume area you will find the Essence of Oman, a multi sensorial area of approximately 90sqm drawing strongly from the influences of the Frankincense of Oman to the scents of Arabia. It includes elements that tell the story of the history of fragrance and its roots in Oman and Arabia, with local, natural fragrance ingredients such as Frankincense, Myrrh, Rose petals, Oud chips, and Jasmine petals (refreshed daily) for customers to touch and smell.</p>");
@@ -51,13 +51,13 @@
     $('.bdy #desc').html("<p>The Amouage brand is the number 1 fragrance brand in Muscat Duty Free and we have dedicated a 100sqm to this flagship store concept.</p><p>The store sells Men’s, Women’s and Unisex Fragrances, deluxe bath and body lines, home fragrances and a newly developed Italian leather accessories range.</p>");
   });
   $('#s6').click(function(){
-    $('.part2 #icon').attr("src","photo/Travelex.jpg");
+    $('.part2 #icon').attr("src","photo/fashion-jewelry.png");
     $('.bdy #title').text("Fashion Jewellery");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("With this well designed self-service solution and friendly, expert in store staff we have created a memorable experience for passengers with international brands Swarovski, Pandora and Tous.");
   });
   $('#s7').click(function(){
-                $('.part2 #icon').attr("src","photo/Ooredoo.jpg");
+                $('.part2 #icon').attr("src","photo/kids-kingdom.png");
                 $('.bdy #title').text("Kids Kingdom");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("This store is an unexpected delight for passengers of all ages, no matter what type of trip they are on. The store will stock classic toy favourites from brands such as Lego, Mattel and Disney. The key feature in this store is our life size Sinbad Sailor made entirely of Lego located on our Omani Dhow. The store will also include an interactive environment offering kids a fun in store experience while their parents shop");
@@ -81,7 +81,7 @@
                 $('.bdy #desc').text("Located in the baggage hall before Customs you will find a 665sqm store that will cater to all international arriving passengers. The area contains a high profile Shop & Collect pick point, positioned for ease of sight for returning resident shoppers. The store also stocks international brands across categories such as liquor, tobacco, fragrances and confectionary. Our Arrivals store also includes a walk in Cigar Humidor and a delicatessen area which will include a refrigerated gourmet food section including premium products from Europe and around the world that are not easily found in Oman.");
               });
               $('#s11').click(function(){
-                $('.part2 #icon').attr("src","photo/Muscat Duty Free – Last Minute Shop.jpg");
+                $('.part2 #icon').attr("src","photo/luxury-fashion-avenue.png");
                 $('.bdy #title').text("Luxury Fashion Avenue");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Our luxury fashion avenue concept contains Mont Blanc alongside a multi branded area including Tumi, Porsche Design, Tatossian and Tag Heuer, located within this area is also our luxury watches area. This leads into our Ralph Lauren store followed by Hugo Boss and then Michael Kors.");

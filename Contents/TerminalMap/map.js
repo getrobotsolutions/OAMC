@@ -4,21 +4,23 @@ jQuery(function () {
 
 $(document).ready(function(){
 				//Change to English
-              //$('#change-us').click(function(){
+              $('#change-us').click(function(){
 
-           		$('#txt0').text("First Floor");
-                $('#txt1').text("Ground Floor");
-                $('#txt2').text("Second Floor");
+           		$('#txt0').text("Passenger Terminal Building Arrivals | level 01");
+                $('#txt1').text("Passenger Terminal Building Departure | level 02");
+                $('#txt2').text("South Pier Departure | Level 02");
+                $('#txt3').text("North Pier Departure | Level 02");
+                
 
-              //});
+              });
 
 
               	//Change to English
               $('#change-ar').click(function(){
-
-              	$('#txt0').text("قبو");
-                $('#txt1').text("الطابق الأرضي");
-                $('#txt2').text("الطابق الثاني");
+              	$('#txt0').text("مبنى الركاب مبنى الوصول | ليفيل 01");
+                $('#txt1').text("مبنى الركاب مبنى المغادرة | المستوى 02");
+                $('#txt2').text("جنوب الرصيف المغادرة | المستوى 02");
+                $('#txt3').text("الرصيف الشمالي | المستوى 02");
 
               });
 

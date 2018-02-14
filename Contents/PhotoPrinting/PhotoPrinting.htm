@@ -35,6 +35,15 @@
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
   PlaySpeech("Its time to smile.");
+  $(document).ready(function(){
+  $("*").dblclick(function(e){
+        e.preventDefault();
+  });
+  $("#panel2").hide();
+$('#change-ar').click(function(){
+    $('body').css('background-image','url(Image/photo_bg_ar.png)');
+  });
+});
 </script>
     
 <style>
