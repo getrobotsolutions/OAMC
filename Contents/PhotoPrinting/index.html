@@ -50,6 +50,24 @@
     height: 66px;
 }
   </style>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		$('#change-ar').click(function(){
+    		$('body').css('background-image','url(Image/photo_bg_ar.png)');
+    		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
+    		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
+    		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
+    		
+  		});
+  		$('#change-us').click(function(){
+    		$('body').css('background-image','url(Images/photo_bg.png)');
+    		$("#email-photo").attr("src","images/btn_nor_email_en-us.png");
+    		$("#retake-photo").attr("src", "images/btn_nor_retake_en-us.png");
+    		$("#btn_start").attr("src","images/start_btn_nor_en-us.png");
+    		
+  		});
+	});
+  </script>
 </head>
 
 <body onload="JSMain()" onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
@@ -98,9 +116,9 @@
 				</div>
 				
 				<ul class="photo_btn">
-					<li><img src="Images/btn_nor_email_en-us.png" alt="이메일보내기" onclick="ShowKeyboard()"></li>
+					<li><img src="Images/btn_nor_email_en-us.png" id="email-photo" alt="이메일보내기" onclick="ShowKeyboard()"></li>
 					<li><!--<img src="Images/btn_nor_print_en-us.png" alt="포토프린트" onclick="PrintPhoto()">--></li>
-					<li><img src="Images/btn_nor_retake_en-us.png" alt="다시촬영하기" onclick="Retake()"></li>
+					<li><img src="Images/btn_nor_retake_en-us.png" id="retake-photo" alt="다시촬영하기" onclick="Retake()"></li>
 				</ul>
 				<dl class="photo_frame">
 					<dd><img src="Images/btn_frame01.png" alt="프레임1" onclick="SelectFrame(1)"></dd>
