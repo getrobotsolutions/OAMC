@@ -45,7 +45,7 @@
     $('.bdy #desc').html("<p>This area is divided into two main kidney shaped footprints with defined passenger walkways and a circular central feature measuring 900sqm.</p><p>Four destination brands, Chanel, Estee Lauder, Lancôme and Christian Dior will be the iconic footprints at each of the entrances.</p><p>Within the perfume area you will find the Essence of Oman, a multi sensorial area of approximately 90sqm drawing strongly from the influences of the Frankincense of Oman to the scents of Arabia. It includes elements that tell the story of the history of fragrance and its roots in Oman and Arabia, with local, natural fragrance ingredients such as Frankincense, Myrrh, Rose petals, Oud chips, and Jasmine petals (refreshed daily) for customers to touch and smell.</p>");
   });
   $('#s5').click(function(){
-    $('.part2 #icon').attr("src","photo/Amouage.jpg");
+    $('.part2 #icon').attr("src","photo/amounge.png");
     $('.bdy #title').text("Amouage Boutique");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>The Amouage brand is the number 1 fragrance brand in Muscat Duty Free and we have dedicated a 100sqm to this flagship store concept.</p><p>The store sells Men’s, Women’s and Unisex Fragrances, deluxe bath and body lines, home fragrances and a newly developed Italian leather accessories range.</p>");
@@ -75,7 +75,7 @@
                 $('.bdy #desc').text("The pier stores act as a last minute opportunity for passengers to purchase Duty Free products including Liquor, tobacco, fragrances and top selling gifting and snacking packs of confectionary.");
               });
               $('#s10').click(function(){
-                $('.part2 #icon').attr("src","photo/Muscat Pharmacy.jpg");
+                $('.part2 #icon').attr("src","photo/arrivals.png");
                 $('.bdy #title').text("Arrivals Store");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Located in the baggage hall before Customs you will find a 665sqm store that will cater to all international arriving passengers. The area contains a high profile Shop & Collect pick point, positioned for ease of sight for returning resident shoppers. The store also stocks international brands across categories such as liquor, tobacco, fragrances and confectionary. Our Arrivals store also includes a walk in Cigar Humidor and a delicatessen area which will include a refrigerated gourmet food section including premium products from Europe and around the world that are not easily found in Oman.");
@@ -87,13 +87,13 @@
                 $('.bdy #desc').text("Our luxury fashion avenue concept contains Mont Blanc alongside a multi branded area including Tumi, Porsche Design, Tatossian and Tag Heuer, located within this area is also our luxury watches area. This leads into our Ralph Lauren store followed by Hugo Boss and then Michael Kors.");
               });
               $('#s12').click(function(){
-                $('.part2 #icon').attr("src","photo/mac.jpg");
+                $('.part2 #icon').attr("src","photo/high-street-fashion.png");
                 $('.bdy #title').text("High Street Fashion");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Our High Street Fashion area includes a multi brand store stocking international fashion brands such as Lacoste, Cerruti, Hackett and Vilebrequin to name but a few. This store then leads into our sports store catering to the outdoor enthusiast with brands such as North Face and Columbia. Located next door you will find our Victoria’s Secrets and Pandora stores.");
               });
                $('#s13').click(function(){
-                $('.part2 #icon').attr("src","photo/elctronics.png");
+                $('.part2 #icon').attr("src","photo/spectrum.png");
                 $('.bdy #title').text("Sunglasses");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').html("Our Spectrum Sunglasses concept store caters to the needs of the international, brand savvy, style conscious traveler who wishes to indulge in an accessible luxury or lifestyle accessory. </br>Spectrum supplies an array of the most iconic and up to date fashionable luxury styles, while also providing cutting edge high performance technology eyewear");

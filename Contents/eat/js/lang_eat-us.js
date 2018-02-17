@@ -5,7 +5,7 @@ $(document).ready(function(){
       return false;
     });
   $("#btn").hide();
-  $("#mapBtn").hide();
+  //$("#mapBtn").hide();
   $("#btn").click(function () {
     ShowPopup($("#btn").attr('dir'));
     //$("$list1").show();
@@ -28,7 +28,7 @@ $(document).ready(function(){
   $('#c10').text("Subway");*/
                 
   $('#c3').click(function(){
-    $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
+    $('.part2 #icon').attr("src","photo/KFC_logo.png");
     $('.bdy #title').text("KFC");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("well known fried chicken concept for the best taste and if you are in hurry.");
@@ -38,7 +38,7 @@ $(document).ready(function(){
     $("#mapBtn").show();
   });
   $('#c4').click(function(){
-    $('.part2 #icon').attr("src","photo/Costa Coffee.jpg");
+    $('.part2 #icon').attr("src","photo/Mcdonalds.png");
 
     $('.bdy #title').text("McDonalds");
     $('.bdy #location').text("Location:");
@@ -49,7 +49,7 @@ $(document).ready(function(){
                 
   });
   $('#c5').click(function(){
-    $('.part2 #icon').attr("src","photo/DQ Grill & Chill.jpg");
+    $('.part2 #icon').attr("src","photo/spice-kitchen.png");
 
     $('.bdy #title').text("Spice Kitchen");
     $('.bdy #location').text("Location:");
@@ -59,7 +59,7 @@ $(document).ready(function(){
     $("#mapBtn").show();
   });
   $('#c6').click(function(){
-    $('.part2 #icon').attr("src","photo/Food Court.jpg");
+    $('.part2 #icon').attr("src","photo/plenty.png");
 
     $('.bdy #title').text("Plenty");
     $('.bdy #location').text("Location:");
@@ -67,25 +67,25 @@ $(document).ready(function(){
     //$('.list2').toggle();
   });
   $('#c61').click(function(){
-    $('.part2 #icon').attr("src","photo/Food Court.jpg");
+    $('.part2 #icon').attr("src","photo/noor.png");
     $('.bdy #title').text("Noor");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Fine Arabic Cuisine, enjoy the breathtaking food and decoration where your eyes will love the food before your palates.");
   });
   $('#c62').click(function(){
-    $('.part2 #icon').attr("src","photo/Food Court.jpg");
+    $('.part2 #icon').attr("src","photo/Tickerdaze.png");
     $('.bdy #title').text("Tickerdaze");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("casual dinning with sports and bubbly beverages. Enjoy matches before boarding you fligth.");
   });
   $('#c63').click(function(){
-    $('.part2 #icon').attr("src","photo/Food Court.jpg");
+    $('.part2 #icon').attr("src","photo/luna.png");
     $('.bdy #title').text("Luna");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("ala cart Tapas Restaurant with Fine Beverages and quite zones with beautiful view of Muscat Beaches.");
   });
   $('#c7').click(function(){
-    $('.part2 #icon').attr("src","photo/The Irish House.jpg");
+    $('.part2 #icon').attr("src","photo/mazoon.png");
     $('.bdy #title').text("Mazoon");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Café with premium coffee just for you and your palates");
@@ -93,14 +93,14 @@ $(document).ready(function(){
     $("#mapBtn").show();             
   });
   $('#c8').click(function(){
-    $('.part2 #icon').attr("src","photo/Moka & More.jpg");
+    $('.part2 #icon').attr("src","photo/caffe-nero.png");
 
     $('.bdy #title').text("Café Nero");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("want to try the best coffee? Visit Café Nero and you will not regret it");
   });
   $('#c9').click(function(){
-    $('.part2 #icon').attr("src","photo/Sadaf.jpg");
+    $('.part2 #icon').attr("src","photo/Caribou-Coffee.png");
     $('.bdy #title').text("Caribou Coffee");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("ACaffeine Junkie? Boost your energy with Caribou Coffee");
@@ -109,7 +109,7 @@ $(document).ready(function(){
     $("#mapBtn").show();
   });
   $('#c10').click(function(){
-    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.part2 #icon').attr("src","photo/kahwaji-cafe.png");
 
     $('.bdy #title').text("Qahwaji Coffee");
     $('.bdy #location').text("Location:");
@@ -117,35 +117,35 @@ $(document).ready(function(){
   });
    
   $('#c11').click(function(){
-    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.part2 #icon').attr("src","photo/traveler-club.png");
     $('.bdy #title').text("Travelers Club");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Café with relaxing seating to sip your coffee and enjoy your snacks.");
    
   });
   $('#c12').click(function(){
-    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.part2 #icon').attr("src","photo/cakes-&-bakes.png");
     $('.bdy #title').text("Cakes & Bakes");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Bakery and café for pasty lovers");
    
   });
   $('#c13').click(function(){
-    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.part2 #icon').attr("src","photo/seaside-park.png");
     $('.bdy #title').text("Seaside Park");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("kids heaven and amazing play ground and snacks.");
     
   });
   $('#c14').click(function(){
-    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.part2 #icon').attr("src","photo/hall.png");
     $('.bdy #title').text("Prime Class Lounge");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("CIP Passenger? Relax, dine, nap, shower, play and more in our world class lounge.");
    
   });
   $('#c15').click(function(){
-    $('.part2 #icon').attr("src","photo/Subway.jpg");
+    $('.part2 #icon').attr("src","photo/hall.png");
     $('.bdy #title').text("Aerotel Muscat Hotel");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("have long layover or want to sleep without any disturbance? Then visit Aerotel Muscat and you will enjoy the best rooms or swim in an In-Door swimming pool.");
@@ -214,13 +214,7 @@ $(document).ready(function(){
                             $this.next().slideToggle(300); */
                     });
 
-    $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
-    $('.bdy #title').text("KFC");
-    $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("well known fried chicken concept for the best taste and if you are in hurry.");
-    $("#btn").show();
-    $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
-    $("#mapBtn").show();
+ 
 
 
          /* function display(data)
