@@ -90,3 +90,14 @@ footer {
     color: white;
 }
 #change-us, #change-ar{text-decoration: none;}
+.deltext{
+
+color: white;
+    position: absolute;
+    top: 400px;
+    right: 0;
+    font-size: 44px;
+    width: 288px;
+    line-height: 41px;
+    text-align: center;
+    }

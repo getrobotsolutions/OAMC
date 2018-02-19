@@ -13,6 +13,8 @@ var deletePicNor="Image/Avatar_delete_nor_ar.png";
 
 	$('#change-us').click(function(){
 		$('.title').text("Robot Avatar");
+		$('.deltext').css({"font-size":"32px", "line-height":"32px"});
+		$('.deltext').text("If you want to delete the Avatar now press the 'DELETE' button.")
 		$('#change-ar').css({"background":"white", "color":"#4a32a4"});
 		$('#change-us').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
 		$('#delete').attr('src','Image/Avatar_delete_none.png')
@@ -23,6 +25,8 @@ var deletePicNor="Image/Avatar_delete_nor_ar.png";
 	//Change to Arabic
 	$('#change-ar').click(function(){
 		$('.title').text("الصّورة الرّمزية");
+		$('.deltext').css({"font-size":"44px", "line-height":"31px"});
+		$('.deltext').text("إذا كنت ترغب في حذف الصورة الرمزية الآن اضغط على زر '' ديليت ''")
 		$('#change-us').css({"background":"white", "color":"#4a32a4"});
 		$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
 		$('#delete').attr('src','Image/Avatar_delete_none_ar.png')
@@ -33,7 +37,7 @@ var deletePicNor="Image/Avatar_delete_nor_ar.png";
 });
 var refreshIntervalId ;
 	function JSMain() {
-		refreshIntervalId = setInterval("test()", 33);
+		//refreshIntervalId = setInterval("test()", 33);
 		// setTimeout("Init()",3000);
 	}
 
