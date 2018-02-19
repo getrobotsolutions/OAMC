@@ -1,4 +1,5 @@
       $(document).ready(function(){
+        $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 var lan="Arabic Male";
                 
@@ -14,6 +15,7 @@
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
               if(readCookie("lang")=="arabic"){
+                $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 var lan="Arabic Male";
                 
@@ -36,7 +38,7 @@
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
                    lan="UK English Female"; 
                 $('#change-ar').css({"background":"white", "color":"#4a32a4"});
-                $(this).css({"background":"#4a32a4", "color":"white"});
+                
                 
 
                 $('#content_term').text("Terminal A");
@@ -67,7 +69,7 @@
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
                    lan="UK English Female"; 
                 $('#change-ar').css({"background":"white", "color":"#4a32a4"});
-                $(this).css({"background":"#4a32a4", "color":"white"});
+                $(this).css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 
 
                 $('#content_term').text("Terminal A");
@@ -98,7 +100,7 @@
                 lan="Arabic Male";
                 writeCookie("lang","arabic");
                 $('#change-us').css({"background":"white", "color":"#4a32a4"});
-                $(this).css({"background":"#4a32a4", "color":"white"});
+                $(this).css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
 
                 $('.fly').text("رحلات طيران");
                 $('.scan').text("مسح الصعود تمريرة الخاص بك");
