@@ -37,7 +37,7 @@ var deletePicNor="Image/Avatar_delete_nor_ar.png";
 });
 var refreshIntervalId ;
 	function JSMain() {
-		//refreshIntervalId = setInterval("test()", 33);
+		refreshIntervalId = setInterval("test()", 33);
 		// setTimeout("Init()",3000);
 	}
 
