@@ -5,7 +5,8 @@ jQuery(function () {
 $(document).ready(function(){
 				//Change to English
               $('#change-us').click(function(){
-
+                $('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');
            		$('#txt0').text("Passenger Terminal Building Arrivals | level 01");
                 $('#txt1').text("Passenger Terminal Building Departure | level 02");
                 $('#txt2').text("South Pier Departure | Level 02");
@@ -17,6 +18,8 @@ $(document).ready(function(){
 
               	//Change to English
               $('#change-ar').click(function(){
+                $('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');
               	$('#txt0').text("مبنى الركاب مبنى الوصول | ليفيل 01");
                 $('#txt1').text("مبنى الركاب مبنى المغادرة | المستوى 02");
                 $('#txt2').text("جنوب الرصيف المغادرة | المستوى 02");

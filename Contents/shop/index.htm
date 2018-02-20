@@ -19,6 +19,7 @@
     //alert("worked");
     location.href='index-en.htm';
   }
+ 
   function GoHome()
 {
   //if(flagPictureAvatar == "true") DeleteRobotFace();  //사진 아바타 삭제
@@ -27,12 +28,14 @@
 </script>
 
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript">
+    UpdateSession(2);
+ </script>
  <!--<script language="JavaScript" type="text/javascript"
   src="../../maincontents.js"></script>-->
- <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
 
  <script src="../../boots/js/bootstrap.min.js"></script>
-  <script src="../../Scripts/speech.js"></script>
+ 
 
   <script src="js/lang_shop.js"></script>
   <!--<script src="sheetjs/dist/xlsx.full.min.js"></script> -->
@@ -388,9 +391,7 @@ li.even{background-color: #f3ebf9;}
 <!--<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>-->
 
   <script type="text/javascript" >
-    //PlaySpeech('اقضِ بعض الوقت في بعض متاجرنا الرائعة.');
-    responsiveVoice.speak("اقضِ بعض الوقت في بعض متاجرنا الرائعة.", "Arabic Male");
-    responsiveVoice.cancel();
+
       
   </script>
 </head>

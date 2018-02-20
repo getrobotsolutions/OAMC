@@ -29,7 +29,7 @@ $(document).ready(function(){
                 
   $('#c3').click(function(){
     $('.part2 #icon').attr("src","photo/KFC_logo.png");
-    $('.bdy #title').text("KFC");
+    $('.bdy #title').text("دجاج كنتاكي");
     $('.bdy #location').text("Location:");
 
     $('.bdy #desc').text("اشهى قطع الدجاج المقلية لمن لا يملك الوقت الكافي للحاق بالطائرة.");
@@ -41,7 +41,7 @@ $(document).ready(function(){
   });
               $('#c4').click(function(){
                 $('.part2 #icon').attr("src","photo/Mcdonalds.png");
-                $('.bdy #title').text("McDonalds");
+                $('.bdy #title').text("ماكدونالدز");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("لمحبي البرجر والماكولات السريعة، استمتع بمذاق ماكدونالدز الشهي مع حركة  الطائرات");
@@ -53,7 +53,7 @@ $(document).ready(function(){
               });
               $('#c5').click(function(){
                 $('.part2 #icon').attr("src","photo/spice-kitchen.png");
-                $('.bdy #title').text("Spice Kitchen");
+                $('.bdy #title').text("سبايس كيتشن");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("لمحبي الماكولات الهندية والحارة، ندعوكم للاستمتاع بالطعام في ردهة المطاعم.");
@@ -64,7 +64,7 @@ $(document).ready(function(){
               });
               $('#c6').click(function(){
                 $('.part2 #icon').attr("src","photo/plenty.png");
-                $('.bdy #title').text("Plenty");
+                $('.bdy #title').text("بلنتي");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("تهتم بصحتك؟ ما عليك الا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك.");
@@ -73,7 +73,7 @@ $(document).ready(function(){
               });
               $('#c61').click(function(){
                 $('.part2 #icon').attr("src","photo/noor.png");
-                $('.bdy #title').text("Noor");
+                $('.bdy #title').text("نور");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("وجبات عربية مع اجمل الوجبات والديكور حيث العيون ستستلذ بالطعام قبل معدتك .");
@@ -81,7 +81,7 @@ $(document).ready(function(){
               });
               $('#c62').click(function(){
                 $('.part2 #icon').attr("src","photo/Tickerdaze.png");
-                $('.bdy #title').text("Tickerdaze");
+                $('.bdy #title').text("تيكرداذ");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("شاهد المباريات مباشرة وانت تستمتع بالماكولات  والمشروبات الشهية قبل صعودك للطائرة");
@@ -89,7 +89,7 @@ $(document).ready(function(){
               });
               $('#c63').click(function(){
                 $('.part2 #icon').attr("src","photo/luna.png");
-                $('.bdy #title').text("Luna");
+                $('.bdy #title').text("لونا");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("مطعم يقدم لك تاباس مع المشروبات في منطقة هادئة ومنظر خلاب لشواطئ مسقط العامرة.");
@@ -97,7 +97,7 @@ $(document).ready(function(){
               });
               $('#c7').click(function(){
                 $('.part2 #icon').attr("src","photo/mazoon.png");
-                $('.bdy #title').text("Mazoon");
+                $('.bdy #title').text("مازون ");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("قهوة عالمية وعالية الجودة لاجلك");
@@ -109,7 +109,7 @@ $(document).ready(function(){
               });
               $('#c8').click(function(){
                 $('.part2 #icon').attr("src","photo/caffe-nero.png");
-                $('.bdy #title').text("Café Nero");
+                $('.bdy #title').text("كافيه نيرو");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("هل تريد تجربة افضل قهوة؟ قم بزيارة كافيه نيرو وستستمتع بمختلف انواع القهوة.");
@@ -117,7 +117,7 @@ $(document).ready(function(){
               });
               $('#c9').click(function(){
                 $('.part2 #icon').attr("src","photo/Caribou-Coffee.png");
-                $('.bdy #title').text("Caribou Coffee");
+                $('.bdy #title').text("قهوة كاريبو");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("محبي الكافيين؟ اشحن طاقتاتك بقهوة كاريبو");
@@ -127,7 +127,7 @@ $(document).ready(function(){
               });
               $('#c10').click(function(){
                 $('.part2 #icon').attr("src","photo/kahwaji-cafe.png");
-                $('.bdy #title').text("Qahwaji Coffee");
+                $('.bdy #title').text("قهوة القهوجي");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("كافيه عماني تقليدي مع القهوة العمانية المشهورة وفرصة لتذوق عمان قبل مغادرة مسقط");
@@ -136,7 +136,7 @@ $(document).ready(function(){
               });
               $('#c11').click(function(){
                 $('.part2 #icon').attr("src","photo/traveler-club.png");
-                $('.bdy #title').text("Travelers Club");
+                $('.bdy #title').text("نادي المسافرين");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("كافيه مع كراسي مريحة وفرصة للتمتع بالخفائف");
                
@@ -144,7 +144,7 @@ $(document).ready(function(){
               });
               $('#c12').click(function(){
                 $('.part2 #icon').attr("src","photo/cakes-&-bakes.png");
-                $('.bdy #title').text("Cakes & Bakes");
+                $('.bdy #title').text("كيكس اند بيكس");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("كافيه وموقع لافضل المعجنات بمطار مسقط الدولي.");
                 
@@ -152,7 +152,7 @@ $(document).ready(function(){
               });
               $('#c13').click(function(){
                 $('.part2 #icon').attr("src","photo/seaside-park.png");
-                $('.bdy #title').text("Seaside Park");
+                $('.bdy #title').text("سي سايد بارك");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("جنة الاطفال للترفيه عنهم ولتغذيهم بافضل الاطعمة الصحية لهم.");
                 

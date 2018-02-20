@@ -366,3 +366,37 @@ function ShowImg(x,y,width,height){
 function HideImg(){
 	window.external.HideImg();
 }
+function UpdateSession(pageId){
+	var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd="0"+dd
+} 
+
+if(mm<10) {
+    mm="0"+mm
+} 
+
+today = mm+"/"+dd+"/"+yyyy + " " +today.getHours() + ":" + today.getMinutes()+":" + today.getSeconds();
+
+	//var bgno=readCookie('BadgeNumber');
+	var dataString =  { 'PageId' : pageId , 'Time' : today };
+      $.ajax({  
+        url:"https://robotaisolutions.com/robot-work/oman/logsApi.php",
+        type:"post",
+        data : dataString,
+              cache : false,
+        success : function (data) { 
+          //alert("success")
+          //ShowPopup('Thank You');
+          
+          //PlaySpeech('Thank You');
+          //GoHome();     
+                //$("" + e_review + " .add-review #form-add-review").fadeOut(600);
+                //$("" + e_review + " .add-review .notice").append(data).fadeIn(1500); 
+        }
+      });
+}

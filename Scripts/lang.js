@@ -46,7 +46,7 @@
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
-
+                $('#content_map').html("TERMINAL MAP");
                 $('#content_info').text("INFORMATION");
 
                 $('#content_flights').html("FLIGHTS");

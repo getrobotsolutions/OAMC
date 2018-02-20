@@ -101,3 +101,12 @@ color: white;
     line-height: 41px;
     text-align: center;
     }
+
+     a {
+    color: #4a32a4 !important;
+}
+ #change-us, #change-ar{padding: 10px 10px 8px 10px; border-radius: 5px;text-decoration: none;}
+ .active{
+    color: rgb(255, 255, 255) !important;
+ background: rgb(74, 50, 164);
+  }

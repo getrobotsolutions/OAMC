@@ -20,10 +20,8 @@
  <script src="jquery/jquery-3.2.1.min.js"></script>
  <script language="JavaScript" type="text/javascript"
   src="maincontents.js"></script>
- <script src="boots/js/bootstrap.min.js"></script>
+<!--<script src="boots/js/bootstrap.min.js"></script>-->
  
-
- <script src="Scripts/speech.js"></script>
 <script src="Scripts/lang.js"></script>
 
   
@@ -42,6 +40,7 @@
 if(readCookie("lang" == null)) {
   writeCookie("lang", "arabic", 30);
 }
+UpdateSession(9);
 </script>
 
 <link rel="stylesheet" href="css/style_riyadh.css">
@@ -56,12 +55,11 @@ if(readCookie("lang" == null)) {
 
 </head>
 <body>
-<!-- <h1>नमस्ते</h1> -->
+
   	<div class="jumbotron text-center">
       <p id="currentDate"></p><br>
       <span class="col-sm-8">
-         <img src="images/Logo.jpg" class="img-responsive" alt="Responsive image" style="height:auto;margin-top: -109px;
-    width: 521px;">
+         <img src="images/Logo.jpg" class="img-responsive" alt="Responsive image" style="height:auto;margin-top: -109px;width: 521px;">
        <!-- <p id="content_term"> محطة A</p> -->
       </span>
       <span class="col-sm-4 text-right">
@@ -73,58 +71,10 @@ if(readCookie("lang" == null)) {
     </div>
     <div class="row" style="padding: 0;margin: 0;border:2px solid #4A32A4;">
       <div class="col-sm-4" style="    margin-top: -2px; border-top: 62px solid #4A32A4;border-right: 36px solid #ffffff00;"></div>
-      <div class="col-sm-8" style="    font-size: 40px;
-    padding-top: 20px;
-    color: #4A32A4;
-    font-weight: bold;">
+      <div class="col-sm-8" style="    font-size: 40px;padding-top: 20px;color: #4A32A4;font-weight: bold;">
         <a href="#"  id="change-us" style="color: #4A32A4;padding: 0 10px;text-decoration: none;">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #4A32A4;padding: 0 10px;text-decoration: none;">غير اللغة</a>
       </div>
     </div>
-
-   <!-- <nav class="navbar navbar-default">
-      <div class="container-fluid navbar1">-->
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="vdivider">
-              <a onclick="FC_ContentsCall('Flights','')" href="#">
-                  <span class="glyphicon glyphicon-plane" ></span>
-                  <div class="fly" id="glyph-text">رحلات طيران</div>
-                   <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="vdivider">
-            <a onclick="FC_ContentsCall('BoardingPass','')" href="#">
-              <span class="glyphicon glyphicon-qrcode" id="glyph-text"></span>
-              <div class="scan" id="glyph-text">مسح الصعود تمريرة الخاص بك</div>
-
-            </a>
-            </li>
-            
-            <li class="vdivider">
-              <a  onclick="FC_ContentsCall('TerminalMap','')" href="#">
-                <span class="glyphicon glyphicon-picture" id="glyph-text"></span><div class="map" id="glyph-text">خريطة المحطة الطرفية</div>
-              </a>
-            </li>
-            <li class="dropdown vdivider">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="glyphicon glyphicon-pushpin" id="glyph-text"></span>              <div class="lang" id="glyph-text">غير اللغة<span class="caret"></span></div>
-
-               </a>
-              <ul class="dropdown-menu">
-                <li class = "active">
-                  <a id="change-ar" href = "#">
-                    <img class="flag" src="images/flags/arabia.png">
-                  </a>
-                </li>
-                <li id="change-us" value="de"><a href="#"><img class="flag" src="images/flags/us.png"></a></li>
-              </ul>
-            </li>
-            <li class="vdivider"></li>
-          </ul>
-        </div>--><!-- /.navbar-collapse -->
-     <!-- </div> /.container-fluid -->
-    <!--</nav>-->
 
   <div class="bmg">  
     <div class="icon1">

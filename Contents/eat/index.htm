@@ -15,8 +15,8 @@
   src="../../Scripts/LogConsole.js"></script>
 
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
- <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
- <!--<script language="JavaScript" type="text/javascript"
+ <!--<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+ <script language="JavaScript" type="text/javascript"
   src="../../maincontents.js"></script>-->
 
  <script src="../../boots/js/bootstrap.min.js"></script>
@@ -29,6 +29,7 @@ if(readCookie("lang")=="english"){
     //alert("worked");
     location.href='index-us.htm';
 }
+UpdateSession(1);
 function GoHome()
 {
   //if(flagPictureAvatar == "true") DeleteRobotFace();  //사진 아바타 삭제
@@ -44,7 +45,7 @@ function GoHome()
 <style>
     .bmg{
           background-image: none;
-          height: 1162px;
+          height: 1158px;
     }
     .img-home {
           position: absolute;
@@ -58,7 +59,7 @@ function GoHome()
 
     .wrap{
 
-        padding-top: 45px;
+        padding-top: 90px;
 
     }
     .part1{
@@ -155,6 +156,7 @@ function GoHome()
         margin-top: 10px;
         line-height: 40px;
         color: white;
+         text-align: right;
     }
     #title{
          font-size: 30px;
@@ -171,7 +173,7 @@ function GoHome()
     padding-left: 60px;
     }
     #desc{
-        font-size: 14px;
+        font-size: 18px;
     font-weight: 200;
     padding-left: 55px;
     font-family: OpenSans-Light;
@@ -363,24 +365,24 @@ li.even{background-color: #f3ebf9;}
                         
                         <img class="eat-icon" src="photo/eat-icon.png">
                         <ul class="list1">
-                          <li class="odd"><a id="c3" href="#">KFC</a></li>
-                          <li class="even"><a id="c4" href="#">McDonalds</a></li>
-                          <li class="odd"><a id="c5" href="#">Spice Kitchen</a></li>
-                          <li class="even"><a id="c6" href="#">Plenty</a></li>
+                          <li class="odd"><a id="c3" href="#">دجاج كنتاكي</a></li>
+                          <li class="even"><a id="c4" href="#">ماكدونالدز</a></li>
+                          <li class="odd"><a id="c5" href="#">سبايس كيتشن</a></li>
+                          <li class="even"><a id="c6" href="#">بلنتي</a></li>
                            
-                          <li class="odd"><a id="c61" href="#">Noor</a></li>
-                          <li class="even"><a id="c62" href="#">Tickerdaze</a></li>
-                          <li class="odd"><a id="c63" href="#">Luna</a></li>
+                          <li class="odd"><a id="c61" href="#">نور</a></li>
+                          <li class="even"><a id="c62" href="#">تيكرداذ</a></li>
+                          <li class="odd"><a id="c63" href="#">لونا</a></li>
                           
-                          <li class="even"><a id="c7" href="#">Mazoon</a></li>
-                          <li class="odd"><a id="c8" href="#">Café Nero</a></li>
-                          <li class="even"><a id="c9" href="#">Caribou Coffee</a></li>
-                          <li class="odd"><a id="c10" href="#">Qahwaji Coffee</a></li>
-                          <li class="even"><a id="c11" href="#">Travelers Club</a></li>
-                          <li class="odd"><a id="c12" href="#">Cakes & Bakes</a></li>
-                          <li class="even"><a id="c13" href="#">Seaside Park</a></li>
-                          <li class="odd"><a id="c14" href="#">Prime Class Lounge</a></li>
-                          <li class="even"><a id="c15" href="#">Aerotel Muscat Hotel</a></li>
+                          <li class="even"><a id="c7" href="#">مازون </a></li>
+                          <li class="odd"><a id="c8" href="#">كافيه نيرو</a></li>
+                          <li class="even"><a id="c9" href="#">قهوة كاريبو</a></li>
+                          <li class="odd"><a id="c10" href="#">قهوة القهوجي</a></li>
+                          <li class="even"><a id="c11" href="#">نادي المسافرين</a></li>
+                          <li class="odd"><a id="c12" href="#">كيكس اند بيكس</a></li>
+                          <li class="even"><a id="c13" href="#">سي سايد بارك</a></li>
+                          <!--<li class="odd"><a id="c14" href="#">Prime Class Lounge</a></li>
+                          <li class="even"><a id="c15" href="#">Aerotel Muscat Hotel</a></li>-->
 
                         </ul>  
                     </div>
@@ -393,7 +395,7 @@ li.even{background-color: #f3ebf9;}
                         <img id="icon" src="photo/KFC_logo.png" class="icon">
                       </div>
                       <div class="bdy">
-                        <div id="title">KFC</div>
+                        <div id="title">دجاج كنتاكي</div>
                         <!--<div id="location"> </div>-->
                         <div id="desc">اشهى قطع الدجاج المقلية لمن لا يملك الوقت الكافي للحاق بالطائرة.</div>
 

@@ -18,7 +18,7 @@
 <!--<script language="JavaScript" type="text/javascript"
 	src="../../maincontents.js"></script>-->
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
- <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+ <!--<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>-->
  <script src="../../boots/js/bootstrap.min.js"></script>
 
   <script type="text/javascript">
@@ -79,6 +79,14 @@ thead {
     width: 500px;
     height: 100px;
  }
+ a {
+    color: #4a32a4;
+}
+ #change-us, #change-ar{padding: 0px 10px; border-radius: 5px;text-decoration: none;}
+ .active{
+    color: rgb(255, 255, 255) !important;
+    background: rgb(74, 50, 164);
+  }
 
 </style>
 
@@ -88,6 +96,7 @@ thead {
 <link href="../../css/Language.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
  <script type="text/javascript">
+  UpdateSession(3);
   $(document).ready(function(){
   if(readCookie("lang")=="english"){
     $('#arr').text("Arrivals");
@@ -130,7 +139,7 @@ function GoHome()
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
       <div class="col-sm-8" style="font-size: 40px;padding-top: 20px;color: #4A32A4;font-weight: bold;">
-        <a href="#"  id="change-us" style="color: #4A32A4 !important;">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #4A32A4 !important;">غير اللغة</a>  |
+        <a href="#"  id="change-us" style="">ENGLISH</a>|<a  id="change-ar" class="active" href="#" style="">غير اللغة</a>  |
       </div>
     </div>
 
