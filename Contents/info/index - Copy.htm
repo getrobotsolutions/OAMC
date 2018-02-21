@@ -63,9 +63,19 @@
                 height: 500px;
                 width: 1080px;
       }
+    
+      hr {
+          display: block;
+          /* height: 1px; */
+          border: 0;
+          /* color: #87CEFA; */
+          margin-top: 5px;
+          margin-bottom: 3px;
+          border-top: 2px solid #87CEFA;
+      }
      
     .wrap{
-        padding-top: 70px;
+        padding-top: 130px;
     }
     .part1{
           /*background-color: #e4e4e4;*/
@@ -74,15 +84,14 @@
           margin-left: -15px;
     }
     .part2{
-      background-repeat: no-repeat;
-      background-size: 550px 313px !important;
-       /*background-color: #f6f6f6;*/
+      /*background-repeat: no-repeat;
+        background-color: #f6f6f6;*/
         height: 703px;
         width: 551px;
         /* padding-right: 182px; */
-        margin-left: -50px;
+        margin-left: -28px;
         z-index: 0;
-        margin-top: 83px;
+        margin-top: 22px;
         position: absolute; 
     }
     .part2 #list1{height: 685px;}
@@ -215,13 +224,13 @@
         font-size: 21px;
     }
     .bdy{
-        /*background-color: whitesmoke;*/
+        background-color: whitesmoke;
      /*   height: 290px;
         width: 625px;*/
         height: 483px;
             width: 539px;
         padding-right: 25px;
-        /*margin-left: 4px;*/
+        margin-left: 4px;
         margin-top: 310px;
         z-index: -1;
         line-height: 40px;
@@ -253,9 +262,9 @@
       margin-left: 55px;
     }*/
     #icon{
-        /*height: 400px;
-        width: 400px;*/
-        padding-top: 80px;
+        height: 400px;
+        padding-top: 182px;
+        width: 400px;
         padding-left: 176px;
     }
  /*   #wrapper {
@@ -288,7 +297,7 @@
           padding-bottom: 5px;
       }
       /*Navigation Side Menu*/
-      .hr-ver-menu-wrapper{     width:549px; font-family:arial; }
+      .hr-ver-menu-wrapper{    border: 1px solid #c7c7c7; width:549px; font-family:arial; margin-top:220px;}
       .hr-ver-menu-wrapper .v-menu-title{color: #fff;
           background-color: #4a32a4;
               font-size: 22px;
@@ -299,16 +308,16 @@
           width: 548px;}
       .hr-ver-menu{width:548px;}
       .hr-ver-menu li{position:relative;}
-      .hr-ver-menu li a{    text-decoration: none;    font-size: 15px;       display: block;       background: #DBA41B;
+      .hr-ver-menu li a{    text-decoration: none;    font-size: 15px;       display: block;       background: #0086be;
              color: #FFFFFF;
           padding: 5px 8px 5px 28px;    border-bottom: 1px solid gainsboro;}
-      .hr-ver-menu li a:hover{background-color: #DBA41B;}
+      .hr-ver-menu li a:hover{background-color: #4a32a4;}
       /*.hr-ver-menu .hr_tog{background:blue;height:17px; width:17px; display:inline-block;position:absolute;left:6px;top:0;
           margin-top: 5px;}*/
 /*      .hr-ver-menu .hr_tog.pl-active{background:green}
 */      .hr-ver-menu ul{display:none;}
       .hr-ver-menu ul li a{    background: #F6FBFF; padding-left:35px;}
-      .hr-ver-menu li a.hr-active{    background: #DBA41B;    color: #FFFFFF;}
+      .hr-ver-menu li a.hr-active{    background: #0086be;    color: #FFFFFF;}
 
       .bd{font-family:OpenSans-Light; font-size:15px; line-height: 21px;font-weight:100;}
       .add,.ph{font-family:OpenSans-Light; font-size:14px; line-height: 22px;font-weight:100; display: none;}
@@ -354,7 +363,17 @@ UpdateSession(6);
 
     <div class="body1">
       <div class="bmg">       
-           
+            <!--<div class="maps">
+              
+             
+                   <div class="titl1">صفحة معلومات مطار الرياض</div>
+                   
+                   <br>
+                   <div id="txt1" class="txt1">هنا يمكنك اكتشاف جميع الخدمات الهامة، وحيث أنها تقع. 
+                   </div>
+
+                   <div id="txt2" class="txt1">حدد زر في أسفل اليسار للبدء.</div>
+              </div>-->
             
             <div class="wrap" >
                <div class="col-sm-6">
@@ -364,52 +383,54 @@ UpdateSession(6);
                       <div class="row prim_1">
                         <div class="col-sm-3">
                            <button id="btn1" type="button" class="btn btn-primary ">
-                           <img src="photo/hotel-icon.png" width="68">
+                           <i class="fa fa-taxi fa-4x" aria-hidden="true"></i>
 
                            </button>
                         </div>
                          <div class="col-sm-3">
                             <button id="btn2" type="button" class="btn btn-primary " >
-                              <img src="photo/lounge-icon.png" width="68">
+                              <img src="photo/prayer-room-icon.png" width="68">
                             </button>
                          </div>
                       </div>
                       <div class="row">  
                         <div class="col-sm-3"> 
                            <button id="btn3" type="button" class="btn btn-primary ">
-                             <img src="photo/prayer-icon.png" width="68">
+                             <i class="fa fa-question-circle-o fa-5x" aria-hidden="true"></i>
                            </button>
                         </div>
                         <div class="col-sm-3">
                             <button id="btn4" type="button" class="btn btn-primary ">
-                             <img src="photo/bath-room.png" width="68">
+                              <i class="fa fa-suitcase fa-4x" aria-hidden="true"></i>
                             </button>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-3">
                            <button id="btn5" type="button" class="btn btn-primary ">
-                             <i class="fa fa-info fa-4x" aria-hidden="true"></i>
+                             <img src="photo/smoking.png" height="70" width="70">
                            </button>
                         </div>
                         <div class="col-sm-3">
                            <button id="btn6" type="button" class="btn btn-primary ">
-                            <!--<img src="photo/bath-room.png" width="68">-->                            
+                            <img src="photo/bath-room.png" width="68">
+                            
+
                            </button>
                         </div>
                       </div>
-                      <!--<div class="row">
+                       <div class="row">
                         <div class="col-sm-3">
                            <button id="btn7" type="button" class="btn btn-primary ">
                              <i class="fa fa-info fa-4x" aria-hidden="true"></i>
                            </button>
-                        </div>-->
+                        </div>
                         <!--<div class="col-sm-3">
                            <button id="btn8" type="button" class="btn btn-primary ">
                              <i class="fa fa-bed fa-4x" aria-hidden="true"></i>
                            </button>
-                        </div>
-                       </div>-->
+                        </div>-->
+                       </div>
                   </div> <!-- part 1 div ends here -->
                 </div>
 

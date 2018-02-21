@@ -100,21 +100,7 @@ $(document).ready(function() {
                   }
                 }
 
-                //Prayer Room
-                $('#btn2').click(function(){
-                     $("#rcar,#ainfo,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#tsale").show();
-                     $('.v-menu-title').text("Prayer Room");
-                     var url = data.Book1[0].IMG_SRC;
-                     //var url = "photo/submenu/buyuk/ticket.jpg";
-                     
-                     $('#content').css({"background-image": "url("+url+")",
-                                  "background-size":"100% 34%"});
-                     $('#icon').hide();  $('#list1').show();  
-                      for(var i = 0; i <= 6; i++) {
-                        $('#t'+i).text(data.Book1[i].NAME_BASE);
-                        $('#t' + i).click( createCallback( i ) );
-                      }
-                 });
+                
                  
                 //Rent a car
                 $('#btn1').click(function(){
@@ -122,7 +108,7 @@ $(document).ready(function() {
                    
 
                      $("#tsale,#ainfo,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#rcar").show();
-                     $('.v-menu-title').text("Transportation");
+                     $('.v-menu-title').text("Hotels");
                      var url = data.Book1[7].IMG_SRC;
                      $('#content').css({"background-image": "url("+url+")",
                                   "background-size":"99% 42%"});
@@ -138,6 +124,22 @@ $(document).ready(function() {
 
                 //Airport Lounges
                 $('#btn3').click(function(){
+                     $("#rcar,#ainfo,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#tsale").show();
+                     $('.v-menu-title').text("Prayer Room");
+                     var url = data.Book1[0].IMG_SRC;
+                     //var url = "photo/submenu/buyuk/ticket.jpg";
+                     
+                     $('#content').css({"background-image": "url("+url+")",
+                                  "background-size":"100% 34%"});
+                     $('#icon').hide();  $('#list1').show();  
+                      for(var i = 0; i <= 6; i++) {
+                        $('#t'+i).text(data.Book1[i].NAME_BASE);
+                        $('#t' + i).click( createCallback( i ) );
+                      }
+                 });
+
+                //Prayer Room
+                $('#btn2').click(function(){
                      $("#tsale,#rcar,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#ainfo").show();
                      $('.v-menu-title').text("Airport Lounges");
                      // var url = "photo/submenu/buyuk/information.jpg";
