@@ -63,7 +63,7 @@
                 $('.bdy #desc').text("This store is an unexpected delight for passengers of all ages, no matter what type of trip they are on. The store will stock classic toy favourites from brands such as Lego, Mattel and Disney. The key feature in this store is our life size Sinbad Sailor made entirely of Lego located on our Omani Dhow. The store will also include an interactive environment offering kids a fun in store experience while their parents shop");
               });
               $('#s8').click(function(){
-                $('.part2 #icon').attr("src","photo/Omantel.jpg");
+                $('.part2 #icon').attr("src","photo/gourmet-store.png");
                 $('.bdy #title').text("Gourmet Store");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("This store is a treasure trove aimed at passengers buying luxury sweet and savory edible products either as gifts or as treats for themselves. It will contain the best of Oman and the Gulf regions foodie delights.");
