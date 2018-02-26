@@ -1,7 +1,7 @@
       $(document).ready(function(){
-        $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+        //$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-                var lan="Arabic Male";
+                var lan="ar-eg";
                 
                 $('#content_term').text("محطة A");
                 //$('#content_air').text("");
@@ -15,9 +15,9 @@
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
               if(readCookie("lang")=="arabic"){
-                $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+                //$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-                var lan="Arabic Male";
+                var lan="ar-eg";
                 
 
                 $('#content_term').text("محطة A");
@@ -36,8 +36,8 @@
               else if(readCookie("lang")=="english"){
                 writeCookie("lang","english");
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
-                   lan="UK English Female"; 
-                $('#change-ar').css({"background":"white", "color":"#4a32a4"});
+                   lan="en-us"; 
+                //$('#change-ar').css({"background":"white", "color":"#4a32a4"});
                 
                 
 
@@ -67,10 +67,11 @@
                 // PlaySpeech("hello"); #337ab7
                 writeCookie("lang","english");
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
-                   lan="UK English Female"; 
-                $('#change-ar').css({"background":"white", "color":"#4a32a4"});
-                $(this).css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
-                
+                   lan="en-us"; 
+                //$('#change-ar').css({"background":"white", "color":"#4a32a4"});
+                //$(this).css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+                $('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');
 
                 $('#content_term').text("Terminal A");
                 //$('#content_air').text("Riyadh Airport");
@@ -97,11 +98,12 @@
               //Change to Arabic
               $('#change-ar').click(function(){
                 welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-                lan="Arabic Male";
+                lan="ar-eg";
                 writeCookie("lang","arabic");
-                $('#change-us').css({"background":"white", "color":"#4a32a4"});
-                $(this).css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
-
+                //$('#change-us').css({"background":"white", "color":"#4a32a4"});
+                //$(this).css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+$('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');
                 $('.fly').text("رحلات طيران");
                 $('.scan').text("مسح الصعود تمريرة الخاص بك");
                 $('.map').text("خريطة المحطة الطرفية");
@@ -127,9 +129,11 @@
 
               });
               $('#content_fly').click(function(){
-                    responsiveVoice.speak(welcomeMessage, lan);  
+                    //responsiveVoice.speak(welcomeMessage, lan);
+                    window.external.ChangeLanguage(lan);
+                    PlaySpeech(welcomeMessage);
               });
-              responsiveVoice.cancel();
+              //responsiveVoice.cancel();
 
               //Change to French
               // $('#change-fr').click(function(){
