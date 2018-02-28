@@ -114,7 +114,7 @@
       padding-bottom: 68px;
       line-height: 25px;
           margin-bottom: -4.6px;
-      background-color: #ffffffc2;
+      background-color: #ffffffde;
     }
     .bmg
     {
@@ -486,11 +486,7 @@ body{
   background-size: 100px 100px;
   animation: changingBckSze 500s infinite linear, pumping 500s infinite linear, rotateTime 1000s infinite linear;
 
-  animation: changingBckSze 3s infinite linear, pumping 3s infinite linear, rotateTime 60s infinite linear;
-
-  animation: changingBckSze 3s infinite linear, pumping 3s infinite linear, rotateTime 60s infinite linear;
-
-  animation: changingBckSze 3s infinite linear, pumping 3s infinite linear, rotateTime 60s infinite linear;
+ 
 
 }
 
