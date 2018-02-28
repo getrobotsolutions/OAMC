@@ -15,7 +15,8 @@
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
               if(readCookie("lang")=="arabic"){
-                //$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+                $('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');
                 var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 var lan="ar-eg";
                 
@@ -35,9 +36,11 @@
               }
               else if(readCookie("lang")=="english"){
                 writeCookie("lang","english");
+
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
                    lan="en-us"; 
-                //$('#change-ar').css({"background":"white", "color":"#4a32a4"});
+                $('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');
                 
                 
 
@@ -100,9 +103,7 @@
                 welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 lan="ar-eg";
                 writeCookie("lang","arabic");
-                //$('#change-us').css({"background":"white", "color":"#4a32a4"});
-                //$(this).css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
-$('#change-us').toggleClass('active');
+                $('#change-us').toggleClass('active');
                 $('#change-ar').toggleClass('active');
                 $('.fly').text("رحلات طيران");
                 $('.scan').text("مسح الصعود تمريرة الخاص بك");
