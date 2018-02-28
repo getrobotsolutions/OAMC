@@ -485,7 +485,7 @@ body{
                                             ) 80px 50px;
   background-size: 100px 100px;
   
-  animation: changingBckSze 3s infinite linear, pumping 3s infinite linear, rotateTime 60s infinite linear;
+  animation: changingBckSze 25s infinite linear, pumping 25s infinite linear, rotateTime 60s infinite linear;
 }
 
 @keyframes changingBckSze{
