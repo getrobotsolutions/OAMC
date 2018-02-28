@@ -449,6 +449,10 @@ body{
   overflow:hidden;
 }
 
+.overlay {
+    position: absolute;
+}
+
 .bmg::before{
   z-index: -1;
   content: '';
