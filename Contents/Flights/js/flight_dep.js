@@ -2,10 +2,10 @@ $(document).ready(function(){
         $("#loading").show();
         $(".fArr").hide();
         //Change to English
-        $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+        $('#change-ar').css({"background":"#008a97", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
               $('#change-us').click(function(){
-                $('#change-ar').css({"background":"white", "color":"#4a32a4"});
-                $('#change-us').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+                $('#change-ar').css({"background":"white", "color":"#008a97"});
+                $('#change-us').css({"background":"#008a97", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 $('#arr').text("Arrivals");
                 $('#dep').text("Departures");
 
@@ -20,8 +20,8 @@ $(document).ready(function(){
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                $('#change-us').css({"background":"white", "color":"#4a32a4"});
-                $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
+                $('#change-us').css({"background":"white", "color":"#008a97"});
+                $('#change-ar').css({"background":"#008a97", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 $('#arr').text("الوصول");
                 $('#dep').text("المغادرين");
 
