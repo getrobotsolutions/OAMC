@@ -449,7 +449,15 @@ body{
   overflow:hidden;
 }
 
+<<<<<<< HEAD
 .bmg1::before{
+=======
+.overlay {
+    position: absolute;
+}
+
+.bmg::before{
+>>>>>>> c36f13a1ba2547ac96b5103a3da5f992e1361c4d
   z-index: -1;
   content: '';
   position: absolute;
@@ -485,7 +493,7 @@ body{
                                             ) 80px 50px;
   background-size: 100px 100px;
   
-  animation: changingBckSze 3s infinite linear, pumping 3s infinite linear, rotateTime 60s infinite linear;
+  animation: changingBckSze 500s infinite linear, pumping 500s infinite linear, rotateTime 1000s infinite linear;
 }
 
 @keyframes changingBckSze{
