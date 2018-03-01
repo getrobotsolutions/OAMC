@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  ShowTime();
         $("#loading").show();
         $(".fArr").hide();
         //Change to English

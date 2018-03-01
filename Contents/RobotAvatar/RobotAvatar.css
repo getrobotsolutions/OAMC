@@ -12,7 +12,8 @@ body {
 	position: absolute;
 	height: 100px;
 }
-
+.main{    background-color: #dba41b;
+    min-height: 1150px;}
 .bg {
 	margin: 0;
 	padding: 0;

@@ -400,3 +400,12 @@ today = mm+"/"+dd+"/"+yyyy + " " +today.getHours() + ":" + today.getMinutes()+":
         }
       });
 }
+function ShowTime()  
+        {  
+            var dt = new Date();  
+            var localeSpecificTime = dt.toLocaleTimeString();
+            localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
+            document.getElementById("content_air")  
+                .innerHTML = localeSpecificTime; 
+            window.setTimeout("ShowTime()", 1000); // Here 1000(milliseconds) means one 1 Sec  
+        }

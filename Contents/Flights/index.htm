@@ -99,15 +99,22 @@ thead {
   UpdateSession(3);
   $(document).ready(function(){
   if(readCookie("lang")=="english"){
+    $('#change-us').addClass('active');
+    $('#change-ar').removeClass('active');
+
     $('#arr').text("Arrivals");
-                $('#dep').text("Departures");
-                $('#flight').text("Flight");
-                $('#origin').text("Origin");
-                $('#airline').text("Airline");
-                $('#terminal').text("Terminal");
-                $('#arrival').text("Arrival");
-                $('#status').text("Status (min)");
+    $('#dep').text("Departures");
+    $('#flight').text("Flight");
+    $('#origin').text("Origin");
+    $('#airline').text("Airline");
+    $('#terminal').text("Terminal");
+    $('#arrival').text("Arrival");
+    $('#status').text("Status (min)");
     PlaySpeech("Keep up to date with our flights and arrivals.");
+  }
+  else if (readCookie("lang")=="arabic") {
+    $('#change-us').removeClass('active');
+    $('#change-ar').addClass('active');
   }
   /*else if(readCookie("lang")=="arabic"){
     
@@ -129,8 +136,7 @@ function GoHome()
          <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
       <div class="col-sm-4 text-right">
-          <img src="../../images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 15px">
-
+         <span id="content_air"></span>
       </div>     
     </div>
 

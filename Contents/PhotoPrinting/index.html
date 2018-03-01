@@ -60,13 +60,23 @@
   <script type="text/javascript">
   	UpdateSession(7);
   	$(document).ready(function(){
-  			$('#change-us').toggleClass('active');
-            $('#change-ar').toggleClass('active');
-    		$('body').css('background-image','url(Image/photo_bg_ar.png)');
+  		ShowTime();
+  		if(readCookie("lang")=="english"){
+      		PlaySpeech("");
+      		$('#change-us').addClass('active');
+      		$('#change-ar').removeClass('active');
+      
+    	}
+    	else if (readCookie("lang")=="arabic") {
+      		$('#change-us').removeClass('active');
+      		$('#change-ar').addClass('active');
+      		$('body').css('background-image','url(Image/photo_bg_ar.png)');
     		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
     		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
     		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
-  		
+      
+    	}
+
   		$('#change-ar').click(function(){
   			$('#change-us').toggleClass('active');
             $('#change-ar').toggleClass('active');
@@ -77,8 +87,9 @@
     		
   		});
   		$('#change-us').click(function(){
-  			$('#change-us').toggleClass('active');
-            $('#change-ar').toggleClass('active');
+  			writeCookie("lang","english");
+  			$('#change-us').addClass('active');
+  			$('#change-ar').removeClass('active');
     		$('body').css('background-image','url(Images/photo_bg.png)');
     		$("#email-photo").attr("src","images/btn_nor_email_en-us.png");
     		$("#retake-photo").attr("src", "images/btn_nor_retake_en-us.png");
@@ -97,7 +108,7 @@
         <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
       <div class="col-sm-4 text-right">
-        <img src="../../images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 15px">
+       <span id="content_air"></span>
       </div>     
     </div>
     

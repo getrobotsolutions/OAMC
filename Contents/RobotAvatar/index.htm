@@ -24,6 +24,37 @@
   <link rel="stylesheet" href="../../css/style_riyadh.css">
   <script type="text/javascript">
     UpdateSession(8);
+    $(document).ready(function(){
+    if(readCookie("lang")=="english"){
+      PlaySpeech("Its time to say cheese");
+      $('#change-us').addClass('active');
+      $('#change-ar').removeClass('active');
+      $('.title').text("Robot Avatar");
+      $('#shot img').attr("src","Image/avatar_shot_nor.png");
+      $('.deltext').css({"font-size":"32px", "line-height":"32px"});
+      $('.deltext').text("If you want to delete the Avatar now press the 'DELETE' button.")
+     
+    $('#delete').attr('src','Image/Avatar_delete_none.png');
+      deletePic="Image/Avatar_delete_none.png";
+      deletePicNor="Image/Avatar_delete_nor.png";
+      del();
+      
+    }
+    else if (readCookie("lang")=="arabic") {
+      $('#change-us').removeClass('active');
+      $('#change-ar').addClass('active');
+      $('.title').text("الصّورة الرّمزية");
+      $('.deltext').css({"font-size":"44px", "line-height":"31px"});
+      $('.deltext').text("إذا كنت ترغب في حذف الصورة الرمزية الآن اضغط على زر '' ديليت ''");
+    
+      $('#shot img').attr('src','Image/avatar_shot_nor_ar.png');
+      $('#delete').attr('src','Image/Avatar_delete_none_ar.png');
+        deletePic="Image/Avatar_delete_none_ar.png";
+        deletePicNor="Image/Avatar_delete_nor_ar.png";
+        del();   
+      
+    }
+  });
   </script>
 </head>
 
@@ -34,7 +65,7 @@
          <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
       <div class="col-sm-4 text-right">
-          <img src="../../images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 15px">
+         <span id="content_air"></span>
 
       </div>     
     </div>

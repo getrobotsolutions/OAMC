@@ -1,9 +1,12 @@
 $(document).ready(function() {
+  ShowTime();
           $('#list1').hide(); 
 
           //Change to English
-              //$('#change-us').click(function(){
-               
+              $('#change-us').click(function(){
+                writeCookie("lang","english");
+       $('#change-us').addClass('active');
+       $('#change-ar').removeClass('active');
                 $('.titl1').text("Oman Airport Information page");
                 $('#txt1').text("Here you can discover all of the important services, and where they are located.");
                 $('#txt2').text("Select a button on the down left to get started.");
@@ -31,11 +34,13 @@ $(document).ready(function() {
                 $('#12').text("Lounge 2");
                 $('#btn').text("View Menu");
                 
-           // });
+            });
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                
+                writeCookie("lang","arabic");
+                $('#change-us').removeClass('active');
+                $('#change-ar').addClass('active');
                 $('.titl1').text("صفحة معلومات مطار الرياض");
                 $('#txt1').text("هنا يمكنك اكتشاف جميع الخدمات الهامة، وحيث أنها تقع.");
                 $('#txt2').text("حدد زر في أسفل اليسار للبدء.");
@@ -93,7 +98,7 @@ $(document).ready(function() {
                 function createCallback(num){
 
                       return function(){  
-                        // alert('you clicked' + num);
+                         alert('you clicked' + num);
                         $("#bdyt"+num).html(data.Book1[num].DETAIL_BASE);
                         $("#add"+num).text("Location : "+data.Book1[num].ADDRESS_BASE);
                         $("#ph"+num).text("Phone : "+data.Book1[num].PHONE_BASE);
@@ -104,8 +109,6 @@ $(document).ready(function() {
                  
                 //Rent a car
                 $('#btn1').click(function(){
-                 
-                   
 
                      $("#tsale,#ainfo,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#rcar").show();
                      $('.v-menu-title').text("Hotels");

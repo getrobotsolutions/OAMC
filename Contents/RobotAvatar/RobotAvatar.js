@@ -5,35 +5,37 @@
 //             (2)
 //             (3)  
 //*******************************************************************************
-var deletePic="Image/Avatar_delete_none_ar.png";
-var deletePicNor="Image/Avatar_delete_nor_ar.png";
+var deletePic="Image/Avatar_delete_none.png";
+var deletePicNor="Image/Avatar_delete_nor.png";
   $(document).ready(function(){
-
+ShowTime();
 	$('#change-us').click(function(){
-		$('#change-us').toggleClass('active');
-        $('#change-ar').toggleClass('active');
+		writeCookie("lang","english");
+		$('#change-us').addClass('active');
+        $('#change-ar').removeClass('active');
 		$('.title').text("Robot Avatar");
 		$('#shot img').attr("src","Image/avatar_shot_nor.png");
 		$('.deltext').css({"font-size":"32px", "line-height":"32px"});
 		$('.deltext').text("If you want to delete the Avatar now press the 'DELETE' button.")
 		$('#change-ar').css({"background":"white", "color":"#4a32a4"});
 		$('#change-us').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
-		$('#delete').attr('src','Image/Avatar_delete_none.png')
+		$('#delete').attr('src','Image/Avatar_delete_none.png');
         deletePic="Image/Avatar_delete_none.png";
         deletePicNor="Image/Avatar_delete_nor.png";
         del();       
 	});
 	//Change to Arabic
 	$('#change-ar').click(function(){
-		$('#change-us').toggleClass('active');
-        $('#change-ar').toggleClass('active');
+		writeCookie("lang","arabic");
+        $('#change-us').removeClass('active');
+        $('#change-ar').addClass('active');
 		$('.title').text("الصّورة الرّمزية");
 		$('.deltext').css({"font-size":"44px", "line-height":"31px"});
 		$('.deltext').text("إذا كنت ترغب في حذف الصورة الرمزية الآن اضغط على زر '' ديليت ''")
 		$('#change-us').css({"background":"white", "color":"#4a32a4"});
 		$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
 		$('#shot img').attr('src','Image/avatar_shot_nor_ar.png');
-		$('#delete').attr('src','Image/Avatar_delete_none_ar.png')
+		$('#delete').attr('src','Image/Avatar_delete_none_ar.png');
         deletePic="Image/Avatar_delete_none_ar.png";
         deletePicNor="Image/Avatar_delete_nor_ar.png";
         del(); 	            
@@ -42,7 +44,7 @@ var deletePicNor="Image/Avatar_delete_nor_ar.png";
 var refreshIntervalId ;
 	function JSMain() {
 		refreshIntervalId = setInterval("test()", 33);
-		// setTimeout("Init()",3000);
+		setTimeout("Init()",3000);
 	}
 
 	function Init(){	

@@ -110,11 +110,12 @@
       background-color:#9932CC;
     }
     .icon1{
+          z-index: 5;
       padding-top: 40px;
-      padding-bottom: 68px;
+      padding-bottom: 85px;
       line-height: 25px;
           margin-bottom: -4.6px;
-      background-color: #ffffffde;
+          background-color: rgba(255, 255, 255, 0.85);
     }
     .bmg
     {
@@ -174,17 +175,6 @@
          font-family: arial;
     }
 
-    /*.header-txt, .header-right{
-      font-size:30px;
-      display: inline-block;
-          transform: scale(1.1, 1.1);
-          -webkit-transform: scale(1.1, 1.1);  Safari and Chrome 
-          -moz-transform: scale(1.1, 1.1); /* Firefox 
-          -ms-transform: scale(1.1, 1.1); /* IE 9+ 
-          -o-transform: scale(1.1, 1.1); /* Opera */
-    /*}*//***//*/*/
-   
-  
     .explore{
        font-size: 32px;
     font-family: calibri;
@@ -200,7 +190,9 @@
           padding-top: 11px;
     }
     #content_air{
-      margin-right:106px;
+     font-size: 40px;
+    color: #73787c;
+    margin-right: 10px;
     }
     #HF{
           height: 346px;
