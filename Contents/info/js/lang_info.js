@@ -98,14 +98,12 @@ $(document).ready(function() {
                 function createCallback(num){
 
                       return function(){  
-                         alert('you clicked' + num);
+                         //alert('you clicked' + num);
                         $("#bdyt"+num).html(data.Book1[num].DETAIL_BASE);
                         $("#add"+num).text("Location : "+data.Book1[num].ADDRESS_BASE);
                         $("#ph"+num).text("Phone : "+data.Book1[num].PHONE_BASE);
                   }
                 }
-
-                
                  
                 //Rent a car
                 $('#btn1').click(function(){
@@ -159,7 +157,7 @@ $(document).ready(function() {
                 //Baggage
                 $('#btn4').click(function(){
                      $("#tsale,#rcar,#ainfo,#smoke,#taxi,#aryd,#htl").hide(); $("#bag").show();
-                     $('.v-menu-title').text("Baggage");
+                     $('.v-menu-title').text("Bathrooms");
                      var url = data.Book1[14].IMG_SRC;
                      // var url = "photo/submenu/buyuk/baggage.jpg";
                      $('#content').css({"background-image": "url("+url+")",

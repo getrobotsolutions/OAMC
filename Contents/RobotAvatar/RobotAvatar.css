@@ -1,3 +1,15 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../../css/Fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: OpenSans-Light;
+    src: url(../../css/Fonts/OpenSans-Light.ttf);
+}
+body{
+	font-family: 'OpenSans-Light' !important;
+/*font-weight: bold;*/
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -106,7 +118,7 @@ color: white;
      a {
     color: #008a97 !important;
 }
- #change-us, #change-ar{padding: 10px 10px 8px 10px; border-radius: 5px;text-decoration: none;}
+ #change-us, #change-ar{padding: 0px 10px 5px 10px !important; border-radius: 5px;text-decoration: none;}
  .active{
     color: rgb(255, 255, 255) !important;
  background: #008a97 !important;
