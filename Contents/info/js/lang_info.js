@@ -432,7 +432,7 @@ $(document).ready(function() {
 
 
               //url: "https://api.myjson.com/bins/yxdsx",
-url:"http://localhost/json/json.json",
+url:"https://api.myjson.com/bins/7052h",
 crossDomain: true,
 
 dataType: "JSON",
