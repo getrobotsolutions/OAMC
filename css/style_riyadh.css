@@ -426,7 +426,11 @@
 .nomargin{margin: 0 !important;}
 .right{float: right; position: absolute;right: 0}
 
-
+#temp{    display: block;
+    width: 166px;
+    float: right;
+    margin-right: 10px;
+    font-size: 15px;}
 body{
   /*margin:120px auto;
   display:block;
