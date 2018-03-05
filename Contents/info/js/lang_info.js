@@ -1,5 +1,8 @@
 $(document).ready(function() {
   ShowTime();
+          $('#factFig').click(function(){
+            ShowPopup('factFig.png');
+          });
           $('#list1').hide(); 
 
           //Change to English
@@ -449,4 +452,28 @@ dataType: "JSON",
 
         });
 
+function ShowPopup(src){
+
+// get the screen height and width  
+  var maskHeight = $(document).height();  
+  var maskWidth = $(window).width();
+  
+  // calculate the values for center alignment
+var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
+var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  
+  // assign values to the overlay and dialog box
+  $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+  
+  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="650" src="'+ src +'"/></div></div>';
+  //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
+        
+$('#dialog-box a').click(function(){
+$('#dialog-overlay').hide();
+$('#dialog-box').hide();
+});
+}
+
      });
+/* */

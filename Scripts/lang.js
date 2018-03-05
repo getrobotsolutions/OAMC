@@ -1,5 +1,6 @@
+
 $(document).ready(function(){
-    ShowTime();
+   ShowTime();
     var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
     var lan="ar-eg";
                 
@@ -138,14 +139,3 @@ $(document).ready(function(){
   
 })
 });
-
- 
-       /* function ShowTime()  
-        {  
-            var dt = new Date();  
-            var localeSpecificTime = dt.toLocaleTimeString();
-            localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
-            document.getElementById("content_air")  
-                .innerHTML = localeSpecificTime; 
-            window.setTimeout("ShowTime()", 1000); // Here 1000(milliseconds) means one 1 Sec  
-        }*/

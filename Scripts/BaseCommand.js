@@ -407,5 +407,5 @@ function ShowTime()
             localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
             document.getElementById("content_air")  
                 .innerHTML = localeSpecificTime; 
-            window.setTimeout("ShowTime()", 1000); // Here 1000(milliseconds) means one 1 Sec  
+            window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec  
         }

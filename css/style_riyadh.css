@@ -427,10 +427,10 @@
 .right{float: right; position: absolute;right: 0}
 
 #temp{    display: block;
-    width: 166px;
+        width: 183px;
     float: right;
     margin-right: 10px;
-    font-size: 15px;}
+    font-size: 17px;}
 body{
   /*margin:120px auto;
   display:block;
