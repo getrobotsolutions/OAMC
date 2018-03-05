@@ -100,118 +100,148 @@ $(document).ready(function() {
                       return function(){  
                          //alert('you clicked' + num);
                         $("#bdyt"+num).html(data.Book1[num].DETAIL_BASE);
-                        $("#add"+num).text("Location : "+data.Book1[num].ADDRESS_BASE);
-                        $("#ph"+num).text("Phone : "+data.Book1[num].PHONE_BASE);
+                        //$("#add"+num).text("Location : "+data.Book1[num].ADDRESS_BASE);
+                        //$("#ph"+num).text("Phone : "+data.Book1[num].PHONE_BASE);
                   }
                 }
                  
-                //Rent a car
-                $('#btn1').click(function(){
 
-                     $("#tsale,#ainfo,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#rcar").show();
-                     $('.v-menu-title').text("Hotels");
-                     var url = data.Book1[7].IMG_SRC;
+
+                //Info
+                $('#btn1').click(function(){
+                     $("#tsale,#rcar,#ainfo,#bag,#smoke,#taxi,#htl, #hotel").hide(); $("#info").show();
+                     $('.v-menu-title').text("info");
+                     //var url = "photo/submenu/buyuk/about.jpg";
+                     var url = data.Book1[0].IMG_SRC;
                      $('#content').css({"background-image": "url("+url+")",
-                                  "background-size":"99% 42%"});
+                                  "background-size":"100% 45%"});
                      $('#icon').hide();  $('#list1').show();  
-                      for(var i = 7; i <= 10; i++) {
-                        
-                        $('#r'+i).html(data.Book1[i].NAME_BASE);
-                       // var html1 = data.Book1[i].NAME_BASE; 
-                        //$('#r'+i).html(html1);
-                        $('#r'+ i).click( createCallback( i ) );
+                      for(var i = 0; i <= 0; i++) {
+                        $('#info'+i).text(data.Book1[i].NAME_BASE);
+                        $('#info' + i).click( createCallback( i ) );
+                      }
+                 });
+
+                //Hotels
+                $('#btn2').click(function(){
+                     $("#tsale,#rcar,#bag,#smoke,#taxi,#aryd,#htl,#info").hide(); $("#hotel").show();
+                     $('.v-menu-title').text("Hotels");
+                     // var url = "photo/submenu/buyuk/information.jpg";
+                     var url = data.Book1[1].IMG_SRC;
+                     $('#content').css({"background-image": "url("+url+")",
+                                  "background-size":"100% 48%"});
+                     $('#icon').hide();  $('#list1').show();  
+                      for(var i = 1; i <= 1; i++) {
+                        $('#hotel'+i).text(data.Book1[i].NAME_BASE);
+                        $('#hotel' + i).click( createCallback( i ) );
                       }
                  });
 
                 //Airport Lounges
                 $('#btn3').click(function(){
-                     $("#rcar,#ainfo,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#tsale").show();
-                     $('.v-menu-title').text("Prayer Room");
-                     var url = data.Book1[0].IMG_SRC;
+                     $("#rcar,#ainfo,#bag,#smoke,#taxi,#aryd,#htl,#info,#hotel").hide(); $("#lounges").show();
+                     $('.v-menu-title').text("Lounges");
+                     var url = data.Book1[2].IMG_SRC;
                      //var url = "photo/submenu/buyuk/ticket.jpg";
                      
                      $('#content').css({"background-image": "url("+url+")",
                                   "background-size":"100% 34%"});
                      $('#icon').hide();  $('#list1').show();  
-                      for(var i = 0; i <= 6; i++) {
-                        $('#t'+i).text(data.Book1[i].NAME_BASE);
-                        $('#t' + i).click( createCallback( i ) );
+                      for(var i = 2; i <= 4; i++) {
+                        $('#lounges'+i).text(data.Book1[i].NAME_BASE);
+                        $('#lounges' + i).click( createCallback( i ) );
                       }
                  });
 
-                //Prayer Room
-                $('#btn2').click(function(){
-                     $("#tsale,#rcar,#bag,#smoke,#taxi,#aryd,#htl").hide(); $("#ainfo").show();
-                     $('.v-menu-title').text("Airport Lounges");
-                     // var url = "photo/submenu/buyuk/information.jpg";
-                     var url = data.Book1[11].IMG_SRC;
-                     $('#content').css({"background-image": "url("+url+")",
-                                  "background-size":"100% 48%"});
-                     $('#icon').hide();  $('#list1').show();  
-                      for(var i = 11; i <= 13; i++) {
-                        $('#a'+i).text(data.Book1[i].NAME_BASE);
-                        $('#a' + i).click( createCallback( i ) );
-                      }
-                 });
-
-                //Baggage
+                //Nursery
                 $('#btn4').click(function(){
-                     $("#tsale,#rcar,#ainfo,#smoke,#taxi,#aryd,#htl").hide(); $("#bag").show();
-                     $('.v-menu-title').text("Bathrooms");
-                     var url = data.Book1[14].IMG_SRC;
+                     $("#info,#hotel,#lounges").hide(); $("#nursery").show();
+                     $('.v-menu-title').text("Nursery");
+                     var url = data.Book1[5].IMG_SRC;
                      // var url = "photo/submenu/buyuk/baggage.jpg";
                      $('#content').css({"background-image": "url("+url+")",
                                   "background-size":"100% 30%"});
                      $('#icon').hide();  $('#list1').show();  
-                      for(var i = 14; i <= 18; i++) {
-                        $('#b'+i).text(data.Book1[i].NAME_BASE);
-                        $('#b' + i).click( createCallback( i ) );
+                      for(var i = 5; i <= 5; i++) {
+                        $('#nursery'+i).text(data.Book1[i].NAME_BASE);
+                        $('#nursery' + i).click( createCallback( i ) );
                       }
                  });
 
-                //Smoking Area
+                //Atms
                 $('#btn5').click(function(){
-                     $("#tsale,#rcar,#ainfo,#bag,#taxi,#aryd,#htl").hide(); $("#smoke").show();
-                     $('.v-menu-title').text("Smoking Area");
-                     var url = data.Book1[19].IMG_SRC;
+                     $("#info,#hotel,#lounges,#nursery").hide(); $("#atm").show();
+                     $('.v-menu-title').text("Atms");
+                     var url = data.Book1[6].IMG_SRC;
                      $('#content').css({"background-image": "url("+url+")",
                                   "background-size":"100% 30%"});
                      $('#icon').hide();  $('#list1').show();  
-                      for(var i = 19; i <= 22; i++) {
-                        $('#s'+i).text(data.Book1[i].NAME_BASE);
-                        $('#s' + i).click( createCallback( i ) );
+                      for(var i = 6; i <= 6; i++) {
+                        $('#atm'+i).text(data.Book1[i].NAME_BASE);
+                        $('#atm' + i).click( createCallback( i ) );
                       }
                  });
 
-                //Taxi
+                //Currecny Exchange
                 $('#btn6').click(function(){
-                     $("#tsale,#rcar,#ainfo,#bag,#smoke,#aryd,#htl").hide(); $("#taxi").show();
-                     $('.v-menu-title').text("Bathrooms");
-                     var url = data.Book1[23].IMG_SRC;
+                     $("#info,#hotel,#lounges,#nursery,#atm").hide(); $("#cr").show();
+                     $('.v-menu-title').text("Currency Exchange");
+                     var url = data.Book1[7].IMG_SRC;
                      //var url = "photo/submenu/buyuk/taxi.jpg";
                     $('#content').css({"background-image": "url("+url+")",
                                   "background-size":"100% 30%"});
                      $('#icon').hide();  $('#list1').show();  
-                      for(var i = 23; i <= 23; i++) {
-                        $('#t'+i).text(data.Book1[i].NAME_BASE);
-                        $('#t' + i).click( createCallback( i ) );
+                      for(var i = 7; i <= 8; i++) {
+                        $('#cr'+i).text(data.Book1[i].NAME_BASE);
+                        $('#cr' + i).click( createCallback( i ) );
+                      }
+                 });
+                //Payphones
+                $('#btn7').click(function(){
+
+                     $("#info,#hotel,#lounges,#nursery,#atm,#cr").hide(); $("#payphones").show();
+                     $('.v-menu-title').text("Payphones");
+                     var url = data.Book1[9].IMG_SRC;
+                     $('#content').css({"background-image": "url("+url+")",
+                                  "background-size":"99% 42%"});
+                     $('#icon').hide();  $('#list1').show();  
+                      for(var i = 9; i <= 9; i++) {
+                        
+                        $('#payphones'+i).html(data.Book1[i].NAME_BASE);
+                       
+                        $('#payphones'+ i).click( createCallback( i ) );
                       }
                  });
 
-                //About Riyadh
-                $('#btn7').click(function(){
-                     $("#tsale,#rcar,#ainfo,#bag,#smoke,#taxi,#htl").hide(); $("#aryd").show();
-                     $('.v-menu-title').text("About Muscat International Airport");
-                     //var url = "photo/submenu/buyuk/about.jpg";
-                     var url = data.Book1[24].IMG_SRC;
+                //Luggage Wrapping
+                $('#btn8').click(function(){
+
+                     $("#info,#hotel,#lounges,#nursery,#atm,#cr,#payphones").hide(); $("#wr").show();
+                     $('.v-menu-title').text("Luggage Wrapping");
+                     var url = data.Book1[10].IMG_SRC;
                      $('#content').css({"background-image": "url("+url+")",
-                                  "background-size":"100% 45%"});
+                                  "background-size":"99% 42%"});
                      $('#icon').hide();  $('#list1').show();  
-                      for(var i = 24; i <= 26; i++) {
-                        $('#ar'+i).text(data.Book1[i].NAME_BASE);
-                        $('#ar' + i).click( createCallback( i ) );
+                      for(var i = 10; i <= 10; i++) {
+                        
+                        $('#wr'+i).html(data.Book1[i].NAME_BASE);
+                       // var html1 = data.Book1[i].NAME_BASE; 
+                        //$('#r'+i).html(html1);
+                        $('#wr'+ i).click( createCallback( i ) );
                       }
                  });
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
 
                 
                       
@@ -224,8 +254,8 @@ $(document).ready(function() {
                       return function(){  
                         // alert('you clicked' + num);
                         $("#bdyt"+num).html(data.Book1[num].DETAIL_LOCAL);
-                        $("#add"+num).text("Location : "+data.Book1[num].ADDRESS_LOCAL);
-                        $("#ph"+num).text("Phone : "+data.Book1[num].PHONE_LOCAL);
+                        //$("#add"+num).text("Location : "+data.Book1[num].ADDRESS_LOCAL);
+                        //$("#ph"+num).text("Phone : "+data.Book1[num].PHONE_LOCAL);
                   }
                 }
                 //Rent a car
@@ -401,10 +431,11 @@ $(document).ready(function() {
               type: "GET",
 
 
-              url: "https://api.myjson.com/bins/yxdsx",
+              //url: "https://api.myjson.com/bins/yxdsx",
+url:"http://localhost/json/json.json",
+crossDomain: true,
 
-            
-              dataType: "JSON",
+dataType: "JSON",
               success: function(data) {
                 display(data);
                 $('#change-us').click(function(event){
@@ -414,7 +445,8 @@ $(document).ready(function() {
                 $('#change-ar').click(function(event){
                  display_ar(data);
                 });
-             }                
+             } 
+
         });
 
      });

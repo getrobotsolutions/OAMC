@@ -124,7 +124,7 @@ $(document).ready(function(){
           });
 
  
-        function ShowTime()  
+       /* function ShowTime()  
         {  
             var dt = new Date();  
             var localeSpecificTime = dt.toLocaleTimeString();
@@ -132,4 +132,4 @@ $(document).ready(function(){
             document.getElementById("content_air")  
                 .innerHTML = localeSpecificTime; 
             window.setTimeout("ShowTime()", 1000); // Here 1000(milliseconds) means one 1 Sec  
-        }
+        }*/

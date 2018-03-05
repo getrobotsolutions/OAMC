@@ -62,12 +62,13 @@
   	$(document).ready(function(){
   		ShowTime();
   		if(readCookie("lang")=="english"){
-      		PlaySpeech("");
+      		PlaySpeech("Its time to smile.");
       		$('#change-us').addClass('active');
       		$('#change-ar').removeClass('active');
       
     	}
     	else if (readCookie("lang")=="arabic") {
+    		PlaySpeech("حان الوقت لتبتسم.");
       		$('#change-us').removeClass('active');
       		$('#change-ar').addClass('active');
       		$('body').css('background-image','url(Image/photo_bg_ar.png)');

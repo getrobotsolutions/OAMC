@@ -26,7 +26,7 @@
     UpdateSession(8);
     $(document).ready(function(){
     if(readCookie("lang")=="english"){
-      PlaySpeech("Its time to say cheese");
+      PlaySpeech("Look your best because now you are about to be a robot.");
       $('#change-us').addClass('active');
       $('#change-ar').removeClass('active');
       $('.title').text("Robot Avatar");
@@ -41,6 +41,7 @@
       
     }
     else if (readCookie("lang")=="arabic") {
+      PlaySpeech("أظهر بأفضل شكل لأنك على وشك أن تصبح رجلاً آلياً.");
       $('#change-us').removeClass('active');
       $('#change-ar').addClass('active');
       $('.title').text("الصّورة الرّمزية");

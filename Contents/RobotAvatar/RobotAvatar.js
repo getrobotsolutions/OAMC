@@ -44,7 +44,7 @@ ShowTime();
 var refreshIntervalId ;
 	function JSMain() {
 		refreshIntervalId = setInterval("test()", 33);
-		setTimeout("Init()",3000);
+		//setTimeout("Init()",3000);
 	}
 
 	function Init(){	
@@ -53,7 +53,7 @@ var refreshIntervalId ;
 
 	function JSUnload() {
 		DeleteRobotFace();
-		HideAdMovie();
+		//HideAdMovie();
 	}
 	
 	function FC_ReadSelectedMovie() {
@@ -142,5 +142,5 @@ var refreshIntervalId ;
 	}
 
 	function OnUserDisappeared() {
-		location.href = "../../IdlePage/IdlePage.htm";
+		//location.href = "../../IdlePage/IdlePage.htm";
 	}

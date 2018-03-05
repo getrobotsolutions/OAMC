@@ -322,7 +322,6 @@
 
 
 <link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
-<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
 
@@ -340,6 +339,7 @@ UpdateSession(6);
     else if (readCookie("lang")=="arabic") {
       $('#change-us').removeClass('active');
       $('#change-ar').addClass('active');
+      PlaySpeech("إليك بعض المعلومات لتجعلك تستمتع برحلتك بشكل أكبر.");
       
     }
   });
@@ -381,52 +381,55 @@ UpdateSession(6);
                       <div class="row prim_1">
                         <div class="col-sm-3">
                            <button id="btn1" type="button" class="btn btn-primary ">
-                           <img src="photo/hotel-icon.png" width="68">
+                            <i class="fa fa-info fa-4x" aria-hidden="true"></i>
+                          
 
                            </button>
                         </div>
                          <div class="col-sm-3">
                             <button id="btn2" type="button" class="btn btn-primary " >
-                              <img src="photo/lounge-icon.png" width="68">
+                               <img src="photo/hotel-icon.png" width="68">
+                              
                             </button>
                          </div>
                       </div>
                       <div class="row">  
                         <div class="col-sm-3"> 
                            <button id="btn3" type="button" class="btn btn-primary ">
-                             <img src="photo/prayer-icon.png" width="68">
+                            <img src="photo/lounge-icon.png" width="68">
+                             
                            </button>
                         </div>
                         <div class="col-sm-3">
                             <button id="btn4" type="button" class="btn btn-primary ">
-                             <img src="photo/bath-room.png" width="68">
+                             <img src="photo/nursery.png" width="68">
                             </button>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-3">
                            <button id="btn5" type="button" class="btn btn-primary ">
-                             <i class="fa fa-info fa-4x" aria-hidden="true"></i>
+                             <img src="photo/Atms.png" width="68">
                            </button>
                         </div>
                         <div class="col-sm-3">
                            <button id="btn6" type="button" class="btn btn-primary ">
-                            <!--<img src="photo/bath-room.png" width="68">-->                            
+                            <img src="photo/Currency-exchange.png" width="68">                            
                            </button>
                         </div>
                       </div>
-                      <!--<div class="row">
+                      <div class="row">
                         <div class="col-sm-3">
                            <button id="btn7" type="button" class="btn btn-primary ">
-                             <i class="fa fa-info fa-4x" aria-hidden="true"></i>
-                           </button>
-                        </div>-->
-                        <!--<div class="col-sm-3">
-                           <button id="btn8" type="button" class="btn btn-primary ">
-                             <i class="fa fa-bed fa-4x" aria-hidden="true"></i>
+                             <img src="photo/payphones.png" width="68">
                            </button>
                         </div>
-                       </div>-->
+                        <div class="col-sm-3">
+                           <button id="btn8" type="button" class="btn btn-primary ">
+                            <img src="photo/Luggage-wrapping.png" width="68">
+                           </button>
+                        </div>
+                       </div>
                   </div> <!-- part 1 div ends here -->
                 </div>
 
@@ -437,322 +440,108 @@ UpdateSession(6);
 
 
                     <div class="hr-ver-menu-wrapper bdy" id="list1">
-                                <div class="v-menu-title">Ticket Sale</div>
-                                <ul id="tsale" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
-                                    <li><a id="t0" href="#"></a>
-                                        <ul>
-                                          <li class="bd" id="bdyt0"></li><hr>
-                                          <li class="add" id="add0"></li>
-                                          <li class="ph" id="ph0"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="t1" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt1"></li><hr>
-                                            <li class="add" id="add1"></li>
-                                            <li class="ph" id="ph1"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="t2" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt2"></li><hr>
-                                            <li class="add" id="add2"></li>
-                                            <li class="ph" id="ph2"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="t3" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt3"></li><hr>
-                                            <li class="add" id="add3"></li>
-                                            <li class="ph" id="ph3"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="t4" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt4"></li><hr>
-                                            <li class="add" id="add4"></li>
-                                            <li class="ph" id="ph4"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="t5" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt5"></li><hr>
-                                            <li class="add" id="add5"></li>
-                                            <li class="ph" id="ph5"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="t6" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt6"></li><hr>
-                                            <li class="add" id="add6"></li>
-                                            <li class="ph" id="ph6"></li>
-                                        </ul>
-                                      </li>
-                                  </ul>
-
-                                   <ul id="rcar" class="hr-ver-menu" style="width: 539px; height: 631px; overflow: auto">
-                                    <li><a id="r7" href="#"></a>
-                                        <ul>
-                                          <li class="bd" id="bdyt7"></li><hr>
-                                          <li class="add" id="add7"></li>
-                                          <li class="ph" id="ph7"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r8" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt8"></li><hr>
-                                            <li class="add" id="add8"></li>
-                                            <li class="ph" id="ph8"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r9" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt9"></li><hr>
-                                            <li class="add" id="add9"></li>
-                                            <li class="ph" id="ph9"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r10" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt10"></li><hr>
-                                            <li class="add" id="add10"></li>
-                                            <li class="ph" id="ph10"></li>
-                                        </ul>
-                                      </li>
-                                      <!--<li><a id="r11" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt11"></li><hr>
-                                            <li class="add" id="add11"></li>
-                                            <li class="ph" id="ph11"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r12" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt12"></li><hr>
-                                            <li class="add" id="add12"></li>
-                                            <li class="ph" id="ph12"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r13" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt13"></li><hr>
-                                            <li class="add" id="add13"></li>
-                                            <li class="ph" id="ph13"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r14" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt14"></li><hr>
-                                            <li class="add" id="add14"></li>
-                                            <li class="ph" id="ph14"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r15" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt15"></li><hr>
-                                            <li class="add" id="add15"></li>
-                                            <li class="ph" id="ph15"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r16" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt16"></li><hr>
-                                            <li class="add" id="add16"></li>
-                                            <li class="ph" id="ph16"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="r17" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt17"></li><hr>
-                                            <li class="add" id="add17"></li>
-                                            <li class="ph" id="ph17"></li>
-                                        </ul>
-                                      </li>-->
-                                  </ul>
-
-                                  <ul id="ainfo" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
-                                    <li><a id="a11" href="#"></a>
-                                        <ul>
-                                          <li class="bd" id="bdyt11"></li><hr>
-                                          <li class="add" id="add11"></li>
-                                          <li class="ph" id="ph11"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="a12" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt12"></li><hr>
-                                            <li class="add" id="add12"></li>
-                                            <li class="ph" id="ph12"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="a13" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt13"></li><hr>
-                                            <li class="add" id="add13"></li>
-                                            <li class="ph" id="ph13"></li>
-                                        </ul>
-                                      </li>
-                                     
-                                  </ul>
-
-                                  <ul id="bag" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
-                                      <li><a id="b14" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt14"></li><hr>
-                                            <li class="add" id="add14"></li>
-                                            <li class="ph" id="ph14"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="b15" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt15"></li><hr>
-                                            <li class="add" id="add15"></li>
-                                            <li class="ph" id="ph15"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="b16" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt16"></li><hr>
-                                            <li class="add" id="add16"></li>
-                                            <li class="ph" id="ph16"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="b17" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt17"></li><hr>
-                                            <li class="add" id="add17"></li>
-                                            <li class="ph" id="ph17"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="b18" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt18"></li><hr>
-                                            <li class="add" id="add18"></li>
-                                            <li class="ph" id="ph18"></li>
-                                        </ul>
-                                      </li>
-                                  </ul>
-
-                                  <ul id="smoke" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
-                                      <li><a id="s21" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt21"></li><hr>
-                                            <li class="add" id="add21"></li>
-                                            <li class="ph" id="ph21"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="s22" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt22"></li><hr>
-                                            <li class="add" id="add22"></li>
-                                            <li class="ph" id="ph22"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="s19" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt19"></li><hr>
-                                            <li class="add" id="add19"></li>
-                                            <li class="ph" id="ph19"></li>
-                                        </ul>
-                                      </li>
-                                      
-                                  </ul>
-
-                                  <ul id="taxi" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
-                                    <li><a id="t23" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt23"></li><hr>
-                                            <li class="add" id="add23"></li>
-                                            <li class="ph" id="ph23"></li>
-                                        </ul>
-                                      </li>
-                                      
-                                  </ul>
-
-                                  <ul id="aryd" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
-                                    <li><a id="ar24" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt24"></li><hr>
-                                            <li class="add" id="add24"></li>
-                                            <li class="ph" id="ph24"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="ar25" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt25"></li><hr>
-                                            <li class="add" id="add25"></li>
-                                            <li class="ph" id="ph25"></li>
-                                        </ul>
-                                      </li>
-                                    <li><a id="ar26" href="#"></a>
-                                        <ul>
-                                          <li class="bd" id="bdyt26"></li><hr>
-                                          <li class="add" id="add26"></li>
-                                          <li class="ph" id="ph26"></li>
-                                        </ul>
-                                      </li>
-                                      
-                                  </ul>
-
-                                  <ul id="htl" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
-                                    <li><a id="h28" href="#"></a>
-                                        <ul>
-                                          <li class="bd" id="bdyt28"></li><hr>
-                                          <li class="add" id="add28"></li>
-                                          <li class="ph" id="ph28"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="h29" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt29"></li><hr>
-                                            <li class="add" id="add29"></li>
-                                            <li class="ph" id="ph29"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="h30" href="#"></a>
-                                        <ul>
-                                          <li class="bd" id="bdyt30"></li><hr>
-                                          <li class="add" id="add30"></li>
-                                          <li class="ph" id="ph30"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="h31" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt31"></li><hr>
-                                            <li class="add" id="add31"></li>
-                                            <li class="ph" id="ph31"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="h32" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt32"></li><hr>
-                                            <li class="add" id="add32"></li>
-                                            <li class="ph" id="ph32"></li>
-                                        </ul>
-                                      </li>
-                                      <li><a id="h33" href="#"></a>
-                                        <ul>
-                                            <li class="bd" id="bdyt33"></li><hr>
-                                            <li class="add" id="add33"></li>
-                                            <li class="ph" id="ph33"></li>
-                                        </ul>
-                                      </li>
-                                  </ul>
-                          </div>
-
-
-
+                        <div class="v-menu-title">Ticket Sale</div>
+                        <ul id="info" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="info0" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt0"></li><hr>
+                                  <li class="add" id="add0"></li>
+                                  <li class="ph" id="ph0"></li>
+                                </ul>
+                              </li>
+                        </ul>
+                        <ul id="hotel" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="hotel1" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt1"></li><hr>
+                                  <li class="add" id="add1"></li>
+                                  <li class="ph" id="ph1"></li>
+                                </ul>
+                              </li>
+                             
+                        </ul>
+                        <ul id="lounges" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="lounges2" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt2"></li><hr>
+                                  <li class="add" id="add2"></li>
+                                  <li class="ph" id="ph2"></li>
+                                </ul>
+                              </li>
+                              <li><a id="lounges3" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt3"></li><hr>
+                                  <li class="add" id="add3"></li>
+                                  <li class="ph" id="ph3"></li>
+                                </ul>
+                              </li>
+                              <li><a id="lounges4" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt4"></li><hr>
+                                  <li class="add" id="add4"></li>
+                                  <li class="ph" id="ph4"></li>
+                                </ul>
+                              </li>
+                             
+                        </ul>
+                        <ul id="nursery" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="nursery5" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt5"></li><hr>
+                                  <li class="add" id="add5"></li>
+                                  <li class="ph" id="ph5"></li>
+                                </ul>
+                              </li>
+                        </ul>
+                        <ul id="atm" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="atm6" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt6"></li><hr>
+                                  <li class="add" id="add6"></li>
+                                  <li class="ph" id="ph6"></li>
+                                </ul>
+                              </li>
+                        </ul>
+                        <ul id="cr" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="cr7" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt7"></li><hr>
+                                  <li class="add" id="add7"></li>
+                                  <li class="ph" id="ph7"></li>
+                                </ul>
+                              </li>
+                              <li><a id="cr8" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt8"></li><hr>
+                                  <li class="add" id="add8"></li>
+                                  <li class="ph" id="ph8"></li>
+                                </ul>
+                              </li>
+                        </ul>
+                        <ul id="payphones" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="payphones9" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt9"></li><hr>
+                                  <li class="add" id="add9"></li>
+                                  <li class="ph" id="ph9"></li>
+                                </ul>
+                              </li>
+                        </ul>
+                        <ul id="wr" class="hr-ver-menu" style="width: 539px; height: 630px; overflow: auto">
+                              <li><a id="wr10" href="#"></a>
+                                <ul>
+                                  <li class="bd" id="bdyt10"></li><hr>
+                                  <li class="add" id="add10"></li>
+                                  <li class="ph" id="ph10"></li>
+                                </ul>
+                              </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-               </div>
+                </div>
               </div>
-
-       
-     
-      </div>
-    </div>
-
-
-
+            </div>
 
 <footer>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
