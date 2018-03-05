@@ -109,7 +109,7 @@ $(document).ready(function() {
 
                 //Info
                 $('#btn1').click(function(){
-                     $("#tsale,#rcar,#ainfo,#bag,#smoke,#taxi,#htl, #hotel").hide(); $("#info").show();
+                     $("#hotel,#lounges,#nursery,#atm,#cr,#payphones,#wr").hide(); $("#info").show();
                      $('.v-menu-title').text("info");
                      //var url = "photo/submenu/buyuk/about.jpg";
                      var url = data.Book1[0].IMG_SRC;
@@ -124,7 +124,7 @@ $(document).ready(function() {
 
                 //Hotels
                 $('#btn2').click(function(){
-                     $("#tsale,#rcar,#bag,#smoke,#taxi,#aryd,#htl,#info").hide(); $("#hotel").show();
+                     $("#info,#lounges,#nursery,#atm,#cr,#payphones,#wr").hide(); $("#hotel").show();
                      $('.v-menu-title').text("Hotels");
                      // var url = "photo/submenu/buyuk/information.jpg";
                      var url = data.Book1[1].IMG_SRC;
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
                 //Airport Lounges
                 $('#btn3').click(function(){
-                     $("#rcar,#ainfo,#bag,#smoke,#taxi,#aryd,#htl,#info,#hotel").hide(); $("#lounges").show();
+                     $("#info,#hotel,#nursery,#atm,#cr,#payphones,#wr").hide(); $("#lounges").show();
                      $('.v-menu-title').text("Lounges");
                      var url = data.Book1[2].IMG_SRC;
                      //var url = "photo/submenu/buyuk/ticket.jpg";
@@ -155,7 +155,7 @@ $(document).ready(function() {
 
                 //Nursery
                 $('#btn4').click(function(){
-                     $("#info,#hotel,#lounges").hide(); $("#nursery").show();
+                     $("#info,#hotel,#lounges,#atm,#cr,#payphones,#wr").hide(); $("#nursery").show();
                      $('.v-menu-title').text("Nursery");
                      var url = data.Book1[5].IMG_SRC;
                      // var url = "photo/submenu/buyuk/baggage.jpg";
@@ -170,7 +170,7 @@ $(document).ready(function() {
 
                 //Atms
                 $('#btn5').click(function(){
-                     $("#info,#hotel,#lounges,#nursery").hide(); $("#atm").show();
+                     $("#info,#hotel,#lounges,#nursery,#cr,#payphones,#wr").hide(); $("#atm").show();
                      $('.v-menu-title').text("Atms");
                      var url = data.Book1[6].IMG_SRC;
                      $('#content').css({"background-image": "url("+url+")",
@@ -184,7 +184,7 @@ $(document).ready(function() {
 
                 //Currecny Exchange
                 $('#btn6').click(function(){
-                     $("#info,#hotel,#lounges,#nursery,#atm").hide(); $("#cr").show();
+                     $("#info,#hotel,#lounges,#nursery,#atm,#payphones,#wr").hide(); $("#cr").show();
                      $('.v-menu-title').text("Currency Exchange");
                      var url = data.Book1[7].IMG_SRC;
                      //var url = "photo/submenu/buyuk/taxi.jpg";
@@ -199,7 +199,7 @@ $(document).ready(function() {
                 //Payphones
                 $('#btn7').click(function(){
 
-                     $("#info,#hotel,#lounges,#nursery,#atm,#cr").hide(); $("#payphones").show();
+                     $("#info,#hotel,#lounges,#nursery,#atm,#cr,#wr").hide(); $("#payphones").show();
                      $('.v-menu-title').text("Payphones");
                      var url = data.Book1[9].IMG_SRC;
                      $('#content').css({"background-image": "url("+url+")",
