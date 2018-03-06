@@ -28,6 +28,10 @@
 if(readCookie("lang")=="english"){
     //alert("worked");
     location.href='index-us.htm';
+    window.external.ChangeLanguage("en-gb");
+}
+else if(readCookie("lang")=="arabic"){
+  window.external.ChangeLanguage("ar-eg");
 }
 UpdateSession(1);
 function GoHome()

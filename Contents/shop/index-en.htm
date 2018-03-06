@@ -18,6 +18,10 @@
   if(readCookie("lang")=="arabic"){
     //alert("worked");
     location.href='index.html';
+    
+  }
+  else if(readCookie("lang")=="english"){
+    window.external.ChangeLanguage("en-gb");
   }
   function GoHome()
 {

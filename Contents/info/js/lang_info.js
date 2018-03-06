@@ -8,8 +8,8 @@ $(document).ready(function() {
           //Change to English
               $('#change-us').click(function(){
                 writeCookie("lang","english");
-       $('#change-us').addClass('active');
-       $('#change-ar').removeClass('active');
+                $('#change-us').addClass('active');
+                $('#change-ar').removeClass('active');
                 $('.titl1').text("Oman Airport Information page");
                 $('#txt1').text("Here you can discover all of the important services, and where they are located.");
                 $('#txt2').text("Select a button on the down left to get started.");

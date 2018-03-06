@@ -102,6 +102,7 @@
               $('#change-us').click(function(){
                location.href = "index-en.htm";
                 writeCookie("lang","english");
+                window.external.ChangeLanguage("en-gb");
                 /*$('.titl1').text("Oman Airport Shop page");
                 $('#txt1').text("Here you can discover all of our retail and shopping options, and where they are located.");
                 $('#txt2').text("Select a button on the down left to get started.");

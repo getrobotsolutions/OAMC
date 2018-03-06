@@ -199,6 +199,7 @@ ShowTime();
               $('#change-ar').click(function(){
                 location.href = "index.htm";
                 writeCookie("lang","arabic");
+                window.external.ChangeLanguage("ar-eg");
               });
 
 

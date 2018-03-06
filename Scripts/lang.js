@@ -41,7 +41,7 @@ $(document).ready(function(){
                 writeCookie("lang","english");
 
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
-                lan="en-us"; 
+                lan="en-gb"; 
                 //$('#change-us').toggleClass('active');
                 //$('#change-ar').toggleClass('active');
                 
@@ -68,7 +68,7 @@ $(document).ready(function(){
                 // PlaySpeech("hello"); #337ab7
                 writeCookie("lang","english");
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
-                lan="en-us"; 
+                lan="en-gb"; 
                 
                 $('#change-us').addClass('active');
                 $('#change-ar').removeClass('active');
@@ -117,7 +117,7 @@ $(document).ready(function(){
                
               });
               $('#content_fly').click(function(){
-                   ChangeLanguage("lan");
+                    ChangeLanguage("lan");
                     window.external.ChangeLanguage(lan);
                     PlaySpeech(welcomeMessage);
               });

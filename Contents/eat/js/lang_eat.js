@@ -181,6 +181,7 @@ ShowTime();
               $('#change-us').click(function(){
                 location.href = "index-us.htm";
                 writeCookie("lang","english");
+                window.external.ChangeLanguage("en-gb");
                 /*$('.titl1').text("Oman Airport Eat page");
                 $('#txt1').text("Here you can discover all of our food and beverage options, where they are located, and what's on the menu.");
                 $('#txt2').text("Select a button on the down left to get started.");
