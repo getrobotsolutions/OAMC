@@ -29,15 +29,15 @@
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>Muscat Duty Free has positioned the core Duty Free Liquor, Tobacco and Confectionary store in this 955sqm footprint on the right hand side as Muscat originating passengers enter the departures lounge. This store will include a complete brand experience and customized footprints for the most popular Scotch whiskey brands including Johnnie Walker and John Dewar’s. </p><p> The Tobacco area includes a walk in Humidor containing hand-rolled cigars from Cuba, Honduras, Nicaragua and the Dominican Republic. The Cigarette area includes international brands such as Marlboro and L&M. </p><p>Passengers will also be treated to an experience filled with pure chocolate and indulgence from brands such as Bateel and Al Rifai.</p>");
     $("#mapBtn").show();
-    $("#mapBtn").attr('dir','photo/maps/map.jpg');
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
   });
   $('#s3').click(function(){
-    $('.part2 #icon').attr("src","photo/Le Tabac.jpg");
+    $('.part2 #icon').attr("src","photo/muscat--market.png");
     $('.bdy #title').text("Muscat Market");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>Positioned on the left hand side as Muscat originating passengers enter the departures lounge, this market measuring 900sqm is a shopping destination for value conscious Indian sub-continent bound passengers.</p><p>Drawing its design theme from the palms of the Omani landscape, the Muscat Market is stocked with products and international brands such as Cadburys, Nestle, Mars and Kinder.</p><p>As you enter the store you will find our iconic Kit Kat chocolate bench which will provide our passengers the perfect opportunity for a preflight photo with friends and family.</p>");
     $("#mapBtn").show();
-    $("#mapBtn").attr('dir','photo/maps/map.jpg');
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
   });
   $('#s4').click(function(){
     $('.part2 #icon').attr("src","photo/p-and-c.png");
@@ -58,10 +58,12 @@
     $('.bdy #desc').text("With this well designed self-service solution and friendly, expert in store staff we have created a memorable experience for passengers with international brands Swarovski, Pandora and Tous.");
   });
   $('#s7').click(function(){
-                $('.part2 #icon').attr("src","photo/kids-kingdom.png");
-                $('.bdy #title').text("Kids Kingdom");
-                $('.bdy #location').text("Location:");
-                $('.bdy #desc').text("This store is an unexpected delight for passengers of all ages, no matter what type of trip they are on. The store will stock classic toy favourites from brands such as Lego, Mattel and Disney. The key feature in this store is our life size Sinbad Sailor made entirely of Lego located on our Omani Dhow. The store will also include an interactive environment offering kids a fun in store experience while their parents shop");
+    $('.part2 #icon').attr("src","photo/kids-kingdom.png");
+    $('.bdy #title').text("Kids Kingdom");
+    $('.bdy #location').text("Location:");
+    $('.bdy #desc').text("This store is an unexpected delight for passengers of all ages, no matter what type of trip they are on. The store will stock classic toy favourites from brands such as Lego, Mattel and Disney. The key feature in this store is our life size Sinbad Sailor made entirely of Lego located on our Omani Dhow. The store will also include an interactive environment offering kids a fun in store experience while their parents shop");
+    $("#mapBtn").show();
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
               });
               $('#s8').click(function(){
                 $('.part2 #icon').attr("src","photo/gourmet-store.png");
@@ -86,12 +88,16 @@
                 $('.bdy #title').text("Luxury Fashion Avenue");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Our luxury fashion avenue concept contains Mont Blanc alongside a multi branded area including Tumi, Porsche Design, Tatossian and Tag Heuer, located within this area is also our luxury watches area. This leads into our Ralph Lauren store followed by Hugo Boss and then Michael Kors.");
+                $("#mapBtn").show();
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
               });
               $('#s12').click(function(){
                 $('.part2 #icon').attr("src","photo/high-street-fashion.png");
                 $('.bdy #title').text("High Street Fashion");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("Our High Street Fashion area includes a multi brand store stocking international fashion brands such as Lacoste, Cerruti, Hackett and Vilebrequin to name but a few. This store then leads into our sports store catering to the outdoor enthusiast with brands such as North Face and Columbia. Located next door you will find our Victoria’s Secrets and Pandora stores.");
+                $("#mapBtn").show();
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
               });
                $('#s13').click(function(){
                 $('.part2 #icon').attr("src","photo/spectrum.png");
@@ -145,7 +151,7 @@
   $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
   $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
   
-  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="700" src="'+ src +'"/></div></div>';
+  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
   //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
         
 

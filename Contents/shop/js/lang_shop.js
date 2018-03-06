@@ -17,15 +17,15 @@
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>أنشئ متجر السوق الحرة للخمور والتبغ والحلويات بمسقط على مساحة 955 متر مربع وذلك على الجانب الأيمن حيث دخول الركاب المغادرين من مسقط إلى صالة المغادرة. كما يشتمل هذا المتجر على تجربة التمتع بالعلامة للتجارية الكاملة والآثار المصممة خصيصا لماركات ويسكي سكوتش الأكثر شهرة بما في ذلك جوني ووكر وجون ديوار.</p><p> تحتوي منطقة التبغ على مكان خاص بسيجار هوميدور والذي يحتوي على سيجار ملفوف يدويا من كوبا وهندوراس ونيكاراغوا وجمهورية الدومينيكان. كما تشتمل منطقة السجائر على علامات تجارية عالمية مثل مارلبورو و إل إم</p><p>وعلى الجانب الآخر، سيسعد الركاب بتجربة مليئة بالشوكولاتة النقية مع التمتع بالكثير من العروض من العلامات التجارية المختلفة مثل بتيل والرفاعي.</p>");
     $("#mapBtn").show();
-    $("#mapBtn").attr('dir','photo/maps/map.jpg');
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
   });
   $('#s2').click(function(){
-    $('.part2 #icon').attr("src","photo/muscat-duty-free-fashion.png");
+    $('.part2 #icon').attr("src","photo/muscat--market.png");
     $('.bdy #title').text("سوق مسقط");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>يقع هذا السوق على الجانب الأيسر حيث يدخل الركاب المغادرون من مسقط إلى صالة المغادرة، ويعد هذا السوق الذي تبلغ مساحته 900 متر مربع وجهة للتسوق يستشعر قيمتها الركاب المتجهون إلى شبه القارة الهندية.</p><p>كما نجد أن تصاميم سوق مسقط جميعها من النخيل الموجود في الطبيعة العمانية، ويمتلئ هذا السوق بالمنتجات والماركات التجارية العالمية مثل كادبوري ونستلة ومارس وكيندر. كما أنه عند دخولك للمتجر سوف تجد لدينا مقاعد شوكولاتة كيت كات المشهورة والتي سوف تمنح المسافرين فرصة مثالية لإلتقاط صورة مع العائلة أو الأصدقاء قبل السفر.</p>");
     $("#mapBtn").show();
-    $("#mapBtn").attr('dir','photo/maps/map.jpg');
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
   });
   $('#s3').click(function(){
     $('.part2 #icon').attr("src","photo/p-and-c.png");
@@ -52,6 +52,8 @@
     $('.bdy #title').text("مملكة الأطفال");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>يعد هذا المتجر بهجة غير متوقعة وسارة للركاب من مختلف الأعمار، بغض النظر عن نوع رحلتهم. حيث سيسهم المتجر بتوفير لعبة كلاسيكية مفضلة من العلامات التجارية ليغو وماتيل وديزني. وتتمثل السمة الأساسية في هذا المتجر في صنع مجسم للبحار سندباد بحجمنا الطبيعي والذي تصممه ليغو  ويوضع على مركب شراعية عمانية. كما سيشتمل المتجر أيضا على بيئة تفاعلية تقدم للأطفال المتعة في تجربة المتجر أثناء تسوق الوالدين.</p>");
+    $("#mapBtn").show();
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
   });
   $('#s7').click(function(){                           
     $('.part2 #icon').attr("src","photo/Ooredoo.jpg");
@@ -76,12 +78,16 @@
                 $('.bdy #title').text("شارع الأزياء الفاخرة");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').html("<p>يحتوى شارع الأزياء الفاخرة لدينا على مونت بلاك وذلك جنبا إلى جنب مع علامات تجارية متعددة بما في ذلك تومي، بورش ديزاين، تاتوسيان و تاغ هوير، ويقع داخل هذه المنطقة أيضا مجمع الساعات الفاخرة. وهذا سيقودنا إلى متجر رالف لورين يليه هوغو بوس ثم مايكل كورس.</p>");
+                $("#mapBtn").show();
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
               });
               $('#s11').click(function(){
                 $('.part2 #icon').attr("src","photo/high-street-fashion.png");
                 $('.bdy #title').text("شارع الأزياء الرئيس");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').html("<p>يحتوى شارع الأزياء الرئيس على متجر متعدد العلامات التجارية يذخر بماركات الأزياء العالمية على سبيل المثال لا الحصر، ماركة لاكوست وسيروتي وهاكيت وفيلبريكين. ويقودنا هذا المتجر فيما بعد إلى متجرنا الرياضي والذي يقدم الطعام لعشاق الهواء الطلق وذلك مع العلامات التجارية ذا نورث فيث وكولمبيا. كما ستجد في الباب المجاور لك متاجر باندورا وفيكتوريا سيكريت. </p>");
+                $("#mapBtn").show();
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
               });
               $('#s12').click(function(){
                 $('.part2 #icon').attr("src","photo/spectrum.png");
@@ -154,7 +160,7 @@
   $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
   $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
   
-  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="700" src="'+ src +'"/></div></div>';
+  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
   //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
         
 
