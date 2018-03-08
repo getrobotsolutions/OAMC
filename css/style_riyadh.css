@@ -12,7 +12,7 @@
         bottom:0;
         height:90px;
         width:100%;
-        border-top: 8px solid #be7726;
+        border-top: 8px solid #f6ad11;
       }
     .container{
           padding-top: 0px;
@@ -44,7 +44,7 @@
         background-color: #fdfdfd;
         line-height: 18px;
         padding-top: 75px;
-        padding-bottom: 112px;
+        padding-bottom: 100px;
       }
       .jumbotron p {
           margin-bottom: 15px;
@@ -110,16 +110,17 @@
       background-color:#9932CC;
     }
     .icon1{
+          z-index: 5;
       padding-top: 40px;
-      padding-bottom: 68px;
+      padding-bottom: 85px;
       line-height: 25px;
           margin-bottom: -4.6px;
-      background-color: #1f2b3069;
+          background-color: rgba(255, 255, 255, 0.85);
     }
     .bmg
     {
-        background-image: url('../images/muscat-oman.jpg');
-        background-color: white;
+        /*background-image: url('../images/muscat-oman.jpg');
+        background-color: white;*/
         background-repeat: no-repeat;
         background-size: 161%;
     height: 1196px;
@@ -174,17 +175,6 @@
          font-family: arial;
     }
 
-    /*.header-txt, .header-right{
-      font-size:30px;
-      display: inline-block;
-          transform: scale(1.1, 1.1);
-          -webkit-transform: scale(1.1, 1.1);  Safari and Chrome 
-          -moz-transform: scale(1.1, 1.1); /* Firefox 
-          -ms-transform: scale(1.1, 1.1); /* IE 9+ 
-          -o-transform: scale(1.1, 1.1); /* Opera */
-    /*}*//***//*/*/
-   
-  
     .explore{
        font-size: 32px;
     font-family: calibri;
@@ -200,7 +190,9 @@
           padding-top: 11px;
     }
     #content_air{
-      margin-right:106px;
+     font-size: 40px;
+    color: #73787c;
+    margin-right: 10px;
     }
     #HF{
           height: 346px;
@@ -433,3 +425,210 @@
 .nopadding{padding: 0 !important;}
 .nomargin{margin: 0 !important;}
 .right{float: right; position: absolute;right: 0}
+
+#temp{    display: block;
+        width: 183px;
+    float: right;
+    margin-right: 10px;
+    font-size: 17px;}
+body{
+  /*margin:120px auto;
+  display:block;
+  width:400px;
+  height:400px;
+  position: relative;*/
+}
+.bmg1{
+  position: relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.bmg1::before{
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -50%;
+  top: -50%;  
+  
+  background: radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 30%,
+                        rgba(110, 125, 123, 0.7) 32%,
+                        white 34%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 30px 0,
+  
+        radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 40%,
+                        rgba(110, 125, 123, 0.7) 42%,
+                        white 44%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 80px 50px;
+  background-size: 100px 100px;
+  animation: changingBckSze 500s infinite linear, pumping 500s infinite linear, rotateTime 1000s infinite linear;
+
+ 
+
+}
+
+@keyframes changingBckSze{
+  from{
+    background-poistion: 30px 0,
+  
+        radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 40%,
+                        rgba(110, 125, 123, 0.7) 42%,
+                        white 44%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 80px 50px;
+    background-size: 100px 100px;
+  }
+
+
+  50%{
+    background: radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 30%,
+                        rgba(110, 125, 123, 0.7) 32%,
+                        white 34%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 30px -100px,
+  
+        radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 40%,
+                        rgba(110, 125, 123, 0.7) 42%,
+                        white 44%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 80px 50px;
+    background-size: 100px 100px;
+  }
+  
+ 
+  
+
+   60%{
+    background: radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 30%,
+                        rgba(110, 125, 123, 0.7) 32%,
+                        white 34%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 30px -100px,
+  
+        radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 40%,
+                        rgba(110, 125, 123, 0.7) 42%,
+                        white 44%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 80px 50px;
+    background-size: 100px 100px;
+  }
+  
+  
+
+
+  to{
+    background: radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 30%,
+                        rgba(110, 125, 123, 0.7) 32%,
+                        white 34%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) -70px -100px,
+  
+        radial-gradient(circle at 50px 50px, white 10%,
+                        rgba(110, 125, 123, 0.7) 12%,
+                        white 14%,
+  
+                        white 40%,
+                        rgba(110, 125, 123, 0.7) 42%,
+                        white 44%,
+  
+                        white 60%,
+                        rgba(110, 125, 123, 0.7) 62%,
+                        transparent 64%
+                                            ) 180px 50px;
+
+    background-size: 100px 100px;   
+  }
+}
+
+@keyframes pumping{
+  from{
+    /* transform: scale(1); */
+  }
+
+  50%{
+    transform: scale(1);
+  }
+
+  55%{
+    transform: scale(1.1);
+  }
+
+  65%{
+    transform: scale(1);
+  }
+
+  to{
+
+  }
+}
+
+@keyframes rotateTime{
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}

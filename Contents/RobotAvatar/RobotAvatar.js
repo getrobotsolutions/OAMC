@@ -1,124 +1,146 @@
 ﻿//*******************************************************************************
-//   FURO-S Robot Avatar Contents Templage JS : 2014.11.06  by Lee Won Yong
-//                           Ver : 2014.11.04
-//   Comment : (1) 
-//             (2) 댄스를 시작할 때마다, ChangeLanguage를 하는 버그(?)가 있음. -> 임시조치함.
+//   FURO-D Contents Templage JS : 2016.11.14
+
+//   Comment : (1) Contents 정리.
+//             (2)
 //             (3)  
 //*******************************************************************************
+var deletePic="Image/Avatar_delete_none.png";
+var deletePicNor="Image/Avatar_delete_nor.png";
+  $(document).ready(function(){
+ShowTime();
+	$('#change-us').click(function(){
+		writeCookie("lang","english");
+		$('#change-us').addClass('active');
+        $('#change-ar').removeClass('active');
+		$('.title').text("Robot Avatar");
+		$('#shot img').attr("src","Image/avatar_shot_nor.png");
+		$('.deltext').css({"font-size":"32px", "line-height":"32px"});
+		$('.deltext').text("If you want to delete the Avatar now press the 'DELETE' button.")
+		$('#change-ar').css({"background":"white", "color":"#4a32a4"});
+		$('#change-us').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
+		$('#delete').attr('src','Image/Avatar_delete_none.png');
+        deletePic="Image/Avatar_delete_none.png";
+        deletePicNor="Image/Avatar_delete_nor.png";
+        del();       
+	});
+	//Change to Arabic
+	$('#change-ar').click(function(){
+		writeCookie("lang","arabic");
+        $('#change-us').removeClass('active');
+        $('#change-ar').addClass('active');
+		$('.title').text("الصّورة الرّمزية");
+		$('.deltext').css({"font-size":"44px", "line-height":"31px"});
+		$('.deltext').text("إذا كنت ترغب في حذف الصورة الرمزية الآن اضغط على زر '' ديليت ''")
+		$('#change-us').css({"background":"white", "color":"#4a32a4"});
+		$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
+		$('#shot img').attr('src','Image/avatar_shot_nor_ar.png');
+		$('#delete').attr('src','Image/Avatar_delete_none_ar.png');
+        deletePic="Image/Avatar_delete_none_ar.png";
+        deletePicNor="Image/Avatar_delete_nor_ar.png";
+        del(); 	            
+	});
+});
+var refreshIntervalId ;
+	function JSMain() {
+		refreshIntervalId = setInterval("test()", 33);
+		//setTimeout("Init()",3000);
+	}
 
-//-------------------------------------------------------------------------------
-// 2014.10.31 : Contents 구조 정리 - 이원용 수석
-//              (1) ** FC : Flash Call...   
-//                  ** JC : JS Call...  
-//-------------------------------------------------------------------------------
+	function Init(){	
+		FC_ReadSelectedMovie(readCookie('CurrentMovie'));
+	}
 
-
-// [ Variables Setting ] --------------------------------------------------------
-var VERSION = "20141202";
-var flagPictureAvatar = "false";
-//var strLanguage = "Kr";
-
-//window.external.InitPose();
-
-//-- Main Contents로 돌아감. 
-function GoHome()
-{
-	//if(flagPictureAvatar == "true")	DeleteRobotFace();	//사진 아바타 삭제
-	location.href = "../../maincontents.htm";
-}
-
-
-//------------------------------------------------------------------------------
-// FC_SetRobotFlagTrue : Flag 처리. --> 향후, 소스코드에서 	DeleteRobotFace() 호출시, 
-//                                      사진 아바타가 아닐 경우 skip처리 필요함.
-//------------------------------------------------------------------------------
-function FC_SetRobotFlagTrue()
-{
-	flagPictureAvatar = "true";
-}
-
-
-//------------------------------------------------------------------------------
-// AdMoive Index 기억 : 서비스 이동 후, Paly 되고 있었던 Movie를 Play 하기 위함.(Index로 관리함)
-//------------------------------------------------------------------------------
-function FC_ReadSelectedMovie()
-{
-	//var tmpIdx = readCookie("CurrentMovie");
-	//App.JC_GetSelectedMovie(tmpIdx);
-}
-
-
-//------------------------------------------------------------------------------
-// Selected Language 기억 : 서비스 이동 후, 복귀 시, 선택된 Language를 선택하기 위함.
-//							( Kr, En, Cn, Jp )
-//------------------------------------------------------------------------------
-function FC_ReadSelectedLanguage()
-{
-	var tmpLanguage = readCookie("CurrentLanguage");
-	App.JC_GetSelectedLanguage(tmpLanguage);
-}
-
-
-//------------------------------------------------------------------------------
-// UF_CamKidMode / UF_CamAdultMode : 로봇의 얼굴을 아이 또는 어른에 맞춤.
-//------------------------------------------------------------------------------
-// 아이 모드
-function FC_CamKidMode()
-{
-	SetHeadPitch(-40,100);
-}
-// 어른 모드
-function FC_CamAdultMode()
-{
-	SetHeadPitch(10,100);
-}
-
-
-//---------------------------------------------------------------------------//
-//-- Cookie Control ---------------------------------------------------------//
-//---------------------------------------------------------------------------//
-function writeCookie(name, value, days)
-{
-	var expires = "";
+	function JSUnload() {
+		DeleteRobotFace();
+		//HideAdMovie();
+	}
 	
-	//쿠키가 지속되는 날짜 수를 지정. 예) 30 = 30일
-	if (days) 
-	{
-		var date = new Date();
-		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-		expires = "; expires=" + date.toGMTString();
+	function FC_ReadSelectedMovie() {
+		var tmpIdx = readCookie("CurrentMovie");
+		FC_ChangeAdMovieHtml(tmpIdx);
 	}
-	document.cookie = name + "=" + value + expires + "; path=/";
-}
 
-function readCookie(name)
-{
-	var searchName = name + "=";
-	var cookies = document.cookie.split(';');
-	for (var i=0; i<cookies.length; i++) 
-	{
-		var c = cookies[i];
-		while (c.charAt(0) == ' ')
-		c = c.substring(1, c.length);
-		if (c.indexOf(searchName) == 0)
-		return c.substring(searchName.length, c.length);
+	function FC_ChangeAdMovieHtml(strIdx) {
+		var path;
+		if (strIdx == "1")
+			path = "../../Movies/main1.avi";
+		if (strIdx == "2")
+			path = "../../Movies/main2.avi";
+		if (strIdx == "3")
+			path = "../../Movies/main3.avi";
+		if (strIdx == "4")
+			path = "../../Movies/main4.avi";
+		PlayAdMovie(path, 0, 1200, 1080, 720, true);
 	}
-	return null;
-}
+	
+	function Home() {
+		location.href = "../../maincontents.htm";
+	}
 
-function eraseCookie(name)
-{
-	//특정 쿠키를 삭제
-	writeCookie(name, "", -1); //소멸일자 (-1일)를 소멸시켜 쿠키를 삭제함
-}
-//-[End Cookie Control]------------------------------------------------------//
-function OnUserApproached()
-{	
-	//PlaySpeech("Welcome to the Amgen booth.");
-	//PlaySpeech("Hi, welcome to ICC, Fresh Technology for Good Food.");
-}
+	function test() {
+		var img = GetCaptureImage();
+		var canvas = document.getElementById("camImage");
+		var ctx = canvas.getContext("2d");
+		var image = new Image();
 
-function OnUserDisappeared()
-{
-	location.href = "../../maincontents.htm";
-}
+		image.onload = function() {
+			ctx.drawImage(this,-300,-75, 1080, 720);
+		}
+		image.src = "data:image/gif;base64," + img;
+	}
+
+	function shot() {
+
+		document.getElementById('shot').style.display = "none";
+		document.getElementById('number').style.display = "";
+		document.getElementById('frame').style.display = "";
+
+		setTimeout('Timer1()', 1000);
+		setTimeout('Timer2()', 2000);
+		setTimeout('Timer3()', 3000);
+	}
+
+	function Timer1() {
+		
+		document.getElementById('number_img').src =  "Image/2_re.png" ;
+		
+	}
+	
+
+	function Timer2() {
+
+		document.getElementById('number_img').src = "Image/1_re.png";
+		
+	}
+
+	function Timer3() {
+		
+		document.getElementById('shot').style.display = "none";
+		document.getElementById('number').style.display = "none";
+		document.getElementById('frame').style.display = "none";
+		document.getElementById('number_img').src = "Image/3_re.png";
+		document.getElementById('delete').src =deletePicNor;
+		clearInterval(refreshIntervalId);
+		
+		GetCaptureImage();
+		GetCaptureImageBase64();
+		MakeRobotFace();
+		SetRobotFace();
+	}
+	
+	function del(){
+		document.getElementById('delete').src = deletePic;
+		document.getElementById('shot').style.display = "";
+		DeleteRobotFace();
+		JSMain();
+	}
+
+
+	function OnUserApproached() {
+
+	}
+
+	function OnUserDisappeared() {
+		//location.href = "../../IdlePage/IdlePage.htm";
+	}

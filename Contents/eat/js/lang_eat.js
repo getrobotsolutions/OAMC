@@ -1,16 +1,12 @@
 $(document).ready(function(){
-
+ShowTime();
   $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
       $('#dialog-overlay, #dialog-box').hide();   
       return false;
     });
-  $("#btn").hide();
-  $("#mapBtn").hide();
-  $("#btn").click(function () {
-    ShowPopup($("#btn").attr('dir'));
-    //$("$list1").show();
+  //$("#btn").hide();
+  //$("#mapBtn").hide();
 
-  });
   $("#mapBtn").click(function () {
     ShowPopup($("#mapBtn").attr('dir'));
     //$("$list1").show();
@@ -32,8 +28,8 @@ $(document).ready(function(){
 
                 
   $('#c3').click(function(){
-    $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
-    $('.bdy #title').text("قهوة كاريبو.");
+    $('.part2 #icon').attr("src","photo/KFC_logo.png");
+    $('.bdy #title').text("دجاج كنتاكي");
     $('.bdy #location').text("Location:");
 
     $('.bdy #desc').text("اشهى قطع الدجاج المقلية لمن لا يملك الوقت الكافي للحاق بالطائرة.");
@@ -44,8 +40,8 @@ $(document).ready(function(){
     $("#mapBtn").show();
   });
               $('#c4').click(function(){
-                $('.part2 #icon').attr("src","photo/Costa Coffee.jpg");
-                $('.bdy #title').text("كوستا");
+                $('.part2 #icon').attr("src","photo/Mcdonalds.png");
+                $('.bdy #title').text("ماكدونالدز");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("لمحبي البرجر والماكولات السريعة، استمتع بمذاق ماكدونالدز الشهي مع حركة  الطائرات");
@@ -56,8 +52,8 @@ $(document).ready(function(){
                 
               });
               $('#c5').click(function(){
-                $('.part2 #icon').attr("src","photo/DQ Grill & Chill.jpg");
-                $('.bdy #title').text("دي كيو جريل اند تشيل");
+                $('.part2 #icon').attr("src","photo/spice-kitchen.png");
+                $('.bdy #title').text("سبايس كيتشن");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("لمحبي الماكولات الهندية والحارة، ندعوكم للاستمتاع بالطعام في ردهة المطاعم.");
@@ -67,71 +63,79 @@ $(document).ready(function(){
                 $("#mapBtn").show();
               });
               $('#c6').click(function(){
-                $('.part2 #icon').attr("src","photo/Food Court.jpg");
-                $('.bdy #title').text("منطقة الغذاء");
+                $('.part2 #icon').attr("src","photo/plenty.png");
+                $('.bdy #title').text("بلنتي");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("تهتم بصحتك؟ ما عليك الا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك.");
-
+                $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
+                $("#mapBtn").show();
                 $('.list2').toggle();
               });
               $('#c61').click(function(){
-                $('.part2 #icon').attr("src","photo/Food Court.jpg");
-                $('.bdy #title').text("Idli.com");
+                $('.part2 #icon').attr("src","photo/noor.png");
+                $('.bdy #title').text("نور");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("وجبات عربية مع اجمل الوجبات والديكور حيث العيون ستستلذ بالطعام قبل معدتك .");
+                $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
+      $("#mapBtn").show();
 
               });
               $('#c62').click(function(){
-                $('.part2 #icon').attr("src","photo/Food Court.jpg");
-                $('.bdy #title').text("Curry Kitchen");
+                $('.part2 #icon').attr("src","photo/Tickerdaze.png");
+                $('.bdy #title').text("تيكرداذ");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("شاهد المباريات مباشرة وانت تستمتع بالماكولات  والمشروبات الشهية قبل صعودك للطائرة");
+                $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
+                $("#mapBtn").show();
 
               });
               $('#c63').click(function(){
-                $('.part2 #icon').attr("src","photo/Food Court.jpg");
-                $('.bdy #title').text("آلي / أوتوماتيك");
+                $('.part2 #icon').attr("src","photo/luna.png");
+                $('.bdy #title').text("لونا");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("مطعم يقدم لك تاباس مع المشروبات في منطقة هادئة ومنظر خلاب لشواطئ مسقط العامرة.");
+                $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
+                $("#mapBtn").show();
 
               });
               $('#c7').click(function(){
-                $('.part2 #icon').attr("src","photo/The Irish House.jpg");
-                $('.bdy #title').text("البيت الإيرلندي/ ذا ايريش هاوس");
+                $('.part2 #icon').attr("src","photo/mazoon.png");
+                $('.bdy #title').text("مازون ");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("قهوة عالمية وعالية الجودة لاجلك");
-                //$("#btn").show();
-                //$("#btn").attr('dir','photo/irish-menu.png');
-
+                $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
                 $("#mapBtn").show();
                 
               });
               $('#c8').click(function(){
-                $('.part2 #icon').attr("src","photo/Moka & More.jpg");
-                $('.bdy #title').text("موكا والمزيد / موكا & مور");
+                $('.part2 #icon').attr("src","photo/caffe-nero.png");
+                $('.bdy #title').text("كافيه نيرو");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("هل تريد تجربة افضل قهوة؟ قم بزيارة كافيه نيرو وستستمتع بمختلف انواع القهوة.");
+                $("#mapBtn").attr('dir','photo/maps/south-pier-departure(level-02).png');
+                $("#mapBtn").show();
 
               });
               $('#c9').click(function(){
-                $('.part2 #icon').attr("src","photo/Sadaf.jpg");
-                $('.bdy #title').text("صدف");
+                $('.part2 #icon').attr("src","photo/Caribou-Coffee.png");
+                $('.bdy #title').text("قهوة كاريبو");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("محبي الكافيين؟ اشحن طاقتاتك بقهوة كاريبو");
                 
 
-                $("#mapBtn").show();
+                $("#mapBtn").attr('dir','photo/maps/north-pier-departure(level-02).png');
+                $("#mapBtn").show()
               });
               $('#c10').click(function(){
-                $('.part2 #icon').attr("src","photo/Subway.jpg");
-                $('.bdy #title').text("صبواي");
+                $('.part2 #icon').attr("src","photo/kahwaji-cafe.png");
+                $('.bdy #title').text("قهوة القهوجي");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("كافيه عماني تقليدي مع القهوة العمانية المشهورة وفرصة لتذوق عمان قبل مغادرة مسقط");
@@ -139,40 +143,44 @@ $(document).ready(function(){
               
               });
               $('#c11').click(function(){
-                $('.part2 #icon').attr("src","photo/Subway.jpg");
-                $('.bdy #title').text("صبواي");
+                $('.part2 #icon').attr("src","photo/traveler-club.png");
+                $('.bdy #title').text("نادي المسافرين");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("كافيه مع كراسي مريحة وفرصة للتمتع بالخفائف");
                
               
               });
               $('#c12').click(function(){
-                $('.part2 #icon').attr("src","photo/Subway.jpg");
-                $('.bdy #title').text("صبواي");
+                $('.part2 #icon').attr("src","photo/cakes-&-bakes.png");
+                $('.bdy #title').text("كيكس اند بيكس");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("كافيه وموقع لافضل المعجنات بمطار مسقط الدولي.");
+                $("#mapBtn").attr('dir','photo/maps/west-pier-departure(level-02).png');
+                $("#mapBtn").show();
                 
               
               });
               $('#c13').click(function(){
-                $('.part2 #icon').attr("src","photo/Subway.jpg");
-                $('.bdy #title').text("صبواي");
+                $('.part2 #icon').attr("src","photo/seaside-park.png");
+                $('.bdy #title').text("سي سايد بارك");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("جنة الاطفال للترفيه عنهم ولتغذيهم بافضل الاطعمة الصحية لهم.");
+                $("#mapBtn").attr('dir','photo/maps/north-pier-departure(level-02).png');
+                $("#mapBtn").show()
                 
               
               });
               $('#c14').click(function(){
-                $('.part2 #icon').attr("src","photo/Subway.jpg");
-                $('.bdy #title').text("صبواي");
+                $('.part2 #icon').attr("src","photo/hall.png");
+                $('.bdy #title').text("Prime Class Lounge");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("استرخي، تناول وغيره، استمتع بافضل صالة كبار الشخصيات وانت في مكان واحد.");
                
               
               });
-              $('#c10').click(function(){
-                $('.part2 #icon').attr("src","photo/Subway.jpg");
-                $('.bdy #title').text("صبواي");
+              $('#c15').click(function(){
+                $('.part2 #icon').attr("src","photo/hall.png");
+                $('.bdy #title').text("Aerotel Muscat Hotel");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("هل لديك وقت طويل حتى موعد رحلتلك القادمة وتريد النوم بدون اي ازعاج؟ ما عليك الا ان تقوم بزيارة فندق ايروتل مسقط للراحة او السباحة في حوض داخل الفندق.");              
               });
@@ -185,77 +193,15 @@ $(document).ready(function(){
               $('#change-us').click(function(){
                 location.href = "index-us.htm";
                 writeCookie("lang","english");
-                /*$('.titl1').text("Oman Airport Eat page");
-                $('#txt1').text("Here you can discover all of our food and beverage options, where they are located, and what's on the menu.");
-                $('#txt2').text("Select a button on the down left to get started.");
-
-                //$('#cafe').text("Cafe");
-                //$('#restau').text("Restaurants");
-                //$('#arloung').text("Airport Lounges");
-                //$('#inside').text("Inside Airport");
-                //$('#outside').text("Outside Airport");
-
-                $('#c3').text("Caribou Coffee");
-                $('#c4').text("Costa Coffee");
-                $('#c5').text("DQ Grill & Chill");
-                $('#c6').text("Food Court");
-                $('#c7').text("The Irish House");
-                $('#c8').text("Moka & More");
-                $('#c9').text("Sadaf");
-                $('#c10').text("Subway");
-
-                //$('#r11').text("Burger King");
-                ///$('#r12').text("Chicken Restaurant");
-                //$('#r13').text("Pinkberry");
-                //$('#r14').text("Domino's Pizza");
-                //$('#r15').text("The Globe Restaurant");
-                //$('#r16').text("Piatto");
-                //$('#r17').text("Najd Village");
-                //$('#r18').text("Outback");
-
-                $('#10').text("Alfursan Lounges");
-                $('#11').text("Lounge 1");
-                $('#12').text("Lounge 2");
-                $('#btn').text("القائمة");*/
+                window.external.ChangeLanguage("en-gb");
+               
                 
             });
 
               //Change to Arabic
               $('#change-ar').click(function(){
                 
-                /*$('.titl1').text("مطار الرياض صفحة العرض");
-                $('#txt1').text("هنا يمكنك اكتشاف كل من خيارات الطعام والشراب، حيث أنها تقع، وما هو على القائمة.");
-                $('#txt2').text("حدد زر في أسفل اليسار للبدء.");
-
-                $('#cafe').text("كافيه");
-                $('#restau').text("مطاعم");
-                $('#arloung').text("صالات المطار");
-                $('#inside').text("داخل المطار");
-                $('#outside').text("خارج المطار");
-
-                $('#c3').text("ستاربكس 1");
-                $('#c4').text("المقاتل");
-                $('#c5').text("ماما روتي كافيه");
-                $('#c6').text("كاريبو، بني اللون");
-                $('#c7').text("قهوة واين");
-                $('#c8').text("دنكن \"للكعك المقلي");
-                $('#c9').text("قهوة جافا");
-                $('#c10').text("ستاربكس 2");
-
-                $('#r11').text("برغر كينغ");
-                $('#r12').text("مطعم دجاج");
-                $('#r13').text("بينك بيري");
-                $('#r14').text("بيتزا دومينوز");
-                $('#r15').text("مطعم غلوب");
-                $('#r16').text("بيتو");
-                $('#r17').text("قرية نجد");
-                $('#r18').text("المناطق النائية");
-
-                $('#10').text("صالات الفرسان");
-                $('#11').text("صالة 1");
-                $('#12').text("صالة 2");
-                $('#btn').text("عرض القائمة");
-*/
+               
                 
               });
 
@@ -269,67 +215,7 @@ $(document).ready(function(){
                             $this.next('ul').find('ul').slideUp();
                             $this.next().slideToggle(300); */
                     });
-                $('.part2 #icon').attr("src","photo/Caribou-Coffee.jpg");
-                $('.bdy #title').text("Caribou Coffee");
-                $('.bdy #location').text("Location:");
-                $('.bdy #desc').text("المكان المثالي للقهوة المميزة والراحة الكافية قبل رحلتلك القادمة");
-                $("#btn").show();
-                $("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
-                $("#mapBtn").show();
-
-         /* function display(data)
-          { 
-            console.log(data);
-
-                  for(var i=3; i<=10; i++){
-                      function clickHandler_eat(num){
-                        //For Eat 
-                          /* $('#c'+i).click(function()
-                           {      
-                               $('#icon').hide();                          
-                                var url = data.Sheet1[num].IMG_SRC;
-                               //photo/submenu/buyuk/cafe.png
-                               // var url = "photo/submenu/buyuk/dunkin.jpg";
-                                $('#content').css({"background-image": "url("+url+")",
-                                  "background-size":"100% 80%"});
-                               
-                                    $('#title').text(data.Sheet1[num].NAME_BASE);
-                                    $('#location').text("Location : "+data.Sheet1[num].ADDRESS_BASE);
-                                    $('#desc').text(data.Sheet1[num].DETAIL_BASE);
-                                    $("#btn").show();
-                              });
-                         }///clickhandler ends here
-                         //clickHandler_eat(i);
-                  } //for loop ends here
-
-                  
-                  
-
-
-        
-
-          }*/
-
-
-            /*$.ajax({
-              type: "GET",
-
-              url: "https://api.myjson.com/bins/91xm1",
-            
-              dataType: "JSON",
-              success: function(data) {
-                //display(data);
-                $('#change-us').click(function(event){
-                    display(data);
-                  });
                 
-                $('#change-ar').click(function(event){
-                  //display_ar(data);
-                });
-                // console.log(data);
-                // console.log(data.Sheet1[1]);
-             }                
-        });*/
 
      });
 
@@ -340,14 +226,14 @@ function ShowPopup(src){
   var maskWidth = $(window).width();
   
   // calculate the values for center alignment
-var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
-var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
+  var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
   
   // assign values to the overlay and dialog box
   $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
   $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
   
-  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="700" src="'+ src +'"/></div></div>';
+  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
   //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
         
 

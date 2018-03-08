@@ -1,10 +1,15 @@
 $(document).ready(function(){
+  ShowTime();
         $("#loading").show();
         $(".fArr").hide();
         //Change to English
-        
+       // $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
               
               $('#change-us').click(function(){
+                 writeCookie("lang","english");
+                $('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');//css({"background":"white", "color":"#4a32a4"});
+                //$('#change-us').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
                 $('#arr').text("Arrivals");
                 $('#dep').text("Departures");
 
@@ -18,7 +23,9 @@ $(document).ready(function(){
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                
+                writeCookie("lang","arabic");
+                $('#change-us').toggleClass('active');
+                $('#change-ar').toggleClass('active');
                 $('#arr').text("القادمون");
                 $('#dep').text("المغادرون");
 

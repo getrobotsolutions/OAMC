@@ -19,6 +19,10 @@
     //alert("worked");
     location.href='index-en.htm';
   }
+  else if(readCookie("lang")=="arabic"){
+    window.external.ChangeLanguage("ar-eg");
+}
+ 
   function GoHome()
 {
   //if(flagPictureAvatar == "true") DeleteRobotFace();  //사진 아바타 삭제
@@ -27,14 +31,15 @@
 </script>
 
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript">
+    UpdateSession(2);
+ </script>
  <!--<script language="JavaScript" type="text/javascript"
   src="../../maincontents.js"></script>-->
- <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
 
  <script src="../../boots/js/bootstrap.min.js"></script>
-  <script src="../../Scripts/speech.js"></script>
+ 
 
-  <script src="../../Scripts/lang.js"></script>
   <script src="js/lang_shop.js"></script>
   <!--<script src="sheetjs/dist/xlsx.full.min.js"></script> -->
 
@@ -45,7 +50,7 @@
 <style>
     .bmg{
           background-image: none;
-          height: 990px;
+          height: 1040px;
     }
     .img-home {
           position: absolute;
@@ -72,17 +77,17 @@
     width: 1080px;
       }
     .wrap{
-       margin-top:206px;
+       margin-top:115px;
     }
     .part1{
           
-    height: 820px;
+    height: 920px;
     
     margin-left: -15px;
     }
     .part2{
-        background-color:#4a32a4;
-        height: 663px;
+        background-color:#008a97;
+        height:750px;
         width: 615px;
         padding: 15px;
         z-index:0;
@@ -160,7 +165,7 @@
         padding:20px 45px;
        
         cursor:pointer;
-        background-color:#4a32a4;
+        background-color:#008a97;
         color:#ffffff;
         text-align:left;
     }
@@ -191,7 +196,7 @@
         list-style-type:none;
     }
     #leftmenu > ul li a {
-      color: #4a32a4;
+      color: #008a97;
       font-weight: bold;
       font-size: 30px;
       padding-left: 80px;
@@ -212,7 +217,7 @@
     }
     .bdy{
         
-       
+       text-align: right;
         width: 580px;
         padding-right: 25px;
        
@@ -242,10 +247,11 @@
     font-family: OpenSans-Light;
     line-height: 17px;
     padding-bottom: 20px;
+    text-align: right;
     }
     #mapBtn{
 
-      margin-left: 55px;background-color: #b5850b;border-color: #b5850b;
+      margin-left: 55px;background-color: #f5a800;border-color: #f5a800;
 
     }
     #icon{
@@ -289,7 +295,7 @@
   
   background:#eee;
   /* styling of the dialog box, i have a fixed dimension for this demo */ 
-  width:750px; 
+  width:850px; 
   
   /* make sure it has the highest z-index */
   position:absolute; 
@@ -371,8 +377,13 @@ a.button:hover {
   padding: 10px;
   text-align: center;
 }
-li.odd{background-color: #c0b5e9;}
+li.odd{background-color: #00c2de1f;}
 li.even{background-color: #f3ebf9;}
+#change-ar{color: rgb(255, 255, 255);
+    background:#008a97;
+        padding: 0px 10px;
+    border-radius: 5px;
+}
 </style>
 
 
@@ -383,10 +394,8 @@ li.even{background-color: #f3ebf9;}
 <!--<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>-->
 
   <script type="text/javascript" >
-    //PlaySpeech('اقضِ بعض الوقت في بعض متاجرنا الرائعة.');
-    responsiveVoice.speak("اقضِ بعض الوقت في بعض متاجرنا الرائعة.", "Arabic Male");
-    responsiveVoice.cancel();
-      
+
+      PlaySpeech('اقضِ بعض الوقت في بعض متاجرنا الرائعة.');
   </script>
 </head>
 <body>
@@ -397,17 +406,18 @@ li.even{background-color: #f3ebf9;}
          <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
       <div class="col-sm-4 text-right">
-          <img src="../../images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 15px">
+         <span id="content_air"></span>
+         <span id="temp"></span>
 
       </div>     
     </div>
 
-    <div class="row" style="padding: 0;margin: 0;border:2px solid #4A32A4;">
-      <div class="col-sm-4" style=" border-top: 62px solid #4A32A4;border-right: 36px solid #ffffff00;">
+    <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
+      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 20px;color: #4A32A4;font-weight: bold;">
-        <a href="#"  id="change-us" style="color: #4A32A4 !important;">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #4A32A4 !important;">غير اللغة |</a>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
+        <a href="#"  id="change-us" style="color: #008a97 !important;">ENGLISH</a>|<a id="change-ar" href="#" style="">غير اللغة</a>|
       </div>
     </div>
 
@@ -423,18 +433,19 @@ li.even{background-color: #f3ebf9;}
                             <img class="shop-icon" src="photo/shop-icon.png">
                           
                           <ul class="list1">
-                            <li class="odd"><a id="s1" href="#">Amouage</a></li>
-                            <li class="even"><a id="s2" href="#">لامود</a></li>
-                            <li class="odd"><a id="s3" href="#">حصريًا للو تاباك  </a></li>
-                            <li class="even"><a id="s4" href="#">لاكوست</a></li>
-                            <!--<li class="odd"><a id="s5" href="#">Souvenir Shop</a></li>-->
-                            <li class="even"><a id="s6" href="#">ترافيليكس</a></li>
-                            <!--<li class="odd"><a id="s7" href="#">Ooredoo</a></li>
-                            <li class="even"><a id="s8" href="#">Omantel</a></li>-->
-                            <li class="odd"><a id="s9" href="#">ذهب صافي/ بيور جولد</a></li>
-                            <li class="even"><a id="s10" href="#">صيدلية مسقط</a></li>
-                            <li class="odd"><a id="s11" href="#">سوق مسقط الحرة</a></li>
-                            <li class="even"><a id="s12" href="#">MAC</a></li>       
+                            <li class="odd"><a id="s1" href="#">الخمور والتبغ والحلويات</a></li>
+                            <li class="even"><a id="s2" href="#">سوق مسقط</a></li>
+                            <li class="odd"><a id="s3" href="#">العطور ومستحضرات التجميل</a></li>
+                            <li class="even"><a id="s4" href="#">بوتيك أمواج</a></li>
+                            <li class="odd"><a id="s5" href="#">أحدث صيحات المجوهرات</a></li>
+                            <li class="even"><a id="s6" href="#">مملكة الأطفال</a></li>
+                            <li class="odd"><a id="s7" href="#">متجر جورميت للمأكولات</a></li>
+                            <li class="even"><a id="s8" href="#">متاجر الرصيف</a></li>
+                            <li class="odd"><a id="s9" href="#">متجر الوافدين</a></li>
+                            <li class="even"><a id="s10" href="#">شارع الأزياء الفاخرة</a></li>
+                            <li class="odd"><a id="s11" href="#">شارع الأزياء الرئيس</a></li>
+                            <li class="even"><a id="s12" href="#">النظارات الشمسية</a></li>   
+                            <li class="odd"><a id="s13" href="#">الأجهزة الإلكترونية</a></li>    
                           </ul>
                       </div>
                   </div>
@@ -442,33 +453,21 @@ li.even{background-color: #f3ebf9;}
                 <div class="col-sm-7">
                   <div class="part2" id="content">
                     <div class="shop-image">
-                      <img id="icon" src="photo/Amouage.jpg" class="icon">
+                      <img id="icon" src="photo/LTC.png" class="icon">
                     </div>
                       <div class="bdy">
-                        <div id="title">Amouage</div>
+                        <div id="title">الخمور والتبغ والحلويات</div>
                         <!--<div id="location"> </div>-->
-                        <div id="desc">تسوق الآن!! وااستمتع  بالعطور العالميه، الفاخرة، المبتكرة التي تشيد بفن صنع العطور الراقية</div>
+                        <div id="desc"><p>أنشئ متجر السوق الحرة للخمور والتبغ والحلويات بمسقط على مساحة 955 متر مربع وذلك على الجانب الأيمن حيث دخول الركاب المغادرين من مسقط إلى صالة المغادرة. كما يشتمل هذا المتجر على تجربة التمتع بالعلامة للتجارية الكاملة والآثار المصممة خصيصا لماركات ويسكي سكوتش الأكثر شهرة بما في ذلك جوني ووكر وجون ديوار.</p><p> تحتوي منطقة التبغ على مكان خاص بسيجار هوميدور والذي يحتوي على سيجار ملفوف يدويا من كوبا وهندوراس ونيكاراغوا وجمهورية الدومينيكان. كما تشتمل منطقة السجائر على علامات تجارية عالمية مثل مارلبورو و إل إم</p><p>وعلى الجانب الآخر، سيسعد الركاب بتجربة مليئة بالشوكولاتة النقية مع التمتع بالكثير من العروض من العلامات التجارية المختلفة مثل بتيل والرفاعي.</p></div>
                         
-                        <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/map.jpg">Map</button>
+                        <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/map.jpg">خريطة</button>
                       </div>
 
                   </div>
                </div>
-              </div>
-            
-          
-
-
-
-         
-     
-     
+              </div>     
       </div>
     </div>
-
-
-
-
 <footer>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -534,6 +533,7 @@ li.even{background-color: #f3ebf9;}
           <span class="sr-only">Next</span>
         </a>
     </div>
+    <img src="../../images/bottom-line.png">
   </footer>
   <div id="dialog-overlay"></div>
       <div id="dialog-box">

@@ -18,14 +18,11 @@
 <!--<script language="JavaScript" type="text/javascript"
 	src="../../maincontents.js"></script>-->
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
- <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+ <!--<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>-->
  <script src="../../boots/js/bootstrap.min.js"></script>
-  <script src="../../Scripts/speech.js"></script>
+
   <script type="text/javascript">
-    if(readCookie("lang")=="arabic"){
-      responsiveVoice.speak("تعرف على مواعيد رحلاتنا و مواعيد الوصول أولاً بأول.", "Arabic Male");
-      responsiveVoice.cancel();
-    }
+   
   </script>
   <!--<script src="../../Scripts/lang.js"></script>-->
 <script src="js/flights.js"></script>
@@ -38,6 +35,7 @@
    .bmg
     {
         background-image: none;
+            height: 1153px; 
     }
     .img-home {
           position: absolute;
@@ -81,6 +79,14 @@ thead {
     width: 500px;
     height: 100px;
  }
+ a {
+    color: #4a32a4;
+}
+ #change-us, #change-ar{color: #008a97;padding: 0px 10px; border-radius: 5px;text-decoration: none;}
+ .active{
+    color: rgb(255, 255, 255) !important;
+    background: #008a97;
+  }
 
 </style>
 
@@ -90,17 +96,28 @@ thead {
 <link href="../../css/Language.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
  <script type="text/javascript">
+  UpdateSession(3);
   $(document).ready(function(){
   if(readCookie("lang")=="english"){
+    $('#change-us').addClass('active');
+    $('#change-ar').removeClass('active');
+
     $('#arr').text("Arrivals");
-                $('#dep').text("Departures");
-                $('#flight').text("Flight");
-                $('#origin').text("Origin");
-                $('#airline').text("Airline");
-                $('#terminal').text("Terminal");
-                $('#arrival').text("Arrival");
-                $('#status').text("Status (min)");
+    $('#dep').text("Departures");
+    $('#flight').text("Flight");
+    $('#origin').text("Origin");
+    $('#airline').text("Airline");
+    $('#terminal').text("Terminal");
+    $('#arrival').text("Arrival");
+    $('#status').text("Status (min)");
+    window.external.ChangeLanguage("en-gb");
     PlaySpeech("Keep up to date with our flights and arrivals.");
+  }
+  else if (readCookie("lang")=="arabic") {
+    $('#change-us').removeClass('active');
+    $('#change-ar').addClass('active');
+    window.external.ChangeLanguage("ar-eg");
+    PlaySpeech("تعرف على مواعيد رحلاتنا و مواعيد الوصول أولاً بأول.");
   }
   /*else if(readCookie("lang")=="arabic"){
     
@@ -122,17 +139,17 @@ function GoHome()
          <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
       <div class="col-sm-4 text-right">
-          <img src="../../images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 15px">
-
+         <span id="content_air"></span>
+         <span id="temp"></span>
       </div>     
     </div>
 
-    <div class="row" style="padding: 0;margin: 0;border:2px solid #4A32A4;">
-      <div class="col-sm-4" style=" border-top: 62px solid #4A32A4;border-right: 36px solid #ffffff00;">
+    <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
+      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 20px;color: #4A32A4;font-weight: bold;">
-        <a href="#"  id="change-us" style="color: #4A32A4 !important;">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #4A32A4 !important;">غير اللغة |</a>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 20px;color: #008a97;font-weight: bold;">
+        <a href="#"  id="change-us" style="">ENGLISH</a>|<a  id="change-ar" class="active" href="#" style="">غير اللغة</a>  |
       </div>
     </div>
 
@@ -392,6 +409,7 @@ function GoHome()
           <span class="sr-only">Next</span>
         </a>
     </div>
+    <img src="../../images/bottom-line.png">
   </footer>
 
 </body>

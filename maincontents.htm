@@ -8,129 +8,71 @@
 
 <!--<script language="JavaScript" type="text/javascript"
 	src="Scripts/FlashPlayer.js"></script>-->
-<script language="JavaScript" type="text/javascript"
-	src="Scripts/BaseCommand.js"></script>
-<script language="JavaScript" type="text/javascript"
-	src="Scripts/BaseEvent.js"></script>
-<script language="JavaScript" type="text/javascript"
-	src="Scripts/LogConsole.js"></script>
+<script language="JavaScript" type="text/javascript" src="Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript" src="Scripts/LogConsole.js"></script>
 
 
-
- <script src="jquery/jquery-3.2.1.min.js"></script>
- <script language="JavaScript" type="text/javascript"
-  src="maincontents.js"></script>
- <script src="boots/js/bootstrap.min.js"></script>
- 
-
- <script src="Scripts/speech.js"></script>
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="maincontents.js"></script>
+<script src="boots/js/bootstrap.min.js"></script> 
 <script src="Scripts/lang.js"></script>
 
   
-  <link rel="stylesheet" href="boots/css/bootstrap.min.css">
+<link rel="stylesheet" href="boots/css/bootstrap.min.css">
 
 
 
 <script type="text/javascript">
 
-    // responsiveVoice.speak("شكرا", "Arabic Male");
-
-    // setTimeout( function(){ 
-    // responsiveVoice.speak("Hi. Welcome to our airport. To begin, please press one of the buttons below.", "UK English Male");
-   
-  // }  , 3000 );
-if(readCookie("lang" == null)) {
+if(readCookie("lang") == null) {
   writeCookie("lang", "arabic", 30);
+
 }
+UpdateSession(9);
 </script>
+
 
 <link rel="stylesheet" href="css/style_riyadh.css">
 <link href="css/Setting.css" rel="stylesheet" type="text/css" />
-<link href="css/Language.css" rel="stylesheet" type="text/css" />
+<!--<link href="css/Language.css" rel="stylesheet" type="text/css" />-->
 <link href="css/Main.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
   .bmg{height: 1144px;}
+  #change-us, #change-ar{color: #008a97;padding: 0px 10px; border-radius: 5px;text-decoration: none;}
+ .active{color: rgb(255, 255, 255) !important;background:  #008a97;}
 </style>
-
 
 </head>
 <body>
-<!-- <h1>नमस्ते</h1> -->
+
   	<div class="jumbotron text-center">
       <p id="currentDate"></p><br>
       <span class="col-sm-8">
-         <img src="images/Logo.jpg" class="img-responsive" alt="Responsive image" style="height:auto;margin-top: -109px;
-    width: 521px;">
-       <!-- <p id="content_term"> محطة A</p> -->
+         <img src="images/Logo.jpg" class="img-responsive" alt="Responsive image" style="height:auto;margin-top: -109px;width: 521px;">
       </span>
       <span class="col-sm-4 text-right">
-          <p  id="content_air"><!--مطار الملك خالد الدولي--></p>
-          <img src="images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 30px">
+        
+          <span id="content_air"></span>
+          <span id="temp"></span>
+          <!--<img src="images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 30px">-->
       </span>
       
        
     </div>
-    <div class="row" style="padding: 0;margin: 0;border:2px solid #4A32A4;">
-      <div class="col-sm-4" style="    margin-top: -2px; border-top: 62px solid #4A32A4;border-right: 36px solid #ffffff00;"></div>
-      <div class="col-sm-8" style="    font-size: 40px;
-    padding-top: 20px;
-    color: #4A32A4;
-    font-weight: bold;">
-        <a href="#"  id="change-us" style="color: #4A32A4;padding: 0 10px;text-decoration: none;">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #4A32A4;padding: 0 10px;text-decoration: none;">غير اللغة</a>
+    <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
+      <div class="col-sm-4" style="margin-top: -2px; border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;"></div>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 22px;color: #008a97;font-weight: bold;">
+        <a href="#"  id="change-us"  style=";">ENGLISH</a>|<a  id="change-ar" href="#" style="" class="">غير اللغة</a>
       </div>
     </div>
 
-   <!-- <nav class="navbar navbar-default">
-      <div class="container-fluid navbar1">-->
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="vdivider">
-              <a onclick="FC_ContentsCall('Flights','')" href="#">
-                  <span class="glyphicon glyphicon-plane" ></span>
-                  <div class="fly" id="glyph-text">رحلات طيران</div>
-                   <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="vdivider">
-            <a onclick="FC_ContentsCall('BoardingPass','')" href="#">
-              <span class="glyphicon glyphicon-qrcode" id="glyph-text"></span>
-              <div class="scan" id="glyph-text">مسح الصعود تمريرة الخاص بك</div>
-
-            </a>
-            </li>
-            
-            <li class="vdivider">
-              <a  onclick="FC_ContentsCall('TerminalMap','')" href="#">
-                <span class="glyphicon glyphicon-picture" id="glyph-text"></span><div class="map" id="glyph-text">خريطة المحطة الطرفية</div>
-              </a>
-            </li>
-            <li class="dropdown vdivider">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="glyphicon glyphicon-pushpin" id="glyph-text"></span>              <div class="lang" id="glyph-text">غير اللغة<span class="caret"></span></div>
-
-               </a>
-              <ul class="dropdown-menu">
-                <li class = "active">
-                  <a id="change-ar" href = "#">
-                    <img class="flag" src="images/flags/arabia.png">
-                  </a>
-                </li>
-                <li id="change-us" value="de"><a href="#"><img class="flag" src="images/flags/us.png"></a></li>
-              </ul>
-            </li>
-            <li class="vdivider"></li>
-          </ul>
-        </div>--><!-- /.navbar-collapse -->
-     <!-- </div> /.container-fluid -->
-    <!--</nav>-->
-
-  <div class="bmg">  
+  <div class="bmg bmg1">  
     <div class="icon1">
       <div class="container nopadding nomargin">
         <div class="row">
-          <div id="content_fly" class="alert alert-success" role="alert" style="    background-color: #dba41b;box-shadow: 0px 1px #969693;border-radius: 50px;font-size:57px; margin-left: 50px;">اضغط هنا للبدء</div>
+          <div id="content_fly" class="alert alert-success" role="alert" style="background-color: #f6ad11;box-shadow: 0px 1px #969693;border-radius: 50px;font-size:57px; margin-left: 50px;">اضغط هنا للبدء</div>
         </div>
         <div class="row nopadding nomargin">
           <div class="col-sm-6 nopadding">
@@ -190,12 +132,8 @@ if(readCookie("lang" == null)) {
               
           </div>
         
-    </div>
-          
+        </div>     
         <div class="row nopadding nomargin">
-          
-              
-
           <div class="col-sm-6 nopadding ">
              
                 <a onclick="FC_ContentsCall('PhotoPrinting','')" href="#">
@@ -221,14 +159,8 @@ if(readCookie("lang" == null)) {
       </div>
     </div>
   </div>
-  <!-- <div  id="content_explore" class="explore">استكشاف تنازلات لدينا</div> -->
   <footer>
-    <style type="text/css">
-      /* CSS used here will be applied after bootstrap.css */
 
-
-
-    </style>
     <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
     <!-- Indicators -->
         <ol class="carousel-indicators">

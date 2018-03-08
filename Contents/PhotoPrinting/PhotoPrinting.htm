@@ -7,8 +7,8 @@
 <link rel="stylesheet" type="text/css" href="PhotoPrinting.css" />
 
 <!-- 기본으로 포함되어야 하는 js -->
-<script language="JavaScript" type="text/javascript"
-	src="../../Scripts/FlashPlayer.js"></script>
+<!--<script language="JavaScript" type="text/javascript"
+	src="../../Scripts/FlashPlayer.js"></script>-->
 <script language="JavaScript" type="text/javascript"
 	src="../../Scripts/BaseCommand.js"></script>
 <script language="JavaScript" type="text/javascript"
@@ -29,12 +29,21 @@
 
 <!-- 추가적으로 포함되는 js -->
 <!-- <script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
-<script language="JavaScript" type="text/javascript" src="PhotoPrinting.js"></script>
+<!--<script language="JavaScript" type="text/javascript" src="PhotoPrinting.js"></script>-->
 <link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Language.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
   PlaySpeech("Its time to smile.");
+  $(document).ready(function(){
+  $("*").dblclick(function(e){
+        e.preventDefault();
+  });
+  $("#panel2").hide();
+$('#change-ar').click(function(){
+    $('body').css('background-image','url(Image/photo_bg_ar.png)');
+  });
+});
 </script>
     
 <style>

@@ -18,6 +18,10 @@
   if(readCookie("lang")=="arabic"){
     //alert("worked");
     location.href='index.html';
+    
+  }
+  else if(readCookie("lang")=="english"){
+    window.external.ChangeLanguage("en-gb");
   }
   function GoHome()
 {
@@ -27,16 +31,9 @@
 </script>
 
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
- <!--<script language="JavaScript" type="text/javascript"
-  src="../../maincontents.js"></script>
- <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>-->
 
  <script src="../../boots/js/bootstrap.min.js"></script>
-  <script src="../../Scripts/speech.js"></script>
-
-  <script src="../../Scripts/lang.js"></script>
   <script src="js/lang_shop-en.js"></script>
-  <script src="sheetjs/dist/xlsx.full.min.js"></script> 
 
   <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
 
@@ -45,7 +42,7 @@
 <style>
     .bmg{
           background-image: none;
-          height: 990px;
+          height: 1040px;
     }
     .img-home {
           position: absolute;
@@ -74,17 +71,17 @@
       }
 
     .wrap{
-       margin-top:206px;
+       margin-top:115px;
     }
     .part1{
           
-    height: 820px;
+    height: 920px;
     
     margin-left: -15px;
     }
     .part2{
-        background-color:#4a32a4;
-        height: 663px;
+        background-color:#008a97;
+        height: 750px;
         width: 615px;
         padding: 15px;
         z-index:0;
@@ -162,7 +159,7 @@
         padding:20px 45px;
        
         cursor:pointer;
-        background-color:#4a32a4;
+        background-color:#008a97;
         color:#ffffff;
         text-align:left;
     }
@@ -189,7 +186,7 @@
         list-style-type:none;
     }
     #leftmenu > ul li a {
-      color: #4a32a4;
+      color: #008a97;
       font-weight: bold;
       font-size: 30px;
       padding-left: 80px;
@@ -240,7 +237,7 @@
     }
     #mapBtn{
 
-      margin-left: 55px;background-color: #b5850b;border-color: #b5850b;
+      margin-left: 55px;background-color: #f5a800;border-color: #f5a800;
 
     }
     #icon{
@@ -284,7 +281,7 @@
   
   background:#eee;
   /* styling of the dialog box, i have a fixed dimension for this demo */ 
-  width:750px; 
+  width:850px; 
   
   /* make sure it has the highest z-index */
   position:absolute; 
@@ -366,8 +363,13 @@ a.button:hover {
   padding: 10px;
   text-align: center;
 }
-li.odd{background-color: #c0b5e9;}
+li.odd{background-color: #00c2de1f;}
 li.even{background-color: #f3ebf9;}
+#change-us{color: rgb(255, 255, 255);
+    background: #008a97;
+        padding: 0px 10px;
+    border-radius: 5px;
+}
 </style>
 
 
@@ -383,24 +385,24 @@ li.even{background-color: #f3ebf9;}
   </script>
 </head>
 <body>
-
  <div class="jumbotron text-center">
       <p id="currentDate"></p><br>
       <span class="col-sm-8">
          <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
       <div class="col-sm-4 text-right">
-          <img src="../../images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 15px">
+          <span id="content_air"></span>
+          <span id="temp"></span>
 
       </div>     
     </div>
 
-    <div class="row" style="padding: 0;margin: 0;border:2px solid #4A32A4;">
-      <div class="col-sm-4" style=" border-top: 62px solid #4A32A4;border-right: 36px solid #ffffff00;">
+    <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
+      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 20px;color: #4A32A4;font-weight: bold;">
-        <a href="#"  id="change-us" style="color: #4A32A4 !important;">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #4A32A4 !important;">غير اللغة |</a>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
+        <a href="#"  id="change-us" style="">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #008a97 !important;">غير اللغة |</a>
       </div>
     </div>
     <div class="body1">
@@ -415,24 +417,24 @@ li.even{background-color: #f3ebf9;}
                           <ul class="list1">
 
                             <li class="odd"><a id="s1" href="#">Electronics</a></li>
-                            <li class="even"><a id="s2" href="#">Muscat Duty Free
-</a></li>
-                            <li class="odd"><a id="s3" href="#">Hugo Boss</a></li>
-                            <li class="even"><a id="s4" href="#">Michael Kors</a></li>
+                            <li class="even"><a id="s2" href="#">LTC</a></li>
+                            <li class="odd"><a id="s3" href="#">Muscat Market</a></li>
+                            <li class="even"><a id="s4" href="#">Perfume and Cosmetics </a></li>
 
                             <!--<li class="odd"><a id="s1" href="#">Amouage</a></li>
                             <li class="even"><a id="s2" href="#">La Moda</a></li>
                             <li class="odd"><a id="s3" href="#">Le Tabac</a></li>
                             <li class="even"><a id="s4" href="#">Lacoste</a></li>-->
 
-                            <!--<li class="odd"><a id="s5" href="#">Souvenir Shop</a></li>-->
-                            <li class="even"><a id="s6" href="#">Travelex</a></li>
-                            <!--<li class="odd"><a id="s7" href="#">Ooredoo</a></li>
-                            <li class="even"><a id="s8" href="#">Omantel</a></li>-->
-                            <li class="odd"><a id="s9" href="#">Pure Gold</a></li>
-                            <li class="even"><a id="s10" href="#">Muscat Pharmacy</a></li>
-                            <li class="odd"><a id="s11" href="#">Muscat Duty Free</a></li>  
-                            <li class="even"><a id="s12" href="#">MAC</a></li>     
+                            <li class="odd"><a id="s5" href="#">Amouage Boutique</a></li>
+                            <li class="even"><a id="s6" href="#">Fashion Jewellery</a></li>
+                            <li class="odd"><a id="s7" href="#">Kids Kingdom</a></li>
+                            <li class="even"><a id="s8" href="#">Gourmet Store</a></li>
+                            <li class="odd"><a id="s9" href="#">Pier Stores</a></li>
+                            <li class="even"><a id="s10" href="#">Arrivals Store</a></li>
+                            <li class="odd"><a id="s11" href="#">Luxury Fashion Avenue</a></li>  
+                            <li class="even"><a id="s12" href="#">High Street Fashion</a></li>
+                            <li class="odd"><a id="s13" href="#">Sunglasses</a></li>       
                           </ul>
                       </div>
                   </div>
@@ -440,33 +442,21 @@ li.even{background-color: #f3ebf9;}
                 <div class="col-sm-7">
                   <div class="part2" id="content">
                     <div class="shop-image">
-                      <img id="icon" src="photo/Amouage.jpg" class="icon">
+                      <img id="icon" src="photo/elctronics.png" class="icon ">
                     </div>
                       <div class="bdy">
-                        <div id="title">Amouage</div>
+                        <div id="title">Electronics</div>
                         <!--<div id="location"> </div>-->
-                        <div id="desc">Shop now!! And enjoy the International, luxury, innovative fragrances that pay tribute to the art of fine perfume making.</div>
+                        <div id="desc">Our store offers a range of the latest electronics in an exciting shopping experience that have been selected especially for the discerning traveler. The store combines the best brands, latest innovations and a trendsetting shopping environment all specifically tailored to travelers. Here you will find the latest smartphones and gadgets from Apple, Samsung and Bose.</div>
                         
                         <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/map.jpg">Map</button>
                       </div>
 
                   </div>
                </div>
-              </div>
-            
-          
-
-
-
-         
-     
-     
+              </div>     
       </div>
     </div>
-
-
-
-
 <footer>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -532,6 +522,7 @@ li.even{background-color: #f3ebf9;}
           <span class="sr-only">Next</span>
         </a>
     </div>
+    <img src="../../images/bottom-line.png">
   </footer>
   <div id="dialog-overlay"></div>
       <div id="dialog-box">

@@ -9,12 +9,7 @@ var refreshIntervalId;
 /****************************************************************************/
 
 /* doubleclick off */
-$(document).ready(function(){
-	$("*").dblclick(function(e){
-        e.preventDefault();
-	});
-	$("#panel2").hide();
-});
+
 
 function JSMain() {		
 	window.external.StartCamViewer();
