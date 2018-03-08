@@ -97,6 +97,7 @@ var refreshIntervalId ;
 		document.getElementById('number').style.display = "";
 		document.getElementById('frame').style.display = "";
 
+
 		setTimeout('Timer1()', 1000);
 		setTimeout('Timer2()', 2000);
 		setTimeout('Timer3()', 3000);
@@ -121,10 +122,8 @@ var refreshIntervalId ;
 		document.getElementById('number').style.display = "none";
 		document.getElementById('frame').style.display = "none";
 		document.getElementById('number_img').src = "Image/3_re.png";
-		// document.getElementById('delete').src = deletePicNor;
-        document.getElementById('delete').src = "Image/Avatar_delete_nor.png";
+		document.getElementById('delete').src = deletePicNor;
 		clearInterval(refreshIntervalId);
-		
 		GetCaptureImage();
 		GetCaptureImageBase64();
 		MakeRobotFace();
