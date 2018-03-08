@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="205208fb-f663-43d5-9223-02b8443507e6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.css" afterPath="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.js" afterPath="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,18 +39,30 @@
       <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="-17">
               <caret line="86" column="64" lean-forward="false" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RobotAvatar.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RobotAvatar.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="117" column="8" lean-forward="true" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RobotAvatar.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -78,6 +91,7 @@
         <option value="$PROJECT_DIR$/Contents/RobotAvatar/index.htm" />
         <option value="$PROJECT_DIR$/Scripts/BaseEvent.js" />
         <option value="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.css" />
+        <option value="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.js" />
       </list>
     </option>
   </component>
@@ -132,6 +146,13 @@
             <path>
               <item name="OMAC" type="b2602c69:ProjectViewProjectNode" />
               <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Contents" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="RobotAvatar" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Image" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OMAC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -167,12 +188,12 @@
       <updated>1520322564090</updated>
       <workItem from="1520322565214" duration="349000" />
       <workItem from="1520549015399" duration="80000" />
-      <workItem from="1520549188487" duration="1754000" />
+      <workItem from="1520549188487" duration="2411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2183000" />
+    <option name="totallyTimeSpent" value="2840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -270,14 +291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="86" column="64" lean-forward="false" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/BaseEvent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -290,9 +303,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="408">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="86" column="64" lean-forward="false" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="117" column="8" lean-forward="true" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -120,7 +120,7 @@ var refreshIntervalId ;
 		document.getElementById('number').style.display = "none";
 		document.getElementById('frame').style.display = "none";
 		document.getElementById('number_img').src = "Image/3_re.png";
-		document.getElementById('delete').src =deletePicNor;
+		document.getElementById('delete').src = deletePicNor;
 		clearInterval(refreshIntervalId);
 		
 		GetCaptureImage();
