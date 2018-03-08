@@ -7,6 +7,7 @@
 //*******************************************************************************
 var deletePic="Image/Avatar_delete_none.png";
 var deletePicNor="Image/Avatar_delete_nor.png";
+
   $(document).ready(function(){
 ShowTime();
 	$('#change-us').click(function(){
@@ -120,7 +121,8 @@ var refreshIntervalId ;
 		document.getElementById('number').style.display = "none";
 		document.getElementById('frame').style.display = "none";
 		document.getElementById('number_img').src = "Image/3_re.png";
-		document.getElementById('delete').src = deletePicNor;
+		// document.getElementById('delete').src = deletePicNor;
+        document.getElementById('delete').src = "Image/Avatar_delete_nor.png";
 		clearInterval(refreshIntervalId);
 		
 		GetCaptureImage();
