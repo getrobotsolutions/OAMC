@@ -207,13 +207,13 @@
     if(readCookie("lang")=="english"){
       $('#change-us').addClass('active');
       $('#change-ar').removeClass('active');
-      window.external.ChangeLanguage("en-gb");
-      PlaySpeech("Scan your boarding pass to receive updated information.");
+      //window.external.ChangeLanguage("en-gb");
+      //PlaySpeech("Scan your boarding pass to receive updated information.");
       
     }
     else if (readCookie("lang")=="arabic") {
-      window.external.ChangeLanguage("ar-eg");
-      PlaySpeech("قم بوضع بطاقة ركوبك على الماسح لتحصل على المعلومات المحدثة.");
+      //window.external.ChangeLanguage("ar-eg");
+      //PlaySpeech("قم بوضع بطاقة ركوبك على الماسح لتحصل على المعلومات المحدثة.");
       $('#change-us').removeClass('active');
       $('#change-ar').addClass('active');
       
