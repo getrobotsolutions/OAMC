@@ -7,6 +7,7 @@
 //*******************************************************************************
 var deletePic="Image/Avatar_delete_none.png";
 var deletePicNor="Image/Avatar_delete_nor.png";
+
   $(document).ready(function(){
 ShowTime();
 	$('#change-us').click(function(){
@@ -96,6 +97,7 @@ var refreshIntervalId ;
 		document.getElementById('number').style.display = "";
 		document.getElementById('frame').style.display = "";
 
+
 		setTimeout('Timer1()', 1000);
 		setTimeout('Timer2()', 2000);
 		setTimeout('Timer3()', 3000);
@@ -120,13 +122,13 @@ var refreshIntervalId ;
 		document.getElementById('number').style.display = "none";
 		document.getElementById('frame').style.display = "none";
 		document.getElementById('number_img').src = "Image/3_re.png";
-		document.getElementById('delete').src =deletePicNor;
-		clearInterval(refreshIntervalId);
-		
+		document.getElementById('delete').src = deletePicNor;
+
 		GetCaptureImage();
 		GetCaptureImageBase64();
 		MakeRobotFace();
 		SetRobotFace();
+        clearInterval(refreshIntervalId);
 	}
 	
 	function del(){

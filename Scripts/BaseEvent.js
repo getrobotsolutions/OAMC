@@ -97,15 +97,19 @@ function OnJoystickButton(button)
 {
 	if( button == "B0" )
 	{
+        PlaySpeech("test button B0");
 	}
 	else if( button == "B1" )
 	{
+        PlaySpeech("test button B1");
 	}
 	else if( button == "B2" )
 	{
+        PlaySpeech("test button B2");
 	}
 	else if( button == "B3" )
 	{
+        PlaySpeech("test button B3");
 	}
 }
 

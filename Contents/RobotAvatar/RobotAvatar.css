@@ -36,10 +36,9 @@ body {
 	width: 1080px;
 }
 
-
 .canvas {
 	position: absolute;
-	left: 145px;
+	left: 180px;
 	top: 660px;
 }
 
