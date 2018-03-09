@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="205208fb-f663-43d5-9223-02b8443507e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/TerminalMap/index.htm" afterPath="$PROJECT_DIR$/Contents/TerminalMap/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/shop/index.htm" afterPath="$PROJECT_DIR$/Contents/shop/index.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maincontents.htm" afterPath="$PROJECT_DIR$/maincontents.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,82 +13,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Contents/info/index.htm">
+      <file leaf-file-name="maincontents.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/maincontents.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="460" column="98" lean-forward="false" selection-start-line="460" selection-start-column="98" selection-end-line="460" selection-end-column="98" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Contents/RobotAvatar/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="80" column="106" lean-forward="false" selection-start-line="80" selection-start-column="106" selection-end-line="80" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Contents/selfie/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3304">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Contents/PhotoPrinting/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3672">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Contents/PhotoPrinting/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="124" column="122" lean-forward="false" selection-start-line="124" selection-start-column="122" selection-end-line="124" selection-end-column="122" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Contents/TerminalMap/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="203" column="104" lean-forward="false" selection-start-line="203" selection-start-column="104" selection-end-line="203" selection-end-column="104" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Contents/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3621">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Contents/shop/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="419" column="123" lean-forward="false" selection-start-line="419" selection-start-column="123" selection-end-line="419" selection-end-column="123" />
-              <folding />
+            <state relative-caret-position="327">
+              <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+              <folding>
+                <marker date="1520554541602" expanded="false" signature="2775:2883" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +36,6 @@
         <option value="$PROJECT_DIR$/Scripts/BaseEvent.js" />
         <option value="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.css" />
         <option value="$PROJECT_DIR$/Contents/RobotAvatar/RobotAvatar.js" />
-        <option value="$PROJECT_DIR$/maincontents.htm" />
         <option value="$PROJECT_DIR$/Contents/BoardingPass/index.htm" />
         <option value="$PROJECT_DIR$/Contents/eat/index.htm" />
         <option value="$PROJECT_DIR$/Contents/eat/index-us.htm" />
@@ -115,6 +45,7 @@
         <option value="$PROJECT_DIR$/Contents/PhotoPrinting/index.html" />
         <option value="$PROJECT_DIR$/Contents/shop/index.htm" />
         <option value="$PROJECT_DIR$/Contents/TerminalMap/index.htm" />
+        <option value="$PROJECT_DIR$/maincontents.htm" />
       </list>
     </option>
   </component>
@@ -160,23 +91,6 @@
               <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Contents" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="OMAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Contents" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OMAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Contents" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="TerminalMap" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OMAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -210,12 +124,12 @@
       <updated>1520322564090</updated>
       <workItem from="1520322565214" duration="349000" />
       <workItem from="1520549015399" duration="80000" />
-      <workItem from="1520549188487" duration="4913000" />
+      <workItem from="1520549188487" duration="5267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5342000" />
+    <option name="totallyTimeSpent" value="5696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -255,7 +169,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1520554541602" expanded="false" signature="2775:2883" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -281,7 +197,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1520554541602" expanded="false" signature="2775:2883" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -335,14 +253,6 @@
           <folding>
             <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maincontents.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -418,6 +328,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Contents/TerminalMap/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="216" column="0" lean-forward="true" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Contents/index.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3621">
@@ -434,11 +352,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Contents/TerminalMap/index.htm">
+    <entry file="file://$PROJECT_DIR$/maincontents.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="203" column="104" lean-forward="false" selection-start-line="203" selection-start-column="104" selection-end-line="203" selection-end-column="104" />
-          <folding />
+        <state relative-caret-position="327">
+          <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+          <folding>
+            <marker date="1520554541602" expanded="false" signature="2775:2883" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
