@@ -249,7 +249,7 @@ function OnJoystickControlled(strPara){
 	if(btn_info[1] == '1')	window.external.PlaySpeech("");
 	if(btn_info[2] == '1'){
 		window.external.ChangeLanguage("en-gb");
-		window.external.PlaySpeech("Good evening your excellences, and our distinguished guests.");
+		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
 	}
 	if(btn_info[3] == '1'){
 		window.external.ChangeLanguage("ar-eg");
