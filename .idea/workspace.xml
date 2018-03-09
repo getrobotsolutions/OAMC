@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="205208fb-f663-43d5-9223-02b8443507e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/BoardingPass/index.htm" afterPath="$PROJECT_DIR$/Contents/BoardingPass/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/Flights/index.htm" afterPath="$PROJECT_DIR$/Contents/Flights/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/PhotoPrinting/index.html" afterPath="$PROJECT_DIR$/Contents/PhotoPrinting/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/RobotAvatar/index.htm" afterPath="$PROJECT_DIR$/Contents/RobotAvatar/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/eat/index-us.htm" afterPath="$PROJECT_DIR$/Contents/eat/index-us.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/eat/index.htm" afterPath="$PROJECT_DIR$/Contents/eat/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/info/index.htm" afterPath="$PROJECT_DIR$/Contents/info/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maincontents.htm" afterPath="$PROJECT_DIR$/maincontents.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/TerminalMap/index.htm" afterPath="$PROJECT_DIR$/Contents/TerminalMap/index.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contents/shop/index.htm" afterPath="$PROJECT_DIR$/Contents/shop/index.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,21 +64,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Contents/TerminalMap/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
+            <state relative-caret-position="595">
+              <caret line="203" column="104" lean-forward="false" selection-start-line="203" selection-start-column="104" selection-end-line="203" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Contents/index.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3621">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Contents/index.htm">
+      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Contents/shop/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3621">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="544">
+              <caret line="419" column="123" lean-forward="false" selection-start-line="419" selection-start-column="123" selection-end-line="419" selection-end-column="123" />
               <folding />
             </state>
           </provider>
@@ -109,6 +113,8 @@
         <option value="$PROJECT_DIR$/Contents/info/index.htm" />
         <option value="$PROJECT_DIR$/Contents/RobotAvatar/index.htm" />
         <option value="$PROJECT_DIR$/Contents/PhotoPrinting/index.html" />
+        <option value="$PROJECT_DIR$/Contents/shop/index.htm" />
+        <option value="$PROJECT_DIR$/Contents/TerminalMap/index.htm" />
       </list>
     </option>
   </component>
@@ -158,6 +164,12 @@
               <item name="OMAC" type="b2602c69:ProjectViewProjectNode" />
               <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Contents" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OMAC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OMAC" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Contents" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="TerminalMap" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -198,12 +210,12 @@
       <updated>1520322564090</updated>
       <workItem from="1520322565214" duration="349000" />
       <workItem from="1520549015399" duration="80000" />
-      <workItem from="1520549188487" duration="4767000" />
+      <workItem from="1520549188487" duration="4913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5196000" />
+    <option name="totallyTimeSpent" value="5342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -406,18 +418,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Contents/TerminalMap/index.htm">
+    <entry file="file://$PROJECT_DIR$/Contents/index.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
+        <state relative-caret-position="-3621">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Contents/index.htm">
+    <entry file="file://$PROJECT_DIR$/Contents/shop/index.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3621">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="544">
+          <caret line="419" column="123" lean-forward="false" selection-start-line="419" selection-start-column="123" selection-end-line="419" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Contents/TerminalMap/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="203" column="104" lean-forward="false" selection-start-line="203" selection-start-column="104" selection-end-line="203" selection-end-column="104" />
           <folding />
         </state>
       </provider>
