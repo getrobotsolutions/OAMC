@@ -247,19 +247,23 @@ function OnJoystickControlled(strPara){
 	
 	if(btn_info[0] == '1'){
         window.external.ChangeLanguage("en-gb");
-        window.external.PlaySpeech("See you on 20th March ");
+        SetVolume(1);
+        window.external.PlaySpeech("Can't wait to see you on the 20th of March!");
 	}
 	if(btn_info[1] == '1'){
         window.external.ChangeLanguage("ar-eg");
-        window.external.PlaySpeech("نحن سعداء بإلتحاقنا بأسرة مطارات عمان");
+        SetVolume(0.4);
+        window.external.PlaySpeech("نحنُ سُعداءٌ بإنضِمامِنا إلى مطاراتْ عُمْان");
 	}
 	if(btn_info[2] == '1'){
 		window.external.ChangeLanguage("en-gb");
+		SetVolume(1);
 		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
 	}
 	if(btn_info[3] == '1'){
 		window.external.ChangeLanguage("ar-eg");
-		window.external.PlaySpeech("تفضل دكتور مؤمن");
+		SetVolume(0.4);
+		window.external.PlaySpeech("طبعاً ، تفضلْ دكتورْ مُؤمنْ");
 		
 	}
 
