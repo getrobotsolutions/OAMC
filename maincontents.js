@@ -260,6 +260,7 @@ function OnJoystickControlled(strPara){
 	if(btn_info[3] == '1'){
 		window.external.ChangeLanguage("ar-eg");
 		window.external.PlaySpeech("تفضل دكتور مؤمن");
+		
 	}
 
 }
