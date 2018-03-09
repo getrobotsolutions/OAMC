@@ -245,8 +245,14 @@ $(document).ready(function(){
 function OnJoystickControlled(strPara){
 	var btn_info = strPara.split(',')[4];
 	
-	if(btn_info[0] == '1')	window.external.PlaySpeech("");
-	if(btn_info[1] == '1')	window.external.PlaySpeech("");
+	if(btn_info[0] == '1'){
+        window.external.ChangeLanguage("en-gb");
+        window.external.PlaySpeech("See you on 20th March ");
+	}
+	if(btn_info[1] == '1'){
+        window.external.ChangeLanguage("ar-eg");
+        window.external.PlaySpeech("نحن سعداء بإلتحاقنا بأسرة مطارات عمان");
+	}
 	if(btn_info[2] == '1'){
 		window.external.ChangeLanguage("en-gb");
 		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
