@@ -7,8 +7,8 @@
 //*******************************************************************************
 //window.external.ChangeLanguage("english");
  
-ChangeLanguage("en");
-SetVolume(0.7);
+ChangeLanguage("en-gb");
+SetVolume(0.9);
 //------------------------------------------------------------------------------
 //Service Contents Call : Main Screen에서 선택한 Service Contents를 호출함.
 //------------------------------------------------------------------------------
@@ -242,3 +242,18 @@ $(document).ready(function(){
       	$('#content_explore').text("استكشاف تنازلات لدينا");
     }); */             
 });
+function OnJoystickControlled(strPara){
+	var btn_info = strPara.split(',')[4];
+	
+	if(btn_info[0] == '1')	window.external.PlaySpeech("");
+	if(btn_info[1] == '1')	window.external.PlaySpeech("");
+	if(btn_info[2] == '1'){
+		window.external.ChangeLanguage("en-gb");
+		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
+	}
+	if(btn_info[3] == '1'){
+		window.external.ChangeLanguage("ar-eg");
+		window.external.PlaySpeech("تفضل دكتور مؤمن");
+	}
+
+}
