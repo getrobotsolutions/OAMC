@@ -19,7 +19,7 @@
     $('.bdy #location').text("Location:");
     $('.bdy #desc').text("Our store offers a range of the latest electronics in an exciting shopping experience that have been selected especially for the discerning traveler. The store combines the best brands, latest innovations and a trendsetting shopping environment all specifically tailored to travelers. Here you will find the latest smartphones and gadgets from Apple, Samsung and Bose.");
     $("#mapBtn").show();
-    $("#mapBtn").attr('dir','photo/maps/map.jpg');
+    $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
   });
   $('#s2').click(function(){
     $('.part2 #icon').attr("src","photo/LTC.png");
