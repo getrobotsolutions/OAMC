@@ -405,6 +405,8 @@ function ShowTime()
             var dt = new Date();  
             //var localeSpecificTime = dt.toLocaleTimeString();
             //localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
-            document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime; 
+            //document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime; 
+            document.getElementById("content_air") .innerHTML = dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime; 
+
             window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec  
         }
