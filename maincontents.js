@@ -211,7 +211,7 @@ function OnJoystickControlled(strPara){
 	}
 	if(btn_info[3] == '1'){
 		window.external.ChangeLanguage("ar-eg");
-		SetVolume(0.4);
+		SetVolume(1);
 		window.external.PlaySpeech("طبعاً ، تفضلْ دكتورْ مُؤمنْ");
 		
 	}
