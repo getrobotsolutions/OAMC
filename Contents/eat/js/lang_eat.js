@@ -37,7 +37,7 @@ ShowTime();
     //$("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
 
     $("#mapBtn").attr('dir','photo/maps/aribou-Coffee.jpg');
-    $("#mapBtn").show();
+    $("#mapBtn").hide();
   });
               $('#c4').click(function(){
                 $('.part2 #icon').attr("src","photo/Mcdonalds.png");
@@ -48,7 +48,7 @@ ShowTime();
                 //$("#btn").show();
                 //$("#btn").attr('dir','photo/costa-drinks.png');
 
-                $("#mapBtn").show();
+                $("#mapBtn").hide();
                 
               });
               $('#c5').click(function(){
@@ -60,7 +60,7 @@ ShowTime();
                 //$("#btn").show();
                 //$("#btn").attr('dir','photo/dq-menu-prices.png');
 
-                $("#mapBtn").show();
+                $("#mapBtn").hide();
               });
               $('#c6').click(function(){
                 $('.part2 #icon').attr("src","photo/plenty.png");

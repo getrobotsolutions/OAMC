@@ -35,7 +35,7 @@ ShowTime();
     
 
     $("#mapBtn").attr('dir','photo/maps/aribou-Coffee.jpg');
-    $("#mapBtn").show();
+    $("#mapBtn").hide();
   });
   $('#c4').click(function(){
     $('.part2 #icon').attr("src","photo/Mcdonalds.png");
@@ -45,7 +45,7 @@ ShowTime();
     $('.bdy #desc').text("for burger and fast food lovers, enjou mcdonalds with movement of planes next to you.");
    
 
-    $("#mapBtn").show();
+    $("#mapBtn").hide();
                 
   });
   $('#c5').click(function(){
@@ -56,7 +56,7 @@ ShowTime();
     $('.bdy #desc').text("Indian Cuisine in a fast food concept for spicy food lovers.");
    
 
-    $("#mapBtn").show();
+    $("#mapBtn").hide();
   });
   $('#c6').click(function(){
     $('.part2 #icon').attr("src","photo/plenty.png");
