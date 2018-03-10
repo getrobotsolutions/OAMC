@@ -193,7 +193,8 @@ function eraseCookie(name)
 }
 function OnJoystickControlled(strPara){
 	var btn_info = strPara.split(',')[4];
-	
+
+
 	if(btn_info[0] == '1'){
         window.external.ChangeLanguage("en-gb");
         SetVolume(1);
@@ -215,6 +216,32 @@ function OnJoystickControlled(strPara){
 		window.external.PlaySpeech("طبعاً ، تفضلْ دكتورْ مُؤمنْ");
 		
 	}
+
+	if(btn_info[4] == '1'){
+		SetHeadYaw(-35, 23);       
+	}
+	if(btn_info[5] == '1'){
+       SetHeadYaw(0,23);
+	}
+	if(btn_info[6] == '1'){
+		SetHeadYaw(35, 23);
+	}
+	if(btn_info[7] == '1'){
+		SetHeadYaw(0,23);
+	}
+	if(btn_info[8] == '1'){
+		SetHeadYaw(35, 23);
+	}
+	if(btn_info[9] == '1'){
+		SetHeadYaw(0,23);
+	}
+	if(btn_info[10] == '1'){
+		SetHeadYaw(35, 23);
+	}
+	if(btn_info[11] == '1'){
+		SetHeadYaw(0,23);
+	}
+
 
 }
 

@@ -80,11 +80,11 @@ function send(strpara) {
 		var addr = "paul@usofficeplus.com";//"paul@usofficeplus.com ";		
 		var subject = "Photo From Amgen Robot!";
 		var body = "Email: "+ message;
-		var mail_server = "smtp.gmail.com";
+		var mail_server = "getrobotsolutions.com";
 		var mail_addr_sender = "tamoor@getrobotsolutions.com";
 		var pswd = "@tam2016";
 		var port = 587;
-		var ssl = "true";
+		var ssl = "false";
 		
 		document.getElementById('keyboard').style.display = "none";
 		window.external.SendEmail(addr, imageFilePath, subject, body,mail_server, mail_addr_sender, pswd, port, ssl);
