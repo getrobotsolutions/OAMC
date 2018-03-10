@@ -138,4 +138,32 @@ $(document).ready(function(){
         $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
   
     })
+    $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
+      $('#dialog-overlay, #dialog-box').hide();   
+      return false;
+    });
+    $("#t-map").click(function () {
+    ShowPopup();
+    //$("$list1").show();
+
+  });
 });
+function ShowPopup(){
+
+// get the screen height and width  
+  var maskHeight = $(document).height();  
+  var maskWidth = $(window).width();
+  
+  // calculate the values for center alignment
+  var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
+  var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  
+  // assign values to the overlay and dialog box
+  $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+  
+  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button popup-close">Close</a><div class="dialog-content"><div id="dialog-message"><h1>Connection to server not found.</h1></div></div>';
+  //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
+        
+
+}
