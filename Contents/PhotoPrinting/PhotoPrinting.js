@@ -81,8 +81,8 @@ function send(strpara) {
 		var subject = "Photo From Amgen Robot!";
 		var body = "Email: "+ message;
 		var mail_server = "smtp.gmail.com";
-		var mail_addr_sender = "amgenrobot@gmail.com";
-		var pswd = "@amgenrobot123";
+		var mail_addr_sender = "tamoor@getrobotsolutions.com";
+		var pswd = "@tam2016";
 		var port = 587;
 		var ssl = "true";
 		
