@@ -54,7 +54,7 @@ $(document).ready(function(){
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
                 $('#content_map').html("TERMINAL MAP");
-                $('#content_info').text("INFORMATION");
+                $('#content_info').text("SEARCH & INFO");
 
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
@@ -79,7 +79,7 @@ $(document).ready(function(){
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
 
-                $('#content_info').text("INFORMATION");
+                $('#content_info').text("SEARCH & INFO");
                 $('#content_map').html("TERMINAL MAP");
 
                 $('#content_flights').html("FLIGHTS");
@@ -142,7 +142,7 @@ $(document).ready(function(){
       $('#dialog-overlay, #dialog-box').hide();   
       return false;
     });
-    $("#t-map").click(function () {
+    $("#info-popup").click(function () {
     ShowPopup();
     //$("$list1").show();
 
