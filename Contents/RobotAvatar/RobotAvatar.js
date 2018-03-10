@@ -93,7 +93,7 @@ var refreshIntervalId ;
 
 	function shot() {
 
-		document.getElementById('shot').style.display = "none";
+		document.getElementById('shot').style.display = "block";
 		document.getElementById('number').style.display = "";
 		document.getElementById('frame').style.display = "";
 
@@ -118,7 +118,7 @@ var refreshIntervalId ;
 
 	function Timer3() {
 		
-		document.getElementById('shot').style.display = "none";
+		document.getElementById('shot').style.display = "block";
 		document.getElementById('number').style.display = "none";
 		document.getElementById('frame').style.display = "none";
 		document.getElementById('number_img').src = "Image/3_re.png";
