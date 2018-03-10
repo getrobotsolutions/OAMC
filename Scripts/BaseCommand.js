@@ -403,7 +403,7 @@ today = mm+"/"+dd+"/"+yyyy + " " +today.getHours() + ":" + today.getMinutes()+":
 function ShowTime()  
         {  
             var dt = new Date();  
-            formatAMPM(dt);
+            //formatAMPM(dt);
             //var localeSpecificTime = dt.toLocaleTimeString();
             //localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
             //document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime; 
@@ -415,7 +415,7 @@ function formatAMPM(date) {
 
   var hours = date.getHours();
   var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'AM' : 'PM';
+  var ampm = hours >= 12 ? 'PM' : 'AM';
   hours = hours % 12;
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? '0'+minutes : minutes;
