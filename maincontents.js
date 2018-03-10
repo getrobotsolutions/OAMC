@@ -191,7 +191,32 @@ function eraseCookie(name)
 	//erase particular cookie
 	writeCookie(name, "", -1); //소멸일자 (-1일)를 소멸시켜 쿠키를 삭제함
 }
+function OnJoystickControlled(strPara){
+	var btn_info = strPara.split(',')[4];
+	
+	if(btn_info[0] == '1'){
+        window.external.ChangeLanguage("en-gb");
+        SetVolume(1);
+        window.external.PlaySpeech("Can't wait to see you on the 20th of March!");
+	}
+	if(btn_info[1] == '1'){
+        window.external.ChangeLanguage("ar-eg");
+        SetVolume(0.4);
+        window.external.PlaySpeech("نحنُ سُعداءٌ بإنضِمامِنا إلى مطاراتْ عُمْان");
+	}
+	if(btn_info[2] == '1'){
+		window.external.ChangeLanguage("en-gb");
+		SetVolume(1);
+		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
+	}
+	if(btn_info[3] == '1'){
+		window.external.ChangeLanguage("ar-eg");
+		SetVolume(0.4);
+		window.external.PlaySpeech("طبعاً ، تفضلْ دكتورْ مُؤمنْ");
+		
+	}
 
+}
 
 //-[End Cookie Control]------------------------------------------------------//
 $(document).ready(function(){
@@ -242,29 +267,3 @@ $(document).ready(function(){
       	$('#content_explore').text("استكشاف تنازلات لدينا");
     }); */             
 });
-function OnJoystickControlled(strPara){
-	var btn_info = strPara.split(',')[4];
-	
-	if(btn_info[0] == '1'){
-        window.external.ChangeLanguage("en-gb");
-        SetVolume(1);
-        window.external.PlaySpeech("Can't wait to see you on the 20th of March!");
-	}
-	if(btn_info[1] == '1'){
-        window.external.ChangeLanguage("ar-eg");
-        SetVolume(0.4);
-        window.external.PlaySpeech("نحنُ سُعداءٌ بإنضِمامِنا إلى مطاراتْ عُمْان");
-	}
-	if(btn_info[2] == '1'){
-		window.external.ChangeLanguage("en-gb");
-		SetVolume(1);
-		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
-	}
-	if(btn_info[3] == '1'){
-		window.external.ChangeLanguage("ar-eg");
-		SetVolume(0.4);
-		window.external.PlaySpeech("طبعاً ، تفضلْ دكتورْ مُؤمنْ");
-		
-	}
-
-}
