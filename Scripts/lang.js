@@ -1,14 +1,16 @@
 
 $(document).ready(function(){
    ShowTime();
-    var welcomeMessage= " ";
+    var welcomeMessage= "مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
     var lan="ar-eg";
     var volume=0.4;
                 
                 $('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("المطاعم");
+
+                $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
@@ -19,10 +21,10 @@ $(document).ready(function(){
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
               
-                //var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-                //var lan="ar-eg";
-                //volume=0.4;
-                var welcomeMessage=" ";
+                var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                var lan="ar-eg";
+                volume=0.4;
+                //var welcomeMessage=" ";
 
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -30,7 +32,9 @@ $(document).ready(function(){
               
                 $('#content_fly').text("اضغط هنا للبدء");
 
-                $('#content_eat').html("المطاعم");
+
+                $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
@@ -97,10 +101,10 @@ $(document).ready(function(){
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                var welcomeMessage=" ";
-                /*welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                //var welcomeMessage=" ";
+                welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 lan="ar-eg";
-                volume=0.4;*/
+                volume=0.4;
                 writeCookie("lang","arabic");
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -113,7 +117,9 @@ $(document).ready(function(){
                 //$('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("المطاعم");
+
+                $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
@@ -156,8 +162,6 @@ $(document).ready(function(){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
         PlaySpeech("Here is some information to make your journey more enjoyable.");
-     
- 
     }
    
 
@@ -179,6 +183,11 @@ $(document).ready(function(){
     }*/
     ShowPopup();
    
+
+  });
+    $("#t-map").click(function () {
+    ShowPopup();
+    //$("$list1").show();
 
   });
 });
