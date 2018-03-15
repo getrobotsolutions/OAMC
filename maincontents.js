@@ -199,15 +199,15 @@ function OnJoystickControlled(strPara){
         window.external.ChangeLanguage("en-gb");
         SetVolume(1);
         window.external.PlaySpeech("Can't wait to see you on the 20th of March!");
-	}*/
+	}
 	if(btn_info[0] == '1'){
         window.external.ChangeLanguage("ar-eg");
         SetVolume(1);
         window.external.PlaySpeech("حَيَّاكُم تَفَضَّلوا");
-	}
+	}*/
 
 	
-	if(btn_info[2] == '1'){
+	/*if(btn_info[2] == '1'){
 
 		window.external.ChangeLanguage("en-gb");
 		SetVolume(1);

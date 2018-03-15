@@ -162,8 +162,6 @@ $(document).ready(function(){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
         PlaySpeech("Here is some information to make your journey more enjoyable.");
-     
- 
     }
    
 
