@@ -64,6 +64,7 @@
   		ShowTime();
   		if(readCookie("lang")=="english"){
   			window.external.ChangeLanguage("en-gb");
+  			window.external.SetVolume(1);
       		PlaySpeech("Its time to smile.");
       		$('#change-us').addClass('active');
       		$('#change-ar').removeClass('active');
@@ -71,6 +72,7 @@
     	}
     	else if (readCookie("lang")=="arabic") {
     		window.external.ChangeLanguage("ar-eg");
+    		window.external.SetVolume(0.4);
     		PlaySpeech("حان الوقت لتبتسم.");
       		$('#change-us').removeClass('active');
       		$('#change-ar').addClass('active');
