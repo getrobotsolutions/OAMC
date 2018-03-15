@@ -7,8 +7,8 @@ $(document).ready(function(){
                 $('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("تناول");
-                $('#content_shop').text("محل");
+                $('#content_eat').html("مطاعم");
+                $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرّحلة");
@@ -27,8 +27,8 @@ $(document).ready(function(){
               
                 $('#content_fly').text("اضغط هنا للبدء");
 
-                $('#content_eat').html("تناول");
-                $('#content_shop').text("محل");
+                $('#content_eat').html("مطاعم");
+                $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرّحلة");
@@ -106,8 +106,8 @@ $(document).ready(function(){
                 //$('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("تناول");
-                $('#content_shop').text("محل");
+                $('#content_eat').html("مطاعم");
+                $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرّحلة");
@@ -143,6 +143,11 @@ $(document).ready(function(){
       return false;
     });
     $("#info-popup").click(function () {
+    ShowPopup();
+    //$("$list1").show();
+
+  });
+    $("#t-map").click(function () {
     ShowPopup();
     //$("$list1").show();
 
