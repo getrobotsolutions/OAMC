@@ -7,12 +7,12 @@ $(document).ready(function(){
                 $('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("مطاعم");
+                $('#content_eat').html("المطاعم");
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرّحلة");
-                $('#content_scan').html(" امسح بطاقة الصعود للطائرة ");
+                $('#content_flights').html("معلومات الرحلات");
+                $('#content_scan').html(" مرر بطاقة الصعود للطائرة ");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
               if(readCookie("lang")=="arabic"){
@@ -27,12 +27,12 @@ $(document).ready(function(){
               
                 $('#content_fly').text("اضغط هنا للبدء");
 
-                $('#content_eat').html("مطاعم");
+                $('#content_eat').html("المطاعم");
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرّحلة");
-                $('#content_scan').html(" امسح بطاقة الصعود للطائرة ");
+                $('#content_flights').html("معلومات الرحلات");
+                $('#content_scan').html("مرر بطاقة الصعود للطائرة ");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
                 //$('#content_dance').html("صورتك في <br>الوجه الآلي");
@@ -106,12 +106,12 @@ $(document).ready(function(){
                 //$('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("مطاعم");
+                $('#content_eat').html("المطاعم");
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرّحلة");
-                $('#content_scan').html("امسح بطاقة الصعود للطائرة");
+                $('#content_flights').html("معلومات الرحلات");
+                $('#content_scan').html("مرر بطاقة الصعود للطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
                

@@ -67,7 +67,7 @@ ShowTime();
                 $('.bdy #title').text("بلنتي");
                 $('.bdy #location').text("Location:");
 
-                $('.bdy #desc').text("تهتم بصحتك؟ ما عليك الا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك.");
+                $('.bdy #desc').text("تهتم بصحتك ما عليك إلا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك.");
                 $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
                 $("#mapBtn").show();
                 $('.list2').toggle();
@@ -84,7 +84,7 @@ ShowTime();
               });
               $('#c62').click(function(){
                 $('.part2 #icon').attr("src","photo/Tickerdaze.png");
-                $('.bdy #title').text("تيكرداذ");
+                $('.bdy #title').text("تيكردايز");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("شاهد المباريات مباشرة وانت تستمتع بالماكولات  والمشروبات الشهية قبل صعودك للطائرة");
