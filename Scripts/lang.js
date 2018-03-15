@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
    ShowTime();
-    var welcomeMessage= "مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+    var welcomeMessage= "";
     var lan="ar-eg";
     var volume=0.4;
                 
@@ -18,13 +18,18 @@ $(document).ready(function(){
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
+                $('#content_fly').hide();
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
+
+
               
-                var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                /*var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 var lan="ar-eg";
-                volume=0.4;
-                //var welcomeMessage=" ";
+                volume=0.4;*/
+                var welcomeMessage=" ";
+
+                $('#content_fly').hide();
 
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -58,6 +63,7 @@ $(document).ready(function(){
 
                 //$('#content_term').text("Terminal A");
                 //$('#content_air').text("Riyadh Airport");
+                 $('#content_fly').show();
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
@@ -83,7 +89,7 @@ $(document).ready(function(){
                 $('#change-ar').removeClass('active');
 
                 //$('#content_term').text("Terminal A");
-                
+                 $('#content_fly').show();
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
@@ -101,13 +107,15 @@ $(document).ready(function(){
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                //var welcomeMessage=" ";
-                welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                var welcomeMessage=" ";
+                /*welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 lan="ar-eg";
-                volume=0.4;
+                volume=0.4;*/
                 writeCookie("lang","arabic");
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
+
+                 $('#content_fly').hide();
 
                 $('.fly').text("رحلات طيران");
                 $('.scan').text("مسح الصعود تمريرة الخاص بك");
