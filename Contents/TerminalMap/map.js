@@ -24,3 +24,9 @@ $(document).ready(function(){
           $('#txt3').text("الرصيف الشمالي | المستوى 02");
         });
 	});
+function OnUserDisappeared()
+{
+  setTimeout(function(){
+    location.href = "../../maincontents.html";
+  }, 60000)
+}

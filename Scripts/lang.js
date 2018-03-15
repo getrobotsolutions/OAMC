@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
    ShowTime();
-    var welcomeMessage= " ";
+    var welcomeMessage= "مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
     var lan="ar-eg";
     var volume=0.4;
                 
@@ -21,10 +21,10 @@ $(document).ready(function(){
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
               
-                //var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-                //var lan="ar-eg";
-                //volume=0.4;
-                var welcomeMessage=" ";
+                var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                var lan="ar-eg";
+                volume=0.4;
+                //var welcomeMessage=" ";
 
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -101,10 +101,10 @@ $(document).ready(function(){
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                var welcomeMessage=" ";
-                /*welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                //var welcomeMessage=" ";
+                welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 lan="ar-eg";
-                volume=0.4;*/
+                volume=0.4;
                 writeCookie("lang","arabic");
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
