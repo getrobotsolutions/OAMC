@@ -107,7 +107,7 @@ function CountDown()
                 refreshIntervalId = null;
                 
                 window.external.PauseCamViewer();
-                window.external.PlaySpeech(speechJsonObj["frame"][c_language]);
+                //window.external.PlaySpeech(speechJsonObj["frame"][c_language]);
             }
             
             isPhotoTaken = true;
@@ -158,7 +158,7 @@ function ShowKeyboard()
     // 메일 전송 안내 스피치
     if (isRobot)
     {
-        window.external.PlaySpeech(speechJsonObj["email"][c_language]);
+        //window.external.PlaySpeech(speechJsonObj["email"][c_language]);
     }
 }
 
@@ -267,14 +267,14 @@ function OnSendEmailResult(str)
 		document.getElementById("email_state").src = "Images/email_success_"+c_language+".png";
         
         // 메일 전송 성공 스피치
-        window.external.PlaySpeech(speechJsonObj["email_success"][c_language]);
+        //window.external.PlaySpeech(speechJsonObj["email_success"][c_language]);
 	}
 	else
     {
 		document.getElementById("email_state").src = "Images/email_fail_"+c_language+".png";
         
         // 메일 전송 실패 스피치
-        window.external.PlaySpeech(speechJsonObj["email_fail"][c_language]);
+        //window.external.PlaySpeech(speechJsonObj["email_fail"][c_language]);
 	}
 }
 

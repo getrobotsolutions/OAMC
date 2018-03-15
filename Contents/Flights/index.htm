@@ -112,13 +112,13 @@ thead {
     $('#arrival').text("Arrival");
     $('#status').text("Status (min)");
     window.external.ChangeLanguage("en-gb");
-    //PlaySpeech("Keep up to date with our flights and arrivals.");
+    PlaySpeech("Keep up to date with our flights and arrivals.");
   }
   else if (readCookie("lang")=="arabic") {
     $('#change-us').removeClass('active');
     $('#change-ar').addClass('active');
     window.external.ChangeLanguage("ar-eg");
-    //PlaySpeech("تعرف على مواعيد رحلاتنا و مواعيد الوصول أولاً بأول.");
+    PlaySpeech("تعرف على مواعيد رحلاتنا و مواعيد الوصول أولاً بأول.");
   }
   /*else if(readCookie("lang")=="arabic"){
     
