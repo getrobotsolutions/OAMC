@@ -205,8 +205,10 @@ function OnJoystickControlled(strPara){
         SetVolume(1);
         window.external.PlaySpeech("حَيَّاكُم تَفَضَّلوا");
 	}
+
 	
 	if(btn_info[2] == '1'){
+
 		window.external.ChangeLanguage("en-gb");
 		SetVolume(1);
 		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
@@ -216,7 +218,7 @@ function OnJoystickControlled(strPara){
 		SetVolume(1);
 		window.external.PlaySpeech("طبعاً ، تفضلْ دكتورْ مُؤمنْ");
 		
-	}
+	}*/
 
 	if(btn_info[4] == '1'){
 		SetHeadYaw(-35, 23);       

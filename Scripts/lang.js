@@ -1,25 +1,30 @@
 
 $(document).ready(function(){
    ShowTime();
-    var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+    var welcomeMessage= " ";
     var lan="ar-eg";
+    var volume=0.4;
                 
                 $('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
+
                 $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرّحلة");
-                $('#content_scan').html(" امسح بطاقة الصعود للطائرة ");
+                $('#content_flights').html("معلومات الرحلات");
+                $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
               
-                var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-                var lan="ar-eg";
+                //var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                //var lan="ar-eg";
+                //volume=0.4;
+                var welcomeMessage=" ";
 
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -27,12 +32,14 @@ $(document).ready(function(){
               
                 $('#content_fly').text("اضغط هنا للبدء");
 
+
                 $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرّحلة");
-                $('#content_scan').html(" امسح بطاقة الصعود للطائرة ");
+                $('#content_flights').html("معلومات الرحلات");
+                $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
                 //$('#content_dance').html("صورتك في <br>الوجه الآلي");
@@ -42,6 +49,7 @@ $(document).ready(function(){
 
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
                 lan="en-gb"; 
+                volume=1;
                 //$('#change-us').toggleClass('active');
                 //$('#change-ar').toggleClass('active');
                 
@@ -69,6 +77,7 @@ $(document).ready(function(){
                 writeCookie("lang","english");
                 welcomeMessage="Hi. Welcome to our airport. To begin, please press one of the buttons below.";
                 lan="en-gb"; 
+                volume=1;
                 
                 $('#change-us').addClass('active');
                 $('#change-ar').removeClass('active');
@@ -92,8 +101,10 @@ $(document).ready(function(){
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                var welcomeMessage=" ";
+                /*welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 lan="ar-eg";
+                volume=0.4;*/
                 writeCookie("lang","arabic");
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -106,21 +117,24 @@ $(document).ready(function(){
                 //$('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
+
                 $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرّحلة");
-                $('#content_scan').html("امسح بطاقة الصعود للطائرة");
+                $('#content_flights').html("معلومات الرحلات");
+                $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
                
               });
-              /*$('#content_fly').click(function(){
+              $('#content_fly').click(function(){
                     ChangeLanguage("lan");
                     window.external.ChangeLanguage(lan);
+                    window.external.SetVolume(volume);
                     PlaySpeech(welcomeMessage);
-              });*/
+              });
     var city = "Muscat";
     var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='c'";
     var queryURL = "https://query.yahooapis.com/v1/public/yql?q="+ searchtext + "&format=json";
@@ -143,8 +157,34 @@ $(document).ready(function(){
       return false;
     });
     $("#info-popup").click(function () {
+      ShowPopup();
+      if(readCookie("lang")=="english"){
+        window.external.ChangeLanguage("en-gb");
+        window.external.SetVolume(1);
+        PlaySpeech("Here is some information to make your journey more enjoyable.");
+     
+ 
+    }
+   
+
+  });
+     $("#t-popup").click(function () {
+      if(readCookie("lang")=="english"){
+      window.external.ChangeLanguage("en-gb");
+      window.external.SetVolume(1);
+      PlaySpeech("Find your way around our airport.");
+     
+      
+    }
+    /*else if (readCookie("lang")=="arabic") {
+      
+      window.external.ChangeLanguage("ar-eg");
+      window.external.SetVolume(0.4);
+      PlaySpeech("اعرف طريقك في مطارنا.");
+      
+    }*/
     ShowPopup();
-    //$("$list1").show();
+   
 
   });
     $("#t-map").click(function () {
