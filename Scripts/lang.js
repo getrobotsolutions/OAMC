@@ -8,7 +8,9 @@ $(document).ready(function(){
                 $('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("المطاعم");
+
+                $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
@@ -30,7 +32,9 @@ $(document).ready(function(){
               
                 $('#content_fly').text("اضغط هنا للبدء");
 
-                $('#content_eat').html("المطاعم");
+
+                $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
@@ -113,7 +117,9 @@ $(document).ready(function(){
                 //$('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
-                $('#content_eat').html("المطاعم");
+
+                $('#content_eat').html("مطاعم");
+
                 $('#content_shop').text("تسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
@@ -179,6 +185,11 @@ $(document).ready(function(){
     }*/
     ShowPopup();
    
+
+  });
+    $("#t-map").click(function () {
+    ShowPopup();
+    //$("$list1").show();
 
   });
 });
