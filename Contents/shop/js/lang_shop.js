@@ -101,7 +101,30 @@
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').html("<p>يقدم متجرنا مجموعة من أحدث الأجهزة الالكترونية في تجربة تسوق مثيرة وفريدة تم اختيارها خصيصا للمسافرين المميزين. حيث يجمع المتجر بين أفضل العلامات التجارية وأحدث الابتكارات مع بيئة تسوق محددة الاتجاهات مصممة خصيصا للمسافرين. كما ستجد لدينا أحدث الهواتف الذكية والأجهزة المبتكرة من أبل وسامسونج وبوز.</p>");
               });
+  $('#s14').click(function(){
+    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+    $('.bdy #title').text("Souvinier Shop");
 
+    $('.bdy #desc').text("تبحث عن هدية تذكارية مثالية؟ قم بزيارتنا وتمتع بشراء التذاكر المحلية والتقليدية");
+  });
+  $('#s15').click(function(){
+    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+    $('.bdy #title').text("Be relax");
+
+    $('.bdy #desc').text("اقضي عشر دقايق ممتعة ومريحة استعدادا لرحلتك القادمة");
+  });
+  $('#s16').click(function(){
+    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+    $('.bdy #title').text("Gallery Argan");
+
+    $('.bdy #desc').text("المكان المناسب لشراء المجوهرات الفاخرة والهدايا لأحبائك.");
+  });
+  $('#s17').click(function(){
+    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+    $('.bdy #title').text("Muscat Pharmacy");
+
+    $('.bdy #desc').text("متجرك المتكامل للحصول على منتجات الصيدلية بالاضافة الى منتجات رعاية الطفل والمنتجات الصحية.");
+  });
 
 
               //Change to English

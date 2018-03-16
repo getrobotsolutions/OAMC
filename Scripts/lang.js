@@ -1,6 +1,11 @@
 
 $(document).ready(function(){
    ShowTime();
+
+     $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
+      $('#dialog-overlay, #dialog-box').hide();   
+      return false;
+    });
     var welcomeMessage= "";
     var lan="ar-eg";
     var volume=0.4;
@@ -165,7 +170,7 @@ $(document).ready(function(){
       return false;
     });
     $("#info-popup").click(function () {
-      ShowPopup();
+      ShowPopup2('images/infographic.png');
       if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
@@ -218,3 +223,27 @@ function ShowPopup(){
         
 
 }
+
+function ShowPopup2(src){
+
+// get the screen height and width  
+  var maskHeight = $(document).height();  
+  var maskWidth = $(window).width();
+  
+  // calculate the values for center alignment
+var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
+var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  
+  // assign values to the overlay and dialog box
+  $('#dialog-overlay-info').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box-info').css({top:dialogTop, left:dialogLeft}).show();
+  
+  document.getElementById('dialog-box-info').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content-info"><div id="dialog-message-info"><img width="650" src="'+ src +'"/></div></div>';
+  //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
+        
+$('#dialog-box-info a').click(function(){
+$('#dialog-overlay-info').hide();
+$('#dialog-box-info').hide();
+});
+}
+
