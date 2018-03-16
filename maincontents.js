@@ -44,7 +44,7 @@ function FC_ContentsCall(strContentsName, strLanguage)
 
 	if(strContentsName == "Flights")
 	{
-		location.href = "Contents/Flights/index.htm";
+		location.href = "Contents/Flights/flights_dep.htm";
 	}
 	if(strContentsName == "BoardingPass")
 	{

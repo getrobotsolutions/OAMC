@@ -15,7 +15,7 @@ $(document).ready(function(){
                 $('#airline').text("Airline");
                 $('#terminal').text("Terminal");
                 $('#arrival').text("Arrival");
-                $('#status').text("Status (min)");
+                $('#status').text("Status");
    
               });
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
                 $('#airline').text("شركة طيران");
                 $('#terminal').text("طرفية");
                 $('#arrival').text("وصول");
-                $('#status').text("االحالة ) دقيقة)");
+                $('#status').text("دقيقة");
 
               });
 
