@@ -204,7 +204,7 @@ function SendEmail()
     // 메일 전송에 필요한 정보
     //var addr = message;
     var addr = "paul@robotaisolutions.com";
-    var subject = "Welcome to the FUTURE ROBOT booth.";
+    var subject = "Welcome to the Muscat International Airport.";
     var body = "Email" + message;
     /*var mail_server = "smtp.gmail.com";
     var mail_addr_sender = "futurerobot0724@gmail.com";
