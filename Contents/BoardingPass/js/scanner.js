@@ -230,13 +230,13 @@ console.log(parts_p);
                       }   
 
                       else{
-                      /* alert("Please put the Barcode scanner on the right position and try again.        يرجى وضع الماسح الضوئي الباركود على المكان الصحيح وحاول مرة أخرى.");*/
+                      alert("Please put the Barcode scanner on the right position and try again.");
                         location.reload();
                       }                     
               });
                  
                     setTimeout(function() {
                       $('#submit').trigger('click');
-                      }, 1500);
+                      }, 5000);
                  
         });
