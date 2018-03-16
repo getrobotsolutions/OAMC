@@ -106,25 +106,31 @@
                 $('.bdy #desc').html("Our Spectrum Sunglasses concept store caters to the needs of the international, brand savvy, style conscious traveler who wishes to indulge in an accessible luxury or lifestyle accessory. </br>Spectrum supplies an array of the most iconic and up to date fashionable luxury styles, while also providing cutting edge high performance technology eyewear");
               });
   $('#s14').click(function(){
-    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+    $('.part2 #icon').attr("src","photo/blank.png");
+    $('.bdy #title').text("Wh Smith");
+
+    $('.bdy #desc').text("In a hurry to catch a flight?! Grab a snack or book to read on your way to your gate.");
+  });
+  $('#s15').click(function(){
+    $('.part2 #icon').attr("src","photo/blank.png");
     $('.bdy #title').text("Souvinier Shop");
 
     $('.bdy #desc').text("Looking for the perfect memorable gift? Check out the local and traditional fine collectables and souvenirs.");
   });
-  $('#s15').click(function(){
-    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+  $('#s16').click(function(){
+    $('.part2 #icon').attr("src","photo/blank.png");
     $('.bdy #title').text("Be relax");
 
     $('.bdy #desc').text("Relaxing in 10 minuts and being spoiled will make a change on your next journey ");
   });
-  $('#s16').click(function(){
-    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+  $('#s17').click(function(){
+    $('.part2 #icon').attr("src","photo/blank.png");
     $('.bdy #title').text("Gallery Argan");
 
     $('.bdy #desc').text("Where you could buy luxury jewelries and a handy gift for your loved ones.");
   });
-  $('#s17').click(function(){
-    $('.part2 #icon').attr("src","photo/gourmet-store.png");
+  $('#s18').click(function(){
+    $('.part2 #icon').attr("src","photo/blank.png");
     $('.bdy #title').text("Muscat Pharmacy");
 
     $('.bdy #desc').text("Your store to get range of pharmacitals products, baby care and health products. ");
