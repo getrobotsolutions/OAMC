@@ -73,7 +73,7 @@ $(document).ready(function(){
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
                 $('#content_map').html("TERMINAL MAP");
-                $('#content_info').text("SEARCH & INFO");
+                $('#content_info').text("INFORMATION");
 
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
@@ -99,7 +99,7 @@ $(document).ready(function(){
                 $('#content_eat').text("EAT");
                 $('#content_shop').text("SHOP");
 
-                $('#content_info').text("SEARCH & INFO");
+                $('#content_info').text("INFORMATION");
                 $('#content_map').html("TERMINAL MAP");
 
                 $('#content_flights').html("FLIGHTS");
@@ -174,7 +174,7 @@ $(document).ready(function(){
       if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
-        PlaySpeech("Here is some information to make your journey more enjoyable.");
+        PlaySpeech("Here is some information about the new Muscat International Airport.");
     }
    
 
