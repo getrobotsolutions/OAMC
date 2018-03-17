@@ -205,7 +205,7 @@ function SendEmail()
     //var addr = message;
     var addr = "paul@robotaisolutions.com";
     var subject = "Welcome to the Muscat International Airport.";
-    var body = "Email" + message;
+    var body = "Email : " + message;
     var mail_server = "smtp.gmail.com";
     var mail_addr_sender = "amgenrobot@gmail.com";
     var pswd = "@amgenrobot2018";
