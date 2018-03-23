@@ -82,8 +82,8 @@
     }
     .part2{
         background-color:#008a97;
-        height: 750px;
-        width: 615px;
+        /*height: 750px;*/
+        width: 522px;
         padding: 15px;
         z-index:0;
         position: absolute;
@@ -189,8 +189,8 @@
     #leftmenu > ul li a {
       color: #008a97;
       font-weight: bold;
-      font-size: 30px;
-      padding-left: 80px;
+          font-size: 27px;
+    padding-left: 58px;
       text-decoration:none;
     }
     #leftmenu > ul li a:hover {
@@ -207,18 +207,17 @@
         font-size: 21px;
     }
     .bdy{
-        width: 580px;
-        padding-right: 25px;
+        width: 494px;
         z-index: -1;
         line-height: 40px;
-        position: absolute;
+      
         color: white;
     }
     #title{
       font-size: 30px;
       margin-top: 20px;
       font-weight: 100;
-    padding-left: 55px;
+   
     font-family: OpenSans-Regular;
    
     }
@@ -231,21 +230,21 @@
     #desc{
         font-size: 14px;
     font-weight: 200;
-    padding-left: 55px;
+    
     font-family: OpenSans-Light;
     line-height: 17px;
     padding-bottom: 20px;
     }
     #mapBtn{
 
-      margin-left: 55px;background-color: #f5a800;border-color: #f5a800;
+      background-color: #f5a800;border-color: #f5a800;
 
     }
     #icon{
       
       margin-top: 10px;
       /*height: 300px;*/
-      width: 500px;
+      width: 470px;
     }
  #dialog-overlay {
 
@@ -390,16 +389,17 @@ li.even{background-color: #f3ebf9;}
   </script>
 </head>
 <body>
- <div class="jumbotron text-center">
-      <p id="currentDate"></p><br>
-      <span class="col-sm-8">
-         <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
+<div class="jumbotron text-center ">
+      
+      <span class="col-sm-7">
+        <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
-      <div class="col-sm-4 text-right">
-          <span id="content_air"></span>
+      <span class="col-sm-5">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
           <span id="temp"></span>
-
-      </div>     
+         
+      </span>    
     </div>
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
@@ -413,7 +413,7 @@ li.even{background-color: #f3ebf9;}
     <div class="body1">
       <div class="bmg">
             <div class="wrap" >
-               <div class="col-sm-5">
+               <div class="col-sm-6">
                   <div class="part1" style="">
                       <div id="leftmenu">
                           <h3 id="shop">Shops</h3>
@@ -421,38 +421,37 @@ li.even{background-color: #f3ebf9;}
                           
                           <ul class="list1">
 
-                            <li class="odd"><a id="s1" href="#">Electronics</a></li>
-                            <li class="even"><a id="s2" href="#">LTC</a></li>
-                            <li class="odd"><a id="s3" href="#">Muscat Market</a></li>
-                            <li class="even"><a id="s4" href="#">Perfume and Cosmetics </a></li>
-
-                            <li class="odd"><a id="s5" href="#">Amouage Boutique</a></li>
-                            <li class="even"><a id="s6" href="#">Fashion Jewellery</a></li>
-                            <li class="odd"><a id="s7" href="#">Kids Kingdom</a></li>
-                            <li class="even"><a id="s8" href="#">Gourmet Store</a></li>
-                            <li class="odd"><a id="s9" href="#">Pier Stores</a></li>
-                            <li class="even"><a id="s10" href="#">Arrivals Store</a></li>
-                            <li class="odd"><a id="s11" href="#">Luxury Fashion Avenue</a></li>  
-                            <li class="even"><a id="s12" href="#">High Street Fashion</a></li>
-                            <li class="odd"><a id="s13" href="#">Sunglasses</a></li>
-                            <li class="even"><a id="s14" href="#">Wh Smith</a></li>
-                            <li class="odd"><a id="s15" href="#">Souvinier Shop</a></li>
-                            <li class="even"><a id="s16" href="#">Be relax</a></li>  
-                            <li class="odd"><a id="s17" href="#">Gallery Argan</a></li>
-                            <li class="even"><a id="s18" href="#">Muscat Pharmacy</a></li>      
+                            <li class="odd"><a id="s5" href="#" onmousedown="return false">Amouage</a></li>
+                            <li class="even"><a id="s10" href="#" onmousedown="return false">Arrivals Store</a></li>
+                            <li class="odd"><a id="s16" href="#" onmousedown="return false">Be relax</a></li>
+                            <li class="even"><a id="s2" href="#" onmousedown="return false">Confectionary,  Liquor & Tobacco</a></li> 
+                            <li class="odd"><a id="s1" href="#" onmousedown="return false">Electronics</a></li>
+                            <li class="even"><a id="s6" href="#" onmousedown="return false">Fashion Jewellery</a></li>
+                            <li class="odd"><a id="s17" href="#" onmousedown="return false">Gallery Argan</a></li>
+                            <li class="even"><a id="s8" href="#" onmousedown="return false">Gourmet Store</a></li>
+                            <li class="odd"><a id="s12" href="#" onmousedown="return false">High Street Fashion</a></li>
+                            <li class="even"><a id="s7" href="#" onmousedown="return false">Kids Kingdom</a></li>
+                            <li class="odd"><a id="s11" href="#" onmousedown="return false">Luxury Fashion Avenue</a></li>
+                            <li class="even"><a id="s3" href="#" onmousedown="return false">Muscat Market</a></li>
+                            <li class="odd"><a id="s4" href="#" onmousedown="return false">Perfumes and Cosmetics</a></li>
+                            <li class="even"><a id="s9" href="#" onmousedown="return false">Pier Stores</a></li>
+                            <li class="odd"><a id="s15" href="#" onmousedown="return false">Souq of Oman</a></li>
+                            <li class="even"><a id="s18" href="#" onmousedown="return false">Muscat Pharmacy</a></li>   
+                            <li class="odd"><a id="s13" href="#" onmousedown="return false">Sunglasses</a></li>
+                            <li class="even"><a id="s14" href="#" onmousedown="return false">Wh Smith</a></li>     
                           </ul>
                       </div>
                   </div>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-6">
                   <div class="part2" id="content">
                     <div class="shop-image">
-                      <img id="icon" src="photo/elctronics.png" class="icon ">
+                      <img id="icon" src="photo/amounge.png" class="icon ">
                     </div>
                       <div class="bdy">
-                        <div id="title">Electronics</div>
+                        <div id="title">Amouge Boutique</div>
                         <!--<div id="location"> </div>-->
-                        <div id="desc">Our store offers a range of the latest electronics in an exciting shopping experience that have been selected especially for the discerning traveler. The store combines the best brands, latest innovations and a trendsetting shopping environment all specifically tailored to travelers. Here you will find the latest smartphones and gadgets from Apple, Samsung and Bose.</div>
+                        <div id="desc"><p>Oman based international fragrance house. Offering a wide veraity  of luxerioues prefumes</p></div>
                         
                         <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">Map</button>
                       </div>

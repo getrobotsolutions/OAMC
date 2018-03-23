@@ -7,7 +7,7 @@
     src: url(../../css/Fonts/OpenSans-Light.ttf);
 }
 body{
-	font-family: 'OpenSans-Light' !important;
+	font-family: 'Bukra-Regular' !important;
 /*font-weight: bold;*/
 }
 body {
@@ -38,7 +38,7 @@ body {
 
 .canvas {
 	position: absolute;
-	left: 180px;
+	left: 147px;
 	top: 660px;
 }
 
@@ -122,3 +122,8 @@ color: white;
     color: rgb(255, 255, 255) !important;
  background: #008a97 !important;
   }
+  .img-home {
+    
+    top:-19px !important;
+    
+}

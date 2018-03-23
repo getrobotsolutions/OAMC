@@ -4,9 +4,6 @@
 <meta content="text/html" charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=11" />
 
-
-<!--<script language="JavaScript" type="text/javascript"
-  src="Scripts/FlashPlayer.js"></script>-->
 <script language="JavaScript" type="text/javascript"
   src="../../Scripts/BaseCommand.js"></script>
 <script language="JavaScript" type="text/javascript"
@@ -15,13 +12,10 @@
   src="../../Scripts/LogConsole.js"></script>
 
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
- <!--<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
- <script language="JavaScript" type="text/javascript"
-  src="../../maincontents.js"></script>-->
+
 
  <script src="../../boots/js/bootstrap.min.js"></script>
-<!--<script src="../../Scripts/speech.js"></script>
-<script src="../../Scripts/lang.js"></script>-->
+
   <script src="js/lang_eat.js"></script>
 
 <script type="text/javascript">
@@ -40,7 +34,7 @@ function GoHome()
   location.href = "../../maincontents.htm";
 }
 </script>
-  <!--<script src="sheetjs/dist/xlsx.full.min.js"></script> -->
+ 
 
   <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
 
@@ -54,31 +48,13 @@ function GoHome()
     .img-home {
           position: absolute;
           top: -60px;
-
           z-index: 99;
-          
           height: 62px;
           cursor: pointer; cursor: hand;
     }
-
-    .wrap{
-
-        padding-top: 90px;
-
-    }
-    .part1{
-          background-color: whitesmoke;
-    height: 660px;
-    margin-top: -22px;
-    margin-left: -15px;
-    }
-    .part2{
-      background-color: #008a97;
-      height: 660px;
-      width: 616px;
-      margin-top: -20px;
-      padding: 15px;
-    }
+    .wrap{ padding-top: 90px; }
+    .part1{ background-color: whitesmoke; height: auto; margin-top: -22px;}
+    .part2{ background-color: #008a97; height: auto; margin-top: -20px; padding: 15px; }
     ul{
       list-style-type: none;
     }
@@ -90,6 +66,7 @@ function GoHome()
         margin-left: -60px;
         font-weight: 500;
         font-family: inherit;
+            text-align: right;
     }
     ul.list1 li:after {
         content: "";
@@ -102,7 +79,7 @@ function GoHome()
     a,a:hover { text-decoration : none; color : #000; }
     #leftmenu h3 {
         margin:0;
-        font-family: OpenSans-Regular;
+       
         font-size: 34px;
         font-weight: 600;
         padding:30px 45px;
@@ -111,7 +88,7 @@ function GoHome()
         cursor:pointer;
         background-color:#008a97;
         color:#ffffff;
-        text-align:left;
+        text-align:right;
     }
     
     #leftmenu h5 {
@@ -136,12 +113,15 @@ function GoHome()
         list-style-type:none;
     }
     #leftmenu > ul li a {
-           color: #008a97;
+               
+    color: #008a97;
     font-weight: bolder;
     font-size: 30px;
-    padding-left: 80px;
+  
+    display: block;
+    padding-right: 80px;
     text-decoration: none;
-    padding: 30px 10px 29px 80px;
+    
     }
     #leftmenu > ul li a:hover {
         text-decoration:underline;
@@ -167,7 +147,7 @@ function GoHome()
     margin-top: 20px;
     font-weight: 100;
     padding-left: 55px;
-    font-family: OpenSans-Regular;
+    font-family: Bukra-Regular;
    
     }
     #location{
@@ -180,8 +160,9 @@ function GoHome()
         font-size: 18px;
     font-weight: 200;
     padding-left: 55px;
-    font-family: OpenSans-Light;
-    line-height: 17px;
+   font-family: Bukra-Light;
+    margin-top: 10px;
+    line-height: 35px;
     padding-bottom: 20px;
     }
     #btn{
@@ -195,10 +176,7 @@ function GoHome()
     padding: 10px;
     text-align: center;
     }
-    .icon{
-      
-      width: 500px;
-    }
+    .icon{ width: 460px;}
     #dialog-overlay {
 
   /* set it to fill the whil screen */
@@ -309,7 +287,7 @@ a.button:hover {
     top: -46px;
     z-index: 1;
     width: 150px;
-    right: -10px;
+    left: -10px;
 }
 li.odd{background-color: #00c2de1f;}
 li.even{background-color: #f3ebf9;}
@@ -327,27 +305,27 @@ li.even{background-color: #f3ebf9;}
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 <script src="../../Scripts/lang1.js"></script>
     <script type="text/javascript">
-    /*window.external.SetVolume(0.4);
-    PlaySpeech('استمتع بوقتك في هذه المطاعم.');*/
+    window.external.SetVolume(0.4);
+    PlaySpeech('اِسْتَمْتِعْ بِأَشْهَى اَلأَطْبَاقْ فِي هَذِهِ اَلمَطَاعِمْ');
 
      
   </script>
-<!--<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
-<script language="JavaScript" type="text/javascript" src="RobotDance.js"></script>-->
 
 
 </head>
 <body>
 
-    <div class="jumbotron text-center">
-      <p id="currentDate"></p><br>
-      <span class="col-sm-8">
-         <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
+    <div class="jumbotron text-center ">
+      
+      <span class="col-sm-7">
+        <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
-      <span class="col-sm-4 text-right">
-         <span id="content_air"></span>
-         <span id="temp"></span>
-      </span>     
+      <span class="col-sm-5">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
+          <span id="temp"></span>
+         
+      </span>    
     </div>
 
     
@@ -364,38 +342,7 @@ li.even{background-color: #f3ebf9;}
     <div class="body1">
       <div class="bmg">       
             <div class="wrap" >
-               <div class="col-sm-5">
-                  <div class="part1" style="">
-                    <div id="leftmenu" >
-                      <h3 id="restau">مطاعم</h3>
-
-                        
-                        <img class="eat-icon" src="photo/eat-icon.png">
-                        <ul class="list1">
-                          
-                          <li class="even"><a id="c6" href="#">بلنتي</a></li>
-                           
-                          <li class="odd"><a id="c61" href="#">نور</a></li>
-                          <li class="even"><a id="c62" href="#">تيكردايز</a></li>
-                          <li class="odd"><a id="c63" href="#">لونا</a></li>
-                          
-                          <li class="even"><a id="c7" href="#">مازون </a></li>
-                          <li class="odd"><a id="c8" href="#">كافيه نيرو</a></li>
-                          <li class="even"><a id="c9" href="#">قهوة كاريبو</a></li>
-                          <li class="odd"><a id="c10" href="#">قهوة القهوجي</a></li>
-                          <li class="even"><a id="c11" href="#">نادي المسافرين</a></li>
-                          <li class="odd"><a id="c12" href="#">كيكس اند بيكس</a></li>
-                          <li class="even"><a id="c13" href="#">سي سايد بارك</a></li>
-                          <li class="odd"><a id="c3" href="#">دجاج كنتاكي</a></li>
-                          <li class="even"><a id="c4" href="#">ماكدونالدز</a></li>
-                          <li class="odd"><a id="c5" href="#">سبايس كيتشن</a></li>
-                          <!--<li class="odd"><a id="c14" href="#">Prime Class Lounge</a></li>
-                          <li class="even"><a id="c15" href="#">Aerotel Muscat Hotel</a></li>-->
-
-                        </ul>  
-                    </div>
-                  </div>
-                </div>
+               
 
                <div class="col-sm-6">
                   <div class="part2" id="content">
@@ -405,7 +352,7 @@ li.even{background-color: #f3ebf9;}
                       <div class="bdy">
                         <div id="title">بلنتي</div>
                         <!--<div id="location"> </div>-->
-                        <div id="desc">تهتم بصحتك ما عليك إلا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك.</div>
+                        <div id="desc">تهتم بصحتك؟ ما عليك الا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك</div>
 
                         <!--<button type="button" id="btn" class="btn btn-success" dir="">القائمة</button>-->
 
@@ -414,6 +361,37 @@ li.even{background-color: #f3ebf9;}
 
                   </div>
                </div>
+
+               <div class="col-sm-6">
+                  <div class="part1" style="">
+                    <div id="leftmenu" >
+                      <h3 id="restau">المطاعم</h3>
+
+                        
+                        <img class="eat-icon" src="photo/eat-icon.png">
+                        <ul class="list1">
+                          
+                          <li class="even"><a id="c6" href="#" onmousedown="return false">بلنتي</a></li>
+                          <li class="odd"><a id="c62" href="#" onmousedown="return false">تيكرديز</a></li>
+                          <li class="even"><a id="c3" href="#" onmousedown="return false">دجاج كنتاكي</a></li>
+                          <li class="odd"><a id="c5" href="#" onmousedown="return false">سبايس كيتشن</a></li>
+                          <li class="even"><a id="c10" href="#" onmousedown="return false">قهوة القهوجي</a></li>
+                          <li class="odd"><a id="c9" href="#" onmousedown="return false">قهوة كاريبو </a></li>
+                          <li class="even"><a id="c8" href="#" onmousedown="return false">قهوة نيرو</a></li>
+                          <li class="odd"><a id="c12" href="#" onmousedown="return false">كيكس اند بيكس</a></li>
+                          <li class="even"><a id="c63" href="#" onmousedown="return false">لونا</a></li>
+                          <li class="odd"><a id="c4" href="#" onmousedown="return false">مكدونالدز</a></li>
+                          <li class="even"><a id="c11" href="#" onmousedown="return false">نادي المسافرين</a></li>
+                          <li class="odd"><a id="c61" href="#" onmousedown="return false">نور</a></li>                          
+                          <li class="even"><a id="c7" href="#" onmousedown="return false">مزون</a></li>                         
+                          <li class="odd"><a id="c13" href="#" onmousedown="return false">سي سايد بارك</a></li>
+                          <!--<li class="odd"><a id="c14" href="#">Prime Class Lounge</a></li>
+                          <li class="even"><a id="c15" href="#">Aerotel Muscat Hotel</a></li>-->
+
+                        </ul>  
+                    </div>
+                  </div>
+                </div>
               </div>
       </div>
   </div>

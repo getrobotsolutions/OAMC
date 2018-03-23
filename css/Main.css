@@ -14,25 +14,74 @@
     font-family: OpenSans-Regular;
     src: url(Fonts/OpenSans-Regular.ttf);
 }
+
+/*BUKRA FONTs*/
+@font-face {
+    font-family: Bukra-Semi-Bold;
+    src: url(Fonts/29L-Bukra-Semi-Bold.ttf);
+}
+@font-face {
+    font-family: Bukra-Black;
+    src: url(Fonts/29LT-Bukra-Black.ttf);
+}
+@font-face {
+    font-family: Bukra-Bold;
+    src: url(Fonts/29LT-Bukra-Bold.ttf);
+}
+@font-face {
+    font-family: Bukra-Extra-Bold;
+    src: url(Fonts/29LT-Bukra-Extra-Bold.ttf);
+}
+@font-face {
+    font-family: Bukra-Extra-Light;
+    src: url(Fonts/29LT-Bukra-Extra-Light.ttf);
+}
+@font-face {
+    font-family: Bukra-Hairline;
+    src: url(Fonts/29LT-Bukra-Hairline.ttf);
+}
+@font-face {
+    font-family: Bukra-Light;
+    src: url(Fonts/29LT-Bukra-Light.ttf);
+}
+@font-face {
+    font-family: Bukra-Medium;
+    src: url(Fonts/29LT-Bukra-Medium.ttf);
+}
+@font-face {
+    font-family: Bukra-Regular;
+    src: url(Fonts/29LT-Bukra-Regular.ttf);
+}
+@font-face {
+    font-family: Bukra-Semi-Bold;
+    src: url(Fonts/29LT-Bukra-Semi-Bold.ttf);
+}
+@font-face {
+    font-family: Bukra-Thin;
+    src: url(Fonts/29LT-Bukra-Thin.ttf);
+}
+/*BUKRA FONTs End*/
+
 body{
-	font-family: 'OpenSans-Light' !important;
+      font-family: Bukra-Regular !important;
+  
 /*font-weight: bold;*/
 }
 .footer{background-color: white;height:513px;width:1067px;}
 .footer-1 h1{font-family: myFirstFont !important;font-weight: bold;}
 div.contents {
 
-	text-align: center;
-	height: 818px;	
-	
+  text-align: center;
+  height: 818px;  
+  
 
 }
 
 .footer-2{padding-top: 28px;}
 table.contents {
-	
-	/*padding: 50px 100px;*/
-	
+  
+  /*padding: 50px 100px;*/
+  
 }
 .contents tr td{padding:25px;}
 
@@ -40,34 +89,15 @@ table.contents {
 #output tr td{width: 350px;text-align: left; font-family: myFirstFont !important;font-weight: bold;}
 
 #changeText1{
-	margin: 30px, 0
+  margin: 30px, 0
 text-align: center;
 vertical-align: middle;
     line-height: 28px;
     margin-left: -13px;
-	    font-size: 25px;
+      font-size: 25px;
     font-family: calibri;
     font-weight: 900;
-	padding-top: 110px;
-	padding-bottom:50px;
-display: inline-block;
-  transform: scale(3.3, 3.7);
-  -webkit-transform: scale(3.3, 3.7); /* Safari and Chrome */
-  -moz-transform: scale(3.3, 3.7); /* Firefox */
-  -ms-transform: scale(3.3, 3.7); /* IE 9+ */
-  -o-transform: scale(3.3, 3.7); /* Opera */
-	
-}
-#changeText2{
-	margin:30px, 0
-text-align: center;
-vertical-align: middle;
-    line-height: 28px;
-    margin-left: -13px;
-	    font-size: 25px;
-    font-family: calibri;
-	font-weight: 900;
-	padding-top: 120px;
+  padding-top: 110px;
   padding-bottom:50px;
 display: inline-block;
   transform: scale(3.3, 3.7);
@@ -75,8 +105,44 @@ display: inline-block;
   -moz-transform: scale(3.3, 3.7); /* Firefox */
   -ms-transform: scale(3.3, 3.7); /* IE 9+ */
   -o-transform: scale(3.3, 3.7); /* Opera */
-	
+  
+}
+#changeText2{
+  margin:30px, 0
+text-align: center;
+vertical-align: middle;
+    line-height: 28px;
+    margin-left: -13px;
+      font-size: 25px;
+    font-family: calibri;
+  font-weight: 900;
+  padding-top: 120px;
+  padding-bottom:50px;
+display: inline-block;
+  transform: scale(3.3, 3.7);
+  -webkit-transform: scale(3.3, 3.7); /* Safari and Chrome */
+  -moz-transform: scale(3.3, 3.7); /* Firefox */
+  -ms-transform: scale(3.3, 3.7); /* IE 9+ */
+  -o-transform: scale(3.3, 3.7); /* Opera */
+  
 }
 .n{
-	padding:2px;
+  padding:2px;
 }
+
+  .unselectable {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none; /* Safari */
+           -khtml-user-select: none; /* Konqueror HTML */
+             -moz-user-select: none; /* Firefox */
+              -ms-user-select: none; /* Internet Explorer/Edge */
+                  user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome and Opera */
+      }
+
+      /*body,img,div,a,#leftmenu { cursor: none; }*/

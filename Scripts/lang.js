@@ -9,14 +9,13 @@ $(document).ready(function(){
     var welcomeMessage= "";
     var lan="ar-eg";
     var volume=0.4;
-                
                 $('#content_term').text("محطة A");
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
 
-                $('#content_eat').html("مطاعم");
+                $('#content_eat').html("المطاعم");
 
-                $('#content_shop').text("تسوق");
+                $('#content_shop').text("التسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرحلات");
@@ -43,9 +42,9 @@ $(document).ready(function(){
                 $('#content_fly').text("اضغط هنا للبدء");
 
 
-                $('#content_eat').html("مطاعم");
+                $('#content_eat').html("المطاعم");
 
-                $('#content_shop').text("تسوق");
+                $('#content_shop').text("التسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرحلات");
@@ -78,7 +77,7 @@ $(document).ready(function(){
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
                 $('#content_avatar').text("CHANGE AVATAR");
-                $('#content_selfie').text("TAKE SELFIE");                
+                $('#content_selfie').text("TAKE SELFIE");               
                 
               }
                       
@@ -96,8 +95,8 @@ $(document).ready(function(){
                 //$('#content_term').text("Terminal A");
                  $('#content_fly').show();
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
-                $('#content_eat').text("EAT");
-                $('#content_shop').text("SHOP");
+                $('#content_eat').text("DINING");
+                $('#content_shop').text("SHOPPING");
 
                 $('#content_info').text("INFORMATION");
                 $('#content_map').html("TERMINAL MAP");
@@ -122,7 +121,7 @@ $(document).ready(function(){
 
                  $('#content_fly').hide();
 
-                $('.fly').text("رحلات طيران");
+               $('.fly').text("رحلات طيران");
                 $('.scan').text("مسح الصعود تمريرة الخاص بك");
                 $('.map').text("خريطة المحطة الطرفية");
                 $('.lang').text("Change Language");
@@ -131,9 +130,9 @@ $(document).ready(function(){
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
 
-                $('#content_eat').html("مطاعم");
+                $('#content_eat').html("المطاعم");
 
-                $('#content_shop').text("تسوق");
+                $('#content_shop').text("التسوق");
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرحلات");
@@ -241,3 +240,49 @@ $('#dialog-box-info').hide();
 });
 }
 
+function ShowTime()  
+        {  
+            var dt = new Date();  
+            //formatAMPM(dt);
+            //var localeSpecificTime = dt.toLocaleTimeString();
+            //localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
+            //document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime; 
+            document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;//dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime; 
+            document.getElementById("content_date") .innerHTML = formatDate(dt);
+            window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec  
+        }
+function formatAMPM(date) {
+
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  /*var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'*/
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+  var dayName = days[date.getDay()];
+  
+  //dayName = date.toString().split(' ')[0];
+  hours = hours <10? '0' +hours : hours;
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = ' ' + hours + ':' + minutes + ' ' + dayName;// + ampm;
+  return strTime;
+}
+
+function formatDate(date){
+
+  var m_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var month = m_names[date.getMonth()];
+  var day = date.getDate();
+  day = getGetOrdinal(day);
+  
+  var output = (month<10 ? '0' : '') + month + ' ' +(day<10 ? '0' : '') + day+', '+ date.getFullYear() ;
+  return output;
+}
+
+function getGetOrdinal(n) {
+    var s=["th","st","nd","rd"],
+    v=n%100;
+    return n+'<sup>'+(s[(v-20)%10]||s[v]||s[0])+'</sup>';
+ }
