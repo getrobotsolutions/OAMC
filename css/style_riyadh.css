@@ -708,3 +708,11 @@ body{
 
 
 #change-us, #change-ar{    font-family: Bukra-Regular;}
+
+video.fillWidth
+        {
+          width: 1080px !important;
+          margin-left: -60px;
+          width: auto;
+          margin-bottom: -30px;
+        }

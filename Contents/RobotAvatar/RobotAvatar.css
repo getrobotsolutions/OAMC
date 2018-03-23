@@ -30,7 +30,7 @@ body {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	top: 500px;
+	top: 430px;
 }
 .bg img{
 	width: 1080px;
@@ -44,8 +44,8 @@ body {
 
 .frame {
 	position: absolute;
-	left: 215px;
-	top: 670px;
+	left: 227px;
+	top: 625px;
 }
 
 #frame {
@@ -56,8 +56,8 @@ body {
 
 .number {
 	position: absolute;
-	left: 370px;
-	top: 849px;
+	left: 363px;
+	top: 775px;
 }
 
 #number {
@@ -68,7 +68,7 @@ body {
 .shot {
 	position: absolute;
 	left: 284px;
-	top: 774px;
+	top: 700px;
 }
 .shot img{
 	width: 280px;
@@ -77,8 +77,8 @@ body {
 
 .delete {
 	position: absolute;
-	right: 10px;
-	top: 1139px;
+	right: 410px;
+	top: 1265px;
 }
 .delete img{
 	width: 250px;

@@ -286,3 +286,18 @@ function getGetOrdinal(n) {
     v=n%100;
     return n+'<sup>'+(s[(v-20)%10]||s[v]||s[0])+'</sup>';
  }
+
+ var vid = document.getElementById("bannerVideo");
+    vid.playbackRate = 2;
+    var interval = self.setInterval(function(){Play()},10000);
+
+    function Play(){
+          
+          /*setTimeout(function(){*/
+              vid.pause();
+              vid.currentTime = 0;
+              vid.play();
+          /*}, 3300);*/
+     }
+
+    document.onselectstart = function() { return false; };
