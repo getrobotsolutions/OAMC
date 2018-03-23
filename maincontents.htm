@@ -70,26 +70,23 @@ UpdateSession(9);
     </div>
 
   <div class="bmg bmg1" >
-    <div class="icon1">
+    <div class="icon1" style="    padding-top: 137px;
+    padding-bottom: 188px;">
       <div class="container nopadding nomargin" style="padding-top: 50px !important; padding-bottom: 100px !important; ">
         
-        <div class="row">
-          <div id="content_fly" class="alert alert-success" role="alert" style="background-color: #f6ad11;box-shadow: 0px 1px #969693;border-radius: 50px;font-size:57px; margin-left: 50px;">اضغط هنا للبدء</div>
-        </div>
-        
-        <div class="row nopadding nomargin">
+       <div class="row nopadding nomargin">
           <div class="col-sm-6 nopadding">
-            <a onclick="FC_ContentsCall('eat')" href="#" >
+            <a onclick="FC_ContentsCall('eat')" href="#" onmousedown="return false">
                     <img class="child nopadding" src="images/icon/eat-3.png">
-                    <div id="content_eat" class="icon-title" style="">مطاعم</div>
+                    <div id="content_eat" class="icon-title" style="font-size: 30px;">المطاعم</div>
                     
                 </a>
             
           </div>
           <div class="col-sm-6 nopadding nomargin right" style="position: absolute;right: 0">
-            <a onclick="FC_ContentsCall('shop')" href="#" style="position: absolute;right: 0">
+            <a onclick="FC_ContentsCall('shop')" href="#" style="position: absolute;right: 0" onmousedown="return false">
                   <img class="child nopadding" src="images/icon/shop.png">
-                  <div id="content_shop" class="icon-title" style="right: 0">تسوق</div>
+                  <div id="content_shop" class="icon-title" style="right: 0;font-size: 30px;">التسوق</div>
                 </a>
               
           </div>
@@ -97,54 +94,56 @@ UpdateSession(9);
         <div class="row nopadding nomargin">
           <div class="col-sm-6 nopadding">
               
-                  <a onclick="FC_ContentsCall('Flights','')" href="#">
+                  <a onclick="FC_ContentsCall('Flights','')" href="#" onmousedown="return false">
                     <img class="child nopadding" src="images/icon/flight info 2.png">
-                    <div id="content_flights" class="icon-title" style="    font-size: 30px;
-    line-height: 27px;">رحلات طيران</div>
+                    <div id="content_flights" class="icon-title" style="font-size: 30px; line-height: 27px;">رحلات طيران</div>
                   </a>
               
           </div>
           <div class="col-sm-6 nopadding right">
               
-                  <a onclick="FC_ContentsCall('BoardingPass','')" href="#" class="right">
+                  <!--<a onclick="FC_ContentsCall('BoardingPass','')" href="#" class="right" onmousedown="return false">
                     <img class="child nopadding" src="images/icon/Boarding Pass 3.png">
-                    <div id="content_scan" class="icon-title" style="right: 0px;font-size: 30px;">مسح الصعود <br> تمريرة الخاص بك</div>
-                  </a>
-              
-          </div>
-        </div>
-        <div class="row nopadding nomargin">
-          <div class="col-sm-6 nopadding">
-
-                <!--<a onclick="FC_ContentsCall('TerminalMap','')" href="#" >-->
-                  <a id="t-popup" href="#" >
-                  
-                    <img class="child nopadding" src="images/icon/map.png">
-                    <div id="content_map" class="icon-title" style="font-size: 30px;">خريطة المحطة <br> الطرفية</div>
-                  </a>
-               
-              
-          </div>
-          <div class="col-sm-6 nopadding right">
-
-              
-                <!--<a onclick="FC_ContentsCall('info')" href="#" class="right">-->
-                  <a id="info-popup" href="#" class="right">
-                  <img class="child nopadding" src="images/icon/information.png">
+                    <div id="content_scan" class="icon-title" style="right: 0px;font-size: 28px; margin-top: -17px; line-height: 35px;">مسح الصعود <br> تمريرة الخاص بك</div>
+                  </a>-->
+                  <a id="info-popup" href="#" class="right" onmousedown="return false">
+                  <img class="child nopadding" src="images/icon/information-new.png">
 
                   <div id="content_info" class="icon-title" style="right: 0px;font-size: 32px;">SEARCH & INFO</div>
 
                 </a>
               
           </div>
+        </div>
+        <div class="row nopadding nomargin">
+          <div class="col-sm-6 nopadding">
+
+                <!--<a onclick="FC_ContentsCall('TerminalMap','')" href="#" onmousedown="return false">
+                    <img class="child nopadding" src="images/icon/map.png">
+                    <div id="content_map" class="icon-title" style="font-size: 30px;">خريطة المحطة <br> الطرفية</div>
+                  </a>-->
+          </div>
+          <div class="col-sm-6 nopadding right">
+
+              
+                <!--<a onclick="FC_ContentsCall('info')" href="#" class="right">-->
+                  <!--<a id="info-popup" href="#" class="right" onmousedown="return false">
+                  <img class="child nopadding" src="images/icon/information.png">
+
+                  <div id="content_info" class="icon-title" style="right: 0px;font-size: 32px;">SEARCH & INFO</div>
+
+                </a>-->
+              
+          </div>
         
-        </div>     
+        </div>  
+          
         <div class="row nopadding nomargin">
           <div class="col-sm-6 nopadding ">
              
-                <a onclick="FC_ContentsCall('PhotoPrinting','')" href="#">
-                  <img class="child nopadding" src="images/icon/PP.png">
-                  <div id="content_selfie" class="icon-title" style="font-size: 30px;">تصوير</div>
+                <a onclick="FC_ContentsCall('PhotoPrinting','')" href="#" onmousedown="return false">
+                  <img class="child nopadding" src="images/icon/PP-new.png">
+                  <div id="content_selfie" class="icon-title" style="font-size: 30px;">إلتقاط صورة</div>
                 </a>
              
 
@@ -152,9 +151,9 @@ UpdateSession(9);
           </div>
           <div class="col-sm-6 nopadding right">
               
-                <a onclick="FC_ContentsCall('RobotAvatar', '')" href="#" class="right">
-                  <img class="child nopadding" src="images/icon/RA.png" >
-                  <div id="content_avatar" class="icon-title" style="right: 0px; font-size: 30px;">>نموذج</div>
+                <a onclick="FC_ContentsCall('RobotAvatar', '')" href="#" class="right" onmousedown="return false">
+                  <img class="child nopadding" src="images/icon/RA-new.png" >
+                  <div id="content_avatar" class="icon-title" style="right: 0px;font-size: 28px; margin-top: -1px; line-height: 32px;">نموذج</div>
                 </a>
               
           
@@ -376,8 +375,8 @@ a.button {
   margin:10px auto 0 auto;
   text-align:center;
   display: block;
-  width:50px;
-  padding: 5px 10px 6px;
+  width:66px;
+  padding: 6px 10px 6px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
