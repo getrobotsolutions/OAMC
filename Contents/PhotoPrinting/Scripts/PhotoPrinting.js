@@ -207,10 +207,11 @@ function SendEmail()
     var subject = "Welcome to the Muscat International Airport.";
     var body = "Email" + message;
     var mail_server = "smtp.gmail.com";
-    var mail_addr_sender = "amgenrobot@gmail.com";
-    var pswd = "@amgenrobot2018";
+    var mail_addr_sender = "ict.muscatairport@gmail.com";
+    var pswd = "123456789K";
+   
     var port = 587;
-    var ssl = "true";
+    var ssl = "false";
     /*var mail_server = "mail.getrobotsolutions.com";
     var mail_addr_sender = "tamoor@getrobotsolutions.com";
     var pswd = "@tam2016";

@@ -11,63 +11,64 @@
                    
                         var len = bar_code.length;
                         var parts = bar_code.split("/");
-                       /* lname = parts[0].substr(2);*/
+                        lname = parts[0].substr(2);
 
                         var parts_p = parts[1].split(" ");
-                        
+                        console.log(parts_p);
 
-                        /*var parts_p1 = parts_p.filter(function(v){return v!==''});
-                        fname = parts_p[0].substr(0,7)+" "+parts_p[1];*/
+                        var parts_p1 = parts_p.filter(function(v){return v!==''});
+/*                        parts_p = jQuery.grep(parts_p, function(n){ return (n); });
+console.log(parts_p);
+*/                         
+                        fname = parts_p[0].substr(0,7)+" "+parts_p[1];
                         /*console.log(fname);*/
+                        flight = parts_p[4];
+
+                        flight1 = parts_p[5];
+
+
+                        air_data = parts_p[3];
+                        source = air_data.substr(0,3);
+                        /*dest = air_data.substr(3,3);
+                        arline = air_data.substr(6);
+                        date_seat = parts_p[5];
+                        seat = date_seat.substr(5,3);*/
+
+                        /*Muscat pattern*/
+                        dest = parts_p[4].substr(0,3);
+                        arline = parts_p[4].substr(6);
                         
-                        bar_code = bar_code.replace(/\s+/g, ' ');
-                        barCode_arr = bar_code.split(' ');
-                        /*console.log(barCode_arr);*/
-                        var index = barCode_arr.indexOf('MR'); // 1
-                        if (index == -1) {  index = barCode_arr.indexOf('MRS'); }
-                        /*console.log(index);*/
+
+                        
+/*                        checkin="---";
+                        gate="---";
+*/
+                        /*console.log(flight1);*/
+
+                        var searchItem = '707';  /*For testing */
+                       /* var searchItem = flight1;*/
+                        var mdata = getGate(searchItem);
                         
 
-                        Name_arr = barCode_arr.slice(0,index);
-                        /*console.log(Name_arr);*/
-                        Other_arr = barCode_arr.slice(index);
-                        /*console.log(Other_arr);*/
-                        /*console.log(barCode_arr);*/
-                        if(Name_arr.length == 1) {
-                          var name_parts = Name_arr.toString().split("/");
-                          var fname = name_parts[1];
-                          var lname = name_parts[0].substr(2);
-                          var name = fname +" "+lname;
-                       }
-                       if(Name_arr.length > 1){
-                          var fnameNlname = Name_arr[0].toString().split("/");
-                          var fname = fnameNlname[1];  
-                          var lname = fnameNlname[0].substr(2);
-                          var mname = Name_arr[1];
-                          var mname1 = (Name_arr[2] != null) ? Name_arr[2] : ''; 
-                          var mname2 = (Name_arr[3] != null) ? Name_arr[3] : ''; 
-                          var name = fname+" "+mname + " " + mname1 + " " + mname2 +" " + lname;
-                       }
 
-                       /*Flight Info*/
-                       var flight_arr = Other_arr[2];
-                       var org = flight_arr.substr(0,3);
-                       var des = flight_arr.substr(3,3);
-                       var arr = flight_arr.substr(6);
 
-                       /*Flight No*/
-                       var flightNum = Other_arr[3];
-                       var flightDis = arr+" "+flightNum;
+                        /*var details = mdata.filter(function (i){
+                          if(i.FlightNo === searchItem) return i
+                        });*/
 
-                        var flightNo = flightNum.substr(1);
-                        console.log(flightNo);
-                        var mdata = getGate(flightNo);
 
-                        $('<p style="text-align:center;">'+name+'</p>').appendTo('.name');
-                        $('<p>'+flightDis+'</p>').appendTo('.airline');
-                        $('<p>'+des+'</p>').appendTo('.dest'); 
-                        $('<p>'+org+'</p>').appendTo('.src');
-    }
+
+                        /*checkin = details[0].TimeToDisplay;
+                        gate = details[0].Gate;*/
+
+
+                        $('<p style="text-align:center;">'+fname+" "+lname+'</p>').appendTo('.name');
+                        $('<p>'+arline+" "+flight1+'</p>').appendTo('.airline');
+                        $('<p>'+dest+'</p>').appendTo('.dest'); 
+                        $('<p>'+source+'</p>').appendTo('.src');
+                       /* $('<p>'+seat+'</p>').appendTo('.seat');*/
+                        
+     }
       
     
      function getGate(flight){
@@ -111,14 +112,11 @@
                         var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhr;
                         var to_date = fday1+'-'+mon+'-'+today.getFullYear()+'-'+lhrs;
 
-                       /* console.log(from_date);
-                        console.log(to_date);*/
-
 
 
                         var appId = "7j985537jyreeeswq65432fvRGp09fXqBB";
                         var url = "https://apps.omanairports.com/weps_PublicApp/OAMCPublic.svc/GetFlightsOpen/"+appId+"/"+from_date+"/"+to_date+"/MCT";
-                       /* console.log(url);*/
+                        console.log(url);
 
 
                        
@@ -136,7 +134,7 @@
                                     var data = JSON.stringify(response);
                                     sdata = JSON.parse(data);
                                     mdata = sdata['Data'];
-                                 /*console.log(mdata);*/
+                                 console.log(mdata);
  
                                     /*Filter based on flightNO*/
                                     var details1 = mdata.filter(function (i){
@@ -148,7 +146,7 @@
                                       if(i.Nature === 'DEPARTURE') return i
                                     });
 
-                                    est_dep = details[0].ScheduledDeparture;
+                                    est_dep = details[0].EstimatedDeparture;
                                     console.log(details);
 
                                     var depTime = est_dep.split("T").pop();
@@ -161,18 +159,18 @@
                                     
                                     /*for check IN*/
                                     var h1 = h;
-                                    var ch_h = h1 -1;
+                                    var ch_h = h1 -2;
                                     if(ch_h == 0){ch_h = 12;}
                                     if(ch_h == -1){ch_h = 11;}
                                     
                                     
 
                                     var ampm = (H < 12 || H === 24) ? " AM" : " PM";
-                                    depTime = h + depTime.substr(2, 3) + ampm+ " ("+H+":"+depTime1.substr(3,2)+")";
+                                    depTime = h + depTime.substr(2, 3) + ampm;
 
 
 
-                                    checkin = ch_h + depTime1.substr(2, 3) + ampm + " ("+(H-1)+":"+depTime1.substr(3,2)+")"; 
+                                    checkin = ch_h + depTime1.substr(2, 3) + ampm; 
                                     gate = (details[0].Gate) ? (details[0].Gate) : "N/A";
                                     
                                     /*console.log(checkin);console.log(gate);*/
@@ -220,11 +218,8 @@
             $( function() {
                   $('.submit').click(function(e) {
                       e.preventDefault();
-                      var bar_code = $("#bar_code").val();
-                      /*var bar_code = 'M1TAN/KOR SENG HEI MUR MR     EDXHNQG MCTBKKWY 0817 081J011J0073 147>1181RO8081BWY              299102113959648 0   EY 100106871583   ';*/
-                      /*var bar_code = 'M1ELSHEEMY/AHMED MR   EPHNVDI MCTCAIWY 0407 081Y017D0018 147>1181RO8081BWY              299105337980569 0   ';*/
-                      /*var bar_code = 'M1AHMAD/WAQAR MR      EDXYPEI MCTDMMWY 0695 081Y016F0027 347>1181RO8081BWY              299102113772898 0';*/
-                      /*console.log(bar_code);*/
+                      var bar_code = $("#bar_code").val(); 
+                      console.log(bar_code);
                       /*var bar_code = 'M1DELAROSA/MONDALEMR   AFYENQ MCTDXBOV 0103 327Y004F00';*/
                   //    console.log(bar_code);
                       
@@ -235,9 +230,8 @@
                       }   
 
                       else{
-                        /*alert("Please put the Barcode scanner on the right position and try again.");*/
-                        /*location.reload();*/
-                        $("#bar_code").val() = '';
+                      alert("Please put the Barcode scanner on the right position and try again.");
+                        location.reload();
                       }                     
               });
                  
