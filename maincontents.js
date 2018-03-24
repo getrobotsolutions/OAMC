@@ -77,12 +77,15 @@ function FC_ContentsCall(strContentsName, strLanguage)
 		location.href = "Contents/RobotDance/RobotDance.htm";
 	}
 }
+
 function GoHome()
 {
 	//if(flagPictureAvatar == "true")	DeleteRobotFace();	//사진 아바타 삭제
 	/*location.href = "../../maincontents.htm";*/
-	location.href = "maincontents.htm";
+	location.href = "../../maincontents.htm";
+	
 }
+
 
 //------------------------------------------------------------
 //Language Change. : Kr, En, Cn, Jp 
