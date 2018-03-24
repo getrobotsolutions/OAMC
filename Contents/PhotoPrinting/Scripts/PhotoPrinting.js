@@ -228,6 +228,7 @@ function SendEmail()
     {
         window.external.SendEmail(addr, imageFilePath, subject, body, mail_server, mail_addr_sender, pswd, port, ssl);
     }
+
     
     // 키보드 숨김
     HideKeyboard();
