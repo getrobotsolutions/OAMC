@@ -247,6 +247,21 @@ UpdateSession(9);
   <div id="dialog-box-info">
         
   </div>
+
+  <script type="text/javascript">
+     var vid = document.getElementById("bannerVideo");
+    vid.playbackRate = 2;
+    var interval = self.setInterval(function(){Play()},10000);
+
+    function Play(){
+          
+          /*setTimeout(function(){*/
+              vid.pause();
+              vid.currentTime = 0;
+              vid.play();
+          /*}, 3300);*/
+     }
+  </script>
   <style type="text/css">
   
  #dialog-overlay-info {
