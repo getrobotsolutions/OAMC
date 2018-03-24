@@ -211,7 +211,7 @@ function SendEmail()
     var pswd = "123456789K";
    
     var port = 587;
-    var ssl = "false";
+    var ssl = "true";
     /*var mail_server = "mail.getrobotsolutions.com";
     var mail_addr_sender = "tamoor@getrobotsolutions.com";
     var pswd = "@tam2016";
