@@ -202,8 +202,8 @@ function SendEmail()
     document.getElementsByClassName("email_state")[0].style.display = "block";    
     
     // 메일 전송에 필요한 정보
-    //var addr = message;
-    var addr = "paul@robotaisolutions.com";
+    var addr = message;
+    //var addr = "paul@robotaisolutions.com";
     var subject = "Welcome to the Muscat International Airport.";
     var body = "Email : " + message;
     var mail_server = "smtp.gmail.com";
