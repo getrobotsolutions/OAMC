@@ -1,11 +1,3 @@
-@font-face {
-    font-family: OpenSans-Regular;
-    src: url(../../css/Fonts/OpenSans-Regular.ttf);
-}
-@font-face {
-    font-family: OpenSans-Light;
-    src: url(../../css/Fonts/OpenSans-Light.ttf);
-}
 body{
 	font-family: 'Bukra-Regular' !important;
 /*font-weight: bold;*/
@@ -79,8 +71,8 @@ body {
 
 .delete {
 	position: absolute;
-	left: 150px;
-    top: 1055px;
+	left: 450px;
+    top: 1200px;
 }
 .delete img{
 	width: 250px;
@@ -110,10 +102,10 @@ color: white;
 direction: rtl;
     position: absolute;
     top: 700px;
-    left: 600px;
+    left: 300px;
     font-size: 44px;
-    width: 340px;
-    line-height: 41px;
+    width: 500px;
+    line-height: 50px;
     text-align: center;
     }
 
