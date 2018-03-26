@@ -135,7 +135,7 @@ function FC_LoadConfigView()
 }
 
 function OnUserApproached()
-{	
+{	PlaySpeech("Hi, I’m Morriya, how can I help you?");
 	if(readCookie("lang")=="english"){
       window.external.ChangeLanguage("en-gb");
       window.external.SetVolume(1);
