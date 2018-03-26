@@ -34,17 +34,19 @@ body {
 }
 .bg img{
 	width: 1080px;
+	position: relative;
+	left: 100px
 }
 
 .canvas {
 	position: absolute;
-	left: 180px;
+	left: 280px;
 	top: 463px;
 }
 
 .frame {
 	position: absolute;
-	left: 227px;
+	left: 327px;
 	top: 428px;
 }
 
@@ -56,7 +58,7 @@ body {
 
 .number {
 	position: absolute;
-	left: 363px;
+	left: 463px;
 	top: 578px;
 }
 
@@ -67,7 +69,7 @@ body {
 
 .shot {
 	position: absolute;
-	left: 284px;
+	left: 384px;
 	top: 503px;
 }
 .shot img{
@@ -77,8 +79,8 @@ body {
 
 .delete {
 	position: absolute;
-	right: 410px;
-	top: 1265px;
+	left: 150px;
+    top: 1055px;
 }
 .delete img{
 	width: 250px;
@@ -105,11 +107,12 @@ footer {
 .deltext{
 
 color: white;
+direction: rtl;
     position: absolute;
-    top: 400px;
-    right: 0;
+    top: 700px;
+    left: 600px;
     font-size: 44px;
-    width: 288px;
+    width: 340px;
     line-height: 41px;
     text-align: center;
     }
