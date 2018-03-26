@@ -30,7 +30,7 @@ body {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	top: 397px;
+	top: 310px;
 }
 .bg img{
 	width: 1080px;
@@ -39,13 +39,13 @@ body {
 .canvas {
 	position: absolute;
 	left: 180px;
-	top: 550px;
+	top: 463px;
 }
 
 .frame {
 	position: absolute;
 	left: 227px;
-	top: 515px;
+	top: 428px;
 }
 
 #frame {
@@ -57,7 +57,7 @@ body {
 .number {
 	position: absolute;
 	left: 363px;
-	top: 665px;
+	top: 578px;
 }
 
 #number {
@@ -68,7 +68,7 @@ body {
 .shot {
 	position: absolute;
 	left: 284px;
-	top: 590px;
+	top: 503px;
 }
 .shot img{
 	width: 280px;
