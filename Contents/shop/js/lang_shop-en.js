@@ -47,7 +47,7 @@
   });
   $('#s5').click(function(){
     $('.part2 #icon').attr("src","photo/amounge.png");
-    $('.bdy #title').text("Amouge Boutique");
+    $('.bdy #title').text("Amouage Boutique");
     $('.bdy #location').text("Location:");
     $('.bdy #desc').html("<p>Oman based international fragrance house. Offering a wide veraity  of luxerioues prefumes</p>");
   });
