@@ -31,8 +31,8 @@ ShowTime();
         $('#change-us').removeClass('active');
         $('#change-ar').addClass('active');
 		$('.title').text("الصّورة الرّمزية");
-		$('.deltext').css({"font-size":"44px", "line-height":"31px"});
-		$('.deltext').text("إذا كنت ترغب في حذف الصورة الرمزية الآن اضغط على زر '' ديليت ''")
+		$('.deltext').css({"font-size":"44px", "line-height":"41px"});
+		$('.deltext').text("إذا كنت ترغب في حذف  الصورة الرمزية الآن  اضغط  على زر  'حذف' ");
 		$('#change-us').css({"background":"white", "color":"#4a32a4"});
 		$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
 		$('#shot img').attr('src','Image/avatar_shot_nor_ar.png');
