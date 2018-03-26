@@ -112,7 +112,8 @@ direction: rtl;
      a {
     color: #008a97 !important;
 }
- #change-us, #change-ar{padding: 0px 10px 5px 10px !important; border-radius: 5px;text-decoration: none;}
+
+ #change-us, #change-ar{color:#008a97;padding: 0px 10px 5px 10px !important; border-radius: 5px;text-decoration: none;}
  .active{
     color: rgb(255, 255, 255) !important;
  background: #008a97 !important;
