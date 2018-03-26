@@ -18,18 +18,7 @@ $(document).ready(function(){
     });
 
  });
- var vid = document.getElementById("bannerVideo");
-    vid.playbackRate = 2;
-    var interval = self.setInterval(function(){Play()},10000);
 
-    function Play(){
-          
-          /*setTimeout(function(){*/
-              vid.pause();
-              vid.currentTime = 0;
-              vid.play();
-          /*}, 3300);*/
-     }
 
 function OnJoystickControlled(strPara){
   var btn_info = strPara.split(',')[4];
