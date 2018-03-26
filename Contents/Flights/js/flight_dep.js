@@ -14,7 +14,7 @@ $(document).ready(function(){
                 $('#origin').text("Origin");
                 $('#airline').text("Airline");
                 $('#terminal').text("Terminal");
-                $('#arrival').text("Arrival");
+                $('#arrival').text("Departure");
                 $('#status').text("Status");
    
               });
