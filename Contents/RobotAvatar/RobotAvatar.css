@@ -71,7 +71,7 @@ body {
 
 .delete {
 	position: absolute;
-	left: 430px;
+	left: 410px;
     top: 1200px;
 }
 .delete img{
@@ -102,7 +102,7 @@ color: white;
 direction: rtl;
     position: absolute;
     top: 700px;
-    left: 300px;
+    left: 280px;
     font-size: 44px;
     width: 500px;
     line-height: 50px;
