@@ -77,7 +77,7 @@ $(document).ready(function(){
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
                 $('#content_avatar').text("CHANGE AVATAR");
-                $('#content_selfie').text("TAKE SELFIE");               
+                $('#content_selfie').text("TAKE A SELFIE");               
                 
               }
                       
@@ -104,7 +104,7 @@ $(document).ready(function(){
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
                 $('#content_avatar').text("CHANGE AVATAR");
-                $('#content_selfie').text("TAKE SELFIE");
+                $('#content_selfie').text("TAKE A SELFIE");
                 //$('#content_dance').text("Dance");
               
               });

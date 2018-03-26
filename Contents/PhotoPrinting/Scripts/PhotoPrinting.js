@@ -69,6 +69,17 @@ var isPhotoTaken = false;
 function TakePhoto()
 {
     isPhotoTaken = false;
+
+    if(readCookie("lang")=="english"){
+        window.external.ChangeLanguage("ar-gb");
+        window.external.SetVolume(1);
+        PlaySpeech('Look at the camera on the robot’s head.');  
+    }
+    else if (readCookie("lang")=="arabic") {
+        window.external.ChangeLanguage("ar-eg");
+        window.external.SetVolume(0.4);
+        PlaySpeech("اُنْظُرْ إلَى اَلْكَامِيرة عَلَى رَأْسِ اَلْرَجُلِ اَلْآلِيْ");
+    }
     
     // 촬영 버튼 이미지 변경 & 숨김
     document.getElementById("btn_start").src = "Images/start_btn_press_"+c_language+".png";
