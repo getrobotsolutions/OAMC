@@ -227,7 +227,7 @@
      .icon-title{
       position: absolute;
       top: 58px;
-        width: 257px;
+        width: 265px;
         height: 100px;
             font-family: Bukra-Regular;
             
@@ -699,7 +699,7 @@ body{
     position: absolute;
     top: -96px;
     z-index: 99;
-    height: 94px;
+    height: 62px;
 }
 
 /*Hides carousel dots*/

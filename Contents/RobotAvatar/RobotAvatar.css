@@ -30,7 +30,7 @@ body {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	top: 430px;
+	top: 397px;
 }
 .bg img{
 	width: 1080px;
@@ -39,13 +39,13 @@ body {
 .canvas {
 	position: absolute;
 	left: 180px;
-	top: 660px;
+	top: 550px;
 }
 
 .frame {
 	position: absolute;
 	left: 227px;
-	top: 625px;
+	top: 515px;
 }
 
 #frame {
@@ -57,7 +57,7 @@ body {
 .number {
 	position: absolute;
 	left: 363px;
-	top: 775px;
+	top: 665px;
 }
 
 #number {
@@ -68,7 +68,7 @@ body {
 .shot {
 	position: absolute;
 	left: 284px;
-	top: 700px;
+	top: 590px;
 }
 .shot img{
 	width: 280px;
@@ -124,6 +124,6 @@ color: white;
   }
   .img-home {
     
-    top:-19px !important;
+    top:0px !important;
     
 }
