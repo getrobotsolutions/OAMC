@@ -227,7 +227,7 @@ function SendEmail()
     var mail_addr_sender = "tamoor@getrobotsolutions.com";
     var pswd = "@tam2016";
     var port = 587;
-    var ssl = "false";*/
+    var ssl = "false"; */
     
     // 이미지 파일명 지정 및 저장
     var d = new Date();
