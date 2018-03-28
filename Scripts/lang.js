@@ -21,7 +21,7 @@ $(document).ready(function(){
                 $('#content_flights').html("معلومات الرحلات");
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("التقاط صورة");
+                $('#content_selfie').text("إلتقاط صورة");
                 $('#content_fly').hide();
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
@@ -50,7 +50,7 @@ $(document).ready(function(){
                 $('#content_flights').html("معلومات الرحلات");
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("التقاط صورة");
+                $('#content_selfie').text("إلتقاط صورة");
                 //$('#content_dance').html("صورتك في <br>الوجه الآلي");
               }
               else if(readCookie("lang")=="english"){
@@ -138,7 +138,7 @@ $(document).ready(function(){
                 $('#content_flights').html("معلومات الرحلات");
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("التقاط صورة");
+                $('#content_selfie').text("إلتقاط صورة");
                
               });
               $('#content_fly').click(function(){
@@ -169,12 +169,19 @@ $(document).ready(function(){
       return false;
     });
     $("#info-popup").click(function () {
-      ShowPopup2('images/infographic.png');
+      
       if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
         PlaySpeech("Here is some information about the new Muscat International Airport.");
-    }
+        ShowPopup2('images/infographic-en.jpg');
+      }
+      else if(readCookie("lang")=="arabic"){
+        window.external.ChangeLanguage("ar-eg");
+        SetVolume(0.4);
+        //PlaySpeech("Here is some information about the new Muscat International Airport.");
+        ShowPopup2('images/infographic-ar.jpg');
+      }
    
 
   });
