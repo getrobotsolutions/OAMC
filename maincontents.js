@@ -145,7 +145,7 @@ function OnUserApproached()
     else if (readCookie("lang")=="arabic") {
       window.external.ChangeLanguage("ar-eg");
       window.external.SetVolume(0.4);
-      PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟ً");
+      PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟");
     }
 }
 
