@@ -41,12 +41,15 @@
         max-height: 400px;
       }
       .jumbotron{
+        height: 230px;
         color:#5c5c5c;
         /*background-color: #fdfdfd;*/
         background-color:white;
-       
-        padding-top: 75px;
-        padding-bottom: 126px;
+           padding-top: 0;
+           margin-bottom: 0px;
+    padding-bottom: 0px;
+        /*padding-top: 75px;
+        padding-bottom: 126px;*/
       }
       .jumbotron p {
           margin-bottom: 15px;
@@ -58,7 +61,7 @@
       .img-responsive{
         position: relative;
         z-index: 99;
-            margin-top: -74px;
+            
         margin-left: 44px;
         width: 441px;
         height: auto;
@@ -121,10 +124,7 @@
     }
     .bmg
     {
-        /*background-image: url('../images/muscat-oman.jpg');
-        background-color: white;*/
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: rgba(255, 255, 255, 0.55);
     height: 1196px;
    
     }
@@ -187,16 +187,20 @@
     padding-bottom:14px;
     }
 
-    #content_term{
-          margin-left: -183px;
-          padding-top: 11px;
-    }
+    
     #content_air,#content_date{
-     font-size: 35px;
+    line-height: 45px;
+    font-size: 35px;
     color: #73787c;
-    margin: 0px 53px 5px 0;
     height: 40px;
+    margin: 0px 53px 5px 0;
     }
+    #content_air{
+    
+    margin: 30px 53px 5px 0;
+   }
+
+
     #HF{
           height: 346px;
            width: 249px;
@@ -432,9 +436,9 @@
 
 #temp{        display: block;
     width: 350px;
-    margin: -6px 0px 0 13px;
+    margin: 20px 0px 0 13px;
     font-size: 27px;
-    line-height: 32px;
+    line-height: 40px;
    
   }
 body{
@@ -709,10 +713,5 @@ body{
 
 #change-us, #change-ar{    font-family: Bukra-Regular;padding: 5px 10px 0px 10px;    text-decoration: none;}
 
-video.fillWidth
-        {
-          width: 1080px !important;
-          margin-left: -60px;
-          width: auto;
-          margin-bottom: -30px;
-        }
+
+.body1{background-image: url(../images/background.png);}

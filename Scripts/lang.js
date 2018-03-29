@@ -9,9 +9,8 @@ $(document).ready(function(){
     var welcomeMessage= "";
     var lan="ar-eg";
     var volume=0.4;
-                $('#content_term').text("محطة A");
-                //$('#content_air').text("");
-                $('#content_fly').text("اضغط هنا للبدء");
+                
+                /*$('#content_fly').text("اضغط هنا للبدء");
 
                 $('#content_eat').html("المطاعم");
 
@@ -21,7 +20,7 @@ $(document).ready(function(){
                 $('#content_flights').html("معلومات الرحلات");
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("إلتقاط صورة");
+                $('#content_selfie').text("إلتقاط صورة");*/
                 $('#content_fly').hide();
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");

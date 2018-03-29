@@ -73,9 +73,9 @@
   });
               $('#s9').click(function(){
                 $('.part2 #icon').attr("src","photo/Pure Gold.jpg");
-                $('.bdy #title').text("Pier Stores (North, South and West)");
+                $('.bdy #title').text("Last Minute Stores (A, B & C)");
                 $('.bdy #location').text("Location:");
-                $('.bdy #desc').text("The pier stores act as a last minute opportunity for passengers to purchase Duty Free products including Liquor, tobacco, fragrances and top selling gifting and snacking packs of confectionary.");
+                $('.bdy #desc').text("The Last Minute Stores is a great opportunity for the passengers to purchase Duty Free products which inludes Liquor, Tobacco, Fragrances, top selling gift items and snacking packs of confectionary.");
               });
               $('#s10').click(function(){
                 $('.part2 #icon').attr("src","photo/arrivals.png");
@@ -106,7 +106,7 @@
                 $('.bdy #desc').html("Our Spectrum Sunglasses concept store caters to the needs of the international, brand savvy, style conscious traveler who wishes to indulge in an accessible luxury or lifestyle accessory.");
               });
   $('#s14').click(function(){
-    $('.part2 #icon').attr("src","photo/blank.png");
+    $('.part2 #icon').attr("src","photo/whsmith.png");
     $('.bdy #title').text("Wh Smith");
 
     $('.bdy #desc').text("In a hurry to catch a flight? Grab a snack or book to read on your way to your gate. ");
