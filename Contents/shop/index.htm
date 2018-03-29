@@ -54,9 +54,10 @@
     }
     .img-home {
           position: absolute;
-    top: -60px;
+     top: 3px;
+    left: 20px;
     z-index: 99;
-    height: 62px;
+    height: 66px;
     }
     tbody {
         display:block;
@@ -388,7 +389,7 @@ li.odd{background-color: #00c2de1f;}
 li.even{background-color: #f3ebf9;}
 #change-ar{color: rgb(255, 255, 255);
     background:#008a97;
-        padding: 0px 10px;
+        
     border-radius: 5px;
 }
 </style>
@@ -405,7 +406,7 @@ li.even{background-color: #f3ebf9;}
     PlaySpeech('اِقْضِ أسْعَدَ اَلأَوْقَاتْ بِالتَسَوْقِ فِي مَحَلَاتِنَا اَلْتِجَارِيْةْ');
   </script>
 </head>
-<body class="noselect unselectable" oncontextmenu="return false;">
+<body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
 
 <div class="jumbotron text-center ">
       
@@ -421,10 +422,11 @@ li.even{background-color: #f3ebf9;}
     </div>
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
+      <div class="col-sm-4" style="padding-left: 0;">
+        <img src="../../images/header-left-bg.png" width="360">
         <img onmousedown="return false" src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
         <a href="#" onmousedown="return false" id="change-us" style="color: #008a97 !important;">ENGLISH</a>|<a onmousedown="return false" id="change-ar" href="#" style="">عربي</a>
       </div>
     </div>
@@ -444,7 +446,7 @@ li.even{background-color: #f3ebf9;}
                         <!--<div id="location"> </div>-->
                         <div id="desc"><p>تمتع بمجموعة مختلفة من الملابس الأنيقة والرياضية والأحذية والساعات والحقائب</p></div>
                         
-                        <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">خريطة</button>
+                        <!--<button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">خريطة</button>-->
                       </div>
 
                   </div>
@@ -475,7 +477,7 @@ li.even{background-color: #f3ebf9;}
                            <li class="odd"><a id="s7" href="#" onmousedown="return false">متجر الذواقة</a></li>
                            <li class="even"><a id="s9" href="#" onmousedown="return false">متجر القادمون</a></li>
                            <li class="odd"><a id="s6" href="#" onmousedown="return false">مملكة الأطفال</a></li>
-                            <li class="odd"><a id="s2" href="#" onmousedown="return false">متجر مسقط</a></li>
+                            <li class="even"><a id="s2" href="#" onmousedown="return false">متجر مسقط</a></li>
                           
                             <li class="odd"><a id="s8" href="#" onmousedown="return false">متاجر الأجنحة</a></li> 
                           </ul>

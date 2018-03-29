@@ -45,14 +45,16 @@
   	.img-home {
     /*position: absolute;
     z-index: 99;*/
-    margin-top: 34px;
+     top: 3px;
+    left: 20px;
+
     cursor: pointer;
     height: 66px;
 }
  a {
     color: #4a32a4;
 }
- #change-us, #change-ar{padding: 10px 10px; border-radius: 5px;text-decoration: none;font-family: Bukra-Regular !important; }
+ #change-us, #change-ar{color: #008a97;padding: 5px 10px 0 15px; border-radius: 5px;text-decoration: none;font-family: Bukra-Regular !important; }
  .active{
     color: rgb(255, 255, 255) !important;
  background: #008a97;
@@ -136,11 +138,12 @@
       </span>    
     </div>
 
-    <div class="row subheader" style="background-color: white; padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
+    <div class="row subheader" style="background-color: white; padding: 0;margin: 0;border:2px solid #008a97;height: 72px;">
+      <div class="col-sm-4" style="padding: 0;">
+      	<img src="../../images/header-left-bg.png" width="360">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
         <a href="#"  id="change-us" style="" class="active">ENGLISH</a>|<a  id="change-ar" href="#" style="" class="">عربي</a>
       </div>
     </div>
@@ -175,7 +178,7 @@
 					<li><img src="Images/btn_nor_retake_en-us.png" id="retake-photo" alt="다시촬영하기" onclick="Retake()"></li>
 				</ul>
 				<dl class="photo_frame">
-					<dd><img src="Images/btn_frame01.png" alt="프레임1" onclick="SelectFrame(1)"></dd>
+					<dd><img src="Images/btn_frame01.png" alt="프레임1" onclick="SelectFrame(5)"></dd>
 					<dd><img src="Images/btn_frame02.png" alt="프레임2" onclick="SelectFrame(2)"></dd>
 					<dd><img src="Images/btn_frame03.png" alt="프레임3" onclick="SelectFrame(3)"></dd>
 					<dd><img src="Images/btn_frame04.png" alt="프레임4" onclick="SelectFrame(4)"></dd>

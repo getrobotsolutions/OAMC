@@ -174,7 +174,7 @@
     .nav>li>a {
             padding: 16px 15px;
         font-size: 17px;
-         font-family: Bukra-Light;
+         font-family: Bukra-regular;
     }
 
     .explore{
@@ -707,7 +707,7 @@ body{
 
 
 
-#change-us, #change-ar{    font-family: Bukra-Regular;}
+#change-us, #change-ar{    font-family: Bukra-Regular;padding: 5px 10px 0px 10px;    text-decoration: none;}
 
 video.fillWidth
         {

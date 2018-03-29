@@ -19,7 +19,7 @@ ShowTime();
 		$('.deltext').css({"font-size":"32px", "line-height":"40px", "direction": "ltr"});
 		$('.deltext').text("If you want to delete the Avatar, press the 'DELETE' button.")
 		$('#change-ar').css({"background":"white", "color":"#4a32a4"});
-		$('#change-us').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
+		$('#change-us').css({"background":"#4a32a4", "color":"white", "border-radius": "5px"});
 		$('#delete').attr('src','Image/Avatar_delete_none.png');
         deletePic="Image/Avatar_delete_none.png";
         deletePicNor="Image/Avatar_delete_nor.png";
@@ -34,7 +34,7 @@ ShowTime();
 		$('.deltext').css({"font-size":"44px", "line-height":"50px", "direction": "rtl"});
 		$('.deltext').text("إذا كنت ترغب في حذف  الصورة الرمزية الآن  اضغط  على زر  'حذف' ");
 		$('#change-us').css({"background":"white", "color":"#4a32a4" });
-		$('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "10px 10px", "border-radius": "5px"});
+		$('#change-ar').css({"background":"#4a32a4", "color":"white",  "border-radius": "5px"});
 		$('#shot img').attr('src','Image/avatar_shot_nor_ar.png');
 		$('#delete').attr('src','Image/Avatar_delete_none_ar.png');
         deletePic="Image/Avatar_delete_none_ar.png";

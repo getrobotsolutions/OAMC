@@ -41,7 +41,7 @@
 
 <style>
   .bmg{background-image: none;height: 1158px;}
-  .img-home {position: absolute;top: -60px;z-index: 99;height: 62px;cursor: pointer; cursor: hand;}
+  .img-home {position: absolute;left:20px;top: 3px;z-index: 99;height: 66px;cursor: pointer; cursor: hand;}
   .wrap{padding-top: 90px;}
   .part1{ background-color: whitesmoke;height: 660px;margin-top: -22px;margin-left: -15px;}
   .part2{
@@ -277,7 +277,7 @@ a.button:hover {
 }
 li.odd{background-color:#00c2de1f;}
 li.even{background-color: #f3ebf9;}
-#change-us{color: rgb(255, 255, 255);background: #008a97;padding: 0px 10px;border-radius: 5px;}
+#change-us{color: rgb(255, 255, 255);background: #008a97;padding: 5px 10px 0px 10px;border-radius: 5px;}
 
 
 </style>
@@ -294,7 +294,7 @@ li.even{background-color: #f3ebf9;}
     PlaySpeech('Enjoy your time here at these restaurants.');
   </script>
 </head>
-<body class="noselect unselectable" oncontextmenu="return false;">
+<body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
 
    <div class="jumbotron text-center ">
       
@@ -310,10 +310,11 @@ li.even{background-color: #f3ebf9;}
     </div>
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
+      <div class="col-sm-4" style="padding-left: 0;">
+        <img src="../../images/header-left-bg.png" width="360">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
         <a href="#" onmousedown="return false" id="change-us" style="">ENGLISH</a>|<a onmousedown="return false" id="change-ar" href="#" style="color: #008a97 !important;">عربي</a>
       </div>
     </div>
@@ -367,7 +368,7 @@ li.even{background-color: #f3ebf9;}
                         <!--<div id="location"> </div>-->
                         <div id="desc">Want to try the best coffee? Visit Café Nero and you will not regret it</div>
 
-                        <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/south-pier-departure(level-02).png">Map</button>
+                        <!--<button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/south-pier-departure(level-02).png">Map</button>-->
                       </div>
 
                   </div>

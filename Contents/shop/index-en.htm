@@ -47,9 +47,10 @@
     }
     .img-home {
           position: absolute;
-    top: -60px;
+    top: 3px;
+    left: 20px;
     z-index: 99;
-    height: 62px;
+    height: 66px;
     }
 
       tbody {
@@ -371,7 +372,7 @@ li.odd{background-color: #00c2de1f;}
 li.even{background-color: #f3ebf9;}
 #change-us{color: rgb(255, 255, 255);
     background: #008a97;
-        padding: 0px 10px;
+        
     border-radius: 5px;
 }
 </style>
@@ -389,7 +390,7 @@ li.even{background-color: #f3ebf9;}
       
   </script>
 </head>
-<body class="noselect unselectable" oncontextmenu="return false;">
+<body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
 <div class="jumbotron text-center ">
       
       <span class="col-sm-7">
@@ -404,10 +405,11 @@ li.even{background-color: #f3ebf9;}
     </div>
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
+      <div class="col-sm-4" style="padding-left: 0;">
+        <img src="../../images/header-left-bg.png" width="360">
         <img onmousedown="return false" src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
         <a href="#" onmousedown="return false" id="change-us" style="">ENGLISH</a>|<a onmousedown="return false" id="change-ar" href="#" style="color: #008a97 !important;">عربي</a>
       </div>
     </div>
@@ -434,10 +436,10 @@ li.even{background-color: #f3ebf9;}
                             <li class="even"><a id="s7" href="#" onmousedown="return false">Kids Kingdom</a></li>
                             <li class="odd"><a id="s11" href="#" onmousedown="return false">Luxury Fashion Avenue</a></li>
                             <li class="even"><a id="s3" href="#" onmousedown="return false">Muscat Market</a></li>
-                            <li class="even"><a id="s18" href="#" onmousedown="return false">Muscat Pharmacy</a></li> 
-                            <li class="odd"><a id="s4" href="#" onmousedown="return false">Perfumes and Cosmetics</a></li>
-                            <li class="even"><a id="s9" href="#" onmousedown="return false">Pier Stores</a></li>
-                            <li class="odd"><a id="s15" href="#" onmousedown="return false">Souq of Oman</a></li>
+                            <li class="odd"><a id="s18" href="#" onmousedown="return false">Muscat Pharmacy</a></li> 
+                            <li class="even"><a id="s4" href="#" onmousedown="return false">Perfumes and Cosmetics</a></li>
+                            <li class="odd"><a id="s9" href="#" onmousedown="return false">Pier Stores</a></li>
+                            <li class="even"><a id="s15" href="#" onmousedown="return false">Souq of Oman</a></li>
                               
                             <li class="odd"><a id="s13" href="#" onmousedown="return false">Sunglasses</a></li>
                             <li class="even"><a id="s14" href="#" onmousedown="return false">Wh Smith</a></li>     
@@ -455,7 +457,7 @@ li.even{background-color: #f3ebf9;}
                         <!--<div id="location"> </div>-->
                         <div id="desc"><p>Oman based international fragrance house. Offering a wide veraity  of luxerioues prefumes</p></div>
                         
-                        <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">Map</button>
+                        <!--<button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">Map</button>-->
                       </div>
 
                   </div>
