@@ -20,7 +20,7 @@
 
 </head>
 
-<body onload="JSMain()" onbeforeunload="JSUnload()" scroll="no">
+<body onload="JSMain()" onbeforeunload="JSUnload()" scroll="no" oncontextmenu="return false;">
 
 	
 
