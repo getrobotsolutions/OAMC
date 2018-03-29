@@ -89,7 +89,7 @@ footer {
 	bottom: 372px !important;
 }
 .title{
-	
+	font-family: bukra-semi-bold;
     padding: 20px 0;
     text-align: center;
     margin: 0;
@@ -124,3 +124,5 @@ direction: rtl;
     left: 20px;
     
 }
+.deltext-ar{line-height: 70px;font-size: 44px;direction: rtl;}
+.deltext-en{line-height: 40px;font-size: 32px;direction: ltr;}

@@ -16,7 +16,10 @@ ShowTime();
         $('#change-ar').removeClass('active');
 		$('.title').text("Robot Avatar");
 		$('#shot img').attr("src","Image/avatar_shot_nor.png");
-		$('.deltext').css({"font-size":"32px", "line-height":"40px", "direction": "ltr"});
+		$('.deltext').removeClass('deltext-ar');
+		$('.deltext').addClass('deltext-en');
+        
+		//$('.deltext').css({"font-size":"32px", "line-height":"40px", "direction": "ltr"});
 		$('.deltext').text("If you want to delete the Avatar, press the 'DELETE' button.")
 		$('#change-ar').css({"background":"white", "color":"#4a32a4"});
 		$('#change-us').css({"background":"#4a32a4", "color":"white", "border-radius": "5px"});
@@ -31,7 +34,9 @@ ShowTime();
         $('#change-us').removeClass('active');
         $('#change-ar').addClass('active');
 		$('.title').text("الصّورة الرّمزية");
-		$('.deltext').css({"font-size":"44px", "line-height":"70px", "direction": "rtl"});
+		$('.deltext').removeClass('deltext-en');
+		$('.deltext').addClass('deltext-ar');
+		//$('.deltext').css({"font-size":"44px", "line-height":"70px", "direction": "rtl"});
 		$('.deltext').text("إذا كنت ترغب في حذف  الصورة الرمزية الآن  اضغط  على زر  'حذف' ");
 		$('#change-us').css({"background":"white", "color":"#4a32a4" });
 		$('#change-ar').css({"background":"#4a32a4", "color":"white",  "border-radius": "5px"});

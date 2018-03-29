@@ -34,7 +34,9 @@
       $('#change-ar').removeClass('active');
       $('.title').text("Robot Avatar");
       $('#shot img').attr("src","Image/avatar_shot_nor.png");
-      $('.deltext').css({"font-size":"32px", "line-height":"40px", "direction": "ltr"});
+      $('.deltext').removeClass('deltext-ar');
+      $('.deltext').addClass('deltext-en');
+      //$('.deltext').css({"font-size":"32px", "line-height":"40px", "direction": "ltr"});
       $('.deltext').text("If you want to delete the Avatar. press the 'DELETE' button.")
      
     $('#delete').attr('src','Image/Avatar_delete_none.png');
@@ -50,7 +52,9 @@
       $('#change-us').removeClass('active');
       $('#change-ar').addClass('active');
       $('.title').text("الصّورة الرّمزية");
-      $('.deltext').css({"font-size":"44px", "line-height":"50px" , "direction": "rtl"});
+      $('.deltext').removeClass('deltext-en');
+      $('.deltext').addClass('deltext-ar');
+      //$('.deltext').css({"font-size":"44px", "line-height":"50px" , "direction": "rtl"});
       $('.deltext').text("إذا كنت ترغب في حذف  الصورة الرمزية الآن  اضغط  على زر  'حذف ");
     
       $('#shot img').attr('src','Image/avatar_shot_nor_ar.png');
