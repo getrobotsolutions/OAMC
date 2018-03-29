@@ -93,7 +93,7 @@ var refreshIntervalId ;
 
 	function shot() {
 		if(readCookie("lang")=="english"){
-        window.external.ChangeLanguage("ar-gb");
+        window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
         PlaySpeech('Look at the camera on the top of the robot’s head.');  
     }

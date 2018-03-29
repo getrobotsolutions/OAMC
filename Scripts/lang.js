@@ -173,7 +173,7 @@ $(document).ready(function(){
       if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
-        PlaySpeech("Here is some information about the new Muscat International Airport.");
+        PlaySpeech("Learn about Muscat International Airport.");
         ShowPopup2('images/infographic-en.jpg');
       }
       else if(readCookie("lang")=="arabic"){
