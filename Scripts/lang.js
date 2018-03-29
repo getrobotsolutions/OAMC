@@ -179,7 +179,7 @@ $(document).ready(function(){
       else if(readCookie("lang")=="arabic"){
         window.external.ChangeLanguage("ar-eg");
         SetVolume(0.4);
-        //PlaySpeech("Here is some information about the new Muscat International Airport.");
+        PlaySpeech("مَعْلُومَاتٌ قَدْ تُهِمُكْ عَنْ مَطَارْ مَسْقَطْ اَلْجَدِيدْ");
         ShowPopup2('images/infographic-ar.jpg');
       }
    

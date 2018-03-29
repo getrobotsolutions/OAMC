@@ -101,9 +101,9 @@
               });
                $('#s13').click(function(){
                 $('.part2 #icon').attr("src","photo/spectrum.png");
-                $('.bdy #title').text("Sunglasses");
+                $('.bdy #title').text("Spectrum Sunglasses");
                 $('.bdy #location').text("Location:");
-                $('.bdy #desc').html("Our Spectrum Sunglasses concept store caters to the needs of the international, brand savvy, style conscious traveler who wishes to indulge in an accessible luxury or lifestyle accessory. </br>Spectrum supplies an array of the most iconic and up to date fashionable luxury styles, while also providing cutting edge high performance technology eyewearModren, sleek & classic Sunglasses designed to fit your taste");
+                $('.bdy #desc').html("Our Spectrum Sunglasses concept store caters to the needs of the international, brand savvy, style conscious traveler who wishes to indulge in an accessible luxury or lifestyle accessory.");
               });
   $('#s14').click(function(){
     $('.part2 #icon').attr("src","photo/blank.png");

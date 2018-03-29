@@ -15,7 +15,7 @@
     $('.part2 #icon').attr("src","photo/LTC.png");
     $('.bdy #title').text("الحلويات والمشروبات الروحية و التبغ");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').html("<p>استمتع بمجموعة مختارة من منتجات التبغ والحلويات و المشروبات الروحية التي تم اختيارهها لتناسب ذوقك الرفيع.</p>");
+    $('.bdy #desc').html("<p>استمتع بمجموعة مختارة من منتجات التبغ والحلويات و المشروبات الروحية التي تم اختيارهها لتناسب ذوقك الرفيع</p>");
     $("#mapBtn").show();
     $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
   });
@@ -39,13 +39,13 @@
     $('.part2 #icon').attr("src","photo/amounge.png");
     $('.bdy #title').text("أمواج");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').html("<p>أمواج توفر أرقى العطورالمتنوعة التي صنعتها الأيدي العمانية.</p>");
+    $('.bdy #desc').html("<p>أمواج توفر أرقى العطورالمتنوعة التي صنعتها الأيدي العمانية</p>");
   });
   $('#s5').click(function(){
     $('.part2 #icon').attr("src","photo/fashion-jewelry.png");
     $('.bdy #title').text("المجوهرات العصرية");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').html("<p>المجوهرات البراقة بكختلف لأشكال والألوان نضعها تحت طلبك في أسواق المجواهرات</p>");
+    $('.bdy #desc').html("<p>المجوهرات البراقة والأكسسوارات بمختلف الأشكال والألوان نضعها تحت طلبك في أسواق المجوهرات</p>");
   });
   $('#s6').click(function(){
     $('.part2 #icon').attr("src","photo/kids-kingdom.png");
@@ -59,13 +59,13 @@
     $('.part2 #icon').attr("src","photo/gourmet-store.png");
     $('.bdy #title').text("متجر الذواقة");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').html("<p>لا تفوت طعم المكسرات اللذيذة والطازجة وتلذذ بروعة طعم الشوكولاتة النقية المحشوة بنكهات مختلفة.</p>");
+    $('.bdy #desc').html("<p>لا تفوت طعم المكسرات اللذيذة والطازجة وتلذذ بروعة طعم الشوكولاتة النقية المحشوة بنكهات مختلفة</p>");
   });
   $('#s8').click(function(){
                 $('.part2 #icon').attr("src","photo/gourmet-store.png");
                 $('.bdy #title').text("متاجر الأجنحة (الشمال والجنوب والغرب)");
                 $('.bdy #location').text("Location:");
-                $('.bdy #desc').html("<p>تعد متاجر الرصيف بمثابة الفرصة الأخيرة للركاب لشراء منتجات خالية من الرسوم  الجمركية بما في ذلك الخمور والتبغ والعطور والهدايا الأكثر مبيعا ووجبات الحلويات الخفيفة.</p>");
+                $('.bdy #desc').html("<p>تعد متاجر الرصيف بمثابة الفرصة الأخيرة للركاب لشراء منتجات خالية من الرسوم  الجمركية بما في ذلك الخمور والتبغ والعطور والهدايا الأكثر مبيعا ووجبات الحلويات الخفيفة</p>");
               });
               $('#s9').click(function(){
                 $('.part2 #icon').attr("src","photo/arrivals.png");
@@ -91,7 +91,7 @@
               });
               $('#s12').click(function(){
                 $('.part2 #icon').attr("src","photo/spectrum.png");
-                $('.bdy #title').text("النظارات");
+                $('.bdy #title').text("سبيكترم للنظارات");
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').html("<p>ارتدي ما يناسب ذائقتك من مجموعة النظارات الشمسية الحديثة والكلاسيكية</p>");
               });
@@ -105,7 +105,7 @@
     $('.part2 #icon').attr("src","photo/blank.png");
     $('.bdy #title').text("سميث");
 
-    $('.bdy #desc').text("هل انت في عجلة على رحلتك؟ اشتري وجبة خفيفة أو كتاب للقراءة في طريقك إلى البوابة الخاصة بك.");
+    $('.bdy #desc').text("هل انت في عجلة على رحلتك؟ اشتري وجبة خفيفة أو كتاب للقراءة في طريقك إلى البوابة الخاصة بك");
   });
   $('#s15').click(function(){
     $('.part2 #icon').attr("src","photo/Suq Of Oman.png");
@@ -123,7 +123,7 @@
     $('.part2 #icon').attr("src","photo/Gallery Argan.png");
     $('.bdy #title').text("جاليري أرجان");
 
-    $('.bdy #desc').text("الحلي البراقة التي ستأسرناظريك ستجدينها في متجر جاليري أرجان ");
+    $('.bdy #desc').text("الحلي البراقة التي ستأسر ناظريك ستجدينها في متجر جاليري أرجان");
   });
   $('#s18').click(function(){
     $('.part2 #icon').attr("src","photo/Muscat Pharmacy.jpg");

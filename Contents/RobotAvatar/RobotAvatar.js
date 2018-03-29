@@ -31,7 +31,7 @@ ShowTime();
         $('#change-us').removeClass('active');
         $('#change-ar').addClass('active');
 		$('.title').text("الصّورة الرّمزية");
-		$('.deltext').css({"font-size":"44px", "line-height":"50px", "direction": "rtl"});
+		$('.deltext').css({"font-size":"44px", "line-height":"70px", "direction": "rtl"});
 		$('.deltext').text("إذا كنت ترغب في حذف  الصورة الرمزية الآن  اضغط  على زر  'حذف' ");
 		$('#change-us').css({"background":"white", "color":"#4a32a4" });
 		$('#change-ar').css({"background":"#4a32a4", "color":"white",  "border-radius": "5px"});

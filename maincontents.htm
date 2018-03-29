@@ -48,15 +48,17 @@ UpdateSession(9);
 </head>
 <body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
 
-  	<div class="jumbotron text-center">
+  	<div class="jumbotron text-center" style="">
       
       <span class="col-sm-7">
          <img onmousedown="return false" src="images/Logo.jpg" class="img-responsive" alt="Responsive image" style="height:auto;margin-top: -74px;width: 521px;">
       </span>
       <span class="col-sm-5">
-        
-          <div  id="content_air"></div>
+        <div >
+          <div id="content_air"></div>
           <div id="content_date"></div>
+        </div>
+          
           <span id="temp"></span>
           <!--<img src="images/airport-acceridated.jpg" width="150" style="position: relative;bottom: 30px">-->
       </span>
@@ -98,7 +100,7 @@ UpdateSession(9);
               
                   <a onclick="FC_ContentsCall('Flights','')" href="#" onmousedown="return false">
                     <img class="child nopadding" src="images/icon/flight info 2.png">
-                    <div id="content_flights" class="icon-title" style="font-size: 30px; line-height: 27px;">رحلات طيران</div>
+                    <div id="content_flights" class="icon-title" style="font-size: 30px; line-height: 27px;">معلومات الرحلات</div>
                   </a>
               
           </div>
@@ -106,7 +108,7 @@ UpdateSession(9);
               
                   <a onclick="FC_ContentsCall('BoardingPass','')" href="#" class="right" onmousedown="return false">
                     <img class="child nopadding" src="images/icon/Boarding Pass 3.png">
-                    <div id="content_scan" class="icon-title" style="right: 0px;font-size: 28px; margin-top: -17px; line-height: 35px;">مسح الصعود <br> تمريرة الخاص بك</div>
+                    <div id="content_scan" class="icon-title" style="right: 0px;font-size: 28px; margin-top: -17px; line-height: 35px;">مرر تذكرة صعود الطائرة</div>
                   </a>
                   
               
@@ -117,7 +119,7 @@ UpdateSession(9);
 
                 <a onclick="FC_ContentsCall('TerminalMap','')" href="#" onmousedown="return false">
                     <img class="child nopadding" src="images/icon/map.png">
-                    <div id="content_map" class="icon-title" style="font-size: 30px;">خريطة المحطة <br> الطرفية</div>
+                    <div id="content_map" class="icon-title" style="font-size: 30px;">خريطة المبنى</div>
                   </a>
           </div>
           <div class="col-sm-6 nopadding right">
@@ -127,7 +129,7 @@ UpdateSession(9);
                   <a id="info-popup" href="#" class="right" onmousedown="return false">
                   <img class="child nopadding" src="images/icon/information.png">
 
-                  <div id="content_info" class="icon-title" style="right: 0px;font-size: 32px;">SEARCH & INFO</div>
+                  <div id="content_info" class="icon-title" style="right: 0px;font-size: 32px;">المعلومات</div>
 
                 </a>
                 <!--<a onclick="FC_ContentsCall('BoardingPass','')" href="#" class="right" onmousedown="return false">
@@ -154,7 +156,7 @@ UpdateSession(9);
               
                 <a onclick="FC_ContentsCall('RobotAvatar', '')" href="#" class="right" onmousedown="return false">
                   <img class="child nopadding" src="images/icon/RA.png" >
-                  <div id="content_avatar" class="icon-title" style="right: 0px;font-size: 27px; margin-top: -1px; line-height: 32px;">نموذج</div>
+                  <div id="content_avatar" class="icon-title" style="right: 0px;font-size: 27px; margin-top: -1px; line-height: 32px;">الصّورة الرّمزية</div>
                 </a>
               
           

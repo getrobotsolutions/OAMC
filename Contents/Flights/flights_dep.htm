@@ -34,10 +34,15 @@
                 $('#terminal').text("Terminal");
                 $('#arrival').text("Arrival");
                 $('#status').text("Status");
-    //PlaySpeech("Keep up to date with our flights and arrivals.");
+    window.external.ChangeLanguage("ar-gb");
+    window.external.SetVolume(1);
+    PlaySpeech('Check your flight updates');  
 
   }
   else if(readCookie("lang")=="arabic"){
+    window.external.ChangeLanguage("ar-eg");
+    window.external.SetVolume(0.4);
+    PlaySpeech("تَحَقَقْ مِنْ تَفَاصِيلِ رِحْلَتِكْ ");
    
   }
 });
@@ -100,6 +105,13 @@ thead {
     
     color: #008a97;
 }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+   color: #ffffff;
+    background-color: #008a97;
+}
+.nav>li>a {
+    color: #008a97;
+  }
 </style>
 
 
