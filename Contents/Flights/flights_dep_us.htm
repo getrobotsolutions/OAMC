@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+
+<!--<script language="JavaScript" type="text/javascript"
+  src="Scripts/FlashPlayer.js"></script>-->
+<script language="JavaScript" type="text/javascript"
+  src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript"
+  src="../../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript"
+  src="../../Scripts/LogConsole.js"></script>
+
+
+<script language="JavaScript" type="text/javascript"
+  src="../../maincontents.js"></script>
+ <script src="../../jquery/jquery-3.2.1.min.js"></script>
+ <script src="../../boots/js/bootstrap.min.js"></script>
+
+  <script src="js/flight_dep.js"></script>
+  <script type="text/javascript">  
+  $(document).ready(function(){
+  if(readCookie("lang")=="english"){
+    $('#arr').text("Arrivals");
+                $('#arr').text("Arrivals");
+                $('#dep').text("Departures");
+
+                $('#flight').text("Flight");
+                $('#origin').text("Origin");
+                $('#airline').text("Airline");
+                $('#terminal').text("Terminal");
+                $('#arrival').text("Arrival");
+                $('#status').text("Status");
+    window.external.ChangeLanguage("ar-gb");
+    window.external.SetVolume(1);
+    PlaySpeech('Check your flight updates');  
+
+  }
+  else if(readCookie("lang")=="arabic"){
+    window.external.ChangeLanguage("ar-eg");
+    window.external.SetVolume(0.4);
+    PlaySpeech("تَحَقَقْ مِنْ تَفَاصِيلِ رِحْلَتِكْ ");
+   
+  }
+});
+  </script>
+  <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../../css/style_riyadh.css">
+
+<style>
+  
+   .bmg
+    {
+        background-image: none;
+            height: 1153px;
+    }
+    .img-home {
+          position: absolute;
+          z-index: 99;
+         top: 3px;
+          left: 20px;
+          height: 66px;
+    }
+     .FArr{
+        margin-top:20px;
+        margin-right:20px;
+        margin-left:20px;
+      }
+
+    
+tbody {
+    display:block;
+    height:1000px;
+    overflow:auto;
+    -ms-overflow-style: none;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+thead {
+    width: calc( 101.5% - 1em )
+}
+
+.tbdy{
+  font-size:20px;
+  font-family:verdena;
+  font-weight: 200;
+}
+.bg-primary {
+    font-size: 20px;
+ }
+  #loading{
+    margin-top: 176px;
+    margin-left: 242px;
+    width: 500px;
+    height: 100px;
+ }
+ #change-us, #change-ar {
+    
+    color: #008a97;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+   color: #ffffff;
+    background-color: #008a97;
+}
+.nav>li>a {
+    color: #008a97;
+  }
+ #change-us, #change-ar{color: #008a97;border-radius: 5px;text-decoration: none;}
+ .active{
+    color: rgb(255, 255, 255) !important;
+    background: #008a97;
+  }
+  a#arr,a#dep {
+      font-size: 30px;
+      font-weight: 800;
+      margin-right: 0px;
+     
+  }
+   .fArr {
+      z-index: 0;
+      position: relative;
+  }
+  #txt-center{
+    padding-top: 42px;
+    font-size: 23px;
+    font-family: bukra-regular;
+  }
+</style>
+
+
+
+<link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript">
+
+      function Setting() {
+          location.href = "../../Config/Config.htm";
+        }
+
+  </script>
+
+  <script>
+      
+    </script>
+
+
+</head>
+<body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
+<div class="jumbotron text-center ">
+      
+      <span class="col-sm-7">
+        <img onmousedown="return false" src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
+      </span>
+      <span class="col-sm-5">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
+          <span id="temp"></span>
+         
+      </span>    
+    </div>
+
+    <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
+      <div class="col-sm-4" style="padding-left: 0;">
+        <img src="../../images/header-left-bg.png" width="360">
+        <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
+      </div>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
+        <a href="#" onmousedown="return false" class="active" id="change-us" style="">ENGLISH</a>|<a onmousedown="return false" id="change-ar" href="#" style="">عربي</a>
+      </div>
+    </div>
+  <div class="bmg">  
+    <div class="icon1">
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a id="dep" href="flights_dep.htm">Departures</a></li>
+          <li role="presentation"><a id="arr" href="index.htm">Arrivals</a></li>
+        </ul>
+        
+        <div id="loading" style="display:none">
+          <img src="../../images/airlines/loading.gif">
+        </div>
+
+        <div class= "fArr">
+          <table class="table table-striped" id="table1">
+            <thead>
+              <tr class="bg-primary">
+                <th id="airline">Airline</th>
+                <th id="flight">Flight</th>
+                <th width="30%" id="origin">Destination</th>
+                <th id="arrival">Time</th>
+                <th id="status">Status</th>
+
+              </tr>
+            </thead>
+            <tbody class="tbdy">
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img0" >
+                </td>
+                <th id="txt-center" class="row0"></th>
+                <td width="30%" id="txt-center" class="origin0"></td>
+               <!--  <td class="airline0"></td> -->
+                
+
+                <!-- <td class="flight0"></td> -->
+                <td id="txt-center" class="arrival0"></td>
+                <td id="txt-center" class="status0"></td>
+              </tr>
+
+              <tr>
+              <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img1" >
+                </td>
+                <th id="txt-center" class="row1"></th>
+                <td width="30%" id="txt-center" class="origin1"></td>
+                <!-- <td class="airline1"></td> -->
+                
+                <!-- <td class="flight1"></td> -->
+                <td id="txt-center" class="arrival1"></td>
+                <td id="txt-center" class="status1"></td>
+              </tr>
+              <tr>
+              <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img2" >
+                </td>
+                <th id="txt-center" class="row2"></th>
+                <td width="30%" id="txt-center" class="origin2"></td>
+                <!-- <td class="airline2"></td> -->
+                
+                <!-- <td class="flight2"></td> -->
+                <td id="txt-center" class="arrival2"></td>
+                <td id="txt-center" class="status2"></td>
+              </tr>
+              <tr>
+               <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img3" >
+                </td>
+                <th id="txt-center" class="row3"></th>
+                <td width="30%" id="txt-center" class="origin3"></td>
+                <!-- <td class="airline3"></td> -->
+               
+                <!-- <td class="flight3"></td> -->
+                <td id="txt-center" class="arrival3"></td>
+                <td id="txt-center" class="status3"></td>
+              </tr>
+              <tr>
+              <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img4">
+                </td>
+                <th id="txt-center" class="row4"></th>
+                <td width="30%" id="txt-center" class="origin4"></td>
+                <!-- <td class="airline4"></td> -->
+                
+                <!-- <td class="flight4"></td> -->
+                <td id="txt-center" class="arrival4"></td>
+                <td id="txt-center" class="status4"></td>
+              </tr>
+              <tr>
+              <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img5" >
+                </td>
+                <th id="txt-center" class="row5"></th>
+                <td width="30%" id="txt-center" class="origin5"></td>
+                <!-- <td class="airline5"></td> -->
+                
+                <!-- <td class="flight5"></td> -->
+                <td id="txt-center" class="arrival5"></td>
+                <td id="txt-center" class="status5"></td>
+              </tr>
+
+              <tr>
+              <td> 
+                 <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img6" >
+                </td>
+                <th id="txt-center" class="row6"></th>
+                <td width="30%" id="txt-center" class="origin6"></td>
+                <!-- <td class="airline6"></td> -->
+                
+                <!-- <td class="flight6"></td> -->
+                <td id="txt-center" class="arrival6"></td>
+                <td id="txt-center" class="status6"></td>
+              </tr>
+
+              <tr>
+              <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img7" >
+                </td>
+                <th id="txt-center" class="row7"></th>
+                <td width="30%" id="txt-center" class="origin7"></td>
+                <!-- <td class="airline7"></td> -->
+                
+                <!-- <td class="flight7"></td> -->
+                  <td id="txt-center" class="arrival7"></td>
+                <td id="txt-center" class="status7"></td>
+              </tr>
+              <tr>
+               <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img8" >
+                </td>
+                <th id="txt-center" class="row8"></th>
+                <td width="30%" id="txt-center" class="origin8"></td>
+                <!-- <td class="airline8"></td> -->
+               
+                <!-- <td class="flight8"></td> -->
+                  <td id="txt-center" class="arrival8"></td>
+                <td id="txt-center" class="status8"></td>
+              </tr>
+              <tr>
+               <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img9" >
+                </td>
+                <th id="txt-center" class="row9"></th>
+                <td width="30%" id="txt-center" class="origin9"></td>
+                <!-- <td class="airline9"></td> -->
+               
+               <!--  <td class="flight9"></td> -->
+                  <td id="txt-center" class="arrival9"></td>
+                <td id="txt-center" class="status9"></td>
+              </tr>
+              <tr>
+              <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" id="img10" >
+                </td>
+                <th id="txt-center" class="row10"></th>
+                <td width="30%" id="txt-center" class="origin10"></td>
+                <!-- <td class="airline10"></td> -->
+                
+                <!-- <td class="flight10"></td> -->
+                  <td id="txt-center" class="arrival10"></td>
+                <td id="txt-center" class="status10"></td>
+              </tr>
+              <tr>
+              <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" id="img11" >
+                </td>
+                <th id="txt-center" class="row11"></th>
+                <td width="30%" id="txt-center" class="origin11"></td>
+                <!-- <td class="airline11"></td> -->
+                
+                <!-- td class="flight11"></td> -->
+                  <td id="txt-center" class="arrival11"></td>
+                <td id="txt-center" class="status11"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" id="img12" >
+                </td>
+                <th id="txt-center" class="row12"></th>
+                <td width="30%" id="txt-center" class="origin12"></td>
+                <!-- <td class="airline12"></td> -->
+               
+               <!--  <td class="flight12"></td> -->
+                  <td id="txt-center" class="arrival12"></td>
+                <td id="txt-center" class="status12"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" id="img13" >
+                </td>
+                <th id="txt-center" class="row13"></th>
+                <td width="30%" id="txt-center" class="origin13"></td>
+                <!-- <td class="airline13"></td> -->
+                
+                <!-- <td class="flight13"></td> -->
+                  <td id="txt-center" class="arrival13"></td>
+                <td id="txt-center" class="status13"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img14" >
+                </td>
+                <th id="txt-center" class="row14"></th>
+                <td width="30%"  id="txt-center" class="origin14"></td>
+                <td id="txt-center" class="arrival14"></td>
+                <td id="txt-center" class="status14"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img15" >
+                </td>
+                <th id="txt-center" class="row15"></th>
+                <td width="30%"  id="txt-center" class="origin15"></td>
+                <td id="txt-center" class="arrival15"></td>
+                <td id="txt-center" class="status15"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img15" >
+                </td>
+                <th id="txt-center" class="row15"></th>
+                <td width="30%"  id="txt-center" class="origin15"></td>
+                <td id="txt-center" class="arrival15"></td>
+                <td id="txt-center" class="status15"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img16" >
+                </td>
+                <th id="txt-center" class="row16"></th>
+                <td width="30%"  id="txt-center" class="origin16"></td>
+                <td id="txt-center" class="arrival16"></td>
+                <td id="txt-center" class="status16"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img17" >
+                </td>
+                <th id="txt-center" class="row17"></th>
+                <td width="30%"  id="txt-center" class="origin17"></td>
+                <td id="txt-center" class="arrival17"></td>
+                <td id="txt-center" class="status17"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img18" >
+                </td>
+                <th id="txt-center" class="row18"></th>
+                <td width="30%"  id="txt-center" class="origin18"></td>
+                <td id="txt-center" class="arrival18"></td>
+                <td id="txt-center" class="status18"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img19" >
+                </td>
+                <th id="txt-center" class="row19"></th>
+                <td width="30%"  id="txt-center" class="origin19"></td>
+                <td id="txt-center" class="arrival19"></td>
+                <td id="txt-center" class="status19"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img20" >
+                </td>
+                <th id="txt-center" class="row20"></th>
+                <td width="30%"  id="txt-center" class="origin20"></td>
+                <td id="txt-center" class="arrival20"></td>
+                <td id="txt-center" class="status20"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img21" >
+                </td>
+                <th id="txt-center" class="row21"></th>
+                <td width="30%"  id="txt-center" class="origin21"></td>
+                <td id="txt-center" class="arrival21"></td>
+                <td id="txt-center" class="status21"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img22" >
+                </td>
+                <th id="txt-center" class="row22"></th>
+                <td width="30%"  id="txt-center" class="origin22"></td>
+                <td id="txt-center" class="arrival22"></td>
+                <td id="txt-center" class="status22"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img23" >
+                </td>
+                <th id="txt-center" class="row23"></th>
+                <td width="30%"  id="txt-center" class="origin23"></td>
+                <td id="txt-center" class="arrival23"></td>
+                <td id="txt-center" class="status23"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img24" >
+                </td>
+                <th id="txt-center" class="row24"></th>
+                <td width="30%"  id="txt-center" class="origin24"></td>
+                <td id="txt-center" class="arrival24"></td>
+                <td id="txt-center" class="status24"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img25" >
+                </td>
+                <th id="txt-center" class="row25"></th>
+                <td width="30%"  id="txt-center" class="origin25"></td>
+                <td id="txt-center" class="arrival25"></td>
+                <td id="txt-center" class="status25"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img26" >
+                </td>
+                <th id="txt-center" class="row26"></th>
+                <td width="30%"  id="txt-center" class="origin26"></td>
+                <td id="txt-center" class="arrival26"></td>
+                <td id="txt-center" class="status26"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img27" >
+                </td>
+                <th id="txt-center" class="row27"></th>
+                <td width="30%"  id="txt-center" class="origin27"></td>
+                <td id="txt-center" class="arrival27"></td>
+                <td id="txt-center" class="status27"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img28" >
+                </td>
+                <th id="txt-center" class="row28"></th>
+                <td width="30%"  id="txt-center" class="origin28"></td>
+                <td id="txt-center" class="arrival28"></td>
+                <td id="txt-center" class="status28"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img29" >
+                </td>
+                <th id="txt-center" class="row29"></th>
+                <td width="30%"  id="txt-center" class="origin29"></td>
+                <td id="txt-center" class="arrival29"></td>
+                <td id="txt-center" class="status29"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img30" >
+                </td>
+                <th id="txt-center" class="row30"></th>
+                <td width="30%"  id="txt-center" class="origin30"></td>
+                <td id="txt-center" class="arrival30"></td>
+                <td id="txt-center" class="status30"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img31" >
+                </td>
+                <th id="txt-center" class="row31"></th>
+                <td width="30%"  id="txt-center" class="origin31"></td>
+                <td id="txt-center" class="arrival31"></td>
+                <td id="txt-center" class="status31"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img32" >
+                </td>
+                <th id="txt-center" class="row32"></th>
+                <td width="30%"  id="txt-center" class="origin32"></td>
+                <td id="txt-center" class="arrival32"></td>
+                <td id="txt-center" class="status32"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img33" >
+                </td>
+                <th id="txt-center" class="row33"></th>
+                <td width="30%"  id="txt-center" class="origin33"></td>
+                <td id="txt-center" class="arrival33"></td>
+                <td id="txt-center" class="status33"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img34" >
+                </td>
+                <th id="txt-center" class="row34"></th>
+                <td width="30%"  id="txt-center" class="origin34"></td>
+                <td id="txt-center" class="arrival34"></td>
+                <td id="txt-center" class="status34"></td>
+              </tr>
+              <tr>
+                <td>  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'"id="img35" >
+                </td>
+                <th id="txt-center" class="row35"></th>
+                <td width="30%"  id="txt-center" class="origin35"></td>
+                <td id="txt-center" class="arrival35"></td>
+                <td id="txt-center" class="status35"></td>
+              </tr>
+
+
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <footer>
+  <!--   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+
+        <div class="carousel-inner" id="slide" role="listbox">
+
+          <div class="item active">
+            <img class="fixed-height" src="../../images/1.png" width="460" height="345">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img class="fixed-height" src="../../images/2.png" width="460" height="345">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+        
+          <div class="item">
+            <img class="fixed-height" src="../../images/3.png" width="460" height="345">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+    
+          
+          <div class="item">
+            <img class="fixed-height" src="../../images/4.png" width="460" height="345">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img class="fixed-height" src="../../images/5.png" width="460" height="345">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+        </div>
+
+       
+    </div> -->
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <img onmousedown="return false" src = "../../images/omac.gif" style="    margin-left: -60px;  width: 1079px;   height: 391px;  margin-bottom: -27px;">
+<!--           <video autoplay="autoplay"  id="bannerVideo" class="fillWidth"  1079px >
+            <source src="Video/bottom_banner.mp4" type="video/mp4" />
+          </video> -->
+        </div>
+      </div>
+    </div>
+    <img style="margin-bottom: -20px;" onmousedown="return false" src="../../images/bottom-line.png">
+  
+  </footer>
+<script src="../../Scripts/lang1.js"></script>
+</body>
+</html>

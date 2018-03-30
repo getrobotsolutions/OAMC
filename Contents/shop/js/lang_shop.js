@@ -149,7 +149,9 @@
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                
+                location.href = "index.htm";
+                writeCookie("lang","arabic");
+                window.external.ChangeLanguage("ar-gb");
                 /*$('.titl1').text("مطار الرياض صفحة العرض");
                 $('#txt1').text("هنا يمكنك اكتشاف كل من خيارات الطعام والشراب، حيث أنها تقع، وما هو على القائمة.");
                 $('#txt2').text("حدد زر في أسفل اليسار للبدء.");

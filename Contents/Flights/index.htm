@@ -15,16 +15,13 @@
 	src="../../Scripts/LogConsole.js"></script>
 
 
-<!--<script language="JavaScript" type="text/javascript"
-	src="../../maincontents.js"></script>-->
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
  <!--<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>-->
  <script src="../../boots/js/bootstrap.min.js"></script>
+<script language="JavaScript" type="text/javascript"  src="../../maincontents.js"></script>
 
-  <script type="text/javascript">
-   
-  </script>
-  <!--<script src="../../Scripts/lang.js"></script>-->
+
+
 <script src="js/flights.js"></script>
   <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
 
@@ -97,7 +94,20 @@ thead {
     color: rgb(255, 255, 255) !important;
     background: #008a97;
   }
-
+  a#arr,a#dep {
+      font-size: 30px;
+      font-weight: 800;
+      margin-right: 0px;
+  }
+  .fArr {
+      z-index: 0;
+      position: relative;
+  }
+  #txt-center{
+    padding-top: 42px;
+    font-size: 23px;
+    font-family: bukra-regular;
+  }
 </style>
 
 
@@ -185,170 +195,306 @@ function GoHome()
           <table class="table table-striped" id="table1">
             <thead>
               <tr class="bg-primary">
-                <th id="flight">طيران</th>
-                <th id="origin">الأصل</th>
-                <th id="airline">شركة طيران</th>
-                <!-- <th id="terminal">طرفية</th> -->
-                <th id="arrival">وصول</th>
-                <th id="status">دقيقة</th>
-
+                <th id="status">الحالة</th>
+                <th id="arrival">الوقت</th>
+                <th width="30%" id="origin">المدينة</th>
+                <th id="flight">رقم الرحلة</th>
+                <th id="airline">شركة الطيران</th>
               </tr>
             </thead>
             <tbody class="tbdy">
               <tr>
-                <th class="row0"></th>
-                <td class="origin0"></td>
-               <!--  <td class="airline0"></td> -->
-                <td>  <img class="img-circle" src="" id="img0" >
+                <td id="txt-center" class="status0"></td>
+                <td id="txt-center" class="arrival0"></td>
+                <td width="30%" id="txt-center" class="origin0"></td>
+                <th id="txt-center" class="row0"></th>
+                <td>  
+                    <img class="img-circle" src="" id="img0" >
                 </td>
-
-                <!-- <td class="flight0"></td> -->
-                  <td class="arrival0"></td>
-                <td class="status0"></td>
               </tr>
 
               <tr>
-                <th class="row1"></th>
-                <td class="origin1"></td>
-                <!-- <td class="airline1"></td> -->
+                <td id="txt-center" class="status1"></td>
+                <td id="txt-center" class="arrival1"></td>
+                <td width="30%" id="txt-center" class="origin1"></td>
+                <th id="txt-center" class="row1"></th>
                 <td>  <img class="img-circle" src="" id="img1" >
                 </td>
-                <!-- <td class="flight1"></td> -->
-                  <td class="arrival1"></td>
-                <td class="status1"></td>
               </tr>
               <tr>
-                <th class="row2"></th>
-                <td class="origin2"></td>
-                <!-- <td class="airline2"></td> -->
+                <td id="txt-center" class="status2"></td>
+                <td id="txt-center" class="arrival2"></td>
+                <td width="30%" id="txt-center" class="origin2"></td>
+                <th id="txt-center" class="row2"></th>
                 <td>  <img class="img-circle" src="" id="img2" >
                 </td>
-                <!-- <td class="flight2"></td> -->
-                  <td class="arrival2"></td>
-                <td class="status2"></td>
               </tr>
               <tr>
-                <th class="row3"></th>
-                <td class="origin3"></td>
-                <!-- <td class="airline3"></td> -->
+                <td id="txt-center" class="status3"></td>
+                <td id="txt-center" class="arrival3"></td>
+                <td width="30%" id="txt-center" class="origin3"></td>
+                <th id="txt-center" class="row3"></th>
                 <td>  <img class="img-circle" src="" id="img3" >
                 </td>
-               <!--  <td class="flight3"></td> -->
-                  <td class="arrival3"></td>
-                <td class="status3"></td>
               </tr>
               <tr>
-                <th class="row4"></th>
-                <td class="origin4"></td>
-                <!-- <td class="airline4"></td> -->
+                <td id="txt-center" class="status4"></td>
+                <td id="txt-center" class="arrival4"></td>
+                <td width="30%" id="txt-center" class="origin4"></td>
+                <th id="txt-center" class="row4"></th>
                 <td>  <img class="img-circle" src="" id="img4" >
                 </td>
-                <!-- <td class="flight4"></td> -->
-                  <td class="arrival4"></td>
-                <td class="status4"></td>
               </tr>
               <tr>
-                <th class="row5"></th>
-                <td class="origin5"></td>
-                <!-- <td class="airline5"></td> -->
+                <td id="txt-center" class="status5"></td>
+                <td id="txt-center" class="arrival5"></td>
+                <td width="30%" id="txt-center" class="origin5"></td>
+                <th id="txt-center" class="row5"></th>
                 <td>  <img class="img-circle" src="" id="img5" >
                 </td>
-               <!--  <td class="flight5"></td> -->
-                  <td class="arrival5"></td>
-                <td class="status5"></td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status6"></td>
+                <td id="txt-center" class="arrival6"></td>
+                <td width="30%" id="txt-center" class="origin6"></td>
+                <th id="txt-center" class="row6"></th>
+                <td>  <img class="img-circle" src="" id="img6" >
+                </td>
+              </tr>
+             
+              <tr>
+                <td id="txt-center" class="status7"></td>
+                <td id="txt-center" class="arrival7"></td>
+                <td width="30%" id="txt-center" class="origin7"></td>
+                <th id="txt-center" class="row7"></th>
+                <td>  
+                    <img class="img-circle" src="" id="img7" >
+                </td>
               </tr>
 
               <tr>
-                <th class="row6"></th>
-                <td class="origin6"></td>
-                <!-- <td class="airline6"></td> -->
-                <td> 
-                 <img class="img-circle" src="" id="img6" >
+                <td id="txt-center" class="status8"></td>
+                <td id="txt-center" class="arrival8"></td>
+                <td width="30%" id="txt-center" class="origin8"></td>
+                <th id="txt-center" class="row8"></th>
+                <td>  <img class="img-circle" src="" id="img8" >
                 </td>
-                <!-- <td class="flight6"></td> -->
-                  <td class="arrival6"></td>
-                <td class="status6"></td>
-              </tr>
-
-              <tr>
-                <th class="row7"></th>
-                <td class="origin7"></td>
-                <!-- <td class="airline7"></td> -->
-                <td>  <img class="img-circle" id="img7" >
-                </td>
-                <!-- <td class="flight7"></td> -->
-                  <td class="arrival7"></td>
-                <td class="status7"></td>
               </tr>
               <tr>
-                <th class="row8"></th>
-                <td class="origin8"></td>
-                <!-- <td class="airline8"></td> -->
-                <td>  <img class="img-circle" id="img8" >
+                <td id="txt-center" class="status9"></td>
+                <td id="txt-center" class="arrival9"></td>
+                <td width="30%" id="txt-center" class="origin9"></td>
+                <th id="txt-center" class="row9"></th>
+                <td>  <img class="img-circle" src="" id="img9" >
                 </td>
-                <!-- <td class="flight8"></td> -->
-                  <td class="arrival8"></td>
-                <td class="status8"></td>
               </tr>
               <tr>
-                <th class="row9"></th>
-                <td class="origin9"></td>
-                <!-- <td class="airline9"></td> -->
-                <td>  <img class="img-circle" id="img9" >
+                <td id="txt-center" class="status10"></td>
+                <td id="txt-center" class="arrival10"></td>
+                <td width="30%" id="txt-center" class="origin10"></td>
+                <th id="txt-center" class="row10"></th>
+                <td>  <img class="img-circle" src="" id="img10" >
                 </td>
-               <!--  <td class="flight9"></td> -->
-                  <td class="arrival9"></td>
-                <td class="status9"></td>
               </tr>
               <tr>
-                <th class="row10"></th>
-                <td class="origin10"></td>
-                <!-- <td class="airline10"></td> -->
-                <td>  <img class="img-circle" id="img10" >
+                <td id="txt-center" class="status11"></td>
+                <td id="txt-center" class="arrival11"></td>
+                <td width="30%" id="txt-center" class="origin11"></td>
+                <th id="txt-center" class="row11"></th>
+                <td>  <img class="img-circle" src="" id="img11" >
                 </td>
-                <!-- <td class="flight10"></td> -->
-                  <td class="arrival10"></td>
-                <td class="status10"></td>
               </tr>
               <tr>
-                <th class="row11"></th>
-                <td class="origin11"></td>
-                <!-- <td class="airline11"></td> -->
-                <td>  <img class="img-circle" id="img11" >
+                <td id="txt-center" class="status12"></td>
+                <td id="txt-center" class="arrival12"></td>
+                <td width="30%" id="txt-center" class="origin12"></td>
+                <th id="txt-center" class="row12"></th>
+                <td>  <img class="img-circle" src="" id="img12" >
                 </td>
-                <!-- <td class="flight11"></td> -->
-                  <td class="arrival11"></td>
-                <td class="status11"></td>
               </tr>
               <tr>
-                <th class="row12"></th>
-                <td class="origin12"></td>
-                <!-- <td class="airline12"></td> -->
-                <td>  <img class="img-circle" id="img12" >
+                <td id="txt-center" class="status13"></td>
+                <td id="txt-center" class="arrival13"></td>
+                <td width="30%" id="txt-center" class="origin13"></td>
+                <th id="txt-center" class="row13"></th>
+                <td>  <img class="img-circle" src="" id="img13" >
                 </td>
-                <!-- <td class="flight12"></td> -->
-                  <td class="arrival12"></td>
-                <td class="status12"></td>
               </tr>
               <tr>
-                <th class="row13"></th>
-                <td class="origin13"></td>
-                <!-- <td class="airline13"></td> -->
-                <td>  <img class="img-circle" id="img13" >
+                <td id="txt-center" class="status14"></td>
+                <td id="txt-center" class="arrival14"></td>
+                <td width="30%" id="txt-center" class="origin14"></td>
+                <th id="txt-center" class="row14"></th>
+                <td>  <img class="img-circle" src="" id="img14" >
                 </td>
-                <!-- <td class="flight13"></td> -->
-                  <td class="arrival13"></td>
-                <td class="status13"></td>
               </tr>
               <tr>
-                <th class="row14"></th>
-                <td class="origin14"></td>
-                <!-- <td class="airline14"></td> -->
-                <td>  <img class="img-circle" id="img14" >
+                <td id="txt-center" class="status15"></td>
+                <td id="txt-center" class="arrival15"></td>
+                <td width="30%" id="txt-center" class="origin15"></td>
+                <th id="txt-center" class="row15"></th>
+                <td>  <img class="img-circle" src="" id="img15" >
                 </td>
-                <td class="flight14"></td>
-                  <!-- <td class="arrival14"></td> -->
-                <td class="status14"></td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status16"></td>
+                <td id="txt-center" class="arrival16"></td>
+                <td width="30%" id="txt-center" class="origin16"></td>
+                <th id="txt-center" class="row16"></th>
+                <td>  <img class="img-circle" src="" id="img16" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status17"></td>
+                <td id="txt-center" class="arrival17"></td>
+                <td width="30%" id="txt-center" class="origin17"></td>
+                <th id="txt-center" class="row17"></th>
+                <td>  <img class="img-circle" src="" id="img17" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status18"></td>
+                <td id="txt-center" class="arrival18"></td>
+                <td width="30%" id="txt-center" class="origin18"></td>
+                <th id="txt-center" class="row18"></th>
+                <td>  <img class="img-circle" src="" id="img18" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status19"></td>
+                <td id="txt-center" class="arrival19"></td>
+                <td width="30%" id="txt-center" class="origin19"></td>
+                <th id="txt-center" class="row19"></th>
+                <td>  <img class="img-circle" src="" id="img19" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status20"></td>
+                <td id="txt-center" class="arrival20"></td>
+                <td width="30%" id="txt-center" class="origin20"></td>
+                <th id="txt-center" class="row20"></th>
+                <td>  <img class="img-circle" src="" id="img20" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status21"></td>
+                <td id="txt-center" class="arrival21"></td>
+                <td width="30%" id="txt-center" class="origin21"></td>
+                <th id="txt-center" class="row21"></th>
+                <td>  <img class="img-circle" src="" id="img21" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status22"></td>
+                <td id="txt-center" class="arrival22"></td>
+                <td width="30%" id="txt-center" class="origin22"></td>
+                <th id="txt-center" class="row22"></th>
+                <td>  <img class="img-circle" src="" id="img22" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status23"></td>
+                <td id="txt-center" class="arrival23"></td>
+                <td width="30%" id="txt-center" class="origin23"></td>
+                <th id="txt-center" class="row23"></th>
+                <td>  <img class="img-circle" src="" id="img23" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status24"></td>
+                <td id="txt-center" class="arrival24"></td>
+                <td width="30%" id="txt-center" class="origin24"></td>
+                <th id="txt-center" class="row24"></th>
+                <td>  <img class="img-circle" src="" id="img24" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status25"></td>
+                <td id="txt-center" class="arrival25"></td>
+                <td width="30%" id="txt-center" class="origin25"></td>
+                <th id="txt-center" class="row25"></th>
+                <td>  <img class="img-circle" src="" id="img25" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status26"></td>
+                <td id="txt-center" class="arrival26"></td>
+                <td width="30%" id="txt-center" class="origin26"></td>
+                <th id="txt-center" class="row26"></th>
+                <td>  <img class="img-circle" src="" id="img26" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status27"></td>
+                <td id="txt-center" class="arrival27"></td>
+                <td width="30%" id="txt-center" class="origin27"></td>
+                <th id="txt-center" class="row27"></th>
+                <td>  <img class="img-circle" src="" id="img27" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status28"></td>
+                <td id="txt-center" class="arrival28"></td>
+                <td width="30%" id="txt-center" class="origin28"></td>
+                <th id="txt-center" class="row28"></th>
+                <td>  <img class="img-circle" src="" id="img28" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status29"></td>
+                <td id="txt-center" class="arrival29"></td>
+                <td width="30%" id="txt-center" class="origin29"></td>
+                <th id="txt-center" class="row29"></th>
+                <td>  <img class="img-circle" src="" id="img29" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status30"></td>
+                <td id="txt-center" class="arrival30"></td>
+                <td width="30%" id="txt-center" class="origin30"></td>
+                <th id="txt-center" class="row30"></th>
+                <td>  <img class="img-circle" src="" id="img30" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status31"></td>
+                <td id="txt-center" class="arrival31"></td>
+                <td width="30%" id="txt-center" class="origin31"></td>
+                <th id="txt-center" class="row31"></th>
+                <td>  <img class="img-circle" src="" id="img31" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status32"></td>
+                <td id="txt-center" class="arrival32"></td>
+                <td width="30%" id="txt-center" class="origin32"></td>
+                <th id="txt-center" class="row32"></th>
+                <td>  <img class="img-circle" src="" id="img32" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status33"></td>
+                <td id="txt-center" class="arrival33"></td>
+                <td width="30%" id="txt-center" class="origin33"></td>
+                <th id="txt-center" class="row33"></th>
+                <td>  <img class="img-circle" src="" id="img33" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status34"></td>
+                <td id="txt-center" class="arrival34"></td>
+                <td width="30%" id="txt-center" class="origin34"></td>
+                <th id="txt-center" class="row34"></th>
+                <td>  <img class="img-circle" src="" id="img34" >
+                </td>
+              </tr>
+              <tr>
+                <td id="txt-center" class="status35"></td>
+                <td id="txt-center" class="arrival35"></td>
+                <td width="30%" id="txt-center" class="origin35"></td>
+                <th id="txt-center" class="row35"></th>
+                <td>  <img class="img-circle" src="" id="img35" >
+                </td>
               </tr>
 
 
@@ -356,6 +502,9 @@ function GoHome()
             </tbody>
           </table>
         </div>
+
+     
+
 
       </div>
     </div>

@@ -3,27 +3,31 @@ $(document).ready(function(){
         $("#loading").show();
         $(".fArr").hide();
         //Change to English
-        $('#change-ar').css({"background":"#008a97", "color":"white",  "border-radius": "5px"});
+       /* $('#change-ar').css({"background":"#008a97", "color":"white",  "border-radius": "5px"});*/
               $('#change-us').click(function(){
-                $('#change-ar').css({"background":"white", "color":"#008a97"});
-                $('#change-us').css({"background":"#008a97", "color":"white", "border-radius": "5px"});
-                $('#arr').text("Arrivals");
+                /*$('#change-ar').css({"background":"white", "color":"#008a97"});*/
+                /*$('#change-us').css({"background":"#008a97", "color":"white", "border-radius": "5px"});*/
+                /*$('#arr').text("Arrivals");
                 $('#dep').text("Departures");
 
                 $('#flight').text("Flight");
-                $('#origin').text("Origin");
+                $('#origin').text("Destination");
                 $('#airline').text("Airline");
                 $('#terminal').text("Terminal");
-                $('#arrival').text("Departure");
-                $('#status').text("Status");
+                $('#arrival').text("Time");
+                $('#status').text("Status");*/
+
+                location.href = "flights_dep_us.htm";
+                writeCookie("lang","english");
+                window.external.ChangeLanguage("en-gb");
    
               });
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                $('#change-us').css({"background":"white", "color":"#008a97"});
-                $('#change-ar').css({"background":"#008a97", "color":"white", "border-radius": "5px"});
-                $('#arr').text("الوصول");
+               /* $('#change-us').css({"background":"white", "color":"#008a97"});*/
+               /* $('#change-ar').css({"background":"#008a97", "color":"white", "border-radius": "5px"});*/
+                /*$('#arr').text("الوصول");
                 $('#dep').text("المغادرين");
 
                 $('#flight').text("طيران");
@@ -31,7 +35,11 @@ $(document).ready(function(){
                 $('#airline').text("شركة طيران");
                 $('#terminal').text("طرفية");
                 $('#arrival').text("وصول");
-                $('#status').text("دقيقة");
+                $('#status').text("دقيقة");*/
+
+                location.href = "flights_dep.htm";
+                writeCookie("lang","arabic");
+                window.external.ChangeLanguage("ar-gb");
 
               });
 

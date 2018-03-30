@@ -2,10 +2,16 @@ $(document).ready(function(){
   ShowTime();
         $("#loading").show();
         $(".fArr").hide();
+
         //Change to English
        // $('#change-ar').css({"background":"#4a32a4", "color":"white", "padding": "0px 10px", "border-radius": "5px"});
               
               $('#change-us').click(function(){
+           
+                location.href = "index_us.htm";
+                writeCookie("lang","english");
+                window.external.ChangeLanguage("en-gb");
+               /* $(".fArr-eng").show();
                  writeCookie("lang","english");
                 $('#change-us').toggleClass('active');
                 $('#change-ar').toggleClass('active');//css({"background":"white", "color":"#4a32a4"});
@@ -17,12 +23,16 @@ $(document).ready(function(){
                 $('#origin').text("Origin");
                 $('#airline').text("Airline");
                 $('#terminal').text("Terminal");
-                $('#arrival').text("Arrival");
-                $('#status').text("Status");
+                $('#arrival').text("Time");
+                $('#status').text("Status");*/
               });
 
               //Change to Arabic
               $('#change-ar').click(function(){
+                  location.href = "index.htm";
+                  writeCookie("lang","arabic");
+                  window.external.ChangeLanguage("ar-gb");
+               /* $(".fArr").show();
                 writeCookie("lang","arabic");
                 $('#change-us').toggleClass('active');
                 $('#change-ar').toggleClass('active');
@@ -34,7 +44,10 @@ $(document).ready(function(){
                 $('#airline').text("شركة طيران");
                 $('#terminal').text("طرفية");
                 $('#arrival').text("وصول");
-                $('#status').text("دقيقة");
+                $('#status').text("دقيقة");*/
+               /* location.href = "index.htm";
+                writeCookie("lang","eng");
+                window.external.ChangeLanguage("ar-eg");*/
 
               });
 
