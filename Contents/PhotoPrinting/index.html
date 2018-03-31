@@ -70,6 +70,8 @@
       		PlaySpeech("Its time to smile.");
       		$('#change-us').addClass('active');
       		$('#change-ar').removeClass('active');
+      		$("#frame-text").text("Choose one of the below frames:");
+    		$("#frame-text").css('direction','ltr');
       
     	}
     	else if (readCookie("lang")=="arabic") {
@@ -82,6 +84,9 @@
     		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
     		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
     		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
+    		$("#frame-text").text("اختر إطارا لصورتك");
+    		$("#frame-text").css('direction','rtl');
+
       
     	}
 
@@ -92,6 +97,8 @@
     		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
     		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
     		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
+    		$("#frame-text").text("اختر إطارا لصورتك");
+    		$("#frame-text").css('direction','rtl');
     		
   		});
   		$('#change-us').click(function(){
@@ -102,6 +109,8 @@
     		$("#email-photo").attr("src","images/btn_nor_email_en-us.png");
     		$("#retake-photo").attr("src", "images/btn_nor_retake_en-us.png");
     		$("#btn_start").attr("src","images/start_btn_nor_en-us.png");
+    		$("#frame-text").text("Choose one of the below frames:");
+    		$("#frame-text").css('direction','ltr');
     		
   		});
   		$('#take_photo').one('click', function(e){
@@ -151,8 +160,11 @@
 
 	<div id="wrapper">
 		<!--<div id="header">
-			<p class="tit">Take A Photo</p>
-			<p class="btn-home" onclick="Home('ko')" ></p>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
 		</div>-->
 		<div id="container">
 			<div id="contents">
@@ -177,6 +189,7 @@
 					<li><!--<img src="Images/btn_nor_print_en-us.png" alt="포토프린트" onclick="PrintPhoto()">--></li>
 					<li><img src="Images/btn_nor_retake_en-us.png" id="retake-photo" alt="다시촬영하기" onclick="Retake()"></li>
 				</ul>
+				<p id="frame-text">Choose one of the below frames:</p>
 				<dl class="photo_frame">
 					<dd><img src="Images/btn_frame01.png" alt="프레임1" onclick="SelectFrame(5)"></dd>
 					<dd><img src="Images/btn_frame02.png" alt="프레임2" onclick="SelectFrame(2)"></dd>

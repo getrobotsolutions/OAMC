@@ -29,8 +29,8 @@ body {
 */
 canvas  {
 	position: absolute;
-	margin-top: 0px;
-	margin-left: -914px;
+	    margin-top: -4px;
+    margin-left: -911px;
 }
 .capture {
 	position: absolute;
@@ -135,4 +135,13 @@ canvas  {
 .enter {
 	margin-left: 880px;
 	margin-top: 3px;
+}
+
+#frame-text{
+	padding: 0 73px;
+    position: absolute;
+    top: 839px;
+    color: white;
+    width: 100%;
+    font-size: 28px;
 }

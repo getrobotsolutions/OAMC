@@ -189,6 +189,7 @@
 
     
     #content_air,#content_date{
+    width: 100%;
     line-height: 45px;
     font-size: 35px;
     color: #73787c;
@@ -435,9 +436,9 @@
 .right{float: right; position: absolute;right: 0}
 
 #temp{        display: block;
-    width: 350px;
+    width: 100%;
     margin: 20px 0px 0 13px;
-    font-size: 27px;
+    font-size: 26px;
     line-height: 40px;
    
   }
