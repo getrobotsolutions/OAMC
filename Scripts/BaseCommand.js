@@ -13,18 +13,6 @@ var g_language;
 var g_mute = 0;
 var g_volume = 0.4;
 
-function quiz_call(strContentsName)
-{
-
-	if(strContentsName == "Quiz")   
-	{
-		
-		//if(strLanguage=="En") { PlaySpeech("Welcome to Amegan Quiz.");  }
-		
-		location.href = "../Quiz/Quiz.htm";
-	}
-}
-
 // ChangeLanguage(language) : 언어 변경-------------------------------------
 function ChangeLanguage(language)
 {
@@ -403,10 +391,6 @@ today = mm+"/"+dd+"/"+yyyy + " " +today.getHours() + ":" + today.getMinutes()+":
 function ShowTime()  
         {  
             var dt = new Date();  
-            //formatAMPM(dt);
-            //var localeSpecificTime = dt.toLocaleTimeString();
-            //localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
-            //document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime; 
             document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;//dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime; 
             document.getElementById("content_date") .innerHTML = formatDate(dt);
             window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec  

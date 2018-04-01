@@ -14,18 +14,8 @@ $(document).ready(function(){
     var lan="ar-eg";
     var volume=0.4;
                 
-                /*$('#content_fly').text("اضغط هنا للبدء");
 
-                $('#content_eat').html("المطاعم");
-
-                $('#content_shop').text("التسوق");
-                $('#content_info').html("المعلومات");
-                $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرحلات");
-                $('#content_scan').html("مرر تذكرة صعود الطائرة");
-                $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("إلتقاط صورة");*/
-                $('#content_fly').hide();
+              $('#content_fly').hide();
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
 
@@ -188,13 +178,11 @@ $(document).ready(function(){
    
 
   });
-     $("#t-popup").click(function () {
-      if(readCookie("lang")=="english"){
+  $("#t-popup").click(function () {
+    if(readCookie("lang")=="english"){
       window.external.ChangeLanguage("en-gb");
       window.external.SetVolume(1);
-      PlaySpeech("Find your way around our airport.");
-     
-      
+      PlaySpeech("Find your way around our airport."); 
     }
     /*else if (readCookie("lang")=="arabic") {
       
@@ -253,10 +241,6 @@ $('#dialog-box-info').hide();
 function ShowTime()  
         {  
             var dt = new Date();  
-            //formatAMPM(dt);
-            //var localeSpecificTime = dt.toLocaleTimeString();
-            //localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
-            //document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime; 
             document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;//dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime; 
             document.getElementById("content_date") .innerHTML = formatDate(dt);
             window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec  
