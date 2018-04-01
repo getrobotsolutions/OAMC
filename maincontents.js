@@ -245,7 +245,7 @@ function OnJoystickControlled(strPara){
 	    }
 	}*/
 	if(btn_info[3] == '1'){
-		GoHome();
+		//GoHome();
 		
 	}
 

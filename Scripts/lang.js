@@ -2,8 +2,12 @@
 $(document).ready(function(){
    ShowTime();
 
-     $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
+    $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
       $('#dialog-overlay, #dialog-box').hide();   
+      return false;
+    });
+    $('a.btn-ok, #dialog-overlay-info, #dialog-box-info').click(function () {   
+      $('#dialog-overlay-info, #dialog-box-info').hide();   
       return false;
     });
     var welcomeMessage= "";
