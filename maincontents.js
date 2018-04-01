@@ -43,15 +43,20 @@ function FC_ContentsCall(strContentsName, strLanguage)
 	}
 
 	if(strContentsName == "Flights")
-	{
-		location.href = "Contents/Flights/flights_dep.htm";
+	{  
+		
+
+		if(readCookie("lang")=="english"){ location.href = "Contents/Flights/flights_dep_us.htm"; }
+		else { location.href = "Contents/Flights/flights_dep.htm"; }
+		
 	}
 	if(strContentsName == "BoardingPass")
 	{
 		location.href = "Contents/BoardingPass/index.htm";
 	}
 	if(strContentsName == "sub_flights"){
-		location.href = "../Flights/index.htm"
+		if(readCookie("lang")=="english"){ location.href = "../Flights/index_us.htm" }
+		else { location.href = "../Flights/index.htm" }
 	}
 	if(strContentsName == "sub_boardingpass"){
 		location.href = "../BoardingPass/index.htm"
