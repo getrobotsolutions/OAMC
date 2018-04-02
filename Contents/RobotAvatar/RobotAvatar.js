@@ -100,7 +100,7 @@ var refreshIntervalId ;
 		if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
-        PlaySpeech('Look at the camera on the top of the robot’s head.');  
+        PlaySpeech('Look at the camera on the robot’s head');  
     }
     else if (readCookie("lang")=="arabic") {
         window.external.ChangeLanguage("ar-eg");
@@ -159,5 +159,5 @@ var refreshIntervalId ;
 	}
 
 	function OnUserDisappeared() {
-		//location.href = "../../IdlePage/IdlePage.htm";
+		
 	}
