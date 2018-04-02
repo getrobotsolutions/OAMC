@@ -212,37 +212,17 @@ function OnJoystickControlled(strPara){
 	var btn_info = strPara.split(',')[4];
 
 
-<<<<<<< HEAD
-	/*if(btn_info[0] == '1'){
-        window.external.ChangeLanguage("en-gb");
-        SetVolume(1);
-        window.external.PlaySpeech("Can't wait to see you on the 20th of March!");
-	}
-	if(btn_info[0] == '1'){
-        window.external.ChangeLanguage("ar-eg");
-        SetVolume(1);
-        window.external.PlaySpeech("حَيَّاكُم تَفَضَّلوا");
-	}*/
-
-	
-	/*if(btn_info[2] == '1'){
-
-		window.external.ChangeLanguage("en-gb");
-		SetVolume(1);
-		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
-	}
-=======
 	if(btn_info[0] == '1'){
 		if(readCookie("lang")=="english"){
 	        window.external.ChangeLanguage("en-gb");
 	        SetVolume(1);
-	        window.external.PlaySpeech("bye, bye. Enjoy your flight.");
-	        //window.external.PlaySpeech("Hi, I’m Morriya, how can I help you?");
+	        //window.external.PlaySpeech("bye, bye. Enjoy your flight.");
+	        window.external.PlaySpeech("Hi, I’m Saif, how can I help you?");
 	    }
     	else if (readCookie("lang")=="arabic") {
     		window.external.ChangeLanguage("ar-eg");
 	        SetVolume(1);
-	        window.external.PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟");
+	        window.external.PlaySpeech("مَرْحَبَاً ، أَنَا سَيْف. كَيْفَ يُمْكِنُنِيْ أنْ أُساعِدَكْ؟");
     	}
 	}
 	if(btn_info[1] == '1'){
@@ -269,7 +249,7 @@ function OnJoystickControlled(strPara){
 	        window.external.PlaySpeech("");
 	    }
 	}*/
->>>>>>> master
+
 	if(btn_info[3] == '1'){
 		//GoHome();
 		

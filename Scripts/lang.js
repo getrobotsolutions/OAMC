@@ -1,25 +1,6 @@
 
 $(document).ready(function(){
    ShowTime();
-<<<<<<< HEAD
-    var welcomeMessage= "مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-    var lan="ar-eg";
-    var volume=0.4;
-                
-                $('#content_term').text("محطة A");
-                //$('#content_air').text("");
-                $('#content_fly').text("اضغط هنا للبدء");
-
-                $('#content_eat').html("مطاعم");
-
-                $('#content_shop').text("تسوق");
-                $('#content_info').html("المعلومات");
-                $('#content_map').html("خريطة المبنى");
-                $('#content_flights').html("معلومات الرحلات");
-                $('#content_scan').html("مرر تذكرة صعود الطائرة");
-                $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("التقاط صورة");
-=======
 
     $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
       $('#dialog-overlay, #dialog-box').hide();   
@@ -35,23 +16,15 @@ $(document).ready(function(){
                 
 
               $('#content_fly').hide();
->>>>>>> master
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
 
 
               
-<<<<<<< HEAD
-                var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
-                var lan="ar-eg";
-                volume=0.4;
-                //var welcomeMessage=" ";
-=======
                 /*var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 var lan="ar-eg";
                 volume=0.4;*/
                 var welcomeMessage=" ";
->>>>>>> master
 
                 $('#content_fly').hide();
 
@@ -62,15 +35,9 @@ $(document).ready(function(){
                 $('#content_fly').text("اضغط هنا للبدء");
 
 
-<<<<<<< HEAD
-                $('#content_eat').html("مطاعم");
-
-                $('#content_shop').text("تسوق");
-=======
                 $('#content_eat').html("المطاعم");
 
                 $('#content_shop').text("التسوق");
->>>>>>> master
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرحلات");
@@ -137,10 +104,10 @@ $(document).ready(function(){
 
               //Change to Arabic
               $('#change-ar').click(function(){
-                //var welcomeMessage=" ";
-                welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                var welcomeMessage=" ";
+                /*welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 lan="ar-eg";
-                volume=0.4;
+                volume=0.4;*/
                 writeCookie("lang","arabic");
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -156,15 +123,9 @@ $(document).ready(function(){
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
 
-<<<<<<< HEAD
-                $('#content_eat').html("مطاعم");
-
-                $('#content_shop').text("تسوق");
-=======
                 $('#content_eat').html("المطاعم");
 
                 $('#content_shop').text("التسوق");
->>>>>>> master
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرحلات");
@@ -205,10 +166,6 @@ $(document).ready(function(){
       if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
-<<<<<<< HEAD
-        PlaySpeech("Here is some information to make your journey more enjoyable.");
-    }
-=======
         PlaySpeech("Learn about Muscat International Airport.");
         ShowPopup2('images/infographic-en.jpg');
       }
@@ -218,7 +175,6 @@ $(document).ready(function(){
         PlaySpeech("مَعْلُومَاتٌ قَدْ تُهِمُكْ عَنْ مَطَارْ مَسْقَطْ اَلْجَدِيدْ");
         ShowPopup2('images/infographic-ar.jpg');
       }
->>>>>>> master
    
 
   });
@@ -237,15 +193,7 @@ $(document).ready(function(){
     }*/
     ShowPopup();
   });
-<<<<<<< HEAD
-    $("#t-map").click(function () {
-    ShowPopup();
-    //$("$list1").show();
 
-  });
-=======
-
->>>>>>> master
 });
 function ShowPopup(){
 
