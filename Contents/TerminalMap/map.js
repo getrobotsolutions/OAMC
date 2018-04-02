@@ -23,11 +23,9 @@ $(document).ready(function(){
           $('#txt2').text("جنوب الرصيف المغادرة | المستوى 02");
           $('#txt3').text("الرصيف الشمالي | المستوى 02");
         });
-<<<<<<< HEAD
+
 	});
-=======
-  });
->>>>>>> master
+
 function OnUserDisappeared()
 {
   setTimeout(function(){
