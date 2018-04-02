@@ -69,6 +69,17 @@ var isPhotoTaken = false;
 function TakePhoto()
 {
     isPhotoTaken = false;
+
+    if(readCookie("lang")=="english"){
+        window.external.ChangeLanguage("ar-gb");
+        window.external.SetVolume(1);
+        PlaySpeech('Look at the camera on the robot’s head.');  
+    }
+    else if (readCookie("lang")=="arabic") {
+        window.external.ChangeLanguage("ar-eg");
+        window.external.SetVolume(0.4);
+        PlaySpeech("اُنْظُرْ إلَى اَلْكَامِيرة عَلَى رَأْسِ اَلْرَجُلِ اَلْآلِيْ");
+    }
     
     // 촬영 버튼 이미지 변경 & 숨김
     document.getElementById("btn_start").src = "Images/start_btn_press_"+c_language+".png";
@@ -203,18 +214,20 @@ function SendEmail()
     
     // 메일 전송에 필요한 정보
     var addr = message;
-    var subject = "Welcome to the FUTURE ROBOT booth.";
-    var body = "Thank you for visiting us.";
-    /*var mail_server = "smtp.gmail.com";
-    var mail_addr_sender = "futurerobot0724@gmail.com";
-    var pswd = "frmac123";
+    //var addr = "paul@robotaisolutions.com";
+    var subject = "Welcome to the Muscat International Airport.";
+    var body = "Email : " + message;
+    var mail_server = "smtp.gmail.com";
+    var mail_addr_sender = "ict.muscatairport@gmail.com";
+    var pswd = "123456789K";
+   
     var port = 587;
-    var ssl = "true";*/
-    var mail_server = "mail.getrobotsolutions.com";
+    var ssl = "true";
+    /*var mail_server = "mail.getrobotsolutions.com";
     var mail_addr_sender = "tamoor@getrobotsolutions.com";
     var pswd = "@tam2016";
     var port = 587;
-    var ssl = "false";
+    var ssl = "false"; */
     
     // 이미지 파일명 지정 및 저장
     var d = new Date();
@@ -226,6 +239,7 @@ function SendEmail()
     {
         window.external.SendEmail(addr, imageFilePath, subject, body, mail_server, mail_addr_sender, pswd, port, ssl);
     }
+
     
     // 키보드 숨김
     HideKeyboard();

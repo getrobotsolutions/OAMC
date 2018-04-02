@@ -13,18 +13,6 @@ var g_language;
 var g_mute = 0;
 var g_volume = 0.4;
 
-function quiz_call(strContentsName)
-{
-
-	if(strContentsName == "Quiz")   
-	{
-		
-		//if(strLanguage=="En") { PlaySpeech("Welcome to Amegan Quiz.");  }
-		
-		location.href = "../Quiz/Quiz.htm";
-	}
-}
-
 // ChangeLanguage(language) : 언어 변경-------------------------------------
 function ChangeLanguage(language)
 {
@@ -403,22 +391,41 @@ today = mm+"/"+dd+"/"+yyyy + " " +today.getHours() + ":" + today.getMinutes()+":
 function ShowTime()  
         {  
             var dt = new Date();  
-            //formatAMPM(dt);
-            //var localeSpecificTime = dt.toLocaleTimeString();
-            //localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
-            //document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime; 
-            document.getElementById("content_air") .innerHTML = formatAMPM(dt);//dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime; 
-
+            document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;//dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime; 
+            document.getElementById("content_date") .innerHTML = formatDate(dt);
             window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec  
         }
 function formatAMPM(date) {
 
   var hours = date.getHours();
   var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'PM' : 'AM';
+  /*var ampm = hours >= 12 ? 'PM' : 'AM';
   hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
+  hours = hours ? hours : 12; // the hour '0' should be '12'*/
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+  var dayName = days[date.getDay()];
+  
+  //dayName = date.toString().split(' ')[0];
+  hours = hours <10? '0' +hours : hours;
   minutes = minutes < 10 ? '0'+minutes : minutes;
-  var strTime = hours + ':' + minutes + ' ' + ampm;
+  var strTime = ' ' + hours + ':' + minutes + ' ' + dayName;// + ampm;
   return strTime;
 }
+
+function formatDate(date){
+
+  var m_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var month = m_names[date.getMonth()];
+  var day = date.getDate();
+  day = getGetOrdinal(day);
+  
+  var output = (month<10 ? '0' : '') + month + ' ' +(day<10 ? '0' : '') + day+', '+ date.getFullYear() ;
+  return output;
+}
+function getGetOrdinal(n) {
+    var s=["th","st","nd","rd"],
+    v=n%100;
+    return n+'<sup>'+(s[(v-20)%10]||s[v]||s[0])+'</sup>';
+ }

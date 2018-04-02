@@ -43,15 +43,20 @@ function FC_ContentsCall(strContentsName, strLanguage)
 	}
 
 	if(strContentsName == "Flights")
-	{
-		location.href = "Contents/Flights/index.htm";
+	{  
+		
+
+		if(readCookie("lang")=="english"){ location.href = "Contents/Flights/flights_dep_us.htm"; }
+		else { location.href = "Contents/Flights/flights_dep.htm"; }
+		
 	}
 	if(strContentsName == "BoardingPass")
 	{
 		location.href = "Contents/BoardingPass/index.htm";
 	}
 	if(strContentsName == "sub_flights"){
-		location.href = "../Flights/index.htm"
+		if(readCookie("lang")=="english"){ location.href = "../Flights/index_us.htm" }
+		else { location.href = "../Flights/index.htm" }
 	}
 	if(strContentsName == "sub_boardingpass"){
 		location.href = "../BoardingPass/index.htm"
@@ -77,11 +82,15 @@ function FC_ContentsCall(strContentsName, strLanguage)
 		location.href = "Contents/RobotDance/RobotDance.htm";
 	}
 }
+
 function GoHome()
 {
 	//if(flagPictureAvatar == "true")	DeleteRobotFace();	//사진 아바타 삭제
+	/*location.href = "../../maincontents.htm";*/
 	location.href = "../../maincontents.htm";
+	
 }
+
 
 //------------------------------------------------------------
 //Language Change. : Kr, En, Cn, Jp 
@@ -131,10 +140,18 @@ function FC_LoadConfigView()
 }
 
 function OnUserApproached()
-{	
-	window.external.RobotDanceStart(false);
-//	SetVolume(0.7);
-//	PlaySpeech("Hi, welcome to Laguna Tools, a premium manufacturer of wood working and metal working tools.");
+{	PlaySpeech("Hi, I’m Morriya, how can I help you?");
+	if(readCookie("lang")=="english"){
+      window.external.ChangeLanguage("en-gb");
+      window.external.SetVolume(1);
+      PlaySpeech("Hi, I’m Morriya, how can I help you?");
+      
+    }
+    else if (readCookie("lang")=="arabic") {
+      window.external.ChangeLanguage("ar-eg");
+      window.external.SetVolume(0.4);
+      PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟");
+    }
 }
 
 function OnUserDisappeared()
@@ -172,7 +189,7 @@ function writeCookie(name, value, days)
 }
 
 function readCookie(name)
-{
+{ 
 	var searchName = name + "=";
 	var cookies = document.cookie.split(';');
 	for (var i=0; i<cookies.length; i++) 
@@ -195,6 +212,7 @@ function OnJoystickControlled(strPara){
 	var btn_info = strPara.split(',')[4];
 
 
+<<<<<<< HEAD
 	/*if(btn_info[0] == '1'){
         window.external.ChangeLanguage("en-gb");
         SetVolume(1);
@@ -213,12 +231,49 @@ function OnJoystickControlled(strPara){
 		SetVolume(1);
 		window.external.PlaySpeech("Good evening your excellence's, and our distinguished guests.");
 	}
-	if(btn_info[3] == '1'){
-		window.external.ChangeLanguage("ar-eg");
-		SetVolume(1);
-		window.external.PlaySpeech("طبعاً ، تفضلْ دكتورْ مُؤمنْ");
-		
+=======
+	if(btn_info[0] == '1'){
+		if(readCookie("lang")=="english"){
+	        window.external.ChangeLanguage("en-gb");
+	        SetVolume(1);
+	        window.external.PlaySpeech("bye, bye. Enjoy your flight.");
+	        //window.external.PlaySpeech("Hi, I’m Morriya, how can I help you?");
+	    }
+    	else if (readCookie("lang")=="arabic") {
+    		window.external.ChangeLanguage("ar-eg");
+	        SetVolume(1);
+	        window.external.PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟");
+    	}
+	}
+	if(btn_info[1] == '1'){
+		if(readCookie("lang")=="english"){
+	        window.external.ChangeLanguage("en-gb");
+	        SetVolume(1);
+	        window.external.PlaySpeech("اَهْلاً ، كَيْفَ يُمْكِنُنِي أَنْ أُسَاعِدَكَ؟");
+	    }
+	    else if (readCookie("lang")=="arabic") {
+    		window.external.ChangeLanguage("ar-eg");
+	        SetVolume(1);
+	        window.external.PlaySpeech("");
+    	}
+	}
+	/*if(btn_info[2] == '1'){
+		if(readCookie("lang")=="english"){
+			window.external.ChangeLanguage("en-gb");
+			SetVolume(1);
+			window.external.PlaySpeech("I've never been on an airplane, it must be so fun to fly.");
+		}
+		else if (readCookie("lang")=="arabic") {
+			window.external.ChangeLanguage("ar-eg");
+	        SetVolume(1);
+	        window.external.PlaySpeech("");
+	    }
 	}*/
+>>>>>>> master
+	if(btn_info[3] == '1'){
+		//GoHome();
+		
+	}
 
 	if(btn_info[4] == '1'){
 		SetHeadYaw(-35, 23);       
@@ -244,56 +299,4 @@ function OnJoystickControlled(strPara){
 	if(btn_info[11] == '1'){
 		SetHeadYaw(0,23);
 	}
-
-
 }
-
-//-[End Cookie Control]------------------------------------------------------//
-$(document).ready(function(){
-  //Change to English
-	/*$('#change-us').click(function(){
-      
-        /*$('#change-ar').css("background", "#f8f8f8");
-        $('#change-fr').css("background", "#f8f8f8");
-        $('#change-sp').css("background", "#f8f8f8");
-        $('#change-ch').css("background", "#f8f8f8");
-        $('#change-ko').css("background", "#f8f8f8");
-	    $(this).css("background", "#e7e7e7");
-        $('.fly').text("Flights");
-    	$('.scan').text("Scan your Boarding-pass");
-        $('.map').text("Terminal Map");
-        $('#content_term').text("Terminal A");
-        $('#content_air').text("");
-        $('#content_fly').text("Press here to start");
-        $('#content_eat').text("Eat");
-        $('#content_shop').text("Shop");
-        $('#content_info').text("Information");
-        $('#content_map').html("Terminal <br> Map");
-		$('#content_flights').html("Flight <br> Information");
-		$('#content_scan').html("Scan Your <br> Boarding-pass");
-		$('#content_selfie').text("Take Photo");
-        $('#content_avatar').text("Avatar");
-        $('#content_share').text("SHARE");
-        $('#content_explore').text("Explore our concessions");
-	});
-              //Change to Arabic
-    $('#change-ar').click(function(){
-                
-        /*$('#change-us').css("background", "#f8f8f8");
-        $('#change-fr').css("background", "#f8f8f8");
-        $('#change-sp').css("background", "#f8f8f8");
-        $('#change-ch').css("background", "#f8f8f8");
-        $('#change-ko').css("background", "#f8f8f8");
-        $(this).css("background", "#e7e7e7");
-        $('#content_term').text("محطة A");
-        $('#content_air').text("");
-        $('#content_fly').text("ملاح");
-        $('#content_eat').text("تأكل");
-        $('#content_shop').text("متجر");
-        $('#content_info').text("معلومات");
-        $('#content_dance').text("رقص");
-        $('#content_selfie').text("تصوير");
-        $('#content_share').text("شارك");
-      	$('#content_explore').text("استكشاف تنازلات لدينا");
-    }); */             
-});

@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
    ShowTime();
+<<<<<<< HEAD
     var welcomeMessage= "مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
     var lan="ar-eg";
     var volume=0.4;
@@ -18,13 +19,41 @@ $(document).ready(function(){
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
                 $('#content_selfie').text("التقاط صورة");
+=======
+
+    $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
+      $('#dialog-overlay, #dialog-box').hide();   
+      return false;
+    });
+    $('a.btn-ok, #dialog-overlay-info, #dialog-box-info').click(function () {   
+      $('#dialog-overlay-info, #dialog-box-info').hide();   
+      return false;
+    });
+    var welcomeMessage= "";
+    var lan="ar-eg";
+    var volume=0.4;
+                
+
+              $('#content_fly').hide();
+>>>>>>> master
               if(readCookie("lang")=="arabic"){
                 writeCookie("lang","arabic");
+
+
               
+<<<<<<< HEAD
                 var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
                 var lan="ar-eg";
                 volume=0.4;
                 //var welcomeMessage=" ";
+=======
+                /*var welcomeMessage="مرحبا. مرحبا بكم في مطارنا. للبدء، يرجى الضغط على أحد الأزرار أدناه.";
+                var lan="ar-eg";
+                volume=0.4;*/
+                var welcomeMessage=" ";
+>>>>>>> master
+
+                $('#content_fly').hide();
 
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
@@ -33,15 +62,21 @@ $(document).ready(function(){
                 $('#content_fly').text("اضغط هنا للبدء");
 
 
+<<<<<<< HEAD
                 $('#content_eat').html("مطاعم");
 
                 $('#content_shop').text("تسوق");
+=======
+                $('#content_eat').html("المطاعم");
+
+                $('#content_shop').text("التسوق");
+>>>>>>> master
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرحلات");
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("التقاط صورة");
+                $('#content_selfie').text("إلتقاط صورة");
                 //$('#content_dance').html("صورتك في <br>الوجه الآلي");
               }
               else if(readCookie("lang")=="english"){
@@ -58,16 +93,17 @@ $(document).ready(function(){
 
                 //$('#content_term').text("Terminal A");
                 //$('#content_air').text("Riyadh Airport");
+                 $('#content_fly').show();
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
-                $('#content_eat').text("EAT");
-                $('#content_shop').text("SHOP");
+                $('#content_eat').text("DINING");
+                $('#content_shop').text("SHOPPING");
                 $('#content_map').html("TERMINAL MAP");
-                $('#content_info').text("SEARCH & INFO");
+                $('#content_info').text("INFORMATION");
 
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
                 $('#content_avatar').text("CHANGE AVATAR");
-                $('#content_selfie').text("TAKE SELFIE");                
+                $('#content_selfie').text("TAKE A SELFIE");               
                 
               }
                       
@@ -83,18 +119,18 @@ $(document).ready(function(){
                 $('#change-ar').removeClass('active');
 
                 //$('#content_term').text("Terminal A");
-                
+                 $('#content_fly').show();
                 $('#content_fly').html("PRESS HERE TO <b>START</b>");
-                $('#content_eat').text("EAT");
-                $('#content_shop').text("SHOP");
+                $('#content_eat').text("DINING");
+                $('#content_shop').text("SHOPPING");
 
-                $('#content_info').text("SEARCH & INFO");
+                $('#content_info').text("INFORMATION");
                 $('#content_map').html("TERMINAL MAP");
 
                 $('#content_flights').html("FLIGHTS");
                 $('#content_scan').html("SCAN YOUR<br> BOARDING PASS");
                 $('#content_avatar').text("CHANGE AVATAR");
-                $('#content_selfie').text("TAKE SELFIE");
+                $('#content_selfie').text("TAKE A SELFIE");
                 //$('#content_dance').text("Dance");
               
               });
@@ -109,7 +145,9 @@ $(document).ready(function(){
                 $('#change-us').removeClass('active');
                 $('#change-ar').addClass('active');
 
-                $('.fly').text("رحلات طيران");
+                 $('#content_fly').hide();
+
+               $('.fly').text("رحلات طيران");
                 $('.scan').text("مسح الصعود تمريرة الخاص بك");
                 $('.map').text("خريطة المحطة الطرفية");
                 $('.lang').text("Change Language");
@@ -118,15 +156,21 @@ $(document).ready(function(){
                 //$('#content_air').text("");
                 $('#content_fly').text("اضغط هنا للبدء");
 
+<<<<<<< HEAD
                 $('#content_eat').html("مطاعم");
 
                 $('#content_shop').text("تسوق");
+=======
+                $('#content_eat').html("المطاعم");
+
+                $('#content_shop').text("التسوق");
+>>>>>>> master
                 $('#content_info').html("المعلومات");
                 $('#content_map').html("خريطة المبنى");
                 $('#content_flights').html("معلومات الرحلات");
                 $('#content_scan').html("مرر تذكرة صعود الطائرة");
                 $('#content_avatar').html("الصّورة الرّمزية");
-                $('#content_selfie').text("التقاط صورة");
+                $('#content_selfie').text("إلتقاط صورة");
                
               });
               $('#content_fly').click(function(){
@@ -157,22 +201,32 @@ $(document).ready(function(){
       return false;
     });
     $("#info-popup").click(function () {
-      ShowPopup();
+      
       if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
+<<<<<<< HEAD
         PlaySpeech("Here is some information to make your journey more enjoyable.");
     }
+=======
+        PlaySpeech("Learn about Muscat International Airport.");
+        ShowPopup2('images/infographic-en.jpg');
+      }
+      else if(readCookie("lang")=="arabic"){
+        window.external.ChangeLanguage("ar-eg");
+        SetVolume(0.4);
+        PlaySpeech("مَعْلُومَاتٌ قَدْ تُهِمُكْ عَنْ مَطَارْ مَسْقَطْ اَلْجَدِيدْ");
+        ShowPopup2('images/infographic-ar.jpg');
+      }
+>>>>>>> master
    
 
   });
-     $("#t-popup").click(function () {
-      if(readCookie("lang")=="english"){
+  $("#t-popup").click(function () {
+    if(readCookie("lang")=="english"){
       window.external.ChangeLanguage("en-gb");
       window.external.SetVolume(1);
-      PlaySpeech("Find your way around our airport.");
-     
-      
+      PlaySpeech("Find your way around our airport."); 
     }
     /*else if (readCookie("lang")=="arabic") {
       
@@ -182,14 +236,16 @@ $(document).ready(function(){
       
     }*/
     ShowPopup();
-   
-
   });
+<<<<<<< HEAD
     $("#t-map").click(function () {
     ShowPopup();
     //$("$list1").show();
 
   });
+=======
+
+>>>>>>> master
 });
 function ShowPopup(){
 
@@ -205,8 +261,78 @@ function ShowPopup(){
   $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
   $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
   
-  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button popup-close">Close</a><div class="dialog-content"><div id="dialog-message"><h1>Connection to server not found.</h1></div></div>';
+  document.getElementById('dialog-box').innerHTML = '<a href="#" class="button popup-close">Close</a><div class="dialog-content"><div id="dialog-message"><h1>Wait to the 20th of March.</h1></div></div>';
   //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
         
 
 }
+
+function ShowPopup2(src){
+
+// get the screen height and width  
+  var maskHeight = $(document).height();  
+  var maskWidth = $(window).width();
+  
+  // calculate the values for center alignment
+var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
+var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  
+  // assign values to the overlay and dialog box
+  $('#dialog-overlay-info').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box-info').css({top:dialogTop, left:dialogLeft}).show();
+  
+  document.getElementById('dialog-box-info').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content-info"><div id="dialog-message-info"><img width="650" src="'+ src +'"/></div></div>';
+  //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
+        
+$('#dialog-box-info a').click(function(){
+$('#dialog-overlay-info').hide();
+$('#dialog-box-info').hide();
+});
+}
+
+function ShowTime()  
+        {  
+            var dt = new Date();  
+            document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;//dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime; 
+            document.getElementById("content_date") .innerHTML = formatDate(dt);
+            window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec  
+        }
+function formatAMPM(date) {
+
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  /*var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'*/
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+  var dayName = days[date.getDay()];
+  
+  //dayName = date.toString().split(' ')[0];
+  hours = hours <10? '0' +hours : hours;
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = ' ' + hours + ':' + minutes + ' ' + dayName;// + ampm;
+  return strTime;
+}
+
+function formatDate(date){
+
+  var m_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var month = m_names[date.getMonth()];
+  var day = date.getDate();
+  day = getGetOrdinal(day);
+  
+  var output = (month<10 ? '0' : '') + month + ' ' +(day<10 ? '0' : '') + day+', '+ date.getFullYear() ;
+  return output;
+}
+
+function getGetOrdinal(n) {
+    var s=["th","st","nd","rd"],
+    v=n%100;
+    return n+'<sup>'+(s[(v-20)%10]||s[v]||s[0])+'</sup>';
+ }
+
+
+
+    document.onselectstart = function() { return false; };

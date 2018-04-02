@@ -27,12 +27,12 @@ ShowTime();
   $('#c10').text("صبواي");*/
 
                 
-  $('#c3').click(function(){
+$('#c3').click(function(){
     $('.part2 #icon').attr("src","photo/KFC_logo.png");
     $('.bdy #title').text("دجاج كنتاكي");
     $('.bdy #location').text("Location:");
 
-    $('.bdy #desc').text("اشهى قطع الدجاج المقلية لمن لا يملك الوقت الكافي للحاق بالطائرة.");
+    $('.bdy #desc').text("اشهى سلسلة مطاعم للوجبات السريعة");
     //$("#btn").show();
     //$("#btn").attr('dir','photo/Caribou-Coffee-Prices.png');
 
@@ -41,10 +41,10 @@ ShowTime();
   });
               $('#c4').click(function(){
                 $('.part2 #icon').attr("src","photo/Mcdonalds.png");
-                $('.bdy #title').text("ماكدونالدز");
+                $('.bdy #title').text("مكدونالدز");
                 $('.bdy #location').text("Location:");
 
-                $('.bdy #desc').text("لمحبي البرجر والماكولات السريعة، استمتع بمذاق ماكدونالدز الشهي مع حركة  الطائرات");
+                $('.bdy #desc').text("لمحبي البرجر والمأكولات السريعة، استمتع بمذاق ماكدونالدز الشهي مع حركة  الطائرات");
                 //$("#btn").show();
                 //$("#btn").attr('dir','photo/costa-drinks.png');
 
@@ -67,7 +67,7 @@ ShowTime();
                 $('.bdy #title').text("بلنتي");
                 $('.bdy #location').text("Location:");
 
-                $('.bdy #desc').text("تهتم بصحتك ما عليك إلا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك.");
+                $('.bdy #desc').text("تهتم بصحتك؟ ما عليك الا زيارتنا والاستمتاع بالطعام ونحن سنقوم بحساب السعرات الحرارية عنك");
                 $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
                 $("#mapBtn").show();
                 $('.list2').toggle();
@@ -84,7 +84,7 @@ ShowTime();
               });
               $('#c62').click(function(){
                 $('.part2 #icon').attr("src","photo/Tickerdaze.png");
-                $('.bdy #title').text("تيكردايز");
+                $('.bdy #title').text("تيكرديز");
                 $('.bdy #location').text("Location:");
 
                 $('.bdy #desc').text("شاهد المباريات مباشرة وانت تستمتع بالماكولات  والمشروبات الشهية قبل صعودك للطائرة");
@@ -97,37 +97,37 @@ ShowTime();
                 $('.bdy #title').text("لونا");
                 $('.bdy #location').text("Location:");
 
-                $('.bdy #desc').text("مطعم يقدم لك تاباس مع المشروبات في منطقة هادئة ومنظر خلاب لشواطئ مسقط العامرة.");
+                $('.bdy #desc').text("مطعم يقدم لك المقبلات مع المشروبات في منطقة هادئة ومنظر خلاب لشواطئ مسقط العامرة.");
                 $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
                 $("#mapBtn").show();
 
               });
               $('#c7').click(function(){
                 $('.part2 #icon').attr("src","photo/mazoon.png");
-                $('.bdy #title').text("مازون ");
+                $('.bdy #title').text("مزون");
                 $('.bdy #location').text("Location:");
 
-                $('.bdy #desc').text("قهوة عالمية وعالية الجودة لاجلك");
+                $('.bdy #desc').text("قهوة عالمية وعالية الجودة لأجلك");
                 $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
                 $("#mapBtn").show();
                 
               });
               $('#c8').click(function(){
                 $('.part2 #icon').attr("src","photo/caffe-nero.png");
-                $('.bdy #title').text("كافيه نيرو");
+                $('.bdy #title').text("كافي نيرو");
                 $('.bdy #location').text("Location:");
 
-                $('.bdy #desc').text("هل تريد تجربة افضل قهوة؟ قم بزيارة كافيه نيرو وستستمتع بمختلف انواع القهوة.");
+                $('.bdy #desc').text("هل تريد تجربة أفضل قهوة؟ قم بزيارة قهوة نيرو وستستمتع بمختلف انواع القهوة.");
                 $("#mapBtn").attr('dir','photo/maps/south-pier-departure(level-02).png');
                 $("#mapBtn").show();
 
               });
               $('#c9').click(function(){
                 $('.part2 #icon').attr("src","photo/Caribou-Coffee.png");
-                $('.bdy #title').text("قهوة كاريبو");
+                $('.bdy #title').text("كاريبو كوفي");
                 $('.bdy #location').text("Location:");
 
-                $('.bdy #desc').text("محبي الكافيين؟ اشحن طاقتاتك بقهوة كاريبو");
+                $('.bdy #desc').text("محبي الكافيين؟ اشحن طاقتك بقهوة كاريبو");
                 
 
                 $("#mapBtn").attr('dir','photo/maps/north-pier-departure(level-02).png');
@@ -154,7 +154,7 @@ ShowTime();
                 $('.part2 #icon').attr("src","photo/cakes-&-bakes.png");
                 $('.bdy #title').text("كيكس اند بيكس");
                 $('.bdy #location').text("Location:");
-                $('.bdy #desc').text("كافيه وموقع لافضل المعجنات بمطار مسقط الدولي.");
+                $('.bdy #desc').text("كافيه وموقع لأفضل المعجنات بمطار مسقط الدولي.");
                 $("#mapBtn").attr('dir','photo/maps/west-pier-departure(level-02).png');
                 $("#mapBtn").show();
                 
@@ -184,7 +184,6 @@ ShowTime();
                 $('.bdy #location').text("Location:");
                 $('.bdy #desc').text("هل لديك وقت طويل حتى موعد رحلتلك القادمة وتريد النوم بدون اي ازعاج؟ ما عليك الا ان تقوم بزيارة فندق ايروتل مسقط للراحة او السباحة في حوض داخل الفندق.");              
               });
-
               
 
 

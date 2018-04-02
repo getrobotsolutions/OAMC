@@ -31,9 +31,7 @@
 </script>
 
 <script src="../../boots/js/bootstrap.min.js"></script>
-<!--<script src="../../Scripts/speech.js"></script>
-<script src="../../Scripts/lang.js"></script>
-<script src="sheetjs/dist/xlsx.full.min.js"></script> -->
+
 <script src="js/lang_eat-us.js"></script>
 
 <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
@@ -41,12 +39,12 @@
 
 <style>
   .bmg{background-image: none;height: 1158px;}
-  .img-home {position: absolute;top: -60px;z-index: 99;height: 62px;cursor: pointer; cursor: hand;}
+  .img-home {position: absolute;left:20px;top: 3px;z-index: 99;height: 66px;cursor: pointer; cursor: hand;}
   .wrap{padding-top: 90px;}
-  .part1{ background-color: whitesmoke;height: 660px;margin-top: -22px;margin-left: -15px;}
+  .part1{ background-color: white;height: 1007px;margin-top: -22px;margin-left: -15px;}
   .part2{
          background-color: #008a97;
-      height: 660px;
+      /*height: 660px;*/
       width: 616px;
       margin-top: -20px;
       padding: 15px;
@@ -110,12 +108,8 @@
         list-style-type:none;
     }
     #leftmenu > ul li a {
-           color:#008a97;
-    font-weight: bolder;
-    font-size: 30px;
-    padding-left: 80px;
-    text-decoration: none;
-    padding: 30px 10px 29px 80px;
+      color:#008a97;font-weight: bolder;font-size: 30px;padding-left: 80px;text-decoration: none;display: block;
+      /*padding: 30px 10px 29px 80px;*/
     }
     #leftmenu > ul li a:hover {
         text-decoration:underline;
@@ -128,42 +122,15 @@
     .h5, h5 {
         font-size: 21px;
     }
-    .bdy{
-        margin-top: 10px;
-        line-height: 40px;
-        color: white;
-
+    .bdy{margin-top: 10px;line-height: 40px;color: white;
     }
-    #title{
-         font-size: 30px;
-    margin-top: 20px;
-    font-weight: 100;
-    padding-left: 55px;
-    font-family: OpenSans-Regular;
-   
-    }
-
-    #desc{
-        font-size: 18px;
-    font-weight: 200;
-    padding-left: 55px;
-    font-family: OpenSans-Light;
-    line-height: 17px;
-    padding-bottom: 20px;
-    }
-
+    #title{font-size: 30px;margin-top: 20px;font-weight: 100;padding-left: 55px;font-family: Bukra-Regular;}
+    #desc{font-size: 22px;font-weight: 200;padding-left: 55px;font-family: Bukra-Light;line-height: 25px;padding-bottom: 20px;}
 
     #btn, #mapBtn{margin-left: 55px;background-color: #f5a800;border-color: #f5a800;}
 
-    .restau-image{
-          background-color: white;
-    padding: 10px;
-    text-align: center;
-    }
-    .icon{
-      
-      width: 500px;
-    }
+    .restau-image{background-color: white;padding: 10px;text-align: center;}
+    .icon{  width: 560px; }
   #dialog-overlay {
 
   /* set it to fill the whil screen */
@@ -227,15 +194,15 @@ a.button {
   margin:10px auto 0 auto;
   text-align:center;
   display: block;
-  width:50px;
-  padding: 5px 10px 6px;
+  width:66px;
+  padding: 6px 10px 6px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
   
   /* button color */
-  background-color:#034671;
+  background-color:#f5a800;
   
   /* css3 implementation :) */
   /* rounded corner */
@@ -277,7 +244,7 @@ a.button:hover {
 }
 li.odd{background-color:#00c2de1f;}
 li.even{background-color: #f3ebf9;}
-#change-us{color: rgb(255, 255, 255);background: #008a97;padding: 0px 10px;border-radius: 5px;}
+#change-us{color: rgb(255, 255, 255);background: #008a97;padding: 5px 10px 0px 10px;border-radius: 5px;}
 
 
 </style>
@@ -288,31 +255,34 @@ li.even{background-color: #f3ebf9;}
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 
 <script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
-<script src="../../Scripts/lang1.js"></script>
+
   <script type="text/javascript">
     window.external.SetVolume(1);
     PlaySpeech('Enjoy your time here at these restaurants.');
   </script>
 </head>
-<body>
+<body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
 
-    <div class="jumbotron text-center">
-      <p id="currentDate"></p><br>
-      <span class="col-sm-8">
-         <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
+   <div class="jumbotron text-center ">
+      
+      <span class="col-sm-7">
+        <img onmousedown="return false" src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
-      <div class="col-sm-4 text-right">
-          <span id="content_air"></span>
+      <span class="col-sm-5">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
           <span id="temp"></span>
-      </div>     
+         
+      </span>    
     </div>
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
+      <div class="col-sm-4" style="padding-left: 0;">
+        <img src="../../images/header-left-bg.png" width="360">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
-        <a href="#"  id="change-us" style="">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #008a97 !important;">عربى |</a>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
+        <a href="#" onmousedown="return false" id="change-us" style="">ENGLISH</a>|<a onmousedown="return false" id="change-ar" href="#" style="color: #008a97 !important;">العربية</a>
       </div>
     </div>
 
@@ -329,22 +299,24 @@ li.even{background-color: #f3ebf9;}
                         <img class="eat-icon" src="photo/eat-icon.png">
                         <ul class="list1">
                           
-                          <li class="even"><a id="c6" href="#">Plenty</a></li>
-                           
-                          <li class="odd"><a id="c61" href="#">Noor</a></li>
-                          <li class="even"><a id="c62" href="#">Tickerdaze</a></li>
-                          <li class="odd"><a id="c63" href="#">Luna</a></li>
+                          <li class="even"><a id="c8" href="#" onmousedown="return false">Caffé Nero</a></li>
+                          <li class="odd"><a id="c12" href="#" onmousedown="return false">Cakes & Bakes</a></li>
+                          <li class="even"><a id="c9" href="#" onmousedown="return false">Caribou Coffee</a></li>
+                          <li class="odd"><a id="c3" href="#" onmousedown="return false">KFC</a></li>
+                          <li class="even"><a id="c63" href="#" onmousedown="return false">Luna</a></li>
                           
-                          <li class="even"><a id="c7" href="#">Mazoon</a></li>
-                          <li class="odd"><a id="c8" href="#">Caffé Nero</a></li>
-                          <li class="even"><a id="c9" href="#">Caribou Coffee</a></li>
-                          <li class="odd"><a id="c10" href="#">Qahwaji Coffee</a></li>
-                          <li class="even"><a id="c11" href="#">Travelers Club</a></li>
-                          <li class="odd"><a id="c12" href="#">Cakes & Bakes</a></li>
-                          <li class="even"><a id="c13" href="#">Seaside Park</a></li>
-                          <li class="odd"><a id="c3" href="#">KFC</a></li>
-                          <li class="even"><a id="c4" href="#">McDonalds</a></li>
-                          <li class="odd"><a id="c5" href="#">Spice Kitchen</a></li>
+                          <li class="odd"><a id="c7" href="#" onmousedown="return false">Mazoon</a></li>
+                          <li class="even"><a id="c4" href="#" onmousedown="return false">McDonalds</a></li>
+                          <li class="odd"><a id="c61" href="#" onmousedown="return false">Noor</a></li>
+
+                          <li class="even"><a id="c6" href="#" onmousedown="return false">Plenty</a></li>
+                          <li class="odd"><a id="c10" href="#" onmousedown="return false">Qahwaji Coffee</a></li>
+                          <li class="even"><a id="c13" href="#" onmousedown="return false">Seaside Park</a></li>
+                          <li class="odd"><a id="c5" href="#" onmousedown="return false">Spice Kitchen</a></li>
+                          <li class="even"><a id="c62" href="#" onmousedown="return false">Tickerdaze</a></li>
+                  
+                          <li class="odd"><a id="c11" href="#" onmousedown="return false">Travelers Club</a></li>
+                          
                           <!--<li class="odd"><a id="c14" href="#">Prime Class Lounge</a></li>
                           <li class="even"><a id="c15" href="#">Aerotel Muscat Hotel</a></li>-->
 
@@ -356,14 +328,14 @@ li.even{background-color: #f3ebf9;}
                <div class="col-sm-6">
                   <div class="part2" id="content">
                       <div class="restau-image">
-                        <img id="icon" src="photo/plenty.png" class="icon">
+                        <img onmousedown="return false" id="icon" src="photo/caffe-nero.png" class="icon">
                       </div>
                       <div class="bdy">
-                        <div id="title">Plenty</div>
+                        <div id="title">Caffé Nero</div>
                         <!--<div id="location"> </div>-->
-                        <div id="desc">Healthy Concious? We have what you need. Just drop in and you calories will be maintained by us.</div>
+                        <div id="desc">Want to try the best coffee? Visit Café Nero and you will not regret it</div>
 
-                        <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">Map</button>
+                        <!--<button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/south-pier-departure(level-02).png">Map</button>-->
                       </div>
 
                   </div>
@@ -372,8 +344,8 @@ li.even{background-color: #f3ebf9;}
       </div>
   </div>
   <footer>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
+  <!--   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -423,21 +395,25 @@ li.even{background-color: #f3ebf9;}
           </div>      
         </div>
 
-        <!-- Left and right controls -->
-        <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>-->
+        
+    </div> -->
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <img onmousedown="return false" src = "../../images/omac.gif" style="    margin-left: -60px;  width: 1079px;   height: 391px;  margin-bottom: -27px;">
+<!--           <video autoplay="autoplay"  id="bannerVideo" class="fillWidth"  1079px >
+            <source src="Video/bottom_banner.mp4" type="video/mp4" />
+          </video> -->
+        </div>
+      </div>
     </div>
-    <img src="../../images/bottom-line.png">
+    <img style="margin-bottom: -20px;" onmousedown="return false" src="../../images/bottom-line.png">
   </footer>
   <div id="dialog-overlay"></div>
       <div id="dialog-box">
         
       </div>
+
+  <script src="../../Scripts/lang1.js"></script>
 </body>
 </html>

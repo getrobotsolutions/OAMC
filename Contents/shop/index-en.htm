@@ -40,15 +40,17 @@
   <link rel="stylesheet" href="../../css/style_riyadh.css">
 
 <style>
+
     .bmg{
           background-image: none;
-          height: 1040px;
+          height: 1162px;
     }
     .img-home {
           position: absolute;
-    top: -60px;
+    top: 3px;
+    left: 20px;
     z-index: 99;
-    height: 62px;
+    height: 66px;
     }
 
       tbody {
@@ -71,18 +73,18 @@
       }
 
     .wrap{
-       margin-top:115px;
+       padding-top:38px;
     }
     .part1{
           
-    height: 920px;
-    
+    height: 1131px;
     margin-left: -15px;
+    background-color: white;
     }
     .part2{
         background-color:#008a97;
-        height: 750px;
-        width: 615px;
+        /*height: 750px;*/
+        width: 522px;
         padding: 15px;
         z-index:0;
         position: absolute;
@@ -117,7 +119,7 @@
     }
     ul.list1{
          padding-top: 2px;
-        line-height: 64px;
+        line-height: 56px;
         font-size: 30px;
         /*text-align: center;*/
         margin-left: -60px;
@@ -188,9 +190,10 @@
     #leftmenu > ul li a {
       color: #008a97;
       font-weight: bold;
-      font-size: 30px;
-      padding-left: 80px;
+          font-size: 27px;
+    padding-left: 66px;
       text-decoration:none;
+          display: block;
     }
     #leftmenu > ul li a:hover {
         text-decoration:underline;
@@ -206,19 +209,18 @@
         font-size: 21px;
     }
     .bdy{
-        width: 580px;
-        padding-right: 25px;
+        width: 494px;
         z-index: -1;
         line-height: 40px;
-        position: absolute;
+      
         color: white;
     }
     #title{
-      font-size: 30px;
-      margin-top: 20px;
-      font-weight: 100;
+          font-size: 30px;
+    margin-top: 20px;
+    font-weight: 100;
     padding-left: 55px;
-    font-family: OpenSans-Regular;
+    font-family: Bukra-Regular;
    
     }
     #location{
@@ -228,23 +230,24 @@
     padding-left: 60px;
     }
     #desc{
-        font-size: 14px;
-    font-weight: 200;
-    padding-left: 55px;
-    font-family: OpenSans-Light;
-    line-height: 17px;
-    padding-bottom: 20px;
+      font-size: 22px;
+      font-weight: 200;
+      padding-left: 55px;
+      font-family: Bukra-Light;
+      line-height: 25px;
+      padding-bottom: 20px;
+      text-align: justify;
     }
     #mapBtn{
 
-      margin-left: 55px;background-color: #f5a800;border-color: #f5a800;
+      background-color: #f5a800;border-color: #f5a800;margin-left: 55px;
 
     }
     #icon{
       
       margin-top: 10px;
       /*height: 300px;*/
-      width: 500px;
+      width: 470px;
     }
  #dialog-overlay {
 
@@ -312,15 +315,15 @@ a.button {
   margin:10px auto 0 auto;
   text-align:center;
   display: block;
-  width:50px;
-  padding: 5px 10px 6px;
+  width:66px;
+  padding: 6px 10px 6px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
   
   /* button color */
-  background-color:#034671;
+  background-color:#f5a800;
   
   /* css3 implementation :) */
   /* rounded corner */
@@ -364,12 +367,13 @@ a.button:hover {
   background-color: white;
   padding: 10px;
   text-align: center;
+      
 }
 li.odd{background-color: #00c2de1f;}
 li.even{background-color: #f3ebf9;}
 #change-us{color: rgb(255, 255, 255);
     background: #008a97;
-        padding: 0px 10px;
+        
     border-radius: 5px;
 }
 </style>
@@ -378,7 +382,7 @@ li.even{background-color: #f3ebf9;}
 <link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Language.css" rel="stylesheet" type="text/css" />
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
-<script src="../../Scripts/lang1.js"></script>
+
 <!--<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>-->
 
   <script type="text/javascript" >
@@ -387,72 +391,74 @@ li.even{background-color: #f3ebf9;}
       
   </script>
 </head>
-<body>
- <div class="jumbotron text-center">
-      <p id="currentDate"></p><br>
-      <span class="col-sm-8">
-         <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
+<body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
+<div class="jumbotron text-center ">
+      
+      <span class="col-sm-7">
+        <img onmousedown="return false" src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
-      <div class="col-sm-4 text-right">
-          <span id="content_air"></span>
+      <span class="col-sm-5">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
           <span id="temp"></span>
-
-      </div>     
+         
+      </span>    
     </div>
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
-        <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
+      <div class="col-sm-4" style="padding-left: 0;">
+        <img src="../../images/header-left-bg.png" width="360">
+        <img onmousedown="return false" src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
-        <a href="#"  id="change-us" style="">ENGLISH</a>|<a  id="change-ar" href="#" style="color: #008a97 !important;">غير اللغة |</a>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
+        <a href="#" onmousedown="return false" id="change-us" style="">ENGLISH</a>|<a onmousedown="return false" id="change-ar" href="#" style="color: #008a97 !important;">العربية</a>
       </div>
     </div>
     <div class="body1">
       <div class="bmg">
             <div class="wrap" >
-               <div class="col-sm-5">
+               <div class="col-sm-6">
                   <div class="part1" style="">
                       <div id="leftmenu">
                           <h3 id="shop">Shops</h3>
-                            <img class="shop-icon" src="photo/shop-icon.png">
+                            <img onmousedown="return false" class="shop-icon" src="photo/shop-icon.png">
                           
                           <ul class="list1">
 
-                            <li class="odd"><a id="s1" href="#">Electronics</a></li>
-                            <li class="even"><a id="s2" href="#">LTC</a></li>
-                            <li class="odd"><a id="s3" href="#">Muscat Market</a></li>
-                            <li class="even"><a id="s4" href="#">Perfume and Cosmetics </a></li>
-
-                            <!--<li class="odd"><a id="s1" href="#">Amouage</a></li>
-                            <li class="even"><a id="s2" href="#">La Moda</a></li>
-                            <li class="odd"><a id="s3" href="#">Le Tabac</a></li>
-                            <li class="even"><a id="s4" href="#">Lacoste</a></li>-->
-
-                            <li class="odd"><a id="s5" href="#">Amouage Boutique</a></li>
-                            <li class="even"><a id="s6" href="#">Fashion Jewellery</a></li>
-                            <li class="odd"><a id="s7" href="#">Kids Kingdom</a></li>
-                            <li class="even"><a id="s8" href="#">Gourmet Store</a></li>
-                            <li class="odd"><a id="s9" href="#">Pier Stores</a></li>
-                            <li class="even"><a id="s10" href="#">Arrivals Store</a></li>
-                            <li class="odd"><a id="s11" href="#">Luxury Fashion Avenue</a></li>  
-                            <li class="even"><a id="s12" href="#">High Street Fashion</a></li>
-                            <li class="odd"><a id="s13" href="#">Sunglasses</a></li>       
+                            <li class="odd"><a id="s5" href="#" onmousedown="return false">Amouage</a></li>
+                            <li class="even"><a id="s10" href="#" onmousedown="return false">Arrivals Store</a></li>
+                            <li class="odd"><a id="s16" href="#" onmousedown="return false">Be relax</a></li>
+                            <li class="even"><a id="s2" href="#" onmousedown="return false">Candy, Liquor & Tobacco</a></li> 
+                            <li class="odd"><a id="s1" href="#" onmousedown="return false">Electronics</a></li>
+                            <li class="even"><a id="s6" href="#" onmousedown="return false">Fashion Jewellery</a></li>
+                            <li class="odd"><a id="s17" href="#" onmousedown="return false">Gallery Argan</a></li>
+                            <li class="even"><a id="s8" href="#" onmousedown="return false">Gourmet Store</a></li>
+                            <li class="odd"><a id="s12" href="#" onmousedown="return false">High Street Fashion</a></li>
+                            <li class="even"><a id="s7" href="#" onmousedown="return false">Kids Kingdom</a></li>
+                            <li class="odd"><a id="s11" href="#" onmousedown="return false">Luxury Fashion Avenue</a></li>
+                            <li class="even"><a id="s3" href="#" onmousedown="return false">Muscat Market</a></li>
+                            <li class="odd"><a id="s18" href="#" onmousedown="return false">Muscat Pharmacy</a></li> 
+                            <li class="even"><a id="s4" href="#" onmousedown="return false">Perfumes and Cosmetics</a></li>
+                            <li class="odd"><a id="s9" href="#" onmousedown="return false">Last Minute Stores (A, B & C)</a></li>
+                            <li class="even"><a id="s15" href="#" onmousedown="return false">Souq of Oman</a></li>
+                              
+                            <li class="odd"><a id="s13" href="#" onmousedown="return false">Spectrum Sunglasses</a></li>
+                            <li class="even"><a id="s14" href="#" onmousedown="return false">Wh Smith</a></li>     
                           </ul>
                       </div>
                   </div>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-6">
                   <div class="part2" id="content">
                     <div class="shop-image">
-                      <img id="icon" src="photo/elctronics.png" class="icon ">
+                      <img onmousedown="return false" id="icon" src="photo/amounge.png" class="icon ">
                     </div>
                       <div class="bdy">
-                        <div id="title">Electronics</div>
+                        <div id="title">Amouage Boutique</div>
                         <!--<div id="location"> </div>-->
-                        <div id="desc">Our store offers a range of the latest electronics in an exciting shopping experience that have been selected especially for the discerning traveler. The store combines the best brands, latest innovations and a trendsetting shopping environment all specifically tailored to travelers. Here you will find the latest smartphones and gadgets from Apple, Samsung and Bose.</div>
+                        <div id="desc"><p>Oman based international fragrance house. Offering a wide veraity  of luxerioues prefumes</p></div>
                         
-                        <button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">Map</button>
+                        <!--<button type="button" id="mapBtn" class="btn btn-success" dir="photo/maps/passenger-terminal-building-departure(Level-02).png">Map</button>-->
                       </div>
 
                   </div>
@@ -461,8 +467,8 @@ li.even{background-color: #f3ebf9;}
       </div>
     </div>
 <footer>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
+    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -497,7 +503,7 @@ li.even{background-color: #f3ebf9;}
           </div>
        
           <div class="item">
-            <img class="fixed-height" src="../../images/5.png" width="460" height="345">
+            <img class="fixed-height" src="../../images/4.png" width="460" height="345">
             <div class="carousel-caption">
               <h3></h3>
               <p></p>
@@ -515,21 +521,25 @@ li.even{background-color: #f3ebf9;}
       
         </div>
 
-        <!-- Left and right controls -->
-        <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>-->
+        
+    </div> -->
+   <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <img onmousedown="return false" src = "../../images/omac.gif" style="    margin-left: -60px;  width: 1079px;   height: 391px;  margin-bottom: -27px;">
+<!--           <video autoplay="autoplay"  id="bannerVideo" class="fillWidth"  1079px >
+            <source src="Video/bottom_banner.mp4" type="video/mp4" />
+          </video> -->
+        </div>
+      </div>
     </div>
-    <img src="../../images/bottom-line.png">
+    <img style="margin-bottom: -20px;" onmousedown="return false" src="../../images/bottom-line.png">
   </footer>
   <div id="dialog-overlay"></div>
       <div id="dialog-box">
         
       </div>
+
+<script src="../../Scripts/lang1.js"></script>
 </body>
 </html>

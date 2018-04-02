@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta content="text/html" charset="utf-8" />
@@ -19,28 +19,22 @@
   src="../../maincontents.js"></script>
  <script src="../../jquery/jquery-3.2.1.min.js"></script>
  <script src="../../boots/js/bootstrap.min.js"></script>
-  <!--<script src="../../Scripts/speech.js"></script>
-  <script src="../../Scripts/lang.js"></script>-->
-
+ 
 <script src="js/scanner.js"></script>
 <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="../../css/style_riyadh.css">
 
 <style>
-    .bmg
-    {
-      /*background-image: url('images/boarding.jpg');*/
-        background-image: none;
-        height: 1153px;
-    }
-    .page-header{
-      border: none;
-    }
+  .body1{
+    /*background-image: url(../../images/background.png);*/
+  }
+  .bmg{background-color: rgba(255, 255, 255, 0.55);height: 1153px;}
+  .page-header{border: none;}
     .img-home {
       position: absolute;
       z-index: 99;
-      margin-top: -64px;
+     left: 20px;top: 3px;
       height: 66px;
       cursor: pointer; 
     }
@@ -63,12 +57,13 @@
     line-height: 16px;
     }
     #txt-name{
-        padding-top: 6px;
-        padding-left: 152px;         
+       /* padding-top: 6px;
+        padding-left: 152px;*/         
     }
     #txt-airline{
         padding-top: 42px;
-        padding-left: 266px;       
+       /* padding-left: 266px;*/ 
+       text-align: center;      
     }
     #txt-src{
            padding-top: 0px;
@@ -81,13 +76,15 @@
     }
     #txt-gate{
          padding-top: 10px;
-         padding-left: 100px;         
+         /*padding-left: 100px;*/
+         text-align: center;              
     }
 
     textarea.form-control {
           height: 0px;    cursor: none;
     margin-top: 7px;
-        margin-left: 21px;
+        /*margin-left: 21px;*/
+        margin-left:-52px;
     width: 3px;z-index: -10;position: absolute;
     left: -78px;
     }
@@ -109,7 +106,7 @@
     }
     .arrow{
           position: absolute;
-    top: 730px;
+    top: 711px;
     right: 0px;
     width: 218px;
     }
@@ -137,29 +134,35 @@
     }
     .dep{
         margin-top: 70px;
-        padding-left: 191px;
+        /*padding-left: 191px;*/
+        text-align: center;     
     }
     .txt-dep{
           padding-top: 23px;
           color: yellow;
-          padding-left:  275px;
+          /*padding-left:  275px;*/
+          text-align: center;     
     }
     .checkin{
        padding-top: 73px;
-       padding-left: 270px;
+       /*padding-left: 270px;*/
+       text-align: center;     
     }
     .txt-checkin{
           padding-top: 20px;
           color: yellow;
-          padding-left:  272px;
+          /*padding-left:  272px;*/
+          text-align: center;     
     }
     .txtgate{
       padding-top: 62px;
-      padding-left: 290px
+      /*padding-left: 290px;*/
+      text-align: center;     
     }
     #txt-gate{
       padding-top: 20px;
-      padding-left: 302px;
+      /*padding-left: 302px;*/
+      text-align: center;     
       color: yellow;
     }
     .map1{
@@ -176,7 +179,7 @@
 
     }
     .inst-img{text-align: center;}
-       #change-us, #change-ar{color: #008a97;padding: 0px 10px; border-radius: 5px;text-decoration: none;}
+       #change-us, #change-ar{color: #008a97; border-radius: 5px;text-decoration: none;}
  .active{
     color: rgb(255, 255, 255) !important;
     background:  #008a97;
@@ -199,8 +202,8 @@
 <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 
 <script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
-<script src="../../Scripts/lang1.js"></script>
-<script language="JavaScript" type="text/javascript" src="RobotDance.js"></script>
+
+<!--<script language="JavaScript" type="text/javascript" src="RobotDance.js"></script>-->
 <script type="text/javascript">
   UpdateSession(4);
   $(document).ready(function(){
@@ -214,9 +217,9 @@
       
     }
     else if (readCookie("lang")=="arabic") {
-      //window.external.ChangeLanguage("ar-eg");
-      //window.external.SetVolume(0.4);
-      //PlaySpeech("مرر تذكرة صعود الطائرة");
+      window.external.ChangeLanguage("ar-eg");
+      window.external.SetVolume(0.4);
+      PlaySpeech("مَرِرْ بِطَاقَةْ اَلصُعُوُدْ إِلَى الطَائِرَةْ ");
       $('#change-us').removeClass('active');
       $('#change-ar').addClass('active');
       
@@ -236,32 +239,34 @@
 
 </script>
 </head>
-<body>
+<body class="noselect unselectable" oncontextmenu="return false;" onmousedown="return false">
 
-    <div class="jumbotron text-center">
-      <p id="currentDate"></p><br>
-      <span class="col-sm-8">
-         <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
+<div class="jumbotron text-center ">
+      
+      <span class="col-sm-7">
+        <img onmousedown="return false" src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
-      <div class="col-sm-4 text-right">
-          <span id="content_air"></span>
+      <span class="col-sm-5">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
           <span id="temp"></span>
-      </div>     
+         
+      </span>    
     </div>
-
     
 
 
     <div class="row" style="padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
-        <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
+     <div class="col-sm-4" style="padding-left: 0;">
+        <img src="../../images/header-left-bg.png" width="360">
+        <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image" onmousedown ="return false">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 20px;color: #008a97;font-weight: bold;">
-        <a href="#"  id="change-us" style="">ENGLISH</a>|<a  id="change-ar" href="#" style=";">عربى</a>
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
+        <a onmousedown="return false" href="#"  id="change-us" style="">ENGLISH</a>|<a onmousedown="return false" id="change-ar" href="#" style=";">العربية</a>
       </div>
     </div>
 
-    <div class="body1">
+    <div class="body1" oncontextmenu="return false;">
       <div class="bmg">
         <div class="container">
             <div class="page-header">
@@ -287,9 +292,9 @@
               <!--<img src="../../images/gif/test2.jpg" class="inst">
              <img src="../../images/gif/test1.jpg" class="inst">
              -->
-             <p style="background-color: #008a97;color: white;font-size: 73px;line-height: 129px;padding: 20px;margin: 10% 20% 10% 2%;;">Please Scan Your Boarding Pass on the Scanner.</p>
+             <p style="background-color: #008a97;color: white;font-size: 73px;line-height: 129px;padding: 20px;margin: 10% 20% 10% 2%;;">Please Scan Your Boarding Pass</p>
             
-                        <img class="arrow" src="../../images/gif/right.png">
+                        <img class="arrow" src="../../images/gif/right.png" onmousedown ="return false">
             </div>
 
             <div class="wrapper1 wrap1">
@@ -326,7 +331,7 @@
 
 
   <footer>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!--   <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -381,16 +386,21 @@
 
         </div>
 
-        <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>-->
+        
+    </div> -->
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <img src = "../../images/omac.gif" style="    margin-left: -60px;  width:1079px;   height: 391px;  margin-bottom: -27px;">
+<!--           <video autoplay="autoplay"  id="bannerVideo" class="fillWidth"  1079px >
+            <source src="Video/bottom_banner.mp4" type="video/mp4" />
+          </video> -->
+        </div>
+      </div>
     </div>
-    <img src="../../images/bottom-line.png">
+    <img style="margin-bottom: -20px;" onmousedown="return false" src="../../images/bottom-line.png">
+    
   </footer>
+<script src="../../Scripts/lang1.js"></script>
 </body>
 </html>

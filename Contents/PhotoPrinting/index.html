@@ -16,7 +16,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11" />
 <!-- 기본으로 포함되어야 하는 css -->
 <link rel="stylesheet" type="text/css" href="../Common/Styles/Css/Layout.css">
-<link rel="stylesheet" type="text/css" href="../Common/Styles/Css/Font.css">
+<!--<link rel="stylesheet" type="text/css" href="../Common/Styles/Css/Font.css">-->
 <!-- 추가적으로 포함되어야 하는 css -->
 <link rel="stylesheet" type="text/css" href="Styles/Css/PhotoPrinting.css">
 
@@ -39,25 +39,27 @@
   		height:68px;
   	}
   	.jumbotron{
-  		padding-bottom: 128px;
+  		padding-bottom: 162px;
   		margin-bottom: 0;
   	}
   	.img-home {
-    position: absolute;
-    z-index: 99;
-    margin-top: -64px;
+    /*position: absolute;
+    z-index: 99;*/
+     top: 3px;
+    left: 20px;
+
     cursor: pointer;
     height: 66px;
 }
  a {
     color: #4a32a4;
 }
- #change-us, #change-ar{padding: 10px 10px; border-radius: 5px;text-decoration: none;}
+ #change-us, #change-ar{color: #008a97;padding: 5px 10px 0 15px; border-radius: 5px;text-decoration: none;font-family: Bukra-Regular !important; }
  .active{
     color: rgb(255, 255, 255) !important;
  background: #008a97;
   }  </style>
-  <script src="../../Scripts/lang.js"></script>
+  
   <script type="text/javascript">
   	UpdateSession(7);
   	$(document).ready(function(){
@@ -68,18 +70,23 @@
       		PlaySpeech("Its time to smile.");
       		$('#change-us').addClass('active');
       		$('#change-ar').removeClass('active');
+      		$("#frame-text").text("Choose one of the below frames:");
+    		$("#frame-text").css('direction','ltr');
       
     	}
     	else if (readCookie("lang")=="arabic") {
-    		/*window.external.ChangeLanguage("ar-eg");
+    		window.external.ChangeLanguage("ar-eg");
     		window.external.SetVolume(0.4);
-    		PlaySpeech("حان الوقت لتبتسم.");*/
+    		PlaySpeech("اِبْتَسِمْ");
       		$('#change-us').removeClass('active');
       		$('#change-ar').addClass('active');
       		$('body').css('background-image','url(Image/photo_bg_ar.png)');
     		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
     		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
     		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
+    		$("#frame-text").text("اختر إطارا لصورتك");
+    		$("#frame-text").css('direction','rtl');
+
       
     	}
 
@@ -90,6 +97,8 @@
     		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
     		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
     		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
+    		$("#frame-text").text("اختر إطارا لصورتك");
+    		$("#frame-text").css('direction','rtl');
     		
   		});
   		$('#change-us').click(function(){
@@ -100,40 +109,62 @@
     		$("#email-photo").attr("src","images/btn_nor_email_en-us.png");
     		$("#retake-photo").attr("src", "images/btn_nor_retake_en-us.png");
     		$("#btn_start").attr("src","images/start_btn_nor_en-us.png");
+    		$("#frame-text").text("Choose one of the below frames:");
+    		$("#frame-text").css('direction','ltr');
     		
   		});
+  		$('#take_photo').one('click', function(e){
+			e.preventDefault();
+			
+			if(readCookie("lang")=="english"){
+				window.external.ChangeLanguage("ar-gb");
+    			window.external.SetVolume(1);
+	    		PlaySpeech('Look at the camera on the robot’s head.');	
+			}
+			else if (readCookie("lang")=="arabic") {
+    			window.external.ChangeLanguage("ar-eg");
+    			window.external.SetVolume(0.4);
+				PlaySpeech("اُنْظُرْ إلَى اَلْكَامِيرة عَلَى رَأْسِ اَلْرَجُلِ اَلْآلِيْ");
+			}
+		});
 	});
   </script>
+  <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body onload="JSMain()" onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
 
-	<div class="jumbotron text-center ">
-      <p id="currentDate"></p><br>
-      <span class="col-sm-8">
-        <img src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
+<div class="jumbotron text-center ">
+      
+      <span class="col-sm-7">
+        <img onmousedown="return false" src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
       </span>
-      <div class="col-sm-4 text-right">
-       <span id="content_air"></span>
-       <span id="temp"></span>
-      </div>     
+      <span class="col-sm-5">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
+          <span id="temp"></span>
+         
+      </span>    
     </div>
-    
 
-    <div class="row subheader" style="background-color: white; padding: 0;margin: 0;border:2px solid #008a97;">
-      <div class="col-sm-4" style=" border-top: 62px solid #008a97;border-right: 36px solid #ffffff00;">
+    <div class="row subheader" style="background-color: white; padding: 0;margin: 0;border:2px solid #008a97;height: 72px;">
+      <div class="col-sm-4" style="padding: 0;">
+      	<img src="../../images/header-left-bg.png" width="360">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">
       </div>
-      <div class="col-sm-8" style="font-size: 40px;padding-top: 23px;color: #008a97;font-weight: bold;">
-        <a href="#"  id="change-us" style="" class="active">ENGLISH</a>|<a  id="change-ar" href="#" style="" class="">عربى</a> |
+      <div class="col-sm-8" style="font-size: 40px;padding-top: 28px;color: #008a97;font-weight: bold;">
+        <a href="#"  id="change-us" style="" class="active">ENGLISH</a>|<a  id="change-ar" href="#" style="" class="">العربية</a>
       </div>
     </div>
 
 
 	<div id="wrapper">
 		<!--<div id="header">
-			<p class="tit">Take A Photo</p>
-			<p class="btn-home" onclick="Home('ko')" ></p>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
+			<div class="col-sm-5"></div>
 		</div>-->
 		<div id="container">
 			<div id="contents">
@@ -158,8 +189,9 @@
 					<li><!--<img src="Images/btn_nor_print_en-us.png" alt="포토프린트" onclick="PrintPhoto()">--></li>
 					<li><img src="Images/btn_nor_retake_en-us.png" id="retake-photo" alt="다시촬영하기" onclick="Retake()"></li>
 				</ul>
+				<p id="frame-text">Choose one of the below frames:</p>
 				<dl class="photo_frame">
-					<dd><img src="Images/btn_frame01.png" alt="프레임1" onclick="SelectFrame(1)"></dd>
+					<dd><img src="Images/btn_frame01.png" alt="프레임1" onclick="SelectFrame(5)"></dd>
 					<dd><img src="Images/btn_frame02.png" alt="프레임2" onclick="SelectFrame(2)"></dd>
 					<dd><img src="Images/btn_frame03.png" alt="프레임3" onclick="SelectFrame(3)"></dd>
 					<dd><img src="Images/btn_frame04.png" alt="프레임4" onclick="SelectFrame(4)"></dd>
@@ -238,12 +270,15 @@
 						</div>
 					</div>
 				</div>
-			</div><img src="../../images/bottom-line.png" style="    bottom: 730px;
+			</div><img onmousedown="return false" src="../../images/bottom-line.png" style="    bottom: 730px;
     position: relative;">
 			<!-- //contents -->
 		</div>
 		<!-- //container -->
 	</div>
 	<!-- //wrapper -->
+
+
+<script src="../../Scripts/lang.js"></script>
 </body>
 </html>

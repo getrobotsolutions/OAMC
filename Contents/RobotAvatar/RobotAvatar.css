@@ -1,13 +1,5 @@
-@font-face {
-    font-family: OpenSans-Regular;
-    src: url(../../css/Fonts/OpenSans-Regular.ttf);
-}
-@font-face {
-    font-family: OpenSans-Light;
-    src: url(../../css/Fonts/OpenSans-Light.ttf);
-}
 body{
-	font-family: 'OpenSans-Light' !important;
+	font-family: 'Bukra-Regular' !important;
 /*font-weight: bold;*/
 }
 body {
@@ -24,28 +16,30 @@ body {
 	position: absolute;
 	height: 100px;
 }
-.main{    background-color: #dba41b;
+.main{       background: rgba(255, 255, 255, 0.55) url(../../images/background.png);
     min-height: 1150px;}
 .bg {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	top: 500px;
+	top: 310px;
 }
 .bg img{
 	width: 1080px;
+	position: relative;
+	/*left: 100px*/
 }
 
 .canvas {
 	position: absolute;
-	left: 180px;
-	top: 660px;
+	left: 280px;
+	top: 423px;
 }
 
 .frame {
 	position: absolute;
-	left: 215px;
-	top: 670px;
+	left: 327px;
+	top: 428px;
 }
 
 #frame {
@@ -56,8 +50,8 @@ body {
 
 .number {
 	position: absolute;
-	left: 370px;
-	top: 849px;
+	left: 463px;
+	top: 578px;
 }
 
 #number {
@@ -67,8 +61,8 @@ body {
 
 .shot {
 	position: absolute;
-	left: 284px;
-	top: 774px;
+	left: 384px;
+	top: 503px;
 }
 .shot img{
 	width: 280px;
@@ -77,8 +71,8 @@ body {
 
 .delete {
 	position: absolute;
-	right: 10px;
-	top: 1139px;
+	left: 410px;
+    top: 1240px;
 }
 .delete img{
 	width: 250px;
@@ -95,30 +89,40 @@ footer {
 	bottom: 372px !important;
 }
 .title{
-	background-color: #dba41b;
+	font-family: bukra-semi-bold;
     padding: 20px 0;
     text-align: center;
     margin: 0;
-    color: white;
+   color: #008a97;
 }
 #change-us, #change-ar{text-decoration: none;}
 .deltext{
 
-color: white;
+color: #008a97;
+direction: rtl;
     position: absolute;
-    top: 400px;
-    right: 0;
+    top: 700px;
+    left: 280px;
     font-size: 44px;
-    width: 288px;
-    line-height: 41px;
+    width: 500px;
+    line-height: 70px;
     text-align: center;
     }
 
      a {
     color: #008a97 !important;
 }
- #change-us, #change-ar{padding: 0px 10px 5px 10px !important; border-radius: 5px;text-decoration: none;}
+
+ #change-us, #change-ar{color:#008a97;border-radius: 5px;text-decoration: none;}
  .active{
     color: rgb(255, 255, 255) !important;
  background: #008a97 !important;
   }
+  .img-home {
+    height: 66px !important;;
+    top: 67px !important;
+    left: 20px;
+    
+}
+.deltext-ar{line-height: 70px;font-size: 44px;direction: rtl;}
+.deltext-en{line-height: 40px;font-size: 32px;direction: ltr;}

@@ -3,7 +3,7 @@ jQuery(function () {
 })
 
 $(document).ready(function(){
-				//Change to English
+        //Change to English
         $('#change-us').click(function(){
           writeCookie("lang","english");
           $('#change-us').addClass('active');
@@ -23,7 +23,11 @@ $(document).ready(function(){
           $('#txt2').text("جنوب الرصيف المغادرة | المستوى 02");
           $('#txt3').text("الرصيف الشمالي | المستوى 02");
         });
+<<<<<<< HEAD
 	});
+=======
+  });
+>>>>>>> master
 function OnUserDisappeared()
 {
   setTimeout(function(){
