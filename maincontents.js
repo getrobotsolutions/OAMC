@@ -222,7 +222,7 @@ function OnJoystickControlled(strPara){
     	else if (readCookie("lang")=="arabic") {
     		window.external.ChangeLanguage("ar-eg");
 	        SetVolume(1);
-	        window.external.PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟");
+	        window.external.PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُساعِدَكْ؟");
     	}
 	}
 	if(btn_info[1] == '1'){
