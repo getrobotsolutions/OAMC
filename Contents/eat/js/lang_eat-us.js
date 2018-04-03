@@ -31,7 +31,7 @@ ShowTime();
     $('.part2 #icon').attr("src","photo/KFC_logo.png");
     $('.bdy #title').text("KFC");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("An American fast food restaurant chain that specializes in fried chicken");
+    $('.bdy #desc').html("<p>Fast food restaurant specializing in fried chicken</p><p><b>Menu:</b> Chicken specialties, chicken burger, salads and sweet treats.</p><p><b>STYLE:</b> SELF-SERVICE</p><p><b>DEPARTURE LEVEL AIR SIDE</b> – Food Hall</p>");
     
 
     $("#mapBtn").attr('dir','photo/maps/aribou-Coffee.jpg');
@@ -42,9 +42,7 @@ ShowTime();
 
     $('.bdy #title').text("McDonalds");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("For burger and fast food lovers, enjou mcdonalds with movement of planes next to you.");
-   
-
+    $('.bdy #desc').html("<p>McDonald’s products consist of high quality ingredients from the four essential food groups required for a well-balanced diet, including many essential vitamins, minerals and other nutrients. McDonald’s is committed to Quality, Service, Cleanliness and Value in every aspect of its operation.</p><p>McDonald’s restaurant provides breakfast from 4am to 11am along with its Chicken Range. The regular menu is served from 11am onwards.</p> <p><b>Menu:</b> Ala-Carte, meal, beverages and desserts.</p><p><b>STYLE:</b> SELF-SERVICE </p><p><b>EPARTURE LEVEL AIR SIDE</b> – Food Hall</p>");
     $("#mapBtn").hide();
                 
   });
@@ -53,7 +51,7 @@ ShowTime();
 
     $('.bdy #title').text("Spice Kitchen");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Indian Cuisine in a fast food concept for spicy food lovers.");
+    $('.bdy #desc').html("<p>This walk-through food court concept offers a variety of delicious, Indian, Asian and Mediterranean street food items with genuinly authentic flavors. In Spice Kitchen, you can truly experience the livelyhood of a spice market.</p> <p><b>Menu:</b>Tastes from India: Tikka, biryani, samosas, curries… From Asia: Chinese crepes, rice balls, soups, spring rolls… From the Mediterranean: Kebabs, gyros, pastas, and pizzas.</p><p><b>STYLE:</b> SELF-SERVICE</p><p><b>DEPARTURE LEVEL AIR SIDE</b> – Food Hall</p>");
    
 
     $("#mapBtn").hide();
@@ -63,7 +61,7 @@ ShowTime();
 
     $('.bdy #title').text("Plenty");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Healthy Concious? We have what you need. Just drop in and you calories will be maintained by us.");
+    $('.bdy #desc').html("<p>Fresh Market is a concept committed to source the best ingredients to prepare healthy and delicous offerings. At Plenty, it is all about simple, fresh food without artifical flavors. The menu consists of wholesome foods, healthy juice and smoothies, fresh brewed coffee and teas.</p> <p><b>Menu:</b> Extensive range of freshly squeezed juices – all freshly made to order, chunky fruit bowls, smoothies, chia and muesli pots, no sugar added ice cream and sorbets.</p><p><b>STYLE:</b> GRAB & GO</p><p><b>DEPARTURE LEVEL LAND SIDE</b> – Terminal Building</p><p><b>DEPARTURE LEVEL AIR SIDE</b> – West Pier</p><p><b>DEPARTURE LEVEL AIR SIDE</b> – Level 2</p>");
     $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
     $("#mapBtn").show();
     
@@ -73,7 +71,7 @@ ShowTime();
     $('.part2 #icon').attr("src","photo/noor.png");
     $('.bdy #title').text("Noor");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Fine Arabic Cuisine, enjoy the breathtaking food and decoration where your eyes will love the food before your palates.");
+    $('.bdy #desc').html("<p>Our Lebanese food concept is rooted in the global adoption and popularity of the Mediterranean diet . This fresh concept capitalizes on the popularity of healthy, authenticand deliciously vibrant fare. The warm, welcoming and highly approachable setting is perfect for travelers on-the-go and for families.</p><p><b><Menu:</b> Hot and cold mezze, shawarma, kebab and other traditional lebanese foods.</p> <p><b>STYLE:</b> A-LA-CARTE<p><b>DEPARTURE LEVEL AIR SIDE</b> – Level 2</p>");
     $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
     $("#mapBtn").show();
   });
@@ -81,15 +79,15 @@ ShowTime();
     $('.part2 #icon').attr("src","photo/Tickerdaze.png");
     $('.bdy #title').text("Tickerdaze");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Casual dinning with sports and bubbly beverages. Enjoy matches before boarding you flight.");
+    $('.bdy #desc').html("<p>Gastro sports bar offering a wide range of international and world renowned premium beers both on tap and bottled, a carefully selected cocktail list containing all the old favourites to the new and trendy shots.</p> <p><b>Menu:</b>A light and refreshing pub style menu. Freshly cooked snacks, chicken wings, burger, pizza or salad choices. “Something foreveryone.”</p><p><b>STYLE:</b> A-LA-CARTE</p><p><b>DEPARTURE LEVEL AIR SIDE</b> – Level 2</p>");
     $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
     $("#mapBtn").show();
   });
   $('#c63').click(function(){
     $('.part2 #icon').attr("src","photo/luna.png");
-    $('.bdy #title').text("Luna");
+    $('.bdy #title').text("Luna Tapas Lounge");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Ala cart Tapas Restaurant with Fine Beverages and quite zones with beautiful view of Muscat Beaches.");
+    $('.bdy #desc').html("<p>Artfully crafted tapas menu and bespoke cocktails combines with a serene and beautiful atmosphere makes this space an oasis of tranquility. Food offerings feature Southern European, Central & South American small savory dishes, snacks and appetizers - perfect for sharing. Fresh and vibrant carefully sourced ingredients are conjured into enticing and delectable small plates and served alongside craft alcoholic beverages.</p><p><b>Menu:</b> European and South American small dishes such as tiger mussels, octopus carpaccio, duck breast and traditional Arabic mezzes.</p><p><b>STYLE:</b> A-LA-CARTE</p><p><b>DEPARTURE LEVEL AIR SIDE</b> – Level 2</p>");
     $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
     $("#mapBtn").show();
   });
@@ -97,7 +95,7 @@ ShowTime();
     $('.part2 #icon').attr("src","photo/mazoon.png");
     $('.bdy #title').text("Mazoon");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Café with premium coffee just for you and your palates");
+    $('.bdy #desc').html("<p>Offering a variety of freshly prepared Italian style ice creams, gourmet coffees and a selection of fine pastries and dessert items, Mazoon welcomes you in a stylish oasis courtyard with simplistic yet elegant finish.</p><p><b>Menu:</b> Freshly prepares Italian style ice creams, gourmet coffees, fine pastries and desserts such as brioche, biscotti, cannoli, croissants, etc.</p><p><b>STYLE:</b> SELF-SERVICE AND A-LA-CARTE SERVICE<p><b>DEPARTURE LEVEL AIR SIDE</b> – Level 2</p>");
     $("#mapBtn").attr('dir','photo/maps/passenger-terminal-building-departure(Level-02).png');
     $("#mapBtn").show();           
   });
@@ -106,7 +104,7 @@ ShowTime();
 
     $('.bdy #title').text("Caffé Nero");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Want to try the best coffee? Visit Café Nero and you will not regret it");
+    $('.bdy #desc').html("<p>Caffè Nero is a European coffee house brand specializing in the creation of high quality Italian coffee. Philosophy is really very simple: Premium Italian coffee. A warm and welcoming atmosphere.</p> <p><strong>Menu:</strong> Espresso, coffee, sandwiches, salads, desserts, cold beverages and more.</strong></p> <p><b>STYLE: SELF-SERVICE</b></p> <p><strong>DEPARTURE LEVEL AIR SIDE</strong> – South Pier</p><p><strong>DEPARTURE LEVEL LAND SIDE </strong>– Terminal Building</p><p><strong>ARRIVAL LEVEL LAND SIDE – </strong>Level 1</p>");
     
     $("#mapBtn").attr('dir','photo/maps/south-pier-departure(level-02).png');
     $("#mapBtn").show();
@@ -115,7 +113,7 @@ ShowTime();
     $('.part2 #icon').attr("src","photo/Caribou-Coffee.png");
     $('.bdy #title').text("Caribou Coffee");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Caffeine Junkie? Boost your energy with Caribou Coffee");
+    $('.bdy #desc').html("<p>Caribou Coffee believes that if passion, hard work and excellence go into an endeavor, the outcome will be a quality experience, and therefore rewarding.</p><p>The breathtaking panoramic view became the entrepreneurial vision for Caribou Coffee - a company that believes excellence is a product of hard work, and that life is too short for anything else. This vision serves as a guide as we strive to create a special experience for you here at Caribou Coffee.</p><p><b>Menu:</b> Wide range of coffees, beverages, sandwiches and fresh pastries.</p><p><b>STYLE:</b> SELF-SERVICE</p> <p><b>DEPARTURE LEVEL AIR SIDE</b> – North Pier</p>");
     $("#mapBtn").attr('dir','photo/maps/north-pier-departure(level-02).png');
     $("#mapBtn").show();
 
@@ -123,23 +121,23 @@ ShowTime();
   $('#c10').click(function(){
     $('.part2 #icon').attr("src","photo/kahwaji-cafe.png");
 
-    $('.bdy #title').text("Qahwaji Coffee");
+    $('.bdy #title').text("Kahwaiji Cafe");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Traditional Omani Café with best Omani Coffee and a chance to taste Oman before leaving Muscat.");
+    $('.bdy #desc').html("<p>Kahwaji is a celebration of the historical association of Oman with coffee. Hand selected beans of the highest quality, roasted to perfection for the perfect aroma and taste of original Arabic Kahwa. Our gourmet menu is a tribute to traditional Arabic romance with food, fresh and delectable.</p><p><b>Menu:</b> Wide range of Arabic and classic coffees, Arabic food choices, sandwiches and fresh pastries.<p><p><b>STYLE:</b> SELF-SERVICE</p><p>DEPARTURE LEVEL AIR SIDE – Level 2</p>");
   });
    
   $('#c11').click(function(){
     $('.part2 #icon').attr("src","photo/traveler-club.png");
     $('.bdy #title').text("Travelers Club");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Café with relaxing seating to sip your coffee and enjoy your snacks");
+    $('.bdy #desc').html("<p>Traveler’s club café is founded on an idea to bring a place where all travelers can meet and simply enjoy them-selves. It is an environment where people begin their journeys and feel relaxed and at ease with time. </p><p>The café presents a comfortable and easy going vibe, serving lights meals, such as sandwiches, salads, and baked goods. We only serve the highest quality of coffee sourced from around the globe. </p> <p><b>Menu:</b>Coffee, tea, juices, sandwiches, salad, ice cream, pastry.</p><p><b>STYLE:</b> GRAB & GO </p><p><b>DEPARTURE LEVEL AIR SIDE</b> – Level 2</p>");
    
   });
   $('#c12').click(function(){
     $('.part2 #icon').attr("src","photo/cakes-&-bakes.png");
     $('.bdy #title').text("Cakes & Bakes");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Bakery and café for pasty lovers");
+    $('.bdy #desc').html("<p>Wide range of baked goods and an extensive selection of tempting cakes and desserts that caters to everybody no matter what time of day, occasion or type of traveller. The concept has a rustic decor and all the fastidiousness is on display inside of the pastry case.</p><p><p><strong>Menu:</strong> Fresh pastas, pizzas, local and global pastry varieties and an excellent selection of sandwiches, including vegetarian sandwiches that even the carnivores will savour.</p><p><strong>STYLE: SELF-SERVICE <strong></p><p><strong>DEPARTURE LEVEL AIR SIDE – West Pier</strong></p>");
     $("#mapBtn").attr('dir','photo/maps/west-pier-departure(level-02).png');
     $("#mapBtn").show();
     
@@ -149,7 +147,7 @@ ShowTime();
     $('.part2 #icon').attr("src","photo/seaside-park.png");
     $('.bdy #title').text("Seaside Park");
     $('.bdy #location').text("Location:");
-    $('.bdy #desc').text("Kids heaven and amazing play ground and snacks.");
+    $('.bdy #desc').html("<p>Seaside Park is a fun play area where visitors can experience sandy. coasts and grassy patches, all within the comfort of the airport. Parents can sit back and relax with a meal or beverage while comfortably keeping an eye on their children as they run, climb, and play with colourful beach themed toys and an interactive television. </p> <p><b>Menu:</b>Popcorn, candy flosses, healthy snacks and sandwiches. Fruit juices and milk. </p><p><b>STYLE:</b> SELF-SERVICE</p><p><b>DEPARTURE LEVEL AIR SIDE</b> – North Pier</p>");
     $("#mapBtn").attr('dir','photo/maps/north-pier-departure(level-02).png');
     $("#mapBtn").show()
     
