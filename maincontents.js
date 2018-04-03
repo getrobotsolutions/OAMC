@@ -251,7 +251,11 @@ function OnJoystickControlled(strPara){
 	}*/
 
 	if(btn_info[3] == '1'){
-		//GoHome();
+		$(document).ready(function(){
+   
+      		$('#dialog-overlay-info, #dialog-box-info').hide();   
+     
+    	});
 		
 	}
 
