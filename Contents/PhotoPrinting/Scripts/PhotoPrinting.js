@@ -77,7 +77,7 @@ function TakePhoto()
     }
     else if (readCookie("lang")=="arabic") {
         window.external.ChangeLanguage("ar-eg");
-        window.external.SetVolume(0.4);
+        window.external.SetVolume(1);
         PlaySpeech("اُنْظُرْ إلَى اَلْكَامِيرة عَلَى رَأْسِ اَلْرَجُلِ اَلْآلِيْ");
     }
     

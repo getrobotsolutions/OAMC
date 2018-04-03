@@ -140,18 +140,17 @@ function FC_LoadConfigView()
 }
 
 function OnUserApproached()
-{	PlaySpeech("Hi, I’m Morriya, how can I help you?");
-	if(readCookie("lang")=="english"){
-      window.external.ChangeLanguage("en-gb");
-      window.external.SetVolume(1);
-      PlaySpeech("Hi, I’m Morriya, how can I help you?");
-      
-    }
-    else if (readCookie("lang")=="arabic") {
-      window.external.ChangeLanguage("ar-eg");
-      window.external.SetVolume(0.4);
-      PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟");
-    }
+{	if(readCookie("lang")=="english"){
+	        window.external.ChangeLanguage("en-gb");
+	        SetVolume(1);
+	        
+	        window.external.PlaySpeech("Hi, I’m Saif, how can I help you?");
+	    }
+    	else if (readCookie("lang")=="arabic") {
+    		window.external.ChangeLanguage("ar-eg");
+	        SetVolume(1);
+	        window.external.PlaySpeech("مَرْحَبَاً ، أَنَا سَيْف. كَيْفَ يُمْكِنُنِيْ أنْ أُساعِدَكْ؟");
+    	}
 }
 
 function OnUserDisappeared()

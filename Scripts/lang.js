@@ -176,7 +176,7 @@ $(document).ready(function(){
       }
       else if(readCookie("lang")=="arabic"){
         window.external.ChangeLanguage("ar-eg");
-        SetVolume(0.4);
+        SetVolume(1);
         PlaySpeech("مَعْلُومَاتٌ قَدْ تُهِمُكْ عَنْ مَطَارْ مَسْقَطْ اَلْجَدِيدْ");
         ShowPopup2('images/infographic-ar.jpg');
       }

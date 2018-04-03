@@ -100,11 +100,11 @@ var refreshIntervalId ;
 		if(readCookie("lang")=="english"){
         window.external.ChangeLanguage("en-gb");
         window.external.SetVolume(1);
-        PlaySpeech('Look at the camera on the top of the robot’s head.');  
+        PlaySpeech('Look at the camera on the robot’s head');  
     }
     else if (readCookie("lang")=="arabic") {
         window.external.ChangeLanguage("ar-eg");
-        window.external.SetVolume(0.4);
+        window.external.SetVolume(1);
         PlaySpeech("اُنْظُرْ إلَى اَلْكَامِيرة عَلَى رَأْسِ اَلْرَجُلِ اَلْآلِيْ");
     }
 
