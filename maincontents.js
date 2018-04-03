@@ -244,7 +244,7 @@ function OnJoystickControlled(strPara){
 		}
 		else if (readCookie("lang")=="arabic") {
 			window.external.ChangeLanguage("ar-eg");
-	        SetVolume(0.4);
+	        SetVolume(1);
 	        window.external.PlaySpeech("مَطَارْ مَسْقَطْ اَلْجَدِيدْ يُرَحِبْ بِكُمْ");
 	    }
 	}
@@ -263,7 +263,7 @@ function OnJoystickControlled(strPara){
 	    }
 	    else if (readCookie("lang")=="arabic") {
     		window.external.ChangeLanguage("ar-eg");
-	        SetVolume(0.4);
+	        SetVolume(1);
 	        window.external.PlaySpeech("مع السلامة");
     	}
 		
