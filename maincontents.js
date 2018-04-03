@@ -229,26 +229,26 @@ function OnJoystickControlled(strPara){
 		if(readCookie("lang")=="english"){
 	        window.external.ChangeLanguage("en-gb");
 	        SetVolume(1);
-	        window.external.PlaySpeech("اَهْلاً ، كَيْفَ يُمْكِنُنِي أَنْ أُسَاعِدَكَ؟");
+	        window.external.PlaySpeech("Hello, How may I help you?");
 	    }
 	    else if (readCookie("lang")=="arabic") {
     		window.external.ChangeLanguage("ar-eg");
 	        SetVolume(1);
-	        window.external.PlaySpeech("");
+	        window.external.PlaySpeech("اَهْلاً ، كَيْفَ يُمْكِنُنِي أَنْ أُسَاعِدَكَ؟");
     	}
 	}
-	/*if(btn_info[2] == '1'){
+	if(btn_info[2] == '1'){
 		if(readCookie("lang")=="english"){
 			window.external.ChangeLanguage("en-gb");
 			SetVolume(1);
-			window.external.PlaySpeech("I've never been on an airplane, it must be so fun to fly.");
+			window.external.PlaySpeech("New Muscat International Airport welcomes you. ");
 		}
 		else if (readCookie("lang")=="arabic") {
 			window.external.ChangeLanguage("ar-eg");
 	        SetVolume(1);
-	        window.external.PlaySpeech("");
+	        window.external.PlaySpeech("مَطَارْ مَسْقَطْ اَلْجَدِيدْ يُرَحِبْ بِكُمْ");
 	    }
-	}*/
+	}
 	if(btn_info[3] == '1'){
 		//GoHome();
 		
