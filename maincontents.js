@@ -221,7 +221,7 @@ function OnJoystickControlled(strPara){
 	    }
     	else if (readCookie("lang")=="arabic") {
     		window.external.ChangeLanguage("ar-eg");
-	        SetVolume(1);
+	        SetVolume(0.4);
 	        window.external.PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُساعِدَكْ؟");
     	}
 	}
@@ -233,7 +233,7 @@ function OnJoystickControlled(strPara){
 	    }
 	    else if (readCookie("lang")=="arabic") {
     		window.external.ChangeLanguage("ar-eg");
-	        SetVolume(1);
+	        SetVolume(0.4);
 	        window.external.PlaySpeech("اَهْلاً ، كَيْفَ يُمْكِنُنِي أَنْ أُسَاعِدَكَ؟");
     	}
 	}
@@ -245,12 +245,23 @@ function OnJoystickControlled(strPara){
 		}
 		else if (readCookie("lang")=="arabic") {
 			window.external.ChangeLanguage("ar-eg");
-	        SetVolume(1);
+	        SetVolume(0.4);
 	        window.external.PlaySpeech("مَطَارْ مَسْقَطْ اَلْجَدِيدْ يُرَحِبْ بِكُمْ");
 	    }
 	}
 	if(btn_info[3] == '1'){
 		//GoHome();
+		
+		if(readCookie("lang")=="english"){
+	        window.external.ChangeLanguage("en-gb");
+	        SetVolume(1);
+	        window.external.PlaySpeech("Good bye");
+	    }
+	    else if (readCookie("lang")=="arabic") {
+    		window.external.ChangeLanguage("ar-eg");
+	        SetVolume(0.4);
+	        window.external.PlaySpeech("مع السلامة");
+    	}
 		
 	}
 
