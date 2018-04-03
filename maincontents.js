@@ -216,7 +216,7 @@ function OnJoystickControlled(strPara){
 		if(readCookie("lang")=="english"){
 	        window.external.ChangeLanguage("en-gb");
 	        SetVolume(1);
-	        window.external.PlaySpeech("bye, bye. Enjoy your flight.");
+	        window.external.PlaySpeech("Hi, I’m Morriya, how can I help you");
 	        //window.external.PlaySpeech("Hi, I’m Morriya, how can I help you?");
 	    }
     	else if (readCookie("lang")=="arabic") {
