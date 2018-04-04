@@ -220,7 +220,7 @@
             $( function() {
                   $('.submit').click(function(e) {
                       e.preventDefault();
-                      var bar_code = $("#bar_code").val();
+                      var bar_code = $("#bar_code").val(); //white robot.
                       /*var bar_code = 'M1TAN/KOR SENG HEI MUR MR     EDXHNQG MCTBKKWY 0817 081J011J0073 147>1181RO8081BWY              299102113959648 0   EY 100106871583   ';*/
                       /*var bar_code = 'M1ELSHEEMY/AHMED MR   EPHNVDI MCTCAIWY 0407 081Y017D0018 147>1181RO8081BWY              299105337980569 0   ';*/
                       /*var bar_code = 'M1AHMAD/WAQAR MR      EDXYPEI MCTDMMWY 0695 081Y016F0027 347>1181RO8081BWY              299102113772898 0';*/
