@@ -139,6 +139,15 @@ $(document).ready(function(){
                   sdata = JSON.parse(data);
                   mdata = sdata['Data'];
 
+                  mdata= mdata.sort(function(a,b){
+                    //sorting based on arrival time
+                    var a1 = a.Nature, b1=b.Nature;
+                    if(a1==b1) return 0;
+                    return b1>a1?1:-1;
+                   });
+
+                  console.log(mdata);
+
                    /*mdata= mdata.sort(function(a,b){
                     //sorting based on arrival time
                     var a1 = a.Nature, b1=b.Nature;
@@ -181,7 +190,7 @@ $(document).ready(function(){
                   var hrs = today.getHours();
                   /*var ctime = hrs + ":" + today.getMinutes()+":"+today.getSeconds();*/
                   var start_time = (hrs-2) + ":" + today.getMinutes()+":"+today.getSeconds();
-                  var end_time =  (hrs+8) + ":" + today.getMinutes()+":"+today.getSeconds();
+                  var end_time =  (hrs+6) + ":" + today.getMinutes()+":"+today.getSeconds();
                   /*console.log(start_time + " " + end_time );*/
 
                   var a = start_time.split(':'); // split it at the colons
@@ -191,8 +200,8 @@ $(document).ready(function(){
                   /*console.log(sTseconds + " " + eTseconds);*/
 
 
-                  mdata = mdata.filter(function (a) {
-                    var dataTseconds = a.TimeToDisplay;
+                  mdata = mdata.filter(function (b) {
+                    var dataTseconds = b.TimeToDisplay;
                     /*console.log(dataTseconds);*/
                     var c = dataTseconds.split(':'); // split it at the colons
                     var dTseconds = (+c[0]) * 60 * 60 + (+c[1]) * 60;
@@ -205,14 +214,14 @@ $(document).ready(function(){
 
 
 
-                 console.log(mdata);
+                 /*console.log(mdata);*/
 
                 
                   for(i=0;i<mdata.length;i++)
                   {
                     var nature = mdata[i].Nature;
-                    if(mdata[i].Nature == 'DEPARTURE'){
-                      
+                    if(mdata[i].Nature === 'DEPARTURE'){
+                         
                       var airline = mdata[i].AirlineIATA;
                       var flight = mdata[i].FlightNo;
                       var terminal = mdata[i].Gate;
@@ -220,6 +229,8 @@ $(document).ready(function(){
                       else {  terminal  = mdata[i].Gate; }
 
                       var flight_status = mdata[i].Status;
+                      if(flight_status === ''){ flight_status = 'N/A'; }
+                      else {  flight_status  = mdata[i].Status; }
                       var est_departure = mdata[i].EstimatedDeparture;
                       var act_departure = mdata[i].ActualDeparture;
                       var destination = mdata[i].DestinationName;
@@ -245,11 +256,15 @@ $(document).ready(function(){
                       //Date and Time conversion
                       var depTime = departure.split("T").pop();
                       depTime = depTime.slice(0, -3);
+                      if(depTime === ''){depTime = mdata[i].TimeToDisplay;}
 
                       if(delay>0){status= "DELAYED ("+ delay +")";}
                       else if(delay==0){status="ON TIME";}
                       else{status="ON TIME";}
-                  
+                      
+                      /*console.log(airline+" "+flight+" "+destination+" "+terminal+" "+depTime+" "+flight_status);*/
+
+
                       $('.row'+i).html(airline+" "+ flight);
                       $('.origin'+i).html(destination);
                       $('.airline'+i).html(airline);
@@ -258,10 +273,13 @@ $(document).ready(function(){
                       $('.arrival'+i).html(depTime);
                       $('.status'+i).html(flight_status);
                       
-                      var dir = '../../images/airlines/'+airline+'.jpg';
-                      $('#img'+i).attr('src',dir).height(100).width(100);
-
-                      $('img').filter(function(index){return $(this).attr('src')==='';}).hide();
+                      if(airline){
+                        var dir = '../../images/airlines/'+airline+'.jpg';
+                        $('#img'+i).attr('src',dir).height(100).width(100);
+                      }
+                      else{ 
+                        $('img').filter(function(index){return $(this).attr('src')==='';}).hide();
+                      }
 
 
                                      
