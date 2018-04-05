@@ -153,7 +153,9 @@ $(document).ready(function(){
         var location = 'Unknown' // not returned in response
         var temp = firstResult.temp
         var text = firstResult.text
-  
+        
+        writeCookie("temp", temp, 30);
+        writeCookie("weatherCondition", text, 30);
         $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
   
     })

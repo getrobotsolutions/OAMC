@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var city = "Muscat";
+    /*var city = "Muscat";
     var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='c'";
     var queryURL = "https://query.yahooapis.com/v1/public/yql?q="+ searchtext + "&format=json";
 
@@ -15,8 +15,11 @@ $(document).ready(function(){
   
         $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
   
-    });
-
+    });*/
+    var temp = readCookie("temp")
+    var text = readCookie("weatherCondition")
+    $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
+  
  });
 
 
