@@ -9,18 +9,19 @@
 
       var x = wordInString(bar_code, 'MR');
       var y = wordInString(bar_code, 'MRS');
-      var z = wordInString(bar_code, 'MS');
-     
-      
+      if((x) || (y)){
+        console.log("contains MR OR MRS");
+      }
+      else{
+        console.log("does not contain MR OR MRS");
+      }
 
                        /* var bar_code = $("#bar_code").val();*/
                        var bar_code = bar_code; 
                        /*console.log(bar_code);*/
                         $(".wrapper1").show();
                         $(".inst-img").hide();
-      
-       if((x) || (y) || (z)){
-        console.log("contains MR OR MS/MRS");             
+                   
                         var len = bar_code.length;
                         var parts = bar_code.split("/");
                        /* lname = parts[0].substr(2);*/
@@ -61,8 +62,6 @@
                           var name = fname+" "+mname + " " + mname1 + " " + mname2 +" " + lname;
                        }
 
-                       console.log(name);
-
                        /*Flight Info*/
                        var flight_arr = Other_arr[2];
                        var org = flight_arr.substr(0,3);
@@ -74,51 +73,6 @@
                        var flightDis = arr+" "+flightNum;
 
                         var flightNo = flightNum.substr(1);
-                        }
-      else{
-        console.log("does not contain MR OR MRS");
-
-        var parts = bar_code.replace( /[\s\n\r]+/g, ' ' );
-        parts = parts.split(" ");
-        console.log(parts);
-        var name_str = parts[0];
-        var mname_str = parts[1];
-        
-        var fname=''; var mname=''; var lname='';
-
-        var mname_parts = mname_str.toString().split("/");
-        if(mname_parts.length>1){ 
-          var mname = mname_parts[1] + " " + mname_parts[0];
-          var flight_str = parts[3];
-          var flightNum =  parts[4];
-        }
-
-        var name_parts = name_str.toString().split("/");
-        if(name_parts.length>1){
-            var fname = name_parts[1];
-            var lname = name_parts[0].substr(2);          
-            var flight_str = parts[2];
-            var flightNum =  parts[3];
-        } else {
-          lname=name_parts[0].substr(2);
-        }
-
-        var name = fname +" "+ mname + " " +lname;
-
-        var org = flight_str.substr(0,3);
-        var des = flight_str.substr(3,3);
-        var arr = flight_str.substr(6);
-
-        /*Flight No*/
-        var flightDis = arr+" "+flightNum;
-        
-        var flightNo = flightNum.replace(/^0/, '');
-        console.log(flightNo);
-        /*var flightNo = flightNum.substr(1);*/
-      }
-
-
-
                         console.log(flightNo);
                         var mdata = getGate(flightNo);
 
@@ -177,7 +131,7 @@
 
                         var appId = "7j985537jyreeeswq65432fvRGp09fXqBB";
                         var url = "https://apps.omanairports.com/weps_PublicApp/OAMCPublic.svc/GetFlightsOpen/"+appId+"/"+from_date+"/"+to_date+"/MCT";
-                        console.log(url);
+                       /* console.log(url);*/
 
 
                        
@@ -197,13 +151,10 @@
                                     mdata = sdata['Data'];
                                  /*console.log(mdata);*/
  
-                                console.log(searchItem);
                                     /*Filter based on flightNO*/
                                     var details1 = mdata.filter(function (i){
                                       if(i.FlightNo === searchItem) return i
                                     });
-
-                                    console.log(details1);
 
                                     /*Re-filter only Departing flights*/
                                     var details = details1.filter(function(i){
@@ -211,6 +162,8 @@
                                     });
 
                                     est_dep = details[0].ScheduledDeparture;
+                                    console.log(details);
+
                                     var depTime = est_dep.split("T").pop();
                                    /* console.log(depTime);*/
                                     depTime1 = depTime.slice(0, -3);
@@ -235,10 +188,7 @@
                                     checkin = ch_h + depTime1.substr(2, 3) + ampm + " ("+(H-1)+":"+depTime1.substr(3,2)+")"; 
                                     gate = (details[0].Gate) ? (details[0].Gate) : "N/A";
                                     
-                                    /*console.log(checkin);console.log(gate); console.log(depTime);
-                                    if(checkin == '') {checkin = 'N/A';}
-                                    if(gate == '') {gate = 'N/A';}
-                                    if(depTime == '') {depTime = 'N/A';}*/
+                                    /*console.log(checkin);console.log(gate);*/
 
                                     $('<p>'+depTime+'</p>').appendTo('.txt-dep');
                                     $('<p>'+checkin+'</p>').appendTo('.txt-checkin');
@@ -285,15 +235,15 @@
                       e.preventDefault();
                       /*var bar_code = $("#bar_code").val();*/ 
                       /*var bar_code = 'M1TAN/KOR SENG HEI MUR MR     EDXHNQG MCTBKKWY 0817 081J011J0073 147>1181RO8081BWY              299102113959648 0   EY 100106871583   ';*/
-                      /*var bar_code = 'M1ABDULLASUHARA/HYKKAB RESDJL MCTDXBOV 0103 098Y011C0085 300';*/
-                      /*var bar_code = 'M1MUBARAKALIMUBARAK/AL HXKWTB MCTSLLOV 0005 098Y020C0037  00';*/
-                      /*var bar_code = 'M1FISHER/SASHA        EKBGK3S MCTDOHQR 1127 098Y033C0022 349>5180      B                2A             0    QR 513373859           N0';*/
-                      /*var bar_code = 'M1PESILLO FAJARDO/CLAUDE KQYW2X MCTDOHQR 1137 098Y042F0040 349>5180      B                2A             0                           N0';*/
+                      var bar_code = 'M1ABDULLASUHARA/HYKKAB RESDJL MCTDXBOV 0103 098Y011C0085 300';
+                      /*var bar_code = 'M1MUBARAKALIMUBARAK/AL HXKWTB MCTSLLOV 0005 098Y020C0037  00';
+                      var bar_code = 'M1FISHER/SASHA        EKBGK3S MCTDOHQR 1127 098Y033C0022 349>5180      B                2A             0    QR 513373859           N0';
+                      var bar_code = 'M1PESILLO FAJARDO/CLAUEKQYW2X MCTDOHQR 1137 098Y042F0040 349>5180      B                2A             0                           N0';*/
 
                       /*var bar_code = 'M1ELSHEEMY/AHMED MR   EPHNVDI MCTCAIWY 0407 081Y017D0018 147>1181RO8081BWY              299105337980569 0   ';*/
                       /*var bar_code = 'M1AHMAD/WAQAR MR      EDXYPEI MCTDMMWY 0695 081Y016F0027 347>1181RO8081BWY              299102113772898 0';*/
                       /*console.log(bar_code);*/
-                      var bar_code = 'M1DELAROSA/MONDALE MR   AFYENQ MCTDXBOV 0103 327Y004F00';
+                      /*var bar_code = 'M1DELAROSA/MONDALEMR   AFYENQ MCTDXBOV 0103 327Y004F00';*/
                   //    console.log(bar_code);
                       
                     if(bar_code.length>0){
