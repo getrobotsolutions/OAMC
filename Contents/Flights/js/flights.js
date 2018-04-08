@@ -187,8 +187,8 @@ $(document).ready(function(){
 
 
 
-                   console.log(mdata);
-                   console.log(mdata.length);
+                   /*console.log(mdata);
+                   console.log(mdata.length);*/
                     for(i=0;i<mdata.length;i++)
                     {
                       var nature = mdata[i].Nature;
@@ -201,6 +201,8 @@ $(document).ready(function(){
                         else {  terminal  = mdata[i].Gate; }
 
                         var flight_status = mdata[i].Status;
+                        if(flight_status === ''){ flight_status = 'N/A'; }
+                        else {  flight_status  = mdata[i].Status; }
                         var est_arrival = mdata[i].EstimatedArrival;
                         var act_arrival = mdata[i].ActualArrival;
                         var origin = mdata[i].OriginName;
@@ -224,6 +226,7 @@ $(document).ready(function(){
                         arrTime = H + arrTime.substr(2,3);*/
                         var arrTime = arrival.split("T").pop();
                         arrTime = arrTime.slice(0, -3);
+                        if(arrTime === ''){arrTime = mdata[i].TimeToDisplay;}
 
                         if(delay>0){status= "DELAYED ("+ delay +")";}
                         else if(delay==0){status="ON TIME";}

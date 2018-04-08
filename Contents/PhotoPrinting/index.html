@@ -80,12 +80,12 @@
     		PlaySpeech("اِبْتَسِمْ");
       		$('#change-us').removeClass('active');
       		$('#change-ar').addClass('active');
-      		$('body').css('background-image','url(Image/photo_bg_ar.png)');
+      		/*$('body').css('background-image','url(Image/photo_bg_ar.png)');
     		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
     		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
     		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
     		$("#frame-text").text("اختر إطارا لصورتك");
-    		$("#frame-text").css('direction','rtl');
+    		$("#frame-text").css('direction','rtl');*/
 
       
     	}
@@ -93,7 +93,7 @@
   		$('#change-ar').click(function(){
   			$('#change-us').toggleClass('active');
             $('#change-ar').toggleClass('active');
-    		$('body').css('background-image','url(Image/photo_bg_ar.png)');
+    		$('body').css('background-image','url(Images/photo_bg_ar.png)');
     		$("#email-photo").attr("src","images/btn_nor_email_ar.png");
     		$("#retake-photo").attr("src", "images/btn_press_retake_ar.png");
     		$("#btn_start").attr("src","images/start_btn_nor_ar.png");
@@ -105,7 +105,7 @@
   			writeCookie("lang","english");
   			$('#change-us').addClass('active');
   			$('#change-ar').removeClass('active');
-    		$('body').css('background-image','url(Images/photo_bg.png)');
+    		$('body').css('background-image','url(Images/photo_bg_en-us.png)');
     		$("#email-photo").attr("src","images/btn_nor_email_en-us.png");
     		$("#retake-photo").attr("src", "images/btn_nor_retake_en-us.png");
     		$("#btn_start").attr("src","images/start_btn_nor_en-us.png");
@@ -176,7 +176,7 @@
 					<img id="frame" src="" alt="">
 				</div>
 				<div class="photo_start" style="display: block;">
-					<img id="btn_start" src="Images/start_btn_nor_en-us.png" alt="" style="opacity: 0.9;">
+					<img id="btn_start" src="" alt="" style="opacity: 0.9;">
                     <div style="position: absolute; top: 0px; left: 0px; width: 910px; height: 682px; z-index: 101; opacity: 0; background-image: url('Images/start_btn_nor_en-us.png')" onclick="TakePhoto()"></div>
 				</div>
 				<p><img class="number_img" id="number_img" style="display: none;" src="Images/3.png"></p>
@@ -185,9 +185,9 @@
 				</div>
 				
 				<ul class="photo_btn">
-					<li><img src="Images/btn_nor_email_en-us.png" id="email-photo" alt="이메일보내기" onclick="ShowKeyboard()"></li>
+					<li><img src="" id="email-photo" alt="이메일보내기" onclick="ShowKeyboard()"></li>
 					<li><!--<img src="Images/btn_nor_print_en-us.png" alt="포토프린트" onclick="PrintPhoto()">--></li>
-					<li><img src="Images/btn_nor_retake_en-us.png" id="retake-photo" alt="다시촬영하기" onclick="Retake()"></li>
+					<li><img src="" id="retake-photo" alt="다시촬영하기" onclick="Retake()"></li>
 				</ul>
 				<p id="frame-text">Choose one of the below frames:</p>
 				<dl class="photo_frame">

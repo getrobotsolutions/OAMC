@@ -37,13 +37,13 @@
                 $('#status').text("Status");
     window.external.ChangeLanguage("en-gb");
     window.external.SetVolume(1);
-    //PlaySpeech('Check your flight updates');  
+    PlaySpeech('Check your flight updates');  
 
   }
   else if(readCookie("lang")=="arabic"){
     window.external.ChangeLanguage("ar-eg");
     window.external.SetVolume(0.4);
-    PlaySpeech("تَحَقَقْ مِنْ تَفَاصِيلِ رِحْلَتِكْ");
+    PlaySpeech("تَحَقَقْ مِنْ تَفَاصِيلِ رِحْلَتِكْ ");
    
   }
 });
@@ -186,8 +186,9 @@ thead {
     <div class="icon1">
       <div class="container">
         <ul class="nav nav-tabs">
-          <li style="right: -656px; position: relative;" role="presentation" class="active"><a onmousedown="return false" id="dep" href="#">المغادرون</a></li>
+          
           <li style="right: -656px; position: relative;" role="presentation"><a onmousedown="return false" id="arr" href="#">القادمون</a></li>
+          <li style="right: -656px; position: relative;" role="presentation" class="active"><a onmousedown="return false" id="dep" href="#">المغادرون</a></li>
           
           
         </ul>
@@ -213,7 +214,7 @@ thead {
                 <td id="txt-center" class="arrival0"></td>
                 <td width="30%" id="txt-center" class="origin0"></td>
                 <th id="txt-center" class="row0"></th>
-                <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img0" >
+                <td id="img-center">  <img class="img-circle" src="" id="img0" >
                 </td>
               </tr>
 
@@ -222,7 +223,7 @@ thead {
                   <td id="txt-center" class="arrival1"></td>
                   <td width="30%" id="txt-center" class="origin1"></td>
                   <th id="txt-center" class="row1"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img1" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img1" >
                   </td>
               </tr>
               <tr>
@@ -230,7 +231,7 @@ thead {
                   <td id="txt-center" class="arrival2"></td>
                   <td width="30%" id="txt-center" class="origin2"></td>
                   <th id="txt-center" class="row2"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img2" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img2" >
                   </td>
               </tr>
               <tr>
@@ -238,7 +239,7 @@ thead {
                   <td id="txt-center" class="arrival3"></td>
                   <td width="30%" id="txt-center" class="origin3"></td>
                   <th id="txt-center" class="row3"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img3" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img3" >
                   </td>
               </tr>
               <tr>
@@ -246,7 +247,7 @@ thead {
                   <td id="txt-center" class="arrival4"></td>
                   <td width="30%" id="txt-center" class="origin4"></td>
                   <th id="txt-center" class="row4"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img4" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img4" >
                   </td>
               </tr>
               <tr>
@@ -254,7 +255,7 @@ thead {
                   <td id="txt-center" class="arrival5"></td>
                   <td width="30%" id="txt-center" class="origin5"></td>
                   <th id="txt-center" class="row5"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img5" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img5" >
                   </td>
               </tr>
 
@@ -263,7 +264,7 @@ thead {
                   <td id="txt-center" class="arrival6"></td>
                   <td width="30%" id="txt-center" class="origin6"></td>
                   <th id="txt-center" class="row6"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img6" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img6" >
                   </td>
               </tr>
 
@@ -272,7 +273,7 @@ thead {
                   <td id="txt-center" class="arrival7"></td>
                   <td width="30%" id="txt-center" class="origin7"></td>
                   <th id="txt-center" class="row7"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img7" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img7" >
                   </td>
               </tr>
               <tr>
@@ -280,7 +281,7 @@ thead {
                   <td id="txt-center" class="arrival8"></td>
                   <td width="30%" id="txt-center" class="origin8"></td>
                   <th id="txt-center" class="row8"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img8" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img8" >
                   </td>
               </tr>
               <tr>
@@ -288,7 +289,7 @@ thead {
                   <td id="txt-center" class="arrival9"></td>
                   <td width="30%" id="txt-center" class="origin9"></td>
                   <th id="txt-center" class="row9"></th>
-                  <td id="img-center">  <img class="img-circle" onerror="this.src='../../images/airlines/arrival.jpg'" src="" id="img9" >
+                  <td id="img-center">  <img class="img-circle" src="" id="img9" >
                   </td>
               </tr>
               <tr>

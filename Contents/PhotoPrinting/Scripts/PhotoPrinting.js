@@ -4,9 +4,21 @@
 function JSMain()
 {
     // 언어 쿠키값 로드
+
 	c_language = readCookie("Language");
     if (c_language == null)
-        c_language = "en-us";
+       // c_language = "en-us";
+
+    if(readCookie("lang")=="english"){
+            
+      c_language = "en-us";
+    }
+    else if (readCookie("lang")=="arabic") {
+        c_language = "ar";
+    
+        $("#frame-text").text("اختر إطارا لصورتك");
+        $("#frame-text").css('direction','rtl');
+    }
     
     // 언어에 따른 이미지 세팅
     SetImage(c_language);
@@ -42,6 +54,10 @@ function JSUnload()
 //---------------------------------------------------------------------------//
 function SetImage(str)
 {
+    $('body').css('background-image','url(Images/photo_bg_'+str+'.png)');
+    $("#email-photo").attr("src","images/btn_nor_email_"+str+".png");
+    $("#retake-photo").attr("src", "images/btn_press_retake_"+str+".png");
+    $("#btn_start").attr("src","images/start_btn_nor_"+str+".png");
     
 }
 
