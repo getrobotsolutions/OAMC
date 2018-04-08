@@ -113,7 +113,7 @@
         var flightDis = arr+" "+flightNum;
         
         var flightNo = flightNum.replace(/^0/, '');
-        console.log(flightNo);
+        /*console.log(flightNo);*/
         /*var flightNo = flightNum.substr(1);*/
       }
 
@@ -197,13 +197,13 @@
                                     mdata = sdata['Data'];
                                  /*console.log(mdata);*/
  
-                                console.log(searchItem);
+                                /*console.log(searchItem);*/
                                     /*Filter based on flightNO*/
                                     var details1 = mdata.filter(function (i){
                                       if(i.FlightNo === searchItem) return i
                                     });
 
-                                    console.log(details1);
+                                    /*console.log(details1);*/
 
                                     /*Re-filter only Departing flights*/
                                     var details = details1.filter(function(i){
@@ -283,7 +283,7 @@
             $( function() {
                   $('.submit').click(function(e) {
                       e.preventDefault();
-                      /*var bar_code = $("#bar_code").val();*/ 
+                      var bar_code = $("#bar_code").val(); 
                       /*var bar_code = 'M1TAN/KOR SENG HEI MUR MR     EDXHNQG MCTBKKWY 0817 081J011J0073 147>1181RO8081BWY              299102113959648 0   EY 100106871583   ';*/
                       /*var bar_code = 'M1ABDULLASUHARA/HYKKAB RESDJL MCTDXBOV 0103 098Y011C0085 300';*/
                       /*var bar_code = 'M1MUBARAKALIMUBARAK/AL HXKWTB MCTSLLOV 0005 098Y020C0037  00';*/
@@ -293,7 +293,7 @@
                       /*var bar_code = 'M1ELSHEEMY/AHMED MR   EPHNVDI MCTCAIWY 0407 081Y017D0018 147>1181RO8081BWY              299105337980569 0   ';*/
                       /*var bar_code = 'M1AHMAD/WAQAR MR      EDXYPEI MCTDMMWY 0695 081Y016F0027 347>1181RO8081BWY              299102113772898 0';*/
                       /*console.log(bar_code);*/
-                      var bar_code = 'M1DELAROSA/MONDALE MR   AFYENQ MCTDXBOV 0103 327Y004F00';
+                      /*var bar_code = 'M1DELAROSA/MONDALE MR   AFYENQ MCTDXBOV 0103 327Y004F00';*/
                   //    console.log(bar_code);
                       
                     if(bar_code.length>0){
