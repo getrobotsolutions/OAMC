@@ -156,7 +156,7 @@ $(document).ready(function(){
         
         writeCookie("temp", temp, 30);
         writeCookie("weatherCondition", text, 30);
-        $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
+        $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup></br>Forecast calls for '+text);
   
     })
     $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   

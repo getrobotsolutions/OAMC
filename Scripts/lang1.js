@@ -18,7 +18,7 @@ $(document).ready(function(){
     });*/
     var temp = readCookie("temp")
     var text = readCookie("weatherCondition")
-    $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
+    $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup></br>Forecast calls for '+text);
   
  });
 
