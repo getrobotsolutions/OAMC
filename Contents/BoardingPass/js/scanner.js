@@ -299,6 +299,9 @@
                     if(bar_code.length>0){
                         
                         CheckVal(bar_code);
+                        window.setTimeout(function() {
+                            window.location.href = '../../maincontents.htm';
+                        }, 15000);
 
                       }   
 
