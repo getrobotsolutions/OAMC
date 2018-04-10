@@ -308,7 +308,10 @@
                       else{
                         /*alert("Please put the Barcode scanner on the right position and try again.");*/
                         /*location.reload();*/
-                        $("#bar_code").val() = '';
+                        /*$("#bar_code").val() = '';*/
+                        window.setTimeout(function() {
+                            window.location.href = '../../maincontents.htm';
+                        }, 3000);
                       }                     
               });
                  
