@@ -132,9 +132,9 @@
   <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body onload="JSMain()" onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
+<body onload="JSMain()" onbeforeunload="JSUnload()" oncontextmenu="return false;" onmousedown="return false" ondragstart="return false;" ondrop="return false;">
 
-<div class="jumbotron text-center " ondragstart="return false;" ondrop="return false;" onmousedown="return false">
+<div class="jumbotron text-center " oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;" onmousedown="return false">
       
       <span class="col-sm-7">
         <img onmousedown="return false" src="../../images/logo.jpg" class="img-responsive" alt="Responsive image" style="width: 521px;">
@@ -147,7 +147,7 @@
       </span>    
     </div>
 
-    <div class="row subheader" style="background-color: white; padding: 0;margin: 0;border:2px solid #008a97;height: 72px;">
+    <div oncontextmenu="return false;" class="row subheader" style="background-color: white; padding: 0;margin: 0;border:2px solid #008a97;height: 72px;">
       <div class="col-sm-4" style="padding: 0;">
       	<img src="../../images/header-left-bg.png" width="360">
         <img src="../../images/home-white-icon.png" onclick="GoHome()" class="img-home" alt="Responsive image">

@@ -155,7 +155,8 @@ $(document).ready(function(){
         var text = firstResult.text
         var image =  firstResult.code;
         var loc = 'https://s.yimg.com/zz/combo?a/i/us/we/52/'+image+'.gif' ;
-  
+        writeCookie("temp", temp, 30);
+        writeCookie("weatherCondition", text, 30);
         $('#temp').append('The temperature is <strong>' + temp +'</strong><sup>°C</sup> Forecast calls for '+text);
         //$('#temp').append('<img style="width:70px;margin-right:20px;"         src="'+ loc +'"> <strong> ' + temp + '</strong><sup>°C</sup> ');
 
