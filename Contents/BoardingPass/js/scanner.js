@@ -299,20 +299,20 @@
                     if(bar_code.length>0){
                         
                         CheckVal(bar_code);
-                        window.setTimeout(function() {
+                        /*window.setTimeout(function() {
                             window.location.href = '../../maincontents.htm';
-                        }, 15000);
+                        }, 15000);*/
 
                       }   
 
-                      else{
+                      /*else{*/
                         /*alert("Please put the Barcode scanner on the right position and try again.");*/
                         /*location.reload();*/
                         /*$("#bar_code").val() = '';*/
-                        window.setTimeout(function() {
+                        /*window.setTimeout(function() {
                             window.location.href = '../../maincontents.htm';
-                        }, 3000);
-                      }                     
+                        }, 3000);*/
+                      /*}*/                     
               });
                  
                     setTimeout(function() {

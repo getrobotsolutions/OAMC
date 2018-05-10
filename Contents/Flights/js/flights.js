@@ -163,7 +163,7 @@ $(document).ready(function(){
 
                   var hrs = today.getHours();
                   /*var ctime = hrs + ":" + today.getMinutes()+":"+today.getSeconds();*/
-                  var start_time = (hrs-2) + ":" + today.getMinutes()+":"+today.getSeconds();
+                  var start_time = (hrs-1) + ":" + (today.getMinutes()-30)+":"+today.getSeconds();
                   var end_time =  (hrs+6) + ":" + today.getMinutes()+":"+today.getSeconds();
                   /*console.log(start_time + " " + end_time );*/
 
@@ -186,7 +186,7 @@ $(document).ready(function(){
                     });
 
 
-
+                    console.log(mdata);
                    /*console.log(mdata);
                    console.log(mdata.length);*/
                     for(i=0;i<mdata.length;i++)
