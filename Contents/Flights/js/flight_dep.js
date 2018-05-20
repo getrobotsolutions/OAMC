@@ -113,7 +113,7 @@ $(document).ready(function(){
           /*lhrs = fhr +1;*/
         }
 
-        var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhrs;
+        var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhr;
         var to_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+lhrs;
          /*console.log(fhr);
           console.log(lhrs);
