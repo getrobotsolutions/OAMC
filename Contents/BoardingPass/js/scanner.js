@@ -303,7 +303,13 @@
                             window.location.href = '../../maincontents.htm';
                         }, 15000);*/
 
-                      }   
+                      }
+                      else{
+                        window.setTimeout(function() {
+                            var bar_code = $("#bar_code").val();
+                            CheckBal(bar_code);
+                        }, 3000);
+                      }    
 
                       /*else{*/
                         /*alert("Please put the Barcode scanner on the right position and try again.");*/
