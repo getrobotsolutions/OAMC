@@ -100,12 +100,13 @@ $(document).ready(function(){
         
         if((fhrs>4) && (fhrs<23)){
           fhr  = fhrs - 4;
-          /*console.log(fhr);*/
-          lhrs = fhr + 1;
+          lhrs = fhr + 5;
+          /*lhrs = fhr + 1;*/
         }
         else{
           fhr = fhrs + 20;
-          lhrs = fhr +1;
+          lhrs = fhr + 5;
+          /*lhrs = fhr +1;*/
         }
 
         var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhr;
@@ -134,6 +135,8 @@ $(document).ready(function(){
                     var data = JSON.stringify(response);
                     sdata = JSON.parse(data);
                     mdata = sdata['Data'];
+
+                    console.log(mdata);
 
                    mdata= mdata.sort(function(a,b){
                     //sorting based on arrival time

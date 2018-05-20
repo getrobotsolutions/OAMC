@@ -102,16 +102,18 @@ $(document).ready(function(){
         console.log(fhrs);
 
 
-        /*if((fhrs>4) && (fhrs<23)){
+        if((fhrs>4) && (fhrs<23)){
           fhr  = fhrs - 4;
-          lhrs = fhr + 1;
+          lhrs = fhr + 5;
+          /*lhrs = fhr + 1;*/
         }
         else{
           fhr = fhrs + 20;
-          lhrs = fhr +1;
-        }*/
+          lhrs = fhr + 5;
+          /*lhrs = fhr +1;*/
+        }
 
-        var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhrs;
+        var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhr;
         var to_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+lhrs;
          /*console.log(fhr);
           console.log(lhrs);
@@ -138,6 +140,7 @@ $(document).ready(function(){
                   var data = JSON.stringify(response);
                   sdata = JSON.parse(data);
                   mdata = sdata['Data'];
+                  console.log(mdata);
 
                   mdata= mdata.sort(function(a,b){
                     //sorting based on arrival time
