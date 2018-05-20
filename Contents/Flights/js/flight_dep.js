@@ -155,22 +155,22 @@ $(document).ready(function(){
                     return a1>b1?1:-1;
                    });*/
 
-                 /*mdata= mdata.sort(function(a,b){
+                 mdata= mdata.sort(function(a,b){
                   //sorting based on arrival time
                   var a1 = a.Nature, b1=b.Nature;
                   var a2 = a.TimeToDisplay, b2=b.TimeToDisplay;
-                  if(a1==b1) return 0;
+/*                  if(a1==b1) return 0;
                   else if(a1>b1){
-                      if (a2 > b2){
+*/                      if (a2 > b2){
                         return 1;
                       } else if (a2 < b2){
                         return -1;
                       } else {
                           return 1;
                       }
-                  }
-                  else{ return 1; }
-                 });*/
+/*                  }
+                  else{ return 1; }*/
+                 });
 
                  /*mdata = mdata.sort(function(a,b){
                   var today1 = new Date();
