@@ -100,12 +100,13 @@ $(document).ready(function(){
         
         if((fhrs>4) && (fhrs<23)){
           fhr  = fhrs - 4;
-          /*console.log(fhr);*/
-          lhrs = fhr + 1;
+          lhrs = fhr + 5;
+          /*lhrs = fhr + 1;*/
         }
         else{
           fhr = fhrs + 20;
-          lhrs = fhr +1;
+          lhrs = fhr + 5;
+          /*lhrs = fhr +1;*/
         }
 
         var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhr;

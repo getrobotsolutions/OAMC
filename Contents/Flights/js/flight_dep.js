@@ -102,14 +102,16 @@ $(document).ready(function(){
         console.log(fhrs);
 
 
-        /*if((fhrs>4) && (fhrs<23)){
+        if((fhrs>4) && (fhrs<23)){
           fhr  = fhrs - 4;
-          lhrs = fhr + 1;
+          lhrs = fhr + 5;
+          /*lhrs = fhr + 1;*/
         }
         else{
           fhr = fhrs + 20;
-          lhrs = fhr +1;
-        }*/
+          lhrs = fhr + 5;
+          /*lhrs = fhr +1;*/
+        }
 
         var from_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+fhrs;
         var to_date = fday+'-'+mon+'-'+today.getFullYear()+'-'+lhrs;
