@@ -323,6 +323,6 @@
                  
                     setTimeout(function() {
                       $('#submit').trigger('click');
-                      }, 5000);
+                      }, 10000);
                  
         });
