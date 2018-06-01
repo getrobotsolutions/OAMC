@@ -5,10 +5,6 @@
   function wordInString(s, word){
     return new RegExp( '\\b' + word + '\\b', 'i').test(s);
   } 
-  function isInt(n) {
-      return +n === n && !(n % 1);
-  }
-
      function CheckVal(bar_code){
 
       var x = wordInString(bar_code, 'MR');
@@ -87,78 +83,27 @@
         console.log(parts);
         var name_str = parts[0];
         var mname_str = parts[1];
+        
         var fname=''; var mname=''; var lname='';
 
-
-        p2 = parts[2];
-        p3 = parts[3];
-        p5 = parts[4];
-
-        if ($.isNumeric(p2)) {
-           var mname_parts = mname_str.toString().split("/");
-           console.log(mname_parts);
-            if(mname_parts.length>1){ 
-              var mname = mname_parts[0] + " " + mname_parts[0];
-              var flight_str = parts[1];
-              var flightNum =  parts[2];
-            }
-            var name_parts = name_str.toString().split("/");
-            console.log(name_parts);
-              if(name_parts.length>1){
-                  var fname = name_parts[1];
-                  var lname = name_parts[0].substr(2);          
-                  var flight_str = parts[1];
-                  var flightNum =  parts[2];
-              } else {
-                lname=name_parts[0].substr(2);
-              }
-            console.log("int");
+        var mname_parts = mname_str.toString().split("/");
+        if(mname_parts.length>1){ 
+          var mname = mname_parts[1] + " " + mname_parts[0];
+          var flight_str = parts[3];
+          var flightNum =  parts[4];
         }
-        else {
-       console.log("not int");
-            if ($.isNumeric(p5)) {
 
-             var mname_parts = mname_str.toString().split("/");
-                if(mname_parts.length>1){ 
-                  var mname = mname_parts[1] + " " + mname_parts[0];
-                  var flight_str = parts[4];
-                  var flightNum =  parts[5];
-                }
+        var name_parts = name_str.toString().split("/");
+        if(name_parts.length>1){
+            var fname = name_parts[1];
+            var lname = name_parts[0].substr(2);          
+            var flight_str = parts[2];
+            var flightNum =  parts[3];
+        } else {
+          lname=name_parts[0].substr(2);
+        }
 
-                var name_parts = name_str.toString().split("/");
-                if(name_parts.length>1){
-                    var fname = name_parts[1];
-                    var lname = name_parts[0].substr(2);          
-                    var flight_str = parts[3];
-                    var flightNum =  parts[4];
-                } else {
-                  lname=name_parts[0].substr(2);
-                }   
-
-            }
-            else 
-            {
-              var mname_parts = mname_str.toString().split("/");
-                if(mname_parts.length>1){ 
-                  var mname = mname_parts[1] + " " + mname_parts[0];
-                  var flight_str = parts[3];
-                  var flightNum =  parts[4];
-                }
-
-                var name_parts = name_str.toString().split("/");
-                if(name_parts.length>1){
-                    var fname = name_parts[1];
-                    var lname = name_parts[0].substr(2);          
-                    var flight_str = parts[2];
-                    var flightNum =  parts[3];
-                } else {
-                  lname=name_parts[0].substr(2);
-                }
-            }
-         }
-
-        if(fname.length>12){ var name = fname + "<br>" + mname+ " " + lname; }
-        else { var name = fname +" "+ mname + " " +lname; }
+        var name = fname +" "+ mname + " " +lname;
 
         var org = flight_str.substr(0,3);
         var des = flight_str.substr(3,3);
@@ -168,7 +113,7 @@
         var flightDis = arr+" "+flightNum;
         
         var flightNo = flightNum.replace(/^0/, '');
-        console.log(flightNo);
+        /*console.log(flightNo);*/
         /*var flightNo = flightNum.substr(1);*/
       }
 
@@ -232,7 +177,7 @@
 
                         var appId = "7j985537jyreeeswq65432fvRGp09fXqBB";
                         var url = "https://apps.omanairports.com/weps_PublicApp/OAMCPublic.svc/GetFlightsOpen/"+appId+"/"+from_date+"/"+to_date+"/MCT";
-                       /* console.log(url);*/
+                        console.log(url);
 
 
                        
@@ -252,13 +197,13 @@
                                     mdata = sdata['Data'];
                                  /*console.log(mdata);*/
  
-                                console.log(searchItem);
+                                /*console.log(searchItem);*/
                                     /*Filter based on flightNO*/
                                     var details1 = mdata.filter(function (i){
                                       if(i.FlightNo === searchItem) return i
                                     });
 
-                                    console.log(details1);
+                                    /*console.log(details1);*/
 
                                     /*Re-filter only Departing flights*/
                                     var details = details1.filter(function(i){
@@ -338,10 +283,8 @@
             $( function() {
                   $('.submit').click(function(e) {
                       e.preventDefault();
-                      var bar_code = $("#bar_code").val();
-                      /*var bar_code = 'M1ALCHAKER/MAHIEDDINMREHWIRAJ MCTBAHGF 0563 099Y020F0035 100';*/
-                      /*var bar_code = 'M1ALHINAEI/ABDULLAH SALEFXIFMU MCTDXBWY 0603 139J002A0158 347>1181OO8139BWY              299102526941863 0'; */
-                      /*var bar_code = 'M1ALHINAEI/ABDULLAHSALEFXIFMU MCTDXBWY 0603 139J002A0158 347>1181OO8139BWY              299102526941863 0';*/
+                      var bar_code = $("#bar_code").val(); 
+                      /*var bar_code = 'M1TAN/KOR SENG HEI MUR MR     EDXHNQG MCTBKKWY 0817 081J011J0073 147>1181RO8081BWY              299102113959648 0   EY 100106871583   ';*/
                       /*var bar_code = 'M1ABDULLASUHARA/HYKKAB RESDJL MCTDXBOV 0103 098Y011C0085 300';*/
                       /*var bar_code = 'M1MUBARAKALIMUBARAK/AL HXKWTB MCTSLLOV 0005 098Y020C0037  00';*/
                       /*var bar_code = 'M1FISHER/SASHA        EKBGK3S MCTDOHQR 1127 098Y033C0022 349>5180      B                2A             0    QR 513373859           N0';*/
@@ -350,7 +293,7 @@
                       /*var bar_code = 'M1ELSHEEMY/AHMED MR   EPHNVDI MCTCAIWY 0407 081Y017D0018 147>1181RO8081BWY              299105337980569 0   ';*/
                       /*var bar_code = 'M1AHMAD/WAQAR MR      EDXYPEI MCTDMMWY 0695 081Y016F0027 347>1181RO8081BWY              299102113772898 0';*/
                       /*console.log(bar_code);*/
-                     /* var bar_code = 'M1DELAROSA/MONDALE MR   AFYENQ MCTDXBOV 0103 327Y004F00';*/
+                      /*var bar_code = 'M1DELAROSA/MONDALE MR   AFYENQ MCTDXBOV 0103 327Y004F00';*/
                   //    console.log(bar_code);
                       
                     if(bar_code.length>0){
@@ -359,27 +302,27 @@
                         /*window.setTimeout(function() {
                             window.location.href = '../../maincontents.htm';
                         }, 15000);*/
+
                       }
                       else{
                         window.setTimeout(function() {
                             var bar_code = $("#bar_code").val();
                             CheckBal(bar_code);
                         }, 3000);
-                      }   
+                      }    
 
                       /*else{*/
                         /*alert("Please put the Barcode scanner on the right position and try again.");*/
                         /*location.reload();*/
                         /*$("#bar_code").val() = '';*/
-                       
                         /*window.setTimeout(function() {
                             window.location.href = '../../maincontents.htm';
-                        }, 3000);
-                      }*/                     
+                        }, 3000);*/
+                      /*}*/                     
               });
                  
                     setTimeout(function() {
                       $('#submit').trigger('click');
-                      }, 3000);
+                      }, 10000);
                  
         });
