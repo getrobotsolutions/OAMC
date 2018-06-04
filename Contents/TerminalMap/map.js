@@ -10,10 +10,10 @@ $(document).ready(function(){
           $('#change-ar').removeClass('active');
           $('#txt01').text("North Pier Departure | Level 04");
           $('#txt02').text("South Pier Departure | Level 04 ");
-          $('#txt03').text("Passenger Terminal Building Departure | level 04");
+          $('#txt03').text("Passenger Terminal Building Arrivals | Level 01");
           $('#txt04').text("West Pier Departure | Level 04");
-          $('#txt05').text("Passenger Terminal Building Arrivals | Mezzanine Level");
-          $('#txt06').text("Passenger Terminal Building Arrivals | Level 01");
+          $('#txt05').text("Passenger Terminal Building Departure | Level 05");
+          $('#txt06').text("Passenger Terminal Building Departure | Level 04");
           $('#txt07').text("Passenger Terminal Building Departure | Level 02");
         });
         //Change to English
@@ -21,13 +21,13 @@ $(document).ready(function(){
           writeCookie("lang","arabic");
           $('#change-us').removeClass('active');
           $('#change-ar').addClass('active');
-          $('#txt01').html("المغادرةشمال الميناء <b> | </b> المستورى  04");
-          $('#txt02').html("المغادرةجنوب الميناء <b> | </b> المستورى 04");
-          $('#txt03').html("المغادرةجنوب الميناء <b> | </b> المستورى 04");
-          $('#txt04').html("المغادرةغرب الميناء <b> | </b> المستورى 04");
-          $('#txt05').html("مبنى الركاب - مبنى الوصول | مستوى الميزانين");
-          $('#txt06').html("مبنى الركاب - مبنى الوصول | المستوى 01");
-          $('#txt07').html("مبنى الركاب - مبنى المغادرة|  المستوى 02");
+          $('#txt01').html("مبنى المغادرون -  الجناح الشمالي / المستوى الثاني");
+          $('#txt02').html("مبنى المغادرون - الجناح الجنوبي | المستوى الثاني");
+          $('#txt03').html("مبنى المسافرون - القادمون /المستوى الأول");
+          $('#txt04').html("مبنى المغادرون- الجناح الغربي / المستوى الثاني");
+          $('#txt05').html("مبنى المسافرون / المغادرون / المستوى الخامس");
+          $('#txt06').html("مبنى المسافرون/ المغادرون/ المستوى الثاني");
+          $('#txt07').html("مبنى المسافرين - المغادرون / المستوى الرابع");
         });
   });
 function OnUserDisappeared()
